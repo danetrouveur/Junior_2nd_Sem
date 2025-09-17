@@ -1,0 +1,136 @@
+\section{Lecture 4 (September 10th)}
+\begin{defi}
+	(Poisson bracket) The Poisson bracket for two functions $F=F[\phi ,\pi ]$ and $G=G[\phi ,\pi ]$ is defined as
+	\[\{F,G\}_{PG}=\int d^3\vec{x}\Big(\dfrac{\delta F}{\delta \phi (x)}\dfrac{\delta G}{\delta \pi (x)}-\dfrac{\delta F}{\delta \pi (x)}\dfrac{\delta G}{\delta \phi (x)}\Big)\]
+Notice that using the Poisson bracket, Hamilton's equation of motion becomes 
+\[\begin{cases}
+\dfrac{d \phi }{d t}=\dfrac{\delta H}{\delta \pi }=\{\phi ,H\}_{PB}\\
+\dfrac{d \pi }{d t}=-\dfrac{\delta H}{\delta \phi }=\{\phi ,H\}_{PB}
+\end{cases}\]
+Then, for an arbitrary functional $F$,
+\[\begin{align*}
+	\dfrac{d F}{d t}=&\int d^3\vec{x}\,\Big(\dfrac{\delta F}{\delta \phi (x)}\dot{\phi }(x)+\dfrac{\delta F}{\delta \pi (x)}\dot{\pi }(x)\Big)\\
+	=&\int d^3\vec{x}\,\Big(\dfrac{\delta F}{\delta \phi }\dfrac{\delta H}{\delta \pi }+\dfrac{\delta F}{\delta \pi }\Big(-\dfrac{\delta H}{\delta \phi }\Big)\Big)=\{F,G\}_{PB}
+\end{align*}\]
+We have some special cases,
+\[\begin{align*}
+	\{\phi (t,\vec{x}),\phi (t,\vec{y})\}_{PB}=&0=\{\pi (t,\vec{x}),\pi (t,\vec{y})\}_{PB}\\
+	\{\phi (t,\vec{x}),\pi (t,\vec{y})\}_{PB}=&\int d^3z\,\dfrac{\delta \phi (t,\vec{x})}{\delta \phi (t,\vec{z})}\dfrac{\delta \pi (t,\vec{y})}{\delta \pi (t,\vec{z})}=\int d^3z\,\delta ^{(3)}(\vec{x}-\vec{z})\delta ^{(3)}(\vec{y}-\vec{z})=\delta ^{(3)}(\vec{x}-\vec{y})
+\end{align*}\]
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Spin-0 Klein-Gordan Fields) The Klein-Gordan (KG) action is given as
+\[S_{KG}=\int d^{4}x\,\underbrace{\Big(-\dfrac{1}{2}\partial ^{\mu }\phi \partial _{\mu }\phi -\dfrac{1}{2}m^2\phi ^2\Big)}_{\mathcal{L}_{KG}}\]
+The Klein-Gordan equation that comes from this action is 
+\[0=\dfrac{\partial \mathcal{L}_{KG}}{\partial \phi }-\partial _{\mu }\Big(\dfrac{\partial \mathcal{L}_{KG}}{\partial (\partial _{\mu }\phi )} \Big)=-m^2\phi -\partial _{\mu }(-\partial ^{\mu }\phi )=(\partial^2-m^2)\phi \]
+here, $\partial ^2=\partial ^{\mu }\partial _{\mu }=\square$. What are the solutions to the Klein-Gordan equation? The simplest case is given as a plane wave solution
+\[\phi _{\pm,\vec{p}}(x)=A_{\pm}e^{i(\vec{p}\cdot \vec{x}\pm E_{p}t)}\]
+where $E_{p}=\sqrt{\vec{p}^2+m^2}$. Is it genuinely a solution? Notice that
+\[(\partial ^2-m^2)\phi _{\pm,\vec{p}}(x)=(-\partial _{t}^2+\nabla ^2-m^2)\phi _{\pm, \vec{p}}=(E_{p}^2-\vec{p}^2-m^2)\phi _{\pm, \vec{p}}=0\]
+The general soltuion is then given by a Fourier expansion,
+\[\phi (x)=\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi)^32E_{p}}}\Big(A_{-}(\vec{p})e^{i(\vec{p}\cdot \vec{x}-E_{p}t)}+A_{+}(-\vec{p})e^{-i(\vec{p}\cdot \vec{x}-E_{p}t)}\Big)\]
+where we will now write $\vec{p}\cdot \vec{x}-E_{p}t=p_{\mu }x^{\mu }$. Imposing the condition that $\phi (x)=\phi^{*} (x)$,
+\[\phi (x)=\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^32E_{p}}}\Big(a(\vec{p})e^{ip_{\mu }x^{\mu }}+a^{*}(\vec{p})e^{-p_{\mu }x^{\mu }}\Big)\]
+The canonical conjugate field is then automatically given as 
+\[\begin{align*}
+	\pi (x)=&\dfrac{\partial \mathcal{L}_{KG}}{\partial \dot{\phi }(x)}=\dot{\phi}(x) \\
+=&\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^32E_{p}}}(-iE_{p})(a^{*}(\vec{p})e^{ip\cdot x}-a(\vec{p})^{*}e^{-ip\cdot x}
+\end{align*}\]
+The Hamiltonian density becomes
+\[\mathcal{H}_{KG}=\pi \dot{\phi }-\mathcal{L}_{KG}=\dfrac{1}{2}(\pi ^2+(\nabla \phi )^2+m^2\phi ^2)\]
+The Poisson brackets become
+\[\begin{cases}
+\{\phi (t,\vec{x}),\phi (t,\vec{y})\}_{PB}=\{\pi (t,\vec{x}),\pi (t,\vec{y})\}_{PB}=0\\
+\{\phi (t,\vec{x}),\pi (t,\vec{y})\}_{PB}=\delta ^{(3)}(\vec{x}-\vec{y})
+\end{cases}\]
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Spin-1/2 Dirac fields) There is no first order, Lorentz covariant equation of motion for spin-0 fields, but we can find one for spin-1/2 fields. We begin from the Weyl equations of motion:
+\[\begin{cases}
+i\bar{\sigma }^{\mu }\partial _{\mu }\psi _{+}+m\sigma _{2}\psi ^{*}_{+}=0\\
+i\sigma ^{\mu }\partial _{\mu }\psi _{-}+m\sigma _{2}\psi _{-}^{*}=0
+\end{cases}\]
+Notice that without the absence of math, they require both left and right chirals. A problem with the equations is that there is no $U(1)$ symmetry.
+\[\psi _{\pm}\rightarrow \psi _{\pm}'=e^{i\theta _{\pm}}\psi _{\pm}\]
+Coupling the two Weyl equations of motion with doubled degrees of freedom, we have
+\[\begin{cases}
+0=i\bar{\sigma }^{\mu }\partial _{\mu }\psi _{+}+m\psi _{-}\\
+0=i\sigma ^{\mu }\partial _{\mu }\psi _{-}+m\psi _{+}
+\end{cases}\iff 
+\Big(\begin{pmatrix}
+	0&\sigma ^{\mu }\\
+	\bar{\sigma }^{\mu }&0
+\end{pmatrix}\partial _{\mu }-m\Big)\begin{pmatrix}
+\psi _{+}\\\psi _{-}
+\end{pmatrix}=0
+\]
+The Dirac action that yields this equation is
+\[S_{D}=\int d^{4}x\,\bar{\psi }(i\gamma ^{\mu }\partial _{\mu }-m)\psi \]
+where $\gamma ^{\mu }\partial _{\mu }=\cancel{\partial }$. The dirac equation is therefore
+\[0=\dfrac{\partial \mathcal{L}_{D}}{\partial \bar{\psi }}-\partial _{\mu }\Big(\dfrac{\partial \mathcal{L}_{D}}{\partial (\partial _{\mu }\bar{\psi })} \Big)=(i\cancel{\partial }-m)\psi  \]
+A natural equation would be to ask what would happen for $\bar{\psi }$. The elementary solution as a plane wave is given as
+\[\psi _{\pm,\vec{p}}(x)=u_{\pm}(\vec{p})e^{\pm ip_{\mu }x^{\mu }}\]
+where $u_{\pm}(\vec{p})$ is expected to be a $4\times 1$ matrix with $(\cancel{p}\pm m)u_{\pm}(\vec{p})=0$. We can check that for our elementary solution.
+\[(i\cancel{\partial }-m)\psi _{\pm,\vec{p}}(\vec{x})=(i(\pm i\gamma ^{\mu }p_{\mu })-m)\psi _{\pm, \vec{p}}=\mp (\cancel{p}\pm m)\psi _{\pm,\vec{p}}=0\]
+Note that also, $p^{\mu }p_{\mu }+m^2=0$.
+\[\begin{align*}
+	0=&-(\gamma ^{\nu }p_{\nu }\mp m)(\gamma ^{\mu }p_{\nu }\pm m)u_{\pm}(\vec{p})=-(\gamma ^{\nu }\gamma ^{\mu }p_{\nu }p_{\mu }-m^2)u_{\pm}(\vec{p})\\
+=&-\Big(\dfrac{1}{2}\{\gamma ^{\nu },\gamma ^{\mu }\}p_{\nu }p_{\mu }-m^2\Big)u_{\pm}(\vec{p})=-(-p^{\mu }p_{\mu }-m^2)u_{\pm}(\vec{p})=0
+\end{align*}\]
+where the commutators equal $-2\eta ^{\mu \nu }$. Using the Dirac basis we can express the four independent solutions for $u_{\pm}$ (2 for each sign) as
+\[0=(\cancel{p}\pm m)u_{\pm}(\vec{p})\propto \begin{pmatrix}
+	\pm m-E_{p}&\vec{p}\cdot \vec{\sigma }\\
+	-\vec{p}\cdot \vec{\sigma }&\pm m+E_{p}
+\end{pmatrix}\begin{pmatrix}
+\phi _{\pm}\\\chi _{\pm}
+\end{pmatrix}
+
+\]
+This implies that
+\[\begin{cases}
+	\chi _{+}=&\dfrac{\vec{p}\cdot \vec{\sigma }}{m+E_{p}}\phi _{+}\\
+	\phi _{-}=&\dfrac{\vec{p}\cdot \vec{\sigma }}{m+E_{p}}\chi _{-}
+\end{cases}\]
+The two independent $u_{+}$ become (for $i=1,2$)
+\[u^{i}_{+}(\vec{p})=\sqrt{m+E_{p}}\begin{pmatrix}
+\phi _{+}^{i}\\
+\dfrac{\vec{p}\cdot \vec{\sigma }}{m+E_{p}}\phi _{+}^{i}
+\end{pmatrix}
+\]
+and two independent for $u_{-}$ become
+\[u_{-}^{i}(\vec{p})=\sqrt{m+E_{p}}\begin{pmatrix}
+\dfrac{\vec{p}\cdot \vec{\sigma }}{m+E_{p}}\chi _{-}^{i}\\
+\chi _{-}^{i}
+\end{pmatrix}
+\]
+with
+\[\begin{cases}
+	(\phi _{+}^{i})^{\dagger}\phi _{+}^{j}=\delta ^{ij}\\
+	\sum ^{2}_{i=1}\phi _{+}^{i}(\phi _{+}^{i})^{\dagger}=I_{2}
+\end{cases}\]
+and the same for $\chi _{-}^{i}$. A good example of vectors that do this are
+\[\phi _{+}^{j}=\{\begin{pmatrix}
+1\\0
+\end{pmatrix},\begin{pmatrix}
+0\\1
+\end{pmatrix}
+\}\]
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+(Properties of $u_{\pm}^{i}(\vec{p})$) We have orthonormality
+\[\bar{u}_{\pm}^{i}(\vec{p})u^{j}_{\pm}(\vec{p})=\pm 2m \delta ^{ij}\]
+and 
+\[\bar{u}^{i}_{\pm}(\vec{p})u_{\mp}^{j}(\vec{p})=0\]
+and the spin state sum
+\[\sum ^{2}_{i=1}u_{\pm}^{i}\bar{u}^{i}_{\pm}(\vec{p})=-(\cancel{p}\mp m)\]
+Other useful properties include
+\[\begin{cases}
+u^{i}_{\pm}^{\dagger}(\vec{p})u^{j}_{\pm}(\vec{p})=2E_{p}\delta ^{ij}\\
+u^{i})\pm(\vec{p})^{\dagger}u_{\mp}^{j}(-\vec{p})=0
+\end{cases}\]
+The general solution then 
+\end{rmk}
+\vspace{2ex}

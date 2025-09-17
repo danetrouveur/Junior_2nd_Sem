@@ -1,0 +1,61 @@
+\section{Lecture 3 (September 8th)}
+\begin{ex}
+Consider the Hilbert space $\mathcal{H}={\bm C}^2$ of a qubit system. An arbitrary mixed state is expressed as
+\[\rho =\sum ^{2}_{i=1}w_{i}|\phi_{i}\rangle \langle \phi _{i}|\]
+Consider
+\[\begin{cases}
+	|\phi _{1}\rangle =|x;\uparrow\rangle =\dfrac{1}{2}\begin{pmatrix}
+	1\\ 1
+	\end{pmatrix}\\
+	|\phi_2\rangle =|z;\uparrow\rangle =\begin{pmatrix}
+	1\\0
+	\end{pmatrix}
+\end{cases}\]
+with $w_1=2/5$ and $w_2=3/5$. The density matrix is then given as
+\[\begin{align*}
+	\rho =&\dfrac{2}{5}\dfrac{1}{\sqrt{2}}\begin{pmatrix}
+	1\\1
+	\end{pmatrix}\dfrac{1}{\sqrt{2}}(1\ 1)+\dfrac{3}{5}\begin{pmatrix}
+		1\\0
+	\end{pmatrix}(1\ 0)\\
+	=&\dfrac{1}{5}\begin{pmatrix}
+		4&1\\1&1
+	\end{pmatrix}
+\end{align*}\]
+Calculating $\rho ^2$ we find that $\rho ^2\ne \rho $ and that $\rho $ is a mixed state. It is a positive operator as
+\[\rho -\rho ^2=\dfrac{1}{25}\begin{pmatrix}
+	3&0\\0&3
+\end{pmatrix}
+\]
+We can lastly preform a spectral decomposition with $p_{1,2}=1/2\pm \sqrt{13}/10$ and
+\[\phi =p_1|1\rangle \langle 1|+p_2|2\rangle \langle 2|=\rho \]	
+Other examples are cooling and optical. 
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Pertubation theory) There are very few quantum systems that we can solve analytically. Pertubation theory provides a way to approximate quantum results and is very important. Let's first look at the big picture. An arbitrary Hamiltonian can be written as
+\[\hat{H}(t)=\hat{H}_{0}+\lambda \hat{V}(t)\]
+where we fully know $\hat{H}_{0}$ as in the eigenvalues, eigenkets and etcetera. We should also take $\lambda $ to be very small for this to make sense. There are large two classes, (1) time independent pertubations and (2) time dependent pertubations. Each are defined as pertubations where $\hat{V}$ is independent and dependent of time. Let's deal with time independent pertubation theory for now.
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+(Non-degenerate pertubation) Given the information of $\hat{H}_{0}$ we want to inquire the following,
+	\[E_{n}^{(0)}\quad\&\quad |n^{(0)}\rangle\qquad\implies \qquad |n\rangle _{\lambda }\quad\&\quad E_{n} \]
+ where $\hat{H}|n\rangle _{\lambda }=E_{n}|n\rangle _{\lambda }$. We automatically expect 
+\[E_{n}= E_{n}^{(0)}+\mathrm{\Delta }_{n}(\lambda )\]
+and thus
+\[(\hat{H}_{0}-E_{n}^{(0)})|n\rangle _{\lambda }=(\mathrm{\Delta }_{n}(\lambda )-\lambda \hat{V})|n\rangle _{\lambda }\]
+As $H_{0}|n^{(0)}\rangle =E_{n}^{(0)}|n^{(0)}\rangle $, $\langle n^{(0)}|(H_{0}-E_{n}^{(0)})=0$ which leads to
+\[\langle n^{(0)}|\mathrm{\Delta }_{n}(\lambda )-\lambda \hat{V}|n\rangle _{\lambda }=0\]
+Telling us that $|n^{(0)}\rangle $ is missing from the ket of the right-hand side. Now define the projection from
+\[{\bf 1}=\sum _{k}|k^{(0)}\rangle \langle k^{(0)}|\]
+where the Hilbert space $\mathcal{H}$ has the basis $\{|k^{(0)}\rangle  \}$ as
+\[\phi _{n}={\bf 1}-|n^{(0)}\rangle \langle n^{(0)}|=\sum _{k\ne n}|k^{(0)}\rangle \langle k^{(0)}|\]
+givens some $n$. Now,
+	\[\boxed{|n\rangle _{\lambda }=C_{n}(\lambda )|n^{(0)}\rangle +\dfrac{1}{E_{n}^{(0)}-\hat{H}_{0}}\phi _{n}(-\mathrm{\Delta  }_{n}(\lambda )+\lambda \hat{V})|n\rangle _{\lambda }}\]
+Notice that $\langle n^{(0)}|n\rangle _{\lambda }=C_{n}(\lambda )$ and that $C_{n}(\lambda )$ dictates normalisation (how much $|n^{(0)}\rangle $ is in $|n\rangle _{\lambda }$). We expect the following
+	\[|n\rangle _{\lambda }=C_{n}(\lambda )\Big(|n^{(0)}\rangle +\lambda |n^{(1)}\rangle +\lambda ^2|n^{(2)}\rangle +\ldots \Big)\]
+now we of course want to substitute. 
+\end{ex}
+\vspace{2ex}
+

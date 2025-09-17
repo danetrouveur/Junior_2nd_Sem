@@ -1,0 +1,50 @@
+\section{Lecture 4 (September 10th)}
+\begin{recall}
+The perturbed ket satisfied the relation
+\[(\lambda \hat{V}-\mathrm{\Delta }_{n}(\lambda ))|n\rangle _{\lambda }=(E_{n}^{(0)}-\hat{H}_{0})|n\rangle _{\lambda }\]
+Applying $\langle n^{(0)}|$,
+\[\langle n^{(0)}|\lambda \hat{V}|n\rangle _{\lambda }=\mathrm{\Delta }_{n}(\lambda )\langle n^{(0)}|n\rangle _{\lambda }\tag{I}\]
+we then obtain
+\[|n\rangle _{\lambda }=C_{n}(\lambda )|n^{(0)}\rangle +\dfrac{1}{E_{n}^{(0)}-\hat{H}_{0}}\phi _{n}(\lambda \hat{V}-\mathrm{\Delta }_{n}(\lambda ))|n\rangle _{\lambda }\tag{II}\]
+and we have also obtained
+\[C_{n}(\lambda )=\langle n^{(0)}|n\rangle _{\lambda }\tag{III}\]
+We now preform an expansion,
+\[|n\rangle _{\lambda }=C_{n}(\lambda )\Big(|n^{(0)}\rangle +\lambda |n^{(1)}\rangle +\lambda ^2|n^{(2)}\rangle +\ldots \Big)\]
+Applying equation (IV) to (I), we have
+\[\langle n^{(0)}|\lambda \hat{V}|n^{(0)}+\lambda n^{(1)}+\lambda ^2n^{(2)}+\ldots\, \rangle =\mathrm{\Delta }_{n}(\lambda )=\mathrm{\Delta }_{n}^{(1)}\lambda +\mathrm{\Delta }_{n}^{(2)}\lambda ^{2}\]
+Resultantly,
+\[\boxed{\mathrm{\Delta }_{n}^{(1)}\lambda =\langle n^{(0)}|\lambda \hat{V}|n^{(0)}\rangle} \]
+Similary, wanting $\lambda ^2\mathrm{\Delta }_{n}^{(2)}$, we need to know $\lambda |n^{(1)}\rangle $. Equating (II) and (IV),
+\[\lambda |n^{(1)}\rangle +\lambda^2|n^{(2)}\rangle +\ldots =\dfrac{1}{E_{n}^{(0)}-H_0}\phi _{n}(\lambda \hat{V}-\mathrm{\Delta }_{n}(\lambda ))\Big(|n^{(0)}+\lambda |n^{(1)}\rangle +\ldots \Big)\]
+Leading us to
+\[\boxed{\lambda |n^{(1)}\rangle =\dfrac{1}{E_{n}^{(0)}-H_{0}}\phi _{n}\lambda \hat{V}|n^{(0)}\rangle }\]
+Applying to the above logic,
+\[\langle n^{(0)}|\lambda \hat{V}|\lambda n^{(1)}\rangle =\mathrm{\Delta }_{n}^{(2)}\lambda ^2\]
+and
+\[\boxed{\mathrm{\Delta }_{n}^{(2)}\lambda ^2=\langle n^{(0)}|\lambda \hat{V}\dfrac{1}{E_{n}^{(0)}-H_{0}}\phi _{n}\lambda \hat{V}|n^{(0)}\rangle }\]
+Well, how can I express this?
+\[\mathrm{\Delta }^{(2)}_{n}\lambda ^2=\sum _{k\ne n}\dfrac{|\langle k^{(0)}|\lambda \hat{V}|n^{(0)}\rangle |^2}{E_{n}^{(0)}-E^{(0)}_{k}}\]
+We cannot ignore $|n\rangle _{\lambda }$. We know that
+\[\begin{align*}
+	_{\lambda }\langle n|n\rangle _{\lambda }=1=&|C_{n}(\lambda )|^2\Big(\langle n^{(0)}|+\lambda \langle n^{(1)}|+\lambda ^2\langle n^{(2)}|+\ldots \Big)\Big(|n^{(0)}\rangle +\lambda |n^{(1)}\rangle +\lambda ^2|n^{(2)}\rangle +\ldots  \Big)\\
+=&|C_{n}(\lambda )|^2\Big(1+\lambda ^2\langle n^{(1)}|n^{(1)}\rangle +\ldots \Big)
+\end{align*}\]
+and
+\[|C_{n}(\lambda )|^2=\dfrac{1}{1+\lambda ^2\langle n^{(1)}|n^{(1)}\rangle +\ldots }= 1-\lambda ^2\langle n^{(1)}|n^{(1)}\rangle \]
+\end{recall}
+\vspace{2ex}
+\begin{ex}
+(Simple harmonic oscillator) Consider the solved harmonic oscillator with basis vectors $|n^{(0)}\rangle $ and $E^{(0)}=\hbar \omega (n+1/2)$. Applying a uniform electric field, $E\hat{x}$,
+\[\lambda \hat{V}=(-e)(-Ex)=eEx\]
+For the first order, we have
+\[\mathrm{\Delta }_{n}^{(1)}=\langle n|\lambda \hat{V}|n\rangle =\langle n|eE\hat{x}|n\rangle =0\]
+For the second order, we have
+\[\mathrm{\Delta }_{n}^{(2)}=\sum _{k\ne n}\dfrac{|\langle k^{(0)}|eE\hat{x}|n^{(0)}\rangle |^2}{E_{n}-E_{k}}=-\dfrac{(eE)^2}{2m\omega ^2}\;<\;0\]
+We know that this result, however, is exact. This is because of the form of the Hamilonian,
+\[H_{0}+\lambda V=\dfrac{p^2}{2m}+\dfrac{1}{2}m\omega ^2x^2+eEx=\dfrac{p^2}{2m}+\dfrac{m\omega ^2}{2}(x-K)-\dfrac{(eE)^2}{2m\omega ^2}\]
+where $K$ is a constant. This is known as the Stark effect. Note that in the ground state,
+\[\mathrm{\Delta }_{n}^{(2)}=\sum _{k\ne n}\dfrac{|\langle k|\lambda \hat{V}|n\rangle |^2}{E_{n}-E_{k}}\;<\;0\]
+
+\end{ex}
+\vspace{2ex}
+

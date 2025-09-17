@@ -1,0 +1,42 @@
+\section{Lecture 1 (September 2nd)}
+\begin{rmk}
+The main subject of this course is Galois theory. The motivation of this theory is to find a general solution of polynomial equations. For example, the general solution of the quadratic equation
+\[ax^2+bx+c\;=\;0\]
+where $a\ne 0$, $b$ and $c$ are real numbers is given by
+\[x\;=\;\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}\]
+To be more precise, we want to express a general solution of the equation
+\[a_{n}x^{n}+a_{n-1}x^{n-1}+\ldots +a_{0}=0\]
+where $a_{i}\in {\bm Q}$ and $a_{n}\ne 0$ using 4 basic operations (namely, $\pm$, $\times $, and $\div$), and $n$-th roots. Today, we know that, through Galois theory, this is not possible for $n\geq 5$. 
+
+\bigskip
+
+In essence, Galois theory connects the theory of fields and the theory of groups. Consider the following example. The polynomial
+\[x^4+x^3+x^2+x+1=0\]
+We know how to solve this,
+\[(x-1)(x^4+x^3+x^2+x+1)=x^5-1=0\]
+	and thus we choose a primitive 5th root of unity (say $\xi =\exp (2\pi i/5)$). Then the solutions are
+\[(\xi^{1} ,\xi ^2,\xi ^3,\xi^{4})\]
+We see that this group is homomorphic to ${\bm Z}/5{\bm Z}$, and that there's a certain relationship between the roots of this polynomial and a certain group.
+\end{rmk}
+\vspace{2ex}
+\section{Chapter 13. Field Extensions}
+\begin{defi}
+(13.1) Let $K$ be a field. A field extension of $K$ is another field $F$ endowed with an injective ring homomorphism $\phi :K\rightarrow F$. You are essentially identifying the field with a subfield of a larger ring $F$.
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+From now on, we use the following conventions:
+\begin{itemize}
+	\item[(i)] Every ring is a commutative ring with $1$
+	\item[(ii)] A ring homomorphism sends $1$ to $1$ 
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+There is at most one ring homomorphism between two fields. Notice that $\mathop{\mathrm{ker}}\phi $ is an ideal (additive subgroup with the absorption property) of $K$, so that $\mathop{\mathrm{ker}}\phi $ is either $0$ or $K$. Therefore, $\phi $ must be injective.
+\end{rmk}
+\vspace{2ex}
+\begin{itemize}
+
+\end{itemize}
+

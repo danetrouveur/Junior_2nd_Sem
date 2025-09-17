@@ -1,0 +1,86 @@
+\section{Lecture 2 (September 4th)}
+\begin{defi}
+(13.1) Let $K$ be a field. A field extension of $K$ is a pair $(F,i :K\rightarrow F)$ where $F$ is a field and $i$ is an injective (ring) homomorphism. We draw field extension tower diagrams like the following: 
+\[
+\begin{tikzcd}[row sep=2.2em]
+F \arrow[d, no head] \\
+K \arrow[d, no head] 
+\end{tikzcd}
+\]
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+(13.2 $\ast$) (Algebraic extension) Let $f(t)\in {\bm Q}[t]$ be a nonzero irreducible polynomial. Then ${\bm Q}[t]\,/\,(f(t))$ is a field, and the composite map 
+\[{\bm Q}\rightarrow {\bm Q}[t]\rightarrow {\bm Q}[t]\,/\,(f(t))\]
+is a field extension. This is the general way we would be obtaining field extensions.
+\[
+\begin{tikzcd}[row sep=2.2em]
+{\bm Q[t]}\,/\,(f(t)) \arrow[d, no head] \\
+{\bm Q} \arrow[d, no head] 
+\end{tikzcd}
+\]
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+The set ${\bm Q}[t]\,/\,(f(t))$ is a maximal ideal and since $f(t)$ is a nonzero irreducible element of ${\bm Q}[t]$ which is principle ideal domain. Therefore, the quotient ${\bm Q}[t]\,/\,(f(t))$ is a field. 
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+(13.3) (Transcendental extension) Let ${\bm Q}(t)$ denote the field of fractions of ${\bm Q}[t]$. Then the composition map ${\bm Q}\rightarrow {\bm Q}[t]\rightarrow {\bm Q}(t)$ determines a field extension.
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(13.6) The characteristic of a field $K$ ($\mathop{\mathrm{char}}(K)$) is the smallest nonnegative generator of the kernel of the unique ring homomorphism $\phi :{\bm Z}\rightarrow K$. 
+\end{defi}
+\vspace{2ex}
+\begin{lem}
+(13.7) Let $F\,/\,K$ be a field extension. Then 
+\[\mathop{\mathrm{char}}(K)=\mathop{\mathrm{char}}(F)\]
+\end{lem}
+\vspace{2ex}
+\begin{lem}
+(13.8) Let $F$ be a field. Then $F$ contains a unqiue copy of ${\bm Q}$ or ${\bm Z}\,/\,p{\bm Z}$, where $p$ is prime.
+\end{lem}
+\vspace{2ex}
+\section{13.2 Finite Extensions and the Degree of an Extension}
+\begin{defi}
+(13.10) The degree of a field extension $F\,/\,K$, denoted $[F:K]$, is the dimension of $F$ as a vector space over $K$.
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+If $i:K\rightarrow F$ is a field extension, then we can view $F$ as a $K$-vector space through the map $i$.
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(13.11) A field extension is finite if $[F:K]<\infty $.
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+Let $F/K$ be a field extension, and let $\alpha \in F$. We will say that $\alpha $ is algebraic over $K$ if there exists a nonzero polynomial $f(t)\in K[t]$ such that $f(\alpha )=0$. The element $\alpha \in F$ is transcendental if not algebraic.
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+Consider
+\[
+\begin{tikzcd}[row sep=2.2em]
+{\bm C} \arrow[d, no head] \\
+{\bm R} \arrow[d, no head] 
+\end{tikzcd}
+\]
+\begin{itemize}
+\item[(i)] Is $i$ algebraic over ${\bm R}$? Yes! $i$ is a zero of $t^2+1\in {\bm R}[t]$.
+\item[(ii)] $\sqrt{2}$ is algebraic over ${\bm Q}$
+\item[(iii)]  Also, $\pi, e \in {\bm C}$ is transcendental over ${\bm C}$. 	
+\item[(iv)] Every element $\alpha $ of $K$ is algebraic over $K$ ($t-\alpha \in K[t]$).
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(13.20) Let $F\,/\,K$ be a field extension. If $\alpha \in F$ is algebraic, the minimal polynomial of $\alpha $ over $K$ is the unqiue monic irreducible polynomial $p(t)\in K[t]$ such that $f(\alpha )=0$.
+\longskip
+To understand this, consider a ring homorphism 
+	\[\mathop{\mathrm{ev}}_{\alpha }:K[t]\rightarrow F\]
+	given by evaluation at $\alpha $ (namely, $f(t)\mapsto f(\alpha )$). Note that $\mathop{\mathrm{ker}}(\mathop{\mathrm{ev}_{\alpha }})$ is something because $\alpha $ is algebraic in $K$. 
+\end{defi}
+\vspace{2ex}
+

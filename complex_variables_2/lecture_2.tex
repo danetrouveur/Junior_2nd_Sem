@@ -1,0 +1,112 @@
+\section{Lecture 2 (September 4th)}
+\begin{recall}
+(Cauchy's formula) For a positively oriented simple closed curve (POSCC) $C$ and $f$ that  is analytic inside and on $C$, we have
+\[f(z)=\dfrac{1}{2\pi i}\int _{C}\dfrac{f(\xi )}{\xi -z}\,d\xi \]
+for all $z$ inside $C$. If $\bar{D}(z_0,r)=\{z \,|\, |z-z_0|\leq r\}\subset D$,
+\[\dfrac{1}{\xi -z}=\dfrac{1}{\xi -z_0+z_0-z}=\dfrac{1}{(\xi -z_0)\Big(1-\dfrac{z-z_0}{\xi -z_0}\Big)}\]
+for $z\in D(z_0,r)$. However,
+\[\Big|\dfrac{z-z_0}{\xi -z_0}\Big|<\dfrac{|z-z_0|}{r}<1\]
+so that
+\[\dfrac{1}{\xi -z}=\dfrac{1}{\xi -z_0}\sum ^{\infty }_{n=0}\Big(\dfrac{z-z_0}{\xi -z_0}\Big)^{n}=\sum ^{\infty }_{n=0}\dfrac{(z-z_0)^{n}}{(\xi -z_0)^{n+1}}\]
+Thus
+\[\begin{align*}
+	f(z)=&\dfrac{1}{2\pi i}\int _{C}f(\xi )\sum ^{\infty }_{n=0}\dfrac{(z-z_0)^{n}}{(\xi -z_0)^{n+1}}\,d\xi \\
+	=&\sum ^{\infty }_{n=0}a_{n}(z-z_0)^{n}
+\end{align*}\]
+where
+\[a_{n}=\dfrac{1}{2\pi i}\int _{C}\dfrac{f(\xi )}{(\xi -z_0)^{n+1}}\,d\xi =\dfrac{1}{n!}f^{(n)}(z_0)\]
+Notice that the convergence is uniform for $\xi \in C$.
+\end{recall}
+\vspace{2ex}
+\begin{thm}
+If $f_{n}$ is continuous in $C$ such that $f_{n}\rightarrow f$ uniformly on $C$
+\[\int _{C}f(z)\,dz=\lim _{n\rightarrow \infty }\int _{C}f_{n}(z)\,dz\]
+\end{thm}
+\vspace{2ex}
+\begin{thm}
+If $f(z)=\sum ^{\infty }_{n=0}c_{n}(z-z_0)^{n}$ for $z\in D(z_0,R)$ then for $0<r<R$ we have
+\[\dfrac{1}{2\pi }\int ^{2\pi }_{0}|f(z_0+re^{it})|^2\,dt=\sum ^{\infty }_{n=0}|c_{n}|^2r^{2n}\]
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Take
+	\[f(z_0+re^{it})=\sum ^{\infty }_{n=0}c_{n}r^{n}e^{int }\]
+so that
+\[\begin{align*}
+	\dfrac{1}{2\pi }\int ^{2\pi }_{0}|f(z_0+re^{it})|^2\,dt=&\dfrac{1}{2\pi }\int ^{2\pi }_{0}\sum ^{\infty }_{n=0}c_{n}r^{n}e^{in t}\sum ^{\infty }_{m=0}\bar{c}_{m}r^{m}e^{-imt}\,dt\\
+	=&\sum ^{\infty }_{n=0}\sum ^{\infty }_{m=0}\dfrac{1}{2\pi }\int ^{2\pi }_{0}c_{n}\bar{c}_{m}r^{n+m}e^{i(n-m)t}\,dt\\
+	=&\sum ^{\infty }_{n=0}|c_{n}|^2r^{2n}
+\end{align*}\]
+Here, we note that
+\[\int ^{2\pi }_{0}e^{i(n-m)t}=
+\begin{cases}
+	2\pi &n=m\\
+	0&n\ne m
+\end{cases}
+\]
+\end{proof}
+\vspace{2ex}
+\begin{cor}
+(Liouville theorem) All bounded entire functions are constant. Using this theorem, we can prove the fundamental theorem of algebra.
+\end{cor}
+\vspace{2ex}
+\begin{proof}
+If $f$ is entire such that $|f(z)|\leq M$ for all $z\in {\bm C}$ then 
+\[\sum ^{\infty }_{n=0}|c_{n}|^2r^{2n}\leq M^2\]
+for all $r>0$ which means that $c_1=c_2=\ldots =0$. 
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Identity theorem) Let $D$ be a domain (open and connected) and $\{z_{n}\}$ be a sequence of distinct points in $D$ such that $z_{n}\rightarrow z_0\in D$. If $f$ is analytic in $D$ with $f(z_{n})=0$ for all $n\in {\bm N}$, then $f(z)=0$ for all $z\in D$. 
+\end{thm}
+\vspace{2ex}
+\begin{thm}
+(Maximum modulus theorem) Let $f$ be analytic in a domain $D$. Then, $|f|$ can not have a local maximum in $D$ unless it is constant.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+If 
+\[|f(z_0+re^{it})\leq |f(z_0)|\]
+for all $t\in [0,2\pi ]$, then
+\[\sum _{n=0}^{\infty }|c_{n}|^2r^{2n}\leq |f(0)|^2=|c_0|^2\]
+which means that $c_1=\ldots= c_{n}=0$. Then we can apply the identity theorem.
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Morera's theorem) Morera's theorem can be thought as Cauchy theorem's inverse. If $f$ is continuous in a domain $D$ such that \[\int _{C}f(z)\,dz=0\]
+for all closed contours $C$ in $D$, then $f$ is analytic in $D$ (note that this also means that the integral is path independent).
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+The key point is that for a given $a\in D$, $F(z)=\int ^{z}_{a}f(\xi )\,d\xi $ is well defined. Take any $z_0\in D$. We'll show that $F'(z_0)=f(z_0)$, which means that $f=F'$ is analytic. Take any $\varepsilon >0$. We choose $\delta >0$ so that
+\begin{itemize}
+\item[(i)] $D(z_0,\delta )\subset D$
+\item[(ii)] If $|z-z_0|<\delta $ then $|f(z)-f(z_0)|<\varepsilon $
+\end{itemize}
+We need to prove that if $0<|z-z_0|<\delta $ then 
+\[\Big|\dfrac{F(z)-F(z_0)}{z-z_0}-f(z_0)\Big|<\varepsilon \]
+Take the line segment path $[z_0,z]$ from $z_0$ to $z$. Then
+\[F(z)-F(z_0)=\int _{[z_0,z]}f(\xi )\,d\xi \]
+and
+\[\dfrac{F(z)-F(z_0)}{z-z_0}-f(z_0)=\dfrac{1}{z-z_0}\int _{[z_0,z]}[f(\xi )-f(z_0)]\,d\xi \]
+Notice that now, due to (ii), the term inside the square brackets can be reduced to less than $\varepsilon $ since $|\xi -z_0|<\delta $. Therefore
+\[\Big|\dfrac{F(z)-F(z_0)}{z-z_0}-f(z_0)\Big|<\dfrac{1}{|z-z_0|}|z-z_0|\varepsilon =\varepsilon \]
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+Let $\{f_{n}\}$ be a sequence of analytic functions in a domain $D$ such that $f_{n}\rightarrow f$ uniformly on every compact sbuset of $D$. Then $f$ is analytic on $D$. 
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+On ${\bm R}$, consider
+\[f_{n}(x)=\sum ^{n}_{k=1}\dfrac{\cos 3^{k}x}{2^{k}}\rightarrow f(x)=\sum ^{\infty }_{n=1}\dfrac{\cos 3^{n}x}{2^{n}}\]
+where the convergence is uniform and the right-hand side is nowhere differentiable.
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+First, $f$ is continuous on $D$ since convergence is uniform. Let $C$ be any closed contour in $D$. Then 
+	\[\int _{C}f(z)\,dz=\lim _{n\rightarrow \infty }\int _{C}f_{n}(z)\,dz=0\]
+By Morera's theorem, the proof is complete. 
+\end{proof}
+\vspace{2ex}
+

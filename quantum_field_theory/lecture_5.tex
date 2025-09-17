@@ -1,0 +1,82 @@
+\section{Lecture 5 (September 15th)}
+\begin{defi}
+(Spin-1 Maxwell fields) The Maxwell action is given as
+\[S_{M}=\int d^{4}x\,\underbrace{\Big(-\dfrac{1}{4}F_{\mu \nu }F^{\mu \nu }\Big)}_{\mathcal{L}_{M}}\]
+Note that for a vector field $A_{\mu }(x)$, the field strength is defined as
+\[F_{\mu \nu }=2\partial _{[\mu }A_{\nu ]}=2\Big(\dfrac{\partial _{\mu }A_{\nu }-\partial _{\nu }A_{\mu }}{2!}\Big)\]
+Notice that $S_{M}$ has a certain gauge symmetry, where the following shift leaves the action invariant:
+\[A_{\mu }\rightarrow A_{\mu }+\partial _{\mu }\mathrm{\Lambda }\]
+There are typical choices for $\mathrm{\Lambda }$. Two are the Coulomb ($\nabla \cdot \vec{A}=0$) and the Lorentz gauge ($\partial _{\mu }A^{\mu }=0$). From these, we get the Maxwell's equations (equations of motion)
+\[\begin{align*}
+	0=&\dfrac{\partial \mathcal{L}_{M}}{\partial A_{\mu }}-\partial _{\nu }\Big(\dfrac{\partial \mathcal{L_{M}}}{\partial (\partial _{\nu }A_{\mu })} \Big) \\
+=&-\partial_{\nu }\Big( -\dfrac{1}{2}F^{\rho \sigma }	\dfrac{\partial F_{\rho \sigma }}{\partial (\partial _{\nu }A_{\mu })}\Big)\\
+=&-\partial _{\nu }\Big(-\dfrac{1}{2}F^{\rho \sigma }(\delta ^{\nu }_{\rho }\delta ^{\mu }_{\sigma }-\delta^{\mu }_{\rho }\delta ^{\nu }_{\sigma  })\Big)\\
+=&-\partial _{\nu }(-F^{\nu \mu })
+\end{align*}\]
+From the gauge symmetry, we have the Bianchi identity, $\partial _{[\mu }F_{\nu \rho ]}=0$ which implies the no-magnetic monopole and Faraday's law, and the equation of motion yield the Gauss and Ampere law.
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+We provide the general solution through the plane wave solution, which is obtainable under the Lorentz gauge $\partial _{\mu }A^{\mu }=0$.
+\[A^{r}_{\mu,\vec{p}}(x)=\epsilon ^{r}_{\mu }(\vec{p})e^{ip\cdot x}\]
+where $r\in \{1,2\}$ with $p_{\mu }p^{\mu }=p^{\mu }\epsilon ^{r}_{\mu }(\vec{p})=0$. Observe that 
+\[\partial ^{\mu }A^{r}_{\mu }(x)=ip^{\mu }\epsilon^{r}_{\mu }(\vec{p})e^{ip\cdot x}=0 \]
+From this, we can look at the deriviative of the field strength to conclude that our identity indeed holds.
+\[\partial ^{\mu }F_{\mu \nu }^{r}=\partial ^{\mu }\partial _{\mu }A^{r}_{\nu }-\partial ^{\mu }\partial _{\nu }A^{r}_{\mu }=-p^{\mu }p_{\mu }\epsilon ^{r}_{\mu }(\vec{p})e^{ip\cdot x}=0\]
+\end{prop}
+\vspace{2ex}
+\begin{defi}
+(Polarisation vectors) There are two physical ones, where the Lorentz gauge kills one degree of freedom.
+\[\varepsilon ^{r}_{\mu }(\vec{p})=(\varepsilon _{0}^{r},\vec{\varepsilon }^{r})=\Big(-\dfrac{\vec{p}\cdot \vec{\varepsilon }^{r}}{p^{0}},\vec{\varepsilon }^{r}\Big)\]
+where we have used $p^{\mu }\varepsilon ^{r}_{\mu }(\vec{p})=p^{0}\varepsilon _{0}^{r}+\vec{p}\cdot \vec{\varepsilon }^{r}=0$. There is also the residual gauge from the fact that $\varepsilon ^{r}_{\mu }(\vec{p})\rightarrow \varepsilon ^{r}_{\mu }(\vec{p})+\alpha p_{\mu }$ which kills the other.
+\[\varepsilon ^{r}_{\mu }(\vec{p})=\Big(-\dfrac{\vec{p}\cdot \vec{\varepsilon }^{r}}{p^{0}}-\alpha p^{0},\vec{\varepsilon }^{r}+\alpha \vec{p}\Big)=\Big(0,\vec{\varepsilon }^{r}-\dfrac{\vec{p}\cdot \vec{\varepsilon }^{r}}{(p^{0})^2}\vec{p}\Big)\]
+where $\alpha =-\vec{p}\cdot \vec{\varepsilon }^{r}/(p^{0})^2$. Which implies $(0,\vec{\varepsilon }^{1,2}(\vec{p}))$. We often choose the orthonormal ones,
+\[\vec{\varepsilon }^{r}(\vec{p})\cdot (\vec{\varepsilon }^{s}(\vec{p}))^{*}=\delta ^{rs}\]
+There are two unphysical ones,
+\[\begin{cases}
+\varepsilon ^{0}_{\mu }(\vec{p})=n _{\mu }=(1,0,0,0)\\
+\varepsilon ^{3}_{\mu }(\vec{p})=(0,\hat{p})=\dfrac{p_{\mu }+n_{\mu }(p\cdot n)}{|p_{\mu }+n_{\mu }(p\cdot n)|}
+\end{cases}\]
+These are necessary to describe virtual photons and are useful in analysing quantum electrodynamic scattering processes.
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+The relations between polarisation vectors are as follows
+\[\eta ^{\mu \nu}(\varepsilon ^{r}_{\mu }(\vec{p}))^{*}\varepsilon ^{s}_{\nu }(\vec{p})=\eta ^{rs}\]
+orthonormality and
+\[\sum ^{3}_{r=0}\eta _{rr}\varepsilon ^{r}_{\mu }(\vec{p})\varepsilon _{\nu }^{s}(\vec{p})^{*}=\eta _{\mu \nu }\]
+completeness. The above gives
+\[\sum ^{2}_{r=1}\eta _{rr}\varepsilon ^{r}_{\mu }(\vec{p})(\varepsilon ^{s}_{\nu }(\vec{p}))^{*}=\eta _{\mu \nu }-\dfrac{p_{\mu }p_{\nu }+(p_{\mu }n_{\nu }+p_{\nu }n_{\mu })(p\cdot n)}{(p\cdot n)^2}\]
+\end{thm}
+\vspace{2ex}
+\begin{prop}
+Finally, we have
+\[A_{\mu }(x)=\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^32E_{p}}}\sum ^{2}_{r=1}\Big(a^{r}(\vec{p})\varepsilon ^{r}_{\mu }(\vec{p})e^{ip\cdot x}+a^{r}(\vec{p})^{*}\varepsilon ^{r}_{\mu }(\vec{p})^{*}e^{-p\cdot x}\Big)\]
+and the canonically conjugate fields and Hamiltonian density is 
+\[\pi _{\mu }=\dfrac{\partial \mathcal{L_{M}}}{\partial (\partial _{0}A^{\mu })}=F_{0\mu }\qquad\&\qquad \mathcal{H}_{M}=\pi ^{\mu }\partial _{0}A_{\mu }-\mathcal{L}_{M} \]
+\end{prop}
+\vspace{2ex}
+\begin{thm}
+(Noether's theorem) Conservation laws in classical field theory are given by Noether's theorem. Consider an infinitesimal transformation,
+\[\phi (x)\rightarrow \phi '(x)=\phi (x)=\delta \phi (x)\]
+where $\delta $ is called a continuous symmetry of the action
+\[S[\phi ]=\int d^{4}x\,\mathcal{L}(\phi (x),\partial _{\mu }\phi (x))\]
+The consequence of this is that there is suppose to be a conserved (Noether) current. Directly evaluating $\delta \mathcal{L}$,
+\[\begin{align*}
+	\delta \mathcal{L}=&\dfrac{\partial \mathcal{L}}{\partial \phi }\,\delta \phi +\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )}  \,\partial_{\mu }(\delta \phi )\\
+=&\Big(\dfrac{\partial \mathcal{L}}{\partial \phi }-\partial _{\mu }\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )}  \Big)\,\delta \phi +\partial _{\mu }\Big(\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )} \,\delta \phi \Big)
+\end{align*}\]
+Invariance of the action for a continuous symmetry ($\delta S=0$) is dictated by the condition \[\delta \mathcal{L}=\partial _{\mu }f^{\mu }\]
+where $f^{\mu }\rightarrow 0$ fast enough at infinity. Identifying the above, we have, by defining
+\[j^{\mu }=\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )}\,\delta \phi -f^{\mu } \]
+the following
+\[\partial _{\mu }j^{\mu }=0\]
+on-shell. The Noether current above is conserved on-shell! What is the conserved quantity?
+\[Q=\int d^3\vec{x}\,j^{0}\]
+as
+\[\dfrac{d Q}{d t}=\int d^3x\,\partial _{0}j^{0}=\int d^3\vec{x}\,\nabla \cdot \vec{j}=-\int d\vec{a}\cdot \vec{j}=0 \]
+There are mutliple types of symmetries. (1) Spacetime symmetries are symmetries that involve transformations of spacetime coordinates. There are also (2) internal symmetries, which are symmetries that act on fields but do not affect spacetime symmetries themselves. For these symmetries, we have $U(1)$, $SU(N)$ symmetries and etcetera.
+
+\end{thm}
+\vspace{2ex}
+

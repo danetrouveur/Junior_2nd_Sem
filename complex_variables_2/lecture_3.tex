@@ -1,0 +1,63 @@
+\section{Lecture 3 (September 9th)}
+\begin{thm}
+Let $f$ be analytic on a simply connected domain $D$ such that $f(z)\ne 0$ for any $z\in D$. Then, 
+\begin{itemize}
+	\item[(i)] There is $g$ analytic on $D$ such that $e^{g}=f$ on $D$
+	\item[(ii)] There is $h$ analytic on $D$ such that $h^2=f$ on $D$ (this implies the Riemann mapping theorem)
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+(1) By Cauchy's theorem, the $\int _{C}f(z)\,dz=0$ for every closed contour $C$ in $D$. Thus for a given $z_0\in D$, the integral 
+\[\int ^{z}_{z_0}f(\xi )\,d\xi \]
+is independent of path. Since $f$ has no zero in $D$, $f'/f$ is analytic on $D$. We define $g$ on $D$ by 
+\[g(z)=\int ^{z}_{z_0}\dfrac{f'(\xi )}{f(\xi )}\,d\xi +\mathop{\mathrm{Log}}f(z_0)\]
+Then we'll show that $f(z)=e^{g(z)}$ on $D$. Observe that 
+\[\begin{align*}
+	(fe^{-g})'=&f'e^{-g}+f(e^{-g})'\\
+	=&f'e^{-g}+fe^{-g}\Big(-\dfrac{f'}{f}\Big)\\ 
+	=&f'e^{-g}-f'e^{-g}=0
+\end{align*}\]
+on $D$ and $fe^{-g}=c$ a constant. If we define $h(z)=f(z)e^{-g(z)}$ then 
+\[\begin{align*}
+	h(z_0)=&f(z_0)e^{-g(z_0)}\\
+	=&f(z_0)e^{-\mathrm{Log}\,f(z_0)}\\
+	=&f(z_0)[f(z_0)]^{-1}=1
+\end{align*}\]
+(2) By $(1)$, there exists an analytic $g$ such that $f=e^{g}$ on $D$. If we define $h=e^{g/2}$, then $h$ is analytic on $D$ with $h ^2=f$. 
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Riemann mapping theorem) If $D$ is a simply connected domain in ${\bm C}$ ($D\ne {\bm C}$), then there is a one-to-one analytic function $f$ from $D$ onto $U=\{z\in {\bm C} \,|\, |z|<1\}$ (the unit disk).
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+The proof consists of three steps. Let $\mathrm{\Sigma} $ be a set of all 1-1 analytic functions from $D$ to $U$. 
+\[\mathrm{\Sigma} =\{ f:D\rightarrow U\,/\,f\mathrm{\ is\ 1-1\ analytic} \}\]
+We first prove that
+\begin{itemize}
+	\item[(i)] $\mathrm{\Sigma} =\varnothing$
+	\item[(ii)] That if $\psi \in \mathrm{\Sigma} $ satisfies $\psi (D)\ne U$, then for every $z_0\in D$ there is $\psi _{0}\in \mathrm{\Sigma} $ such that $|\psi '_{0}(z_0)|>|\psi '(z_0)|$, 
+	\item[(iii)] For a given $z_0\in D$  if $\eta _{0}=\sup \{ |\psi '(z_0)|\,|\,\psi \in \mathrm{\Sigma}  \}$ then there is $f\in \mathrm{\Sigma} $ such that $|f'(z_0)|=\eta _{0}$.
+\end{itemize}
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Exhastion of $D$ by compact subsets) Let $D\subset {\bm C}$ be open. Then there is a sequence of compact subsets $K_{n}$ of $D$ such that
+\begin{itemize}
+	\item[(i)] \[K_1\subset K_2\subset \ldots \subset K_{n}\subset D\]
+	\item[(ii)] \[ \bigcup ^{\infty }_{n=1}K_{n}=D\]
+	\item[(iii)] If $K\subset D$ is compact then $K\subset K_{n}$ for some $n\in {\bm N}$
+	\item[(iv)] There is a sequence $\{\delta _{n}\}$ with $\delta _{n}>0$ such that
+		\[\bar{D}(z,2\delta _{n})\subset K_{n+1}\] for each $z\in K_{n}$
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Define 
+\[K_{n}=\Big\{z\in {\bm C} \,|\, |z|\leq n\Big\}\cap \Big\{z\in {\bm C} \,|\,d(z,D^{c})\geq \dfrac{1}{n} \Big\}\]
+\[G_{n}=\Big\{|z|<n \Big\}\cap \Big\{d(z,D^{c})>\dfrac{1}{n}\Big\}\]
+and $\Bigcup G_{n}=D$ by the Archimeidan property.
+\end{proof}
+\vspace{2ex}
+

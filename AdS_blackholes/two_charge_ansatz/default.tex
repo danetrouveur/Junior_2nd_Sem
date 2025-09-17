@@ -1,0 +1,220 @@
+\input{preamble}
+\usepackage{cancel}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes}
+\usepackage{titlesec}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[]
+
+\title{}
+\author{Dane Jeon}
+\affiliation{Sogang University,\\
+35 Baekbeom-ro, Mapo-gu, Seoul 04107, Republic of Korea}
+\emailAdd{danetrouveur@gmail.com}
+\abstract{}
+
+\begin{document}
+
+\section{Pairwise Equal Charge Solution in Kerr-Schild Form}
+ After failing to express the 2-charge pairwise equal charge solution in the ansatz structure from Wu, we attempt to express the pairwise equal charge solution in a Kerr-Schild-like form. That is, we attempt to express the metric in the form
+\[ds^2=d\bar{s}^2+\dfrac{2m}{U}(k_{\mu}\,dx^{\mu })^2\tag{1}\]
+where $d\bar{s}^2$ is a AdS$_{4}$ background metric we expect from the massless limit and the 1-form $k_{\mu }$ is linear to the electric gauge potentials.
+\newline
+\newline
+The logic we follow in this section is quite straight forward -- alike how Wu has sought the Cvetic-Youm solutions, I look at the $g= 0$ limit to obtain the appropriate coordinate transformation. 
+\newline
+
+\begin{prop}
+	Upon the following reparametrisation of the ungauged metric ($g=0$) with charge
+	\[{R^2=(r+2ms_1^2)(r+2ms_2^2)}\tag{2}\]
+	we arrive at the following form (the new coordinate $R$ is simply written as $r$)
+\[
+\begin{align*}
+	ds^2=&-dt^2+(r^2+a^2\cos ^2\theta )\Big(\dfrac{dr^2}{\mathrm{\Delta }_{r}}+d\theta ^2\Big)+(a^2+r^2)\sin ^2\theta \,d\phi ^2\\
+	&+\dfrac{2mU}{r^2+a^2\cos ^2\theta }(dt-a\sin ^2\theta \,d\phi )^2
+\end{align*}
+	\tag{3}
+\]
+with
+\[
+\begin{align*}
+	\mathrm{\Delta }_{r}=&(r^2+m^2(s_1^2-s_2^2)^2)\Big[a^2+r^2-2mU\Big]/r^2\\U=&(1+s_1^2+s_2^2)\sqrt{r^2+m^2(s_1^2-s_2^2)^2}-m[s_1^2(1+s_1^2)+s_2^2(1+s_2^2)]	
+\end{align*}
+	\tag{4}
+\]
+The metric shows similaries with that of the ungauged, uncharged Wu form:
+\[
+\begin{align*}
+	ds^2=	&-dt^2+(r^2+a^2\cos ^2\theta )\Big(\dfrac{dr^2}{r^2+a^2-2mr}+\,d\theta ^2\Big)+(a^2+r^2)\sin ^2\theta \,d\phi ^2\\&+\dfrac{2mr}{r^2+a^2\cos ^2\theta }(dt-a\sin ^2\theta \,d\phi )^2
+\end{align*}
+	\tag{5}
+\]
+
+\end{prop}
+\vspace{2ex}
+\begin{prop}
+In the case of the gauged case ($g\ne 0$), the result is similar. Upon the same reparametrisation, we arrive at
+\[
+\begin{align*}
+	ds^2=&-\dfrac{(1+g^2r^2)(1-a^2g^2\cos ^2\theta )}{1-a^2g^2}\,dt^2\\&+(r^2+a^2\cos ^2\theta )\Big(\dfrac{dr^2}{\mathrm{\Delta }_{r}}+\dfrac{d\theta ^2}{1-a^2g^2\cos ^2\theta }\Big)\\&+\dfrac{r^2+a^2}{1-a^2g^2}\sin ^2\theta \,d\phi ^2+\dfrac{2mU}{r^2+a^2\cos ^2\theta }\Big(\dfrac{1-a^2g^2\cos ^2\theta }{1-a^2g^2}\,dt-\dfrac{a}{1-a^2g^2}\sin ^2\theta \,d\phi \Big)^2
+\end{align*}
+	\tag{6}
+\]
+with
+\[
+\begin{align*}
+	\mathrm{\Delta }_{r}=(r^2+m^2(s_1^2-s_2^2)^2)\Big[(r^2+a^2)(1+g^2r^2)-2mU\Big]/r^2
+\end{align*}
+	\tag{7}
+\]
+and the same $U$ defined above. This again shows a resemblance to the gauged but uncharged solution:
+\[
+\begin{align*}
+	ds^2=&-\dfrac{(1+g^2r^2)(1-a^2g^2\cos ^2\theta )}{1-a^2g^2}\,dt^2\\&+(r^2+a^2\cos ^2\theta )\Big(\dfrac{dr^2}{(r^2+a^2)(1+g^2r^2)-2mr}+\dfrac{d\theta ^2}{1-a^2g^2\cos ^2\theta }\Big)\\
+	&+\dfrac{r^2+a^2}{1-a^2g^2}\sin ^2\theta \,d\phi ^2+\dfrac{2mr}{r^2+a^2\cos ^2\theta }\Big(\dfrac{1-a^2g^2\cos ^2\theta }{1-a^2g^2}\,dt-\dfrac{a}{1-a^2g^2}\sin ^2\theta \,d\phi \Big)^2
+\end{align*}
+	\tag{8}
+\]
+\end{prop}
+\vspace{2ex}
+
+\section{Convention Matching}
+With the two independent charge solution perfectly fitting into the Wu form, we now attempt to fit the four charge ungauged case into the Wu form. For this to be properly set up, we first need to match conventions. Using the duality transformation 
+\[\begin{cases}
+	F^{2}=e^{-\varphi _1+\varphi _2-\varphi _3}\star(\tilde{\mathcal{F}}_{2}+\chi_3e^{2\varphi _3}\mathcal{F}^{1})-\chi_1(\tilde{\mathcal{F}}_{3}+\chi_3F^{4})\\
+	F^{3}=e^{-\varphi _1-\varphi _2+\varphi _3}\star(\tilde{\mathcal{F}}_{3}+\chi_2e^{2\varphi _2}\mathcal{F}^{1})-\chi_1(\tilde{\mathcal{F}}_{2}+\chi_2F^{4})
+\end{cases}\]
+\section{Coefficient Determination Algorithm}
+At the current stage of the project, there is a need for the determining the coefficients of the gauge-linear terms. In this section, I suggest that the method of achieving this is by preforming a Taylor series expansion in terms of the charges. Here, we consider the following examples (all of which were proven to be in the Wu form). Ultimately, we will want to apply this logic to the four charge ungauged solution.
+\begin{itemize}
+	\item[(i)] Three charge AdS$_5$ solution
+	\item[(ii)] Two charge AdS$_4$ solution
+\end{itemize}
+\begin{ex}
+(Two charge AdS$_4$) We first present the explicit form of the solution and the gauge fields.
+\[\begin{align*}
+	ds^2=(H_1H_2)^{1/2}\Big[&-dt^2+\mathrm{\mathrm{\Sigma} }\Big(\dfrac{dr^2}{r^2+a^2-2mr}+d\theta ^2\Big)+(r^2+a^2)\sin ^2\theta \,d\phi ^2\\
+	&+\dfrac{s_1^2}{(s_1^2-s_2^2)}\Big(\dfrac{1}{1-1/H_1}\Big)A_1^2+\dfrac{s_2^2}{(s_2^2-s_1^2)}\Big(\dfrac{1}{1-1/H_2}\Big)A_2^2\Big]
+\end{align*}\]
+Meanwhile, the gauge fields are given as
+\[A_{i}=\Big(1-\dfrac{1}{H_i}\Big)\Big(\dfrac{c_i}{s_{i}}\,dt-\dfrac{c_1c_2}{s_{i}c_{i}}a\sin ^2\theta \,d\phi \Big)\]
+where
+\[\begin{align*}
+	H_{i}=&1+\dfrac{2mrs_{i}^2}{\mathrm{\Sigma} }&c_{i}=&\sqrt{1+s_{i}^2}
+\end{align*}\]
+Preforming a Taylor expansion of the terms inside the warp factor with respect to $s_2$ we find (up to $O(s_2^4)$ terms and subtracting the pure AdS terms)
+
+\[\begin{cases}
+	O(0):&\dfrac{1}{s_1^2}\Big(1-\dfrac{1}{H_1}\Big)(c_1dt-c_2a\sin ^2\theta\,d\phi )^2\\
+	O(s_2^2):&\dfrac{1}{s_1^{4}}\Big(1-\dfrac{1}{H_1}\Big)(c_1\,dt-c_2a\sin ^2\theta \,d\phi )^2-\dfrac{2mr}{\mathrm{\Sigma} s_1^2}(c_2\,dt-c_1a\sin ^2\theta \,d\phi )^2\\
+\end{cases}\]
+
+Doing the same for $s_1$, 
+
+\[\begin{cases}
+	O(0):&\dfrac{1}{s_2^2}\Big(1-\dfrac{1}{H_2}\Big)(c_2dt-c_1a\sin ^2\theta\,d\phi )^2\\
+	O(s_1^2):&\dfrac{1}{s_2^{4}}\Big(1-\dfrac{1}{H_2}\Big)(c_2\,dt-c_1a\sin ^2\theta \,d\phi )^2-\dfrac{2mr}{\mathrm{\Sigma} s_2^2}(c_1\,dt-c_2a\sin ^2\theta \,d\phi )^2\\
+\end{cases}\]
+
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Three charge AdS$_5$ solution) We first present the explicit form of the solution and the gauge fields.
+\[\begin{align*}
+	ds^2=(H_1H_2H_3)^{1/3}\Big[&-dt^2+\mathrm{\Sigma} \Big(\dfrac{r^2\,dr^2}{(r^2+a^2)(r^2+b^2)-2mr}+d\theta ^2\Big)+(r^2+a^2)\sin ^2\theta \,d\phi ^2\\
+	&+(r^2+b^2)\cos ^2\theta \,d\psi ^2+\dfrac{s_1^2}{(s_1^2-s_2^2)(s_1^2-s_3^2)}\Big(\dfrac{\mathrm{\Sigma} H_1}{2m}\Big)A_1^2\\
+	&+\dfrac{s_2^2}{(s_2^2-s_1^2)(s_2^2-s_3^2)}\Big(\dfrac{\mathrm{\Sigma} H_2}{2m}\Big)A_2^2+\dfrac{s_3}{(s_3^2-s_1^2)(s_3^2-s_2^2)}\Big(\dfrac{\mathrm{\Sigma} H_3}{2m}\Big)A_3^2\Big]
+\end{align*}\]
+Meanwhile, the guage fields are given as 
+\[A_{i}=\dfrac{2m}{\mathrm{\Sigma} H_{i}}\Big[\dfrac{s_{i}c_1c_2c_3}{c_{i}}\Big(\dfrac{c_{i}^2}{c_1c_2c_3}dt-a\sin ^2\theta \,d\phi -b\cos ^2\theta \,d\psi \Big)+\dfrac{c_{i}s_1s_2s_3}{s_{i}}\Big(b\sin ^2\theta \,d\phi +a\cos ^2\theta\, d\psi \Big)\Big]\]
+where
+\[\begin{align*}
+	H_{i}=&1+\dfrac{2ms_{i}^2}{\mathrm{\Sigma} }&c_{i}=&\sqrt{1+s_{i}^2}
+\end{align*}\]
+Preforming a Taylor expansion of the terms inside the warp factor with respect to $(s_2,s_3)$ we find (up to $O(s_2^{4},s_3^{4})$ terms and subtracting the pure AdS terms)
+
+\[\begin{align*}
+	O(0):\dfrac{2m}{\mathrm{\Sigma} }\Big[&\dfrac{1}{H_1}\dfrac{1}{s_1^2}\Big(c_1\,dt-\dfrac{c_1c_2c_3}{c_1}(a\sin ^2\theta \,d\phi +b\cos ^2\theta \,d\psi )\Big)^2+\\ &c_2^2(b\sin ^2\theta \,d\phi +a\cos ^2\theta \,d\psi )^2+c_3^2(b\sin ^2\theta \,d\phi +a\cos ^2\theta \,d\psi )^2\Big]
+\end{align*}\]
+
+Doing the same for $(s_1,s_3)$,
+
+\[\begin{align*}
+O(0):\dfrac{2m}{\mathrm{\Sigma} }\Big[&\dfrac{1}{H_2}\dfrac{1}{s_2^2}\Big(c_2\,dt-\dfrac{c_1c_2c_3}{c_2}(a\sin ^2\theta \,d\phi +b\cos ^2\theta \,d\psi )\Big)^2+\\ &c_1^2(b\sin ^2\theta \,d\phi +a\cos ^2\theta \,d\psi )^2+c_3^2(b\sin ^2\theta \,d\phi +a\cos ^2\theta \,d\psi )^2\Big]
+\end{align*}\]
+
+Doing the same for $(s_1,s_2)$,
+
+\[\begin{align*}
+O(0):\dfrac{2m}{\mathrm{\Sigma} }\Big[&\dfrac{1}{H_3}\dfrac{1}{s_3^2}\Big(c_3\,dt-\dfrac{c_1c_2c_3}{c_3}(a\sin ^2\theta \,d\phi +b\cos ^2\theta \,d\psi )\Big)^2+\\ &c_1^2(b\sin ^2\theta \,d\phi +a\cos ^2\theta \,d\psi )^2+c_2^2(b\sin ^2\theta \,d\phi +a\cos ^2\theta \,d\psi )^2\Big]
+\end{align*}\]
+
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Four charge AdS$_4$ solution) 
+We first present the explicit form of the solution and the gauge fields,
+\[\begin{align*}
+	ds^2=\dfrac{W}{\mathrm{\Sigma} }\Big[&-\dfrac{\mathrm{\Sigma} (r^2+a^2\cos ^2\theta -2mr)}{W^2}\Big(dt+\dfrac{2ma\sin ^2\theta (rc_1c_2c_3c_4-(r-2m)s_1s_2s_3s_4)}{r^2+a^2\cos ^2\theta -2mr}\,d\phi \Big)^2\\
+	&+\mathrm{\Sigma} \Big(\dfrac{dr^2}{r^2+a^2-2mr}+d\theta ^2+\dfrac{r^2+a^2-2mr}{r^2+a^2\cos ^2\theta -2mr}\sin ^2\theta \,d\phi ^2\Big)\Big]
+\end{align*}\]
+Meanwhile, the gauge fields are given as
+\[\begin{align*}
+	A_i=\dfrac{2m}{aW^2}\Big[&(\dfrac{r_1r_2r_3r_4}{r_{i}}+ru^2)[c_is_ia\,dt-(a^2-u^2)(\dfrac{c_1c_2c_3c_4}{c_{i}}s_i-\dfrac{s_1s_2s_3s_4}{s_{i}}c_{i})\,d\phi ]\\
+	&+2mu^2[e_ia\,dt-(a^2-u^2)\dfrac{s_1s_2s_3s_4}{s_{i}}c_i\,d\phi ]\Big]
+\end{align*}\]
+where
+	\[e_{i}=\dfrac{c_1c_2c_3c_4s_1s_2s_3s_4}{c_{i}s_{i}}(c_{i}^2+s_{i}^2)-c_{i}s_{i}\Big(\sum _{\substack{j<k\\j,k\ne i}}s_{j}^2s_{k}^2+\dfrac{2s_1^2s_2^2s_3^2s_4^2}{s_{i}^2}\Big)\]
+and
+\[\begin{align*}
+	H_{i}=&1+\dfrac{2mrs_{i}^2}{\mathrm{\Sigma} }
+	\quad
+	c_{i}=\sqrt{1+s_{i}^2}
+	\quad
+	r_{i}=r+2ms_{i}^2\\
+	W^{2}=&(r_1r_2+u^2)(r_3r_4+u^2)-4mu^2(s_1s_2c_3c_4-c_1c_2s_3s_4)^2
+\end{align*}\]
+Preforming a Taylor expansion of the terms inside the warp factor with respect to $(s_2,s_3,s_4)$ we find (up to $O(s_2^{4},s_3^{4},s_4^{2})$ terms and subtracting the pure AdS terms)
+
+\[\begin{align*}
+	O(0):&-\dfrac{\mathrm{\Sigma} (r^2+a^2\cos ^2\theta -2mr)}{(r_1r+u^2)(r^2+u^2)}\Big(dt+\dfrac{2mrc_1a\sin ^2\theta}{r^2+a^2\cos ^2\theta -2mr}\,d\phi \Big)^2\\
+	&+\mathrm{\Sigma} \Big(\dfrac{dr^2}{r^2+a^2-2mr}+d\theta ^2+\dfrac{r^2+a^2-2mr}{r^2+a^2\cos ^2\theta -2mr}\sin ^2\theta \,d\phi ^2\Big)
+\end{align*}\]
+
+
+Doing the same for $(s_1,s_3,s_4)$,
+
+\[\begin{align*}
+	O(0):&-\dfrac{\mathrm{\Sigma} (r^2+a^2\cos ^2\theta -2mr)}{(r_2r+u^2)(r^2+u^2)}\Big(dt+\dfrac{2mrc_2a\sin ^2\theta}{r^2+a^2\cos ^2\theta -2mr}\,d\phi \Big)^2\\
+	&+\mathrm{\Sigma} \Big(\dfrac{dr^2}{r^2+a^2-2mr}+d\theta ^2+\dfrac{r^2+a^2-2mr}{r^2+a^2\cos ^2\theta -2mr}\sin ^2\theta \,d\phi ^2\Big)
+\end{align*}\]
+
+Doing the same for $(s_1,s_2,s_4)$,
+
+\[\begin{align*}
+	O(0):&-\dfrac{\mathrm{\Sigma} (r^2+a^2\cos ^2\theta -2mr)}{(r_3r+u^2)(r^2+u^2)}\Big(dt+\dfrac{2mrc_3a\sin ^2\theta}{r^2+a^2\cos ^2\theta -2mr}\,d\phi \Big)^2\\
+	&+\mathrm{\Sigma} \Big(\dfrac{dr^2}{r^2+a^2-2mr}+d\theta ^2+\dfrac{r^2+a^2-2mr}{r^2+a^2\cos ^2\theta -2mr}\sin ^2\theta \,d\phi ^2\Big)
+\end{align*}\]
+
+Doing the same for $(s_2,s_3,s_4)$,
+
+\[\begin{align*}
+	O(0):&-\dfrac{\mathrm{\Sigma} (r^2+a^2\cos ^2\theta -2mr)}{(r_4r+u^2)(r^2+u^2)}\Big(dt+\dfrac{2mrc_4a\sin ^2\theta}{r^2+a^2\cos ^2\theta -2mr}\,d\phi \Big)^2\\
+	&+\mathrm{\Sigma} \Big(\dfrac{dr^2}{r^2+a^2-2mr}+d\theta ^2+\dfrac{r^2+a^2-2mr}{r^2+a^2\cos ^2\theta -2mr}\sin ^2\theta \,d\phi ^2\Big)
+\end{align*}\]
+Simplifying the first expression we found and subtracting the pure AdS part, we find
+\[\begin{align*}
+	\dfrac{2mr}{\mathrm{\Sigma} H_1}(c_1\,dt-a\sin ^2\theta \,d\phi )^2
+\end{align*}\]
+Meanwhile, we expect
+\[\begin{align*}
+\dfrac{2mr}{\mathrm{\Sigma} H_1}\dfrac{1}{s_1^2}\Big(c_1\,dt-c_2c_3c_4a\sin ^2\theta \,d\phi \Big)^2
+\end{align*}\]
+Letting us consider a coordinate transformation like
+\[t\rightarrow \dfrac{1}{s_1s_2s_3s_4}\,t\qquad \& \qquad \phi \rightarrow c_1c_2c_3c_4\,\phi \]
+
+\end{ex}
+\vspace{2ex}
+
+
+\end{document}

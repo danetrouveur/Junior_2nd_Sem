@@ -1,0 +1,62 @@
+\section{Lecture 1 (September 2nd)}
+\begin{defi}
+(Contour integral) Let $C$ be a contour parametrised by $z=z(t)$ where $a\leq t\leq b$. Also, let $f$ be continuous on $C$. Then, the contour integral of $f$ is defined as
+\[\int _{C}f(z)\,dz=\int _{C}u\,dx-v\,dy+i\int _{C}u\,dy+v\,dx\]
+and also, through parametrisation, we have
+\[\int _{C}f(z)\,dz=\int ^{b}_{a}f(z(t))z'(t)\,dt\]
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Derivative) The derivative of a complex function is defined as
+\[f'(z_0)=\lim _{z\rightarrow z_0}\dfrac{f(z)-f(z_0)}{z-z_0}\]
+if it exists. If $f$ is $C^{1}$ (the function is continuous up its first derivatives) and $u_{x}=v_{y}$ \& $v_{x}=-u_{y}$, then $f'(z)$ exists. 
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Green's theorem) Let $P$ and $Q$ be a $C^{1}$ function on $\bar{D}$ where $D$ is a simply connnected bounded region whose boundary is $C$. Then,
+\[\int _{C}P\,dx+Q\,dy=\iint_{D}\Big(\dfrac{\partial Q}{\partial x}-\dfrac{\partial P}{\partial y}\Big)\,dxdy\]
+where $C$ is oriented in the positive sense. Here,
+\[\int _{C}P\,dx=-\iint_{D} \dfrac{\partial  Q}{\partial y}\,dydx \]
+and
+\[\int _{C}Q\,dy=\iint_{D}\dfrac{\partial Q}{\partial x}\,dxdy \]
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Notice that for a parametrised simple disc where the above is $y=g_2(x)$ and $y=g_1(x)$ on the bottom,
+\[\int _{C}P\,dx=\int _{a}^{b}P(x,g_1(x))\,dx-\int ^{b}_{a}P(x,g_{2}(x))\,dx\]
+and
+\[\iint_{D}\dfrac{\partial P}{\partial y}\,dydx=\int ^{b}_{a}\int ^{g_{2}(x)}_{g_{1}(x)}\dfrac{\partial P}{\partial y}\,dydx=\int ^{b}_{a}\Big[P(x,g_2(x))-P(x,g_1(x))\Big]\,dx  \]
+Similarly,
+\[\int _{D}Q\,dy=\int _{c}^{d}Q(y,h_2(x))\,dy-\int _{c}^{d}Q(h_1(y),y)\,dy\]
+and
+\[\iint \dfrac{\partial Q}{\partial x}\,dxdy=\int ^{d}_{c}\int_{c}^{d}\int ^{h_2(y)}_{h_1(y)}\dfrac{\partial Q}{\partial x}\,dxdy= \Big[Q(h_2(y),y)-Q(h_1(y),y)\Big]\,dy \]
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Cauchy's theorem) If $f$ is a analytic (differentiable) inside and on a bounded simply connected domain $D$ whose boundary is $C$ and $f\in C^{1}(\bar{D})$ then 
+\[\int _{C}f(z)\,dz=0\]
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Let $f=u+iv$. Then $u_{x}=v_{y}$ and $v_{x}=-u_{y}$ on $D$. Thus 
+\[\int _{C}f(z)\,dz=\int _{C}u\,dx-v\,dy+i\Big[\int _{C}u\,dy+v\,dx\Big]\]
+where 
+\[\int _{C}u\,dx-v\,dy=\iint_{D}\Big(-\dfrac{\partial v}{\partial x}-\dfrac{\partial u}{\partial y}\Big)\,dxdy\]
+and
+\[\int _{C}u\,dy+v\,dx=\iint_{D}\Big(\dfrac{\partial v}{\partial x}-\dfrac{\partial u}{\partial y}\Big)\,dxdy\]
+notice how the terms in the large brackets vanish, and that the integral itself equals zero.
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Generalised Cauchy's Theorem) If $f\in C^{1}(\bar{D})$ is analytic in a bounded multiply connected domain $D$ with finitely many holes inside, then 
+\[\int _{\partial D}f(z)\,dz=0\]
+where $\partial D$ is a positively oriented boundary of $D$.
+\end{thm}
+\vspace{2ex}
+\begin{thm}
+(Cauchy Integral Formula) If $f$ is analytic inside and on a POSCC $C$ then for every $z_0$ inside $C$ we have 
+\[f(z_0)=\dfrac{1}{2\pi i}\int _{C}\dfrac{f(z)}{z-z_0}\,dz\]
+
+\end{thm}
+\vspace{2ex}
+

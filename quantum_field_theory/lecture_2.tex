@@ -1,0 +1,111 @@
+\section{Lecture 2 (September 3rd)}
+\begin{recall}
+We have learned the Lorentz algebra that satisfies the commutator relations
+	\[[M^{\mu \nu },M^{\rho \sigma }]=i\Big(\eta ^{\mu \rho }M^{\nu \sigma }+\eta ^{\nu \sigma }M^{\mu \rho }-\eta^{\mu \sigma }M^{\nu \rho }-\eta ^{\nu \rho }M^{\mu \sigma }\Big)\]
+where
+\[\mathrm{\Lambda }=\exp \Big[\dfrac{i}{2}\alpha _{\mu \nu }M^{\mu \nu }\Big]\]
+\end{recall}
+\vspace{2ex}
+\begin{prop}
+(Irreducible representation of the Lorentz algebra) We now want seek to find a specific representation of the Lorentz algebra, suitable for distinguishing how different particles are acted by them. First, we find the individual components of the matrix to be denoted by
+\[\begin{align*}
+	J^{i}&=\dfrac{1}{2}\epsilon ^{ijk}M^{jk}\; &\; K^{i}&=M^{0i}
+\end{align*}\]
+The Lie algebra becomes 
+\[\begin{align*}
+	[J^{i},J^{j}]=&i\epsilon^{ijk}J^{k}\;&\; 
+	[J^{i},K^{j}]=&i\epsilon ^{ijk}K^{k}\;&\;
+	[K^{i},K^{j}]=&-i\epsilon^{ijk}J^{k} 
+\end{align*}\]
+From here, we can complexify the Lorentz algebra and express
+\[J^{\pm i}=\dfrac{1}{2}(J^{i}\pm iK^{i})\]
+What about the commutator relations?
+\[\begin{align*}
+	[J^{\pm i},J^{\pm j}]=&i\epsilon ^{ijk}J^{k}\;&\;[J^{\pm i},J^{\mp j}]=&0
+\end{align*}\]
+Note that through this complexification process, we are essentially expressing the Lorentz algebra, the tangent space of the Lorentz group at $e$, through the real $\mathfrak{su}(2)$ component and an imaginary $\mathfrak{su}(2)$ component given the homomorphism 
+\[\mathfrak{so}(1,3)\simeq \mathfrak{su}(2)\oplus \mathfrak{su}(2)\]	
+With all the information above, we can simply write the general Lorentz transformation through the parameters
+\[\begin{align*}
+	\vec{\alpha }=&(\alpha_{23},\alpha _{31},\alpha _{12})&\vec{\beta }=&(\alpha _{01},\alpha _{02},\alpha _{03})
+\end{align*}\]
+where
+	\[\mathrm{\Lambda }=\exp \Big[\dfrac{i}{2}\alpha _{\mu \nu }M^{\mu \nu }\Big]=\exp \Big[i\vec{\alpha }\cdot \vec{J}+i\vec{\beta }\cdot \vec{K}\Big]=\exp \Big[i(\vec{\alpha }-i\vec{\beta })\cdot \vec{J}^{+}\Big]\exp \Big[i(\vec{\alpha }+i\vec{\beta })\cdot \vec{J}^{-}\Big]\]
+\end{prop}
+\vspace{2ex}
+\begin{defi}
+($(j_{+},j_{-})$-representation of the Lorentz transform) Note that by definition, a representation of a Lorentz algebra is a Lie algebra homomorphism
+\[\phi :\mathfrak{so}(3,1)_{{\bm C}}\rightarrow \mathop{\mathrm{End}}(V)\]
+where $V$ is the representation space. Note that a Lie algebra homomorphism is a map between two Lie algebras that respects both the vector space structure and the bracket.
+\[\phi ([X,Y])=[\phi (X),\phi (Y)]\]
+We now create these target vector spaces using ladder operators. We now define a $(j_{+},j_{-})$ representation space of the Lorentz transformations to be the vector space with the basis
+\[\{m_{+},m_{-} \,|\, m_{\pm}=-j_{\pm},-j_{\pm}+1,\ldots ,j_{\pm}\}\]
+(here, $j_{\pm}\in {\bm Z}_{\geq 0}/2$) constructed through the ladder operators
+\[J^{+}_{\pm}=J^{+1}\pm iJ^{+2}\qquad J^{-}_{\pm}=J^{-1}\pm iJ^{-2}\]
+satisfying 
+\[J^{+}_{\pm}|m_{+},m_{-}\rangle \sim |m_{+}\pm 1,m_{-}\rangle \qquad J^{-}_{\pm}|m_{+},m_{-}\rangle \sim  |m_{+},m_{-}\pm 1\rangle \]
+We would also have
+	\[\sum _{i=1}^{3}(J^{\pm})^2|m_{+},m_{-}\rangle =j_{\pm}(j_{\pm}+1)|m_{+},m_{-}\rangle \]
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+(1D (0,0)-representation as spin-0 scalars) We see that for this representation, all Lorentz transforms are of the form
+\[\mathrm{\Lambda }|_{(0,0)}={\bf 1}\]
+and that the vector space elements $|0,0\rangle =\phi(x)$ transform as
+\[\phi '(x')=\mathrm{\Lambda }|_{(0,0)}\phi (x)=\phi (x)\]	
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(2D (1/2,0)-representation as spin-1/2 left-chiral spinors) We see that for this representation, all Lorentz transforms are of the form
+	\[\mathrm{\Lambda }|_{(1/2,0)}=\exp \Big[i(\vec{\alpha }-i\vec{\beta }\cdot \vec{J}^{+})\Big]\]
+As we are dealing with a 2D complex vector space, an arbitrary transformation is a linear combination of the Pauli matrices, and in matrix notation,
+	\[l_{+}=\exp \Big[i(\vec{\alpha }-i\vec{\beta })\cdot \dfrac{\vec{\sigma }}{2}\Big]\]
+	and vector space elements $|\pm j,0\rangle =\psi _{+}(x)$ transform as
+	\[\psi '_{+}(x')=\mathrm{\Lambda }|_{(1/2,0)}\psi _{+}(x)=l_{+}\psi _{+}(x)\]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(2D (0,1/2)-representation as spin-1/2 right-chiral spinors) We see that for this representation, all Lorentz transforms are of the form
+	\[\mathrm{\Lambda }|_{(0,1/2)}=\exp \Big[i(\vec{\alpha }-i\vec{\beta }\cdot \vec{J}^{-})\Big]\]
+As we are dealing with a 2D complex vector space, an arbitrary transformation is a linear combination of the Pauli matrices, and in matrix notation,
+	\[l_{-}=\exp \Big[i(\vec{\alpha }-i\vec{\beta })\cdot \dfrac{\vec{\sigma }}{2}\Big]\]
+	and vector space elements $|0,\pm J\rangle =\psi _{-}(x)$ transform as
+	\[\psi '_{-}(x')=\mathrm{\Lambda }|_{(0,1/2)}\psi _{-}(x)=l_{-}\psi _{-}(x)\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Chirality and helicity) We call a vector left-chiral or right-chiral based on which $SU(2)$ factor of the Lorentz group it transforms by. Helicity is a property of fields.
+\end{defi}
+\vspace{2ex}
+\begin{lem}
+We find that
+\begin{itemize}
+	\item[(i)] Choosing how the left-chiral spinors transform automatically dictate how the right-chiral spinors transform, as
+		\[(\vec{J}^{\pm})^{\dagger}=\vec{J}^{\mp}\]
+	\item[(ii)] The map between left and right-chiral spinors manifest through the fact that
+		\[(l_{\pm})^{\dagger}=(l_{\mp})^{-1}\qquad\&\qquad (l_{\pm})^{*}=\sigma _{2}l_{\mp}\sigma _{2}\]
+as $SU(2)$ elements. We see that
+\[\sigma_2\psi '_{\pm}(x')^{*}=l_{\mp}\sigma _{2}\psi _{\pm}(x)^{*}\]
+Therefore, conjugation is the exact map between left and right-chiral spinors.
+\end{itemize}
+\end{lem}
+\vspace{2ex}
+
+\begin{defi}
+(Invariant tensors) We define
+\[\begin{cases}
+	\sigma ^{\mu }=(I_2,\vec{\sigma })\\
+	\bar{\sigma }^{\mu }=(I_2,-\vec{ \sigma }) 
+\end{cases}\]
+which leads
+\[\begin{cases}
+	(l_{-})^{+}\sigma ^{\mu }l_{-}=\mathrm{\Lambda }^{\mu }{}_{\nu }\sigma ^{\nu }\\
+	(l_{+})^{+}\bar{\sigma }^{\mu }l_{+}=\mathrm{\Lambda }^{\mu }{}_{\nu }\bar{\sigma }^{\nu }
+\end{cases}\]
+	Therefore the Lorentz generators for the $\{(1/2,0),(0,1/2)\}$ representations in terms of $\sigma ^{\mu }$ and $\bar{\sigma }^{\mu }$ can be expressed as
+\[\begin{cases}
+	(\dfrac{1}{2},0):M^{0i}=-\dfrac{i}{2}\sigma ^{i},M^{ij}=\dfrac{1}{2}\varepsilon ^{ijk}\sigma ^{k}
+\end{cases}\]
+\end{defi}
+\vspace{2ex}
+

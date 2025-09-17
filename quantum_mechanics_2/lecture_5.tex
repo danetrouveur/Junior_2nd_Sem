@@ -1,0 +1,59 @@
+\section{Lecture 5 (September 15th)}
+\begin{defi}
+(Degenerate pertubation theory) Notice that multiple states occupy the same energy level for the hydrogen atom with a Coulomb potential ($e^2/r$). Contrarily from the previous case where we saw one ket per energy level, we will try to see what happens when we deal with Hilbert spaces with multiple states per energy level. The state space with identical energy levels can be expressed as (via projection)
+\[P_{0}=\sum _{D}|l_{0}\rangle \langle l_{0}|\]
+where $D$ is a degenerate subspace. The identity can thus be written as
+\[{\bf 1}=P_0+P_1\]
+Obviously,
+\[\hat{H}_{0}P_0=\hat{H}_{0}\sum _{l}|l_{0}\rangle \langle l_{0}|=E_{D}^{(0)}P_0\]
+and
+\[P_0\hat{H}_{0}=\sum _{l}|l_0\rangle \langle l_0|\hat{H}_{0}=E_{D}^{(0)}P_0\]
+and the two operators commute. We ultimately want to solve
+\[\hat{H}|l\rangle =(\hat{H}_{0}+\lambda \hat{V})|l\rangle =E|l\rangle \]
+we state that it can be expressed as
+\[|l\rangle =P_0|l\rangle +P_{1}|l\rangle \]
+Applying the Hamiltonian, we expect
+\[(\hat{H}_{0}+\lambda \hat{V})(P_0|l\rangle+P_1|l\rangle )=E(P_0|l\rangle )+E(P_1|l\rangle ) \]
+Applying once more the projection operator $P_0$,
+\[(E_{D}^{(0)}+P_{0}\lambda \hat{V}P_0)P_0|l\rangle+P_0\lambda \hat{V}P_1|l\rangle=EP_0|l\rangle \]
+we can of course subtract the most-left term and arrive at
+\[(P_0\lambda \hat{V}P_0)P_0|l\rangle +P_0\lambda \hat{V}P_1|l\rangle =(E-E^{(0)}_{D})P_{D}|l\rangle \]
+where the energy difference on the right is called the energy spitting $\delta E_0$. Ignoring the second term as we want only the 1st order, we have
+\[(P_0\lambda VP_0)P_0|l\rangle =\delta E_{0}P_0|l\rangle \]
+We can also apply $P_1$ from the left to prove that indeed the second term is of second order and beyond. Having
+\[\begin{align*}
+	P_1\lambda \hat{V}P_0|l\rangle +(\hat{H}_{0}+P_1\lambda \hat{V}P_1)P_1|l\rangle =&EP_1|l\rangle \\
+	(E-\hat{H}_{0}-P_1\lambda VP_1)P_1|l\rangle =&P_1\lambda VP_0|l\rangle 
+\end{align*}\]
+which leads to
+\[P_1|l\rangle =\dfrac{1}{E-H_0}P_1\lambda VP_0|l\rangle \]
+\end{defi}
+\vspace{2ex}
+\begin{thm}The following
+\[\boxed{(P_0\lambda VP_0)P_0|l\rangle =\delta E_0P_0|l\rangle }\]
+is ultimately the eigenvalue problem we want to solve to find the perturbed eigenkets. The energy is resultantly
+\[\boxed{E=E_0^{(0)}+\delta E_0+\lambda \sum _{k\notin D}\dfrac{|V_{kl}|^2}{E_{D}^{(0)}-E^{(0)}_{k}}}\]
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(Isotropic rigid rotator) Consider the Hamiltonian 
+\[\hat{H}_{0}=\dfrac{\vec{L}\cdot \vec{L}}{2I}\]
+We know that the eigenkets and their energy levels are given as 
+\[|l,m\rangle\qquad \&\qquad \dfrac{l(l+1)\hbar ^2}{2I} \]
+If $l\ne 0$, degenerate $2l+1$. The pertubation will be given by
+\[\hat{V}=-\vec{\mu }\cdot \vec{B}=-\dfrac{gqB}{2m}L_{z}\]
+where $\vec{B}$ is an external magnetic field and $\vec{\mu }=gq\vec{L}/2m$. The $g$ is dicated by whether its electron spin (=2) or whether its orbitals (=1). These kind of potentials are from Zeeman coupling. Now, we see that the potential is also commutative with $L_{z}$, as $[V,L_{z}]=0$. We should utilise this! For a general state vector,
+\[\langle m|[V,L_{z}]|m'\rangle =\langle m|VL_{z}-L_{z}V|m'\rangle =0\]
+which implies that
+\[(m'-m)\hbar \langle m|V|m'\rangle =0\]
+Thus we have found the matrix element for the pertubation! We thus find
+\[\dfrac{l(l+1)\hbar ^2}{2I}-x\hbar m\]
+for $x>0$.
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Stark effect of the hydrogen atom) Assume no spin. For an Hydrogen atom in an electric field in the $z$-axis, 
+\[H_1=(-e)V(r)=(-e)(-Ez)=eEz\]
+\end{defi}
+\vspace{2ex}
+

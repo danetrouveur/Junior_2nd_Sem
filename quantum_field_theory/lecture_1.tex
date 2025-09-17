@@ -1,0 +1,67 @@
+\section{Lecture 1 (September 1st)}
+\begin{defi}
+(Tensor product) Let $V$ and $W$ be vector spaces over a common field. A tensor product of $V$ and $W$ is a pair
+	\[(V\otimes W,\otimes )\]
+	where $V\otimes W$ is a vector space over the aforementioned field and $\otimes :V\times W\rightarrow V\otimes W$ is a bilinear map (called the canonical tensor product map) such that for any linear map $f:V\times W\rightarrow Z$, there exists a unique linear map 
+	\[\tilde{f}:V\otimes W\rightarrow Z\]
+such that
+	\[f(v,w)=\tilde{f}(v\otimes w)=\tilde{f}(\otimes(v,w))\]
+for all $v\in V$ and $w\in W$. 
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Direct sum) Let $V$ and $W$ be vector spaces over a common field. The direct sum of $V$ and $W$ is defined as the vector space
+	\[V\oplus W:=\{(v,w) \,|\, v\in V,w\in W\}\]
+over the aforementioned common field.
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Fock space) Let $\mathcal{H}_{1}$ be a complex Hilbert space (A complete inner product space) that describes a single particle. The Fock space over $\mathcal{H}_{1}$, denoted $\mathcal{F}(\mathcal{H}_{1})$, is defined as:
+	\[\mathcal{F}(\mathcal{H}_{1})=\bigoplus^{\infty }_{n=0}(\mathcal{H}_{1}^{\otimes n})_{S,A}={\bm C}\oplus \mathcal{H}_{1}\oplus(\mathcal{H}_{1}\otimes \mathcal{H}_{1})_{S,A}\oplus \ldots \] 
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+	There are some issues with combining special relativity (SR) and quantum mechanics (QM) naively:
+\begin{itemize}
+	\item[(i)] Special relativity treates $t$ and ${\bf x}$ as equal compotents of a 4-vector while quantum mechanics quantises ${\bf x}$ but not $t$
+	\item[(ii)] Special relativity allows for creation and annhilation of particles whereas quantum mechanics doesn't accomodate such processes 
+\end{itemize}
+	The resultion is quantum field theory (QFT) which is done by quantising classical field theory.
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(Special relativity) We deal with the Minkowski space denoted as ${\bm R}^{1,3}$, characterised by the metric 
+	\[d(x,y)=\eta _{\mu \nu }x^{\mu }y^{\nu }\]
+	where $x^{\mu }=(ct,x,y,z)$ and $\eta_{\mu \nu }=\mathop{\mathrm{diag}}(-1,1,1,1)$. We define automorphisms called the Lorentz transformations (LT) as
+	\[x'^{\mu }=\mathrm{\Lambda }^{\mu }{}_{\nu }x^{\nu }\]
+	where $\mathrm{\Lambda }^{\mu }{}_{\rho }\eta _{\mu \nu }\mathrm{\Lambda }^{\nu }{}_{\sigma }=\eta _{\rho \sigma }$. These transformations are those such that leave metric invariant, as seen below
+	\[ds'^2=\eta _{\mu \nu }dx'^{\mu }dx'^{\nu }=\eta _{\mu \nu }\mathrm{\Lambda }^{\mu }{}_{\rho }dx^{\rho }\mathrm{\Lambda }^{\nu }{}_{\rho }dx^{\rho }=ds^2\]
+	In this course, we only deal with proper ($\mathop{\mathrm{det}}\mathrm{\Lambda }=1$) and orthochronous transformations $\mathrm{\Lambda }^{0}{}_{0}\ge 1$ (note that $|\mathrm{\Lambda }^{0}{}_{0}|\ge 1$). In the language of matrices, we denote the $(\mu ,\nu )$ component of $\eta^{-1} $ as $\eta ^{\mu \nu }$ and of $\mathrm{\Lambda }^{T}$ as $(\mathrm{\Lambda }^{T})^{\nu }_{\mu }$. Using this, we can express the previous identity as
+\[\eta =\mathrm{\Lambda }^{T}\eta \mathrm{\Lambda }\]
+	Meanwhile, Lorentz tensors (scalars, contravariant, and covariant) are defined as objects that transform accordingly. A general rank $(p,g)$ tensor is then naturally defined as an object that transforms as
+	\[T'^{\mu_1'\ldots \mu_{p}'}{}_{\nu_1'\ldots \nu _{q}'}\]
+Note that we can also define $\partial _{\mu }$ and $\partial ^{\mu }$ that transform covariantly and contravariantly respectively. You'll need to check that $\eta $ and its inverse lowers and raises indexes respectively. Depending on their norms, we can define vectors to be either time-like, space-like, and null/light-like.
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Representation of the Lorentz group) Are there representation of fields beyond tensors that transform a specific way under Lorentz transformations? Yes! Spinors! Consider the Lie algebra of the Lie group of Lorentz tranformations, where
+	\[\mathrm{\Lambda }^{\mu }{}_{\nu }=\exp (i\omega ^{\mu }{}_{\nu })=\delta ^{\mu }{}_{\nu }+i\omega ^{\mu }{}_{\nu }+\mathcal{O}(\omega ^2)\]
+Using the definition of Lorentz transformations, we come to the conclusion that the algebra should satisfy
+\[\omega _{\mu \nu }+\omega _{\nu \mu }=0\]
+There are 6 linearly independent $4\times 4$ anti-symmetric matrices that satisfy such equation and we want to express them as a combination of transformation parameters and 6 independent Lorentz generators in vector representation.
+	\[\omega ^{\mu }{}_{\nu }=\dfrac{1}{2}\alpha _{\rho \sigma }(M^{\rho \sigma })^{\mu }{}_{\nu }\]
+where of course $M^{\rho \sigma }=-M^{\sigma \rho }$. With this freedom, we have
+\[
+(M^{01})_{\mu \nu }=\begin{pmatrix}
+	0&-i&0&0\\i&0&0&0\\0&0&0&0\\0&0&0&0
+\end{pmatrix}
+\]
+In general,
+	\[(M^{\rho \sigma })^{\mu }{}_{\nu }=-i(\eta ^{\rho \mu }\delta ^{\rho }{}_{\nu }-\eta ^{\rho \mu }\delta ^{\rho }{}_{\nu })\]
+The commutation relations of Lorentz generators in vector representations thus become
+	\[[M^{\mu \nu },M^{\rho \sigma }]=i(\eta ^{\mu \rho }M^{\nu \sigma }+\eta ^{\nu \rho }M^{\mu \rho }-\eta ^{\mu \rho }M^{\nu \rho }-\eta^{\nu \rho }M^{\mu \rho })\]
+Which is called the Lorentz algebra. The Lorentz algebra is more fundamental than the specific form of generators in the specific representation. General Lorentz transformations in temrs of Lorentz generators thus become
+\[\mathrm{\Lambda }=\exp \Big(\dfrac{i}{2}\alpha _{\mu \nu }M^{\mu \nu }\Big)\]
+	$\alpha _{\mu \nu }\in {\bm R}$ $M^{\mu \nu }=(M^{\mu \nu })^{\dagger}$ thus $\mathrm{\Lambda }^{\dagger}=\mathrm{\Lambda }$. A natural question is -- what do $M^{\mu \nu }$ look like in the spinor representation?
+\end{defi}
+\vspace{2ex}

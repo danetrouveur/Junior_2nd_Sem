@@ -1,0 +1,125 @@
+\section{Lecture 3 (September 8th)}
+\begin{defi}
+(Grassmann numbers) Grassman numbers are numbers, contrarily to complex numbers, that describe fermions. Grassmann variables are tuplets 
+\[\{\theta_1,\ldots ,\theta_{n}\}\]
+that satisfy
+\[\{\theta _{i},\theta _{j}\}=\theta _{i}\theta _{j}+\theta _{j}\theta _{i}=0\]
+The Grassmann algebra is defined as
+\[\mathrm{\Lambda }(v)={\bm C}\oplus V\oplus V^2\oplus \ldots \oplus V^{n}\]
+where $V$ is an $n$-dimensional vector space with the basis $\{\theta _{i}\}$ over the field of complex numbers. Basic operations are defined as
+\begin{itemize}
+	\item[(i)] Addition $\theta _{i}+\theta _{j}$
+	\item[(ii)] Complex multiplication $c\theta _{i}$ ($c\in {\bm C}$)
+	\item[(iii)] Product $\theta_{i}\theta _{j}$
+\end{itemize}
+The general element of the Grassmann algebra is called the Grassmann number,
+\[\begin{align*}
+	f(\theta )=&f_{0}+\sum ^{n}_{i_{1}=1}f_{i_1}\theta _{i_1}+\dfrac{1}{2}\sum _{i_1,i_2=1}^{n}f_{i_1i_2}\theta _{i_1}\theta _{i_2}+\ldots \\
+	=& \sum ^{n}_{k=0}\dfrac{1}{k!}\sum ^{n}_{i_1,\ldots ,i_{k}=1}f_{i_1\ldots i_{k}}\theta _{i_1}\ldots \theta _{i_{k}}
+\end{align*}\]	
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Differentiation of Grassmann variables) 
+	\[\dfrac{\partial \theta _{j}}{\partial \theta _{i}}=\delta _{ij}\qquad \dfrac{\partial {\bf 1}}{\partial \theta _{i}}=0\qquad \dfrac{\partial }{\partial \theta _{i}}(\theta _{j}\theta _{k})=\delta _{ij}\theta _{k}   \]
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Integration of Grassmann variables) 
+	\[\int d\theta \,f(\theta )=\dfrac{\partial }{\partial \theta }f(\theta ) \]
+Notice that once we change the integration measure from $\theta _{i}'=A_{ij}\theta _{j}$,
+\[\begin{align*}
+	\int d\theta _{1}\ldots d\theta _{n}\,f(\theta )=&\dfrac{\partial }{\partial \theta_1}\ldots \dfrac{\partial }{\partial \theta _{n}}f(\theta )  \\
+	=&A_{i_{1}1}\ldots A_{i_{n}n}\dfrac{\partial }{\partial \theta _{i_1}'}\ldots \dfrac{\partial }{\partial \theta _{i_{n}}'}f(A^{-1}\theta ') \\
+	=&\varepsilon _{i_{1}\ldots i_{n}}A_{i_11}\ldots A_{i_{n}n}\dfrac{\partial }{\partial \theta _{1}'}\ldots \dfrac{\partial }{\partial \theta _{n}'}f(A^{-1}\theta ')\\
+	=&\mathop{\mathrm{det}}(A)\int d\theta _{1}'\ldots d\theta _{n}'\,f(A^{-1}\theta ')
+\end{align*}\]
+which gives us
+\[d\theta_1'\ldots d\theta _{n}'=(\mathrm{\mathop{det}}A)^{-1}d\theta _{1}\ldots d\theta _{n}\]
+as
+\[\dfrac{\partial }{\partial \theta _{i}}=\dfrac{\partial \theta _{j}'}{\partial \theta _{i}}\dfrac{\partial }{\partial \theta _{j}'}   \]
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Gaussian integral wth respect to two sets of Grassman variables)
+\[\begin{align*}
+	&\int d\bar{\theta }_{1}d\theta _{1}\ldots d\bar{\theta }_{n}d\theta _{n}\,e^{-\sum _{i,j=1}^{n}\bar{\theta }_{i}M_{ij}\theta _{j}}\\
+	&=\int d\bar{\theta}_{1}d\theta _{1}'\ldots d\bar{\theta }_{n}d\theta _{n}'(\mathop{\mathrm{det}}M)e^{o\sum ^{n}_{i=1}\bar{\theta }_{i}\theta _{i}'}\\
+	&=\mathop{\mathrm{det}}M\prod_{i=1}^{n}\int d\bar{\theta }_{i}d\theta _{i}'\,e^{-\bar{\theta }_{i}\theta _{i}'}\\
+	&=\mathop{\mathrm{det}}M\prod^{n}_{i=1}\int d\bar{\theta }_{i}d\theta _{i}'(1-\bar{\theta}_{i}\theta _{i}')=\mathop{\mathrm{det}}M
+\end{align*}\]
+(where $M_{ij}\theta _{j}=\theta '_{i}$)
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Functional derivatives) Note that the differentiation of a multivariate function $F=F(f_1,\ldots ,f_{n})$ is easy to define 
+\[\dfrac{\partial F}{\partial f_{i}} \]
+The critical question is how we would be when the index $i$ becomes continuous (uncountable). Given $M=\{f \,|\, f:{\bm R}\rightarrow {\bm R}\}$, we define the functional derivative of a functional $F:M\rightarrow {\bm R}$ with respect to some $f(x)$ at some point $x\in {\bm R}$ as
+\[\dfrac{\delta F[f]}{\delta f(x)}=\lim _{\varepsilon \rightarrow 0}\dfrac{F[f+\varepsilon \delta _{x}]-F[f}{\varepsilon }\]
+where $\delta _{x}\in M$ is defined as $\delta _{x}(y)=\delta (x-y)$. 
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+(Examples of functional derivatives) Take
+	\[F[f]=\int dx\,f^{n}(x)\]
+Then,
+\[\begin{align*}
+	\dfrac{\delta F[f]}{\delta f(z)}=&\lim_{\varepsilon \rightarrow 0}\dfrac{1}{\varepsilon }\Big[\int dx\,(f(x)+\varepsilon \delta _{z}(x))^{n}-\int dx\,f^{n}(x)\Big]\\
+	=&\lim _{\varepsilon \rightarrow 0}\dfrac{1}{\varepsilon }\Big[\int dx\,nf^{n-1}(x)\varepsilon \delta (x-z)+O(\varepsilon ^2)\Big]\\
+	=&nf(z)^{n-1}
+\end{align*}\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Generalisation to 3D) We now take $x$ to be a vector and we have
+	\[\dfrac{\delta F[f]}{\delta f(\vec{x})}=\lim _{\varepsilon \rightarrow 0}\dfrac{F[f+\varepsilon \delta _{\vec{x}}]-F[f]}{\varepsilon }\]
+	where $\delta _{\vec{x}}(\vec{y})=\delta ^{(3)}(\vec{x}-\vec{y})$. 
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Variation of a functional) The variation of a functional is then
+\[\begin{align*}
+	\delta F[f]=&\int d^3\vec{x}\,\dfrac{\delta F[f]}{\delta f(\vec{x})}\delta f(\vec{x})\\
+	dF(f)=&\sum _{i}\dfrac{\partial F}{\partial f_{i}}df_{i} 
+\end{align*}\]
+\end{defi}
+\vspace{2ex}
+\section{Classical Field Theory}
+\begin{thm}
+(Lagrangian formalism) Classically, the action $S$ of a system is written as
+\[S[x,\dot{x}]=\int ^{t_{f}}_{t_{i}}dt\,L(x_{i},\dot{x}_{i})\]
+For a field, we write
+\[S[\phi ,\dot{\phi }]=\int ^{t_{f}}_{t_{i}}dt\,L[\phi ,\dot{\phi }]\]
+where $\phi =\phi (t,\vec{x})=\phi (x)$. The variation of this action is given as
+\[\begin{align*}
+	\delta S[\phi ,\dot{\phi }]=\int dt\,\int  d^3\vec{x}\,\Big[\dfrac{\delta L}{\delta \phi (x)}\delta \phi (x)+\dfrac{\delta L}{\delta \dot{\phi }(x)}\delta \dot{\phi }(x)\Big]
+\end{align*}\]
+Through the application of Hamilton's principle (the variation of the action is zero for an arbitrary variation of the field such that $\delta \phi (t_{i},\vec{x})=\delta \phi (t_{f},\vec{x})=0$) we obtain
+\[\begin{align*}
+	0=&\int d^{4}x\,\Big(\dfrac{\delta L}{\delta \phi (x)}\delta \phi (x)+\dfrac{\delta L}{\delta \dot{\phi }(x)}\dfrac{\partial }{\partial t}\delta \phi (x) \Big)\\
+	=&\int d^{4}x\,\Big(\dfrac{\delta L}{\delta \phi (x)}-\dfrac{\partial }{\partial t}\dfrac{\delta L}{\delta \dot{\phi }(x)} \Big)\delta \phi (x)+\int d^{4}x\,\dfrac{\partial }{\partial t}\Big(\dfrac{\delta L}{\delta \dot{\phi }(x)}\delta \phi (x)\Big) 
+\end{align*}\]
+where the second boundary terms vanish to zero. The Lagrangian in "local" relativistic conformal field theory leads to the concept of a Lagrangian density.
+\[S[\phi ,\dot{\phi }]=\int dt\,L[\phi ,\dot{\phi }]=\int d^{4}x\,\mathcal{L}(\phi (x),\dot{\phi }(x),\nabla \phi (x))=\int d^{4}x\,\mathcal{L}(\phi (x),\partial _{\mu }\phi (x))\]
+Alternative expressions in local conformal field theory include
+	\[\dfrac{\delta L}{\delta \phi }=\dfrac{\partial \mathcal{L}}{\partial \phi }-\nabla \Big(\dfrac{\partial \mathcal{L}}{\partial (\nabla \phi )} \Big)\qquad \dfrac{\delta L}{\delta \dot{\phi }}=\dfrac{\partial \mathcal{L}}{\partial \dot{\phi }}  \]
+and the Euler-Lagrangian equations as
+\[0=\dfrac{\partial \mathcal{L}}{\partial \phi }-\partial _{\mu }\Big(\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )} \Big) \]
+as
+\[\begin{align*}
+	0=&\int d^{4}x\,\Big[\dfrac{\partial \mathcal{L}}{\partial \phi }\,d\phi +\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )}\partial _{\mu }(\delta \phi ) \Big]\\
+	=&\int d^{4}x\,\Big(\dfrac{\partial \mathcal{L}}{\partial \phi }-\partial _{\mu }\Big(\dfrac{\partial \mathcal{L}}{\partial  (\partial_{\mu }\phi  )} \Big)\delta \phi +\int d^{4}x\,\partial _{\mu }\Big(\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )}\delta \phi \Big) \Big)
+\end{align*}\]
+assuming that $\phi ,\partial _{\mu }\phi \rightarrow 0	$ fast enough as $|\vec{x}|\rightarrow \infty $. 
+\end{thm}
+\vspace{2ex}
+\begin{thm}
+(Hamiltonian formulation) The canonically conjugate field is defined as
+\[\pi(x)=\dfrac{\delta L}{\delta \dot{\phi }(x)}=\dfrac{\partial \mathcal{L}}{\partial \dot{\phi }(x)} \]
+The Hamiltonian is then defined as
+	\[H[\phi ,\pi ]=\int d^3\vec{x}\,\Big(\pi (x)\dot{\phi }(x)-\mathcal{L}\Big)=\int d^3x\,\mathcal{H}\]
+The Eular-Lagrange equations then become Hamilton's equations of motion
+	\[\dot{\phi }(x)=\dfrac{\delta H}{\delta \pi (x)}\qquad \dot{\pi }(x)=-\dfrac{\delta H}{\delta \phi (x)}\]
+\end{thm}
+\vspace{2ex}
+

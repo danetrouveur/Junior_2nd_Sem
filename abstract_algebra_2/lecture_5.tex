@@ -1,0 +1,77 @@
+\section{Lecture 5 (September 16th)}
+\begin{recall}
+Last time, we have dealt with $K[x]\,/\,(p(t))$ and minimal polynomials. Today, we will learn about properties of finite and algebraic extensions.
+\end{recall}
+\vspace{2ex}
+\begin{defi}
+(Simple field extensions) A field extension $F\,/\,K$ is simple if $F=K(\alpha )$ for some $\alpha \in F$, where $K(\alpha )$ denotes the smallest subfield of $F$ containing $K\cup \{\alpha \}$.
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(13.20) (Minimal polynomial) If $\alpha \in F$ is algebraic over $K$, the minimal polynomial of $\alpha $ over $K$ is the unique monic irreducible polynomial $p(t)\in K[t]$ with $p(\alpha )=0$.
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+(Notation) $K(\alpha )$ is the smallest subfield, and $K[\alpha ]$ is the smallest subring of $F$ containing $K\cup \{\alpha \}$.
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+\begin{itemize}
+\item[(i)] $\alpha \in F$ is algebraic over $K$ if and only if
+\[\mathrm{ker}\,\Big(\mathrm{ev}_{\alpha }:K[t]\rightarrow F:f(t)\mapsto f(\alpha )\Big)\] 
+is nontrivial.
+\item[(ii)] If $\alpha $ is algebraic over $K$, then $K[\alpha ]=K(\alpha )$. In particular, every element of $K(\alpha )$ can be expressed as a polynomial in $\alpha $ with coefficient in $K$.	
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{proof}
+Consider $\alpha \in F$. 
+\[\mathrm{ker}\,\mathrm{ev}_{\alpha }=(p(t))\]
+and due to the first isomorphic theorem,
+\[K[t]\,/\,(p(t))\cong K[\alpha ]\]
+If $\alpha $ is algebraic over $K$, then $(p(t))$ must be a maximal ideal of $K[t]$. This implies that $K[\alpha ]=K(\alpha )$.
+\end{proof}
+\vspace{2ex}
+\end{itemize} 
+\begin{prop}
+(13.17) Read this! 
+\end{prop}
+\vspace{2ex}
+\begin{ex}
+(13.21) \[\alpha =2^{1/5}\in {\bm Q}(2^{1/5})\]
+Notice that $\pi $ is algebraic in ${\bm R}$ but is not algebraic in ${\bm Q}$. 
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+(7.11) Let $K$ be a field and $f(x)$ be a nonzero polynomial of degree $n$. Then,
+\[K[x]\,/\,(f(x))\]
+is a $n$-dimensional vector space over $K$.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+The following set is a basis for $K[t]\,/\,(f(t))$
+\[\{1,x,\ldots ,x^{n-1} \}\]
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+(Notation) The minimal polynomial of $\alpha $ over $K=\mathrm{irr}(\alpha ,K)$.
+\end{rmk}
+\vspace{2ex}
+\section{13.4 Algebraic Extensions}
+\begin{defi}
+(13.30) A field extension $F\,/\,K$ is algebraic if every element of $F$ is algebraic over $K$. 
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+(13.31) Every finite extension $F\,/\,K$ is algebraic.
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+Fix an element $\alpha \in F$. Set $\mathrm{dim}\,F=n$. Then
+\[\{1,\alpha ,\alpha ^2,\ldots ,\alpha ^{n}\}\]
+is linearly dependent over $K$, that is, $a_0+a_1\alpha +\ldots +a_{n}\alpha ^{n}=0$ for some $(a_0,\ldots ,a_{n})\ne 0\in K^{n+1}$. Take
+\[f(t)=a_0+a_1t+\ldots +a_{n}t^{n}\]
+
+\end{proof}
+\vspace{2ex}
+

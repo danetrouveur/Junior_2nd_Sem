@@ -1,0 +1,60 @@
+\section{Lecture 2 (September 3rd)}
+\begin{recall}
+We have learned that the expectation value of a certain observable was given by
+	\[\mathop{\mathrm{Tr}}(\hat{\rho }\hat{A})\]
+Using the spectral decomposition $\hat{A}=\sum a|a\rangle \langle a|=\sum a\mathop{\mathrm{Pr}}_{a}$, we can express the probability of observing $\hat{A}$ and obtaining $a$ as 
+	\[\mathop{\mathrm{Tr}}(\hat{\rho }\mathop{\mathrm{Pr}_{a}})\]
+You should check how this works for a pure state? Notice that
+\[\dfrac{\mathop{\mathrm{Pr}}_{a}\hat{\rho }\mathop{\mathrm{Pr}}_{a}}{\mathop{\mathrm{Tr}}(\hat{\rho }\mathop{\mathrm{Pr}}_{a})}=\dfrac{1}{\mathrm{\mathop{Tr}}(\hat{\rho }\mathop{\mathrm{Pr}_{a}})}\mathop{\mathrm{Tr}}(\mathop{\mathrm{Pr}_{a}}\hat{\rho }\mathop{\mathrm{Pr}_{a}})=1\]
+and that the trace is 1.
+\end{recall}
+\vspace{2ex}
+\begin{ex}
+We check that the density matrix satisfies
+\begin{align*}
+\dot{\rho} 
+&= \frac{d}{dt} \big( |\psi\rangle \langle \psi| \big) \\[6pt]
+&= |\dot{\psi}\rangle \langle \psi| + |\psi\rangle \langle \dot{\psi}| \\[6pt]
+&= -\tfrac{i}{\hbar} H |\psi\rangle \langle \psi| 
+   + \tfrac{i}{\hbar} |\psi\rangle \langle \psi| H \\[6pt]
+&= -\tfrac{i}{\hbar} [ H, \rho ]
+\end{align*}
+\end{ex}
+\vspace{2ex}
+\begin{rmk}
+(General properies of $\hat{\rho }$) Notice that the square of the density matrix is equal to
+\[\hat{\rho }^2=\sum _{j}p_{j}^2|\psi _{j}\rangle \langle \psi _{j}|\]
+Therefore, in general, we say mixed states are states whose density matrix satisfies
+\[\hat{\rho }\ne \hat{\rho }^2\]
+and a pure state otherwise. Also,
+	\[\hat{\rho }-\hat{\rho }^2=\sum _{j}(p_{j}-p_{j}^2)|\psi _{j}\rangle \langle \psi _{j}|\]
+and the expected value is always bigger than 0. Sometimes, we write $\hat{\rho }\geq \hat{\rho }^2$. We also ask, what is the norm of $|\hat{\rho }\psi \rangle $ for an arbitrary $|\psi \rangle $? We notice that
+\[\langle \hat{\rho }\psi |\hat{\rho }\psi \rangle =\langle \psi |\hat{\rho }^2|\psi \rangle =\langle \psi|\rho \psi \rangle \leq  \sqrt{\langle \psi |\psi \rangle }\sqrt{\langle \hat{\rho } \psi |\hat{\rho } \psi\rangle } \]
+Resulting in
+\[\langle \hat{\rho }\psi |\hat{\rho }\psi \rangle\leq \langle \psi |\psi \rangle  \]
+We see that the density matrix is a contraction mapping. We now prove the contraposition -- if $\hat{\rho }^2=\hat{\rho }$, the state is pure. Last class we have seen that the eigenvalue of the matrix becomes either 1 or 0. In the spectral decomposition,
+\[\hat{\rho }=\sum _{j}p_{j}|\psi _{j}\rangle \langle \psi _{j}|\]
+we see that only one of the $p_{j}$'s should become one and that the others should be zero. We have now concluded the proof. 
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(Relationship between diagonal and non-diagonal density matrices) Always, you want to find the diagonal form of an operator. How do you find it from a mixed state?
+\[\hat{\rho }=\sum ^{n}_{i=1}p_{i}|\psi _{i}\rangle \langle \psi _{i}|\longleftrightarrow \hat{\rho }=\sum ^{m}_{i=1}w_{j}|\alpha _{j}\rangle \langle \alpha _{j}|\]
+We obviously know that $n\leq m$. Take
+\[\langle \psi _{k}|\hat{\rho }|\psi _{k}\rangle =0\]
+Then,
+\[\sum ^{N}_{j=1}w_{j}|\langle \psi _{i}|\alpha _{j}\rangle |^2=0\]
+which tells us that
+\[\langle \psi _{i}|\alpha  _{j}\rangle =0\]
+Therefore,
+\[|\alpha _{j}\rangle =\sum ^{n}_{k=1}\langle \psi _{k}|\alpha _{j}\rangle |\psi _{k}\rangle \]
+We now define a $m\times n$ matrix
+\[V_{ij}=\sqrt{\dfrac{w_{i}}{p_{j}}}\langle \psi _{j}|\alpha _{i}\rangle \]
+It is obvious that
+\[\sum ^{n}_{j=1}V_{ij}\sqrt{p_{j}}|\psi _{j}\rangle =\sqrt{w_{i}}|\alpha _{i}\rangle \]
+and we have
+	\[\sum ^{m}_{i=1}(V^{\dagger})_{ji}V_{ij}=\dfrac{1}{\sqrt{p_{j}p_{k}}}\sum ^{m}_{i=1}w_{i}\langle \psi _{j}|\alpha _{i}\rangle \langle \alpha _{i}|\psi _{k}\rangle =\dfrac{1}{\sqrt{p_{j}p_{k}}}\langle \psi _{i}|\rho ^2|\psi _{k}\rangle =\delta _{jk}\]
+
+\end{thm}
+\vspace{2ex}
+
