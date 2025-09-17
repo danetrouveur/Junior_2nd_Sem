@@ -1,0 +1,86 @@
+\section{Lecture 4 (September 16th)}
+\begin{thm}
+Let $D$ be a domain in ${\bm C}$. There is a sequence $\{K_{n}\}$ of compact subsets of $D$ and $\{\delta _{n}\}$ ($\delta _{n}>0$) such that
+\begin{itemize}
+\item[(i)] \[\bigcup ^{\infty }_{n}K_{n}=D\]
+\item[(ii)] If $K\subset D$ is compact then $K\subset K_{n}$ for some $n$
+\item[(iii)] $\bar{D}(z,2\delta _{n})\subset K_{n+1}$ for every $z\in K_{n}$, $n=1,2,\ldots $
+\end{itemize}
+Note that $z\notin F$ and $F$ is closed. This implies that $d(z,F)=\min\{|z-w| \,|\, w\in F\}>0$.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Put
+\[K_{n}=\Big\{z\leq n\Big\}\cap \Big\{d(z,D^{C})\geq \dfrac{1}{n}\Big\}\]
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Consider 
+\[f_{n}(x)=\dfrac{\sin (nx)}{\sqrt{n}}\rightarrow 0\]
+which converges uniformly on ${\bm R}$. However,
+\[f'(0)=\sqrt{n}\rightarrow \infty \]
+as $n\rightarrow \infty $.
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+If $\{f_{n}\}$ is a sequence of analytic functions on a domain $D$ such that $f_{n}\rightarrow f$ uniformly on every compact subset of $D$, then 
+\begin{itemize}
+\item[(i)] $f$ is analytic on $D$ (by Morera's theorem)
+\item[(ii)] $f_{n}'\rightarrow f'$ uniformly on every compact subset of $D$
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Take any compact subset $K$ of $D$. Then $K\subset K_{n}$ for some $n$, and $\bar{D}(z,\delta _{n})\subset K_{n+1}$ for all $z\in K$. So, there exists $r>0$ and $K'$, a compact subset of $D$, such that $\bar{D}(z,r)\subset K'$ for all $z\in K$. Here, applying Cauchy's integral formula,
+\[f(z)=\dfrac{1}{2\pi i}\int _{|\xi -z|=r}\dfrac{f(\xi )}{(\xi -z)^2}\,d\xi \]
+For every $z\in K$, we have
+\[f'(z)=\dfrac{1}{2\pi i}\int _{|\xi -z|=r}\dfrac{f(\xi )}{(\xi -z)^2}\,d\xi \]
+which implies that
+\[|f'(z)|\leq \dfrac{1}{2\pi }\dfrac{||f||_{K'}}{r^2}(2\pi r)=\dfrac{||f||_{K'}}{r}\]
+with $||f||_{K}=\max_{z\in K}|f(z)|$. Therefore, for every $z\in K$,
+\[|f_{n}'(z)-f'(z)|\leq \dfrac{||f_{n}-f||_{K'}}{r}\]
+wihch means $f_{n}'\rightarrow f'$ uniformly on $K$. 
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+(Linear mapping) Consider the linear mapping
+\[w=az+b\]
+This mapping we see that, by expressing $a=re^{i\theta }$, the map stretches, rotates, and translates the complex plane.
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Linear functional transformation) For $ad-bc\ne 0$,
+\[w=T(z)=\dfrac{az+b}{cz+d}\]
+This can be written as
+\[w=T(z)=\dfrac{a}{c}+\dfrac{bc-ad}{c}\cdot \dfrac{1}{cz+d}\]
+Additionally, the map is 1-1 from the fact that the following inverse map exists:
+\[z=\dfrac{dw-b}{-cw+a}\]
+Thus telling us that the map can be seen as a combination of translation, dilation ($|a|>1$) or contraction ($|a|\leq 1$), rotation, and inversion. 
+\[z\rightarrow \dfrac{1}{z}\]
+This is the tricky one! 
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+(Inversion map $w=1/z$) The equation (locus) of all lines and all circles in ${\bm R}^2$ is
+\[a(x^2+y^2)+bx+cy+d=0\]
+where $b^2+c^2>4ad $ and $a,b,c,d\in {\bm R}$. In the complex plane, for $x^2+y^2=|z|^2$, $x=(z+\bar{z})/2$ and $y=(z-\bar{z})/2i$ so that
+\[a|z|^2+\dfrac{1}{2}(b-ic)z+\dfrac{1}{2}(b+ic)\bar{z}+d=0\]
+and again $b^2+c^2>4ad$. This implies that
+\[a|z|^2+\beta z+\bar{\beta }\bar{z}+d=0\]
+where $a,d\in {\bm R}$ and $\beta \in {\bm C}$ with $|\beta |^2>ad$. Taking the inversion map,
+\[a\dfrac{1}{|w|^2}+\beta\dfrac{1}{w}+\bar{\beta }\dfrac{1}{\bar{w}}+d|w|^2=0\]
+and
+\[a+\beta \bar{w}+\bar{\beta }w+d=0\]
+by multiplying $|w|^2=w\bar{w}$ ($\beta \bar{\beta }>ad$). We therefore see that the inversion map takes the set of all lines and circles to again the set of all lines and circles.
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+($S^2$) $S^2$ is defined as the boundary of a unit ball in ${\bm R}^3$. We see this as a one-point compactification (Alexandroff compactification) of ${\bm C}$, and is seen as ${\bm C}\cup  \{\infty \}$ where $\{\infty \}$ is called the north pole. 
+\end{defi}
+\vspace{2ex}
+\begin{lem}
+The linear functional transformation which takes $\{a,b,c\}$ to $\{0,1,\infty \}$ is uniquely determined by
+\[T(z)=\dfrac{(z-a)(b-c)}{(z-c)(b-a)}\]
+\end{lem}
+\vspace{2ex}
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  16 SEP 2025 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  16 SEP 2025 11:49
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -978,35 +978,67 @@ Things are pretty mixed up, but I think the worst is over.
 
 
 
-[6])
+[6]
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no J in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
 
-[7] (./default.aux)
+./lecture_5.tex:127: Package pgf Error: No shape named `J' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127   \draw (I) -- (J)
+                        ;
+(That was another \errmessage.)
+
+
+./lecture_5.tex:127: Package pgf Error: No shape named `J' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127   \draw (I) -- (J)
+                        ;
+(That was another \errmessage.)
+
+
+
+[7])
+
+[8] (./default.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-Package rerunfilecheck Warning: File `default.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `default.out':
-(rerunfilecheck)             Before: 1F02E4AA5B9C58837FF69D23042A01D1;1407
-(rerunfilecheck)             After:  2D1D70A6BC6C271714366D521E5D17F5;1435.
+Package rerunfilecheck Info: File `default.out' has not changed.
+(rerunfilecheck)             Checksum: 2D1D70A6BC6C271714366D521E5D17F5;1435.
  ) 
 Here is how much of TeX's memory you used:
- 25032 strings out of 473190
- 494100 string characters out of 5715800
+ 25115 strings out of 473190
+ 495171 string characters out of 5715800
  984409 words of memory out of 5000000
- 47806 multiletter control sequences out of 15000+600000
- 568045 words of font info for 70 fonts, out of 8000000 for 9000
+ 47876 multiletter control sequences out of 15000+600000
+ 572206 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,15n,108p,1196b,1072s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on default.pdf (7 pages, 144722 bytes).
+Output written on default.pdf (8 pages, 148580 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 

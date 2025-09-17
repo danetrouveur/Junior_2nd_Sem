@@ -52,37 +52,23 @@ as
 \end{defi}
 \vspace{2ex}
 \begin{defi}
-(Functional derivatives) Note that the differentiation of a multivariate function $F=F(f_1,\ldots ,f_{n})$ is easy to define 
-\[\dfrac{\partial F}{\partial f_{i}} \]
-The critical question is how we would be when the index $i$ becomes continuous (uncountable). Given $M=\{f \,|\, f:{\bm R}\rightarrow {\bm R}\}$, we define the functional derivative of a functional $F:M\rightarrow {\bm R}$ with respect to some $f(x)$ at some point $x\in {\bm R}$ as
-\[\dfrac{\delta F[f]}{\delta f(x)}=\lim _{\varepsilon \rightarrow 0}\dfrac{F[f+\varepsilon \delta _{x}]-F[f}{\varepsilon }\]
-where $\delta _{x}\in M$ is defined as $\delta _{x}(y)=\delta (x-y)$. 
+(Functional derivatives) Let $X$ be a space of admissible functions $y:[a,b]\rightarrow {\bm R}$ like the Banach space $L^2([a,b])$ or $C^{1}([a,b])$. A functional is a mapping $F:X\rightarrow {\bm R}$ defined as
+\[\dfrac{\delta F[f]}{\delta f(x_0)}=\lim _{\varepsilon \rightarrow 0}\dfrac{F[f(x)+\varepsilon \delta(x-x_0) ]-F[f(x)]}{\varepsilon }\]
 \end{defi}
 \vspace{2ex}
 \begin{ex}
-(Examples of functional derivatives) Take
-	\[F[f]=\int dx\,f^{n}(x)\]
-Then,
-\[\begin{align*}
-	\dfrac{\delta F[f]}{\delta f(z)}=&\lim_{\varepsilon \rightarrow 0}\dfrac{1}{\varepsilon }\Big[\int dx\,(f(x)+\varepsilon \delta _{z}(x))^{n}-\int dx\,f^{n}(x)\Big]\\
-	=&\lim _{\varepsilon \rightarrow 0}\dfrac{1}{\varepsilon }\Big[\int dx\,nf^{n-1}(x)\varepsilon \delta (x-z)+O(\varepsilon ^2)\Big]\\
-	=&nf(z)^{n-1}
-\end{align*}\]
+(Examples of functional derivatives) We have
+\begin{itemize}
+\item[(i)] $\int f^{n}$ gives
+\[\dfrac{\delta F[f]}{\delta f(z)}=n(f(z))^{n-1}\]
+\item[(ii)] $\int (f')^{n}$ gives
+\[\dfrac{\delta F[f]}{\delta f(z)}=-nf^{(n)}(z)\]
+\item[(iii)] $\int dx\, K(y,x)f(x)$ gives
+\[\dfrac{\delta F[f]}{\delta f(z)}=K(y,z)\]
+\item[(iv)] $f(y)$ gives
+\[\dfrac{\delta F[f]}{\delta f(z)}=\delta (y-z)\]
+\end{itemize}
 \end{ex}
-\vspace{2ex}
-\begin{defi}
-(Generalisation to 3D) We now take $x$ to be a vector and we have
-	\[\dfrac{\delta F[f]}{\delta f(\vec{x})}=\lim _{\varepsilon \rightarrow 0}\dfrac{F[f+\varepsilon \delta _{\vec{x}}]-F[f]}{\varepsilon }\]
-	where $\delta _{\vec{x}}(\vec{y})=\delta ^{(3)}(\vec{x}-\vec{y})$. 
-\end{defi}
-\vspace{2ex}
-\begin{defi}
-(Variation of a functional) The variation of a functional is then
-\[\begin{align*}
-	\delta F[f]=&\int d^3\vec{x}\,\dfrac{\delta F[f]}{\delta f(\vec{x})}\delta f(\vec{x})\\
-	dF(f)=&\sum _{i}\dfrac{\partial F}{\partial f_{i}}df_{i} 
-\end{align*}\]
-\end{defi}
 \vspace{2ex}
 \section{Classical Field Theory}
 \begin{thm}
@@ -99,9 +85,9 @@ Through the application of Hamilton's principle (the variation of the action is 
 	0=&\int d^{4}x\,\Big(\dfrac{\delta L}{\delta \phi (x)}\delta \phi (x)+\dfrac{\delta L}{\delta \dot{\phi }(x)}\dfrac{\partial }{\partial t}\delta \phi (x) \Big)\\
 	=&\int d^{4}x\,\Big(\dfrac{\delta L}{\delta \phi (x)}-\dfrac{\partial }{\partial t}\dfrac{\delta L}{\delta \dot{\phi }(x)} \Big)\delta \phi (x)+\int d^{4}x\,\dfrac{\partial }{\partial t}\Big(\dfrac{\delta L}{\delta \dot{\phi }(x)}\delta \phi (x)\Big) 
 \end{align*}\]
-where the second boundary terms vanish to zero. The Lagrangian in "local" relativistic conformal field theory leads to the concept of a Lagrangian density.
+where the second boundary terms vanish to zero. The Lagrangian in "local" relativistic classical field theory leads to the concept of a Lagrangian density.
 \[S[\phi ,\dot{\phi }]=\int dt\,L[\phi ,\dot{\phi }]=\int d^{4}x\,\mathcal{L}(\phi (x),\dot{\phi }(x),\nabla \phi (x))=\int d^{4}x\,\mathcal{L}(\phi (x),\partial _{\mu }\phi (x))\]
-Alternative expressions in local conformal field theory include
+Alternative expressions in local classical field theory include
 	\[\dfrac{\delta L}{\delta \phi }=\dfrac{\partial \mathcal{L}}{\partial \phi }-\nabla \Big(\dfrac{\partial \mathcal{L}}{\partial (\nabla \phi )} \Big)\qquad \dfrac{\delta L}{\delta \dot{\phi }}=\dfrac{\partial \mathcal{L}}{\partial \dot{\phi }}  \]
 and the Euler-Lagrangian equations as
 \[0=\dfrac{\partial \mathcal{L}}{\partial \phi }-\partial _{\mu }\Big(\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )} \Big) \]

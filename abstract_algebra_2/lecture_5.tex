@@ -67,10 +67,66 @@ The following set is a basis for $K[t]\,/\,(f(t))$
 \end{prop}
 \vspace{2ex}
 \begin{proof}
-Fix an element $\alpha \in F$. Set $\mathrm{dim}\,F=n$. Then
+Fix an element $\alpha \in F$. Set $\mathrm{dim}_{K}\,F=n$. Then
 \[\{1,\alpha ,\alpha ^2,\ldots ,\alpha ^{n}\}\]
 is linearly dependent over $K$, that is, $a_0+a_1\alpha +\ldots +a_{n}\alpha ^{n}=0$ for some $(a_0,\ldots ,a_{n})\ne 0\in K^{n+1}$. Take
 \[f(t)=a_0+a_1t+\ldots +a_{n}t^{n}\]
+in $K[t]$. 
+\end{proof}
+\vspace{2ex}
+\begin{prop}
+(13.13) Let $K\subset E\subset F$ be field extensions. If $E\,/\,K$ and $F\,/\,E$ are both finite, then $F\,/\,K$ is also finite. Furthermore, 
+\[[F:K]=[F:E][E:K]\]
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+Let $\{f_{i}\}^{n}_{i=1}$ be an $E$-basis of $F$ and $\{e_{j}\}^{n}_{j=1}$ be a $K$-basis of $E$. Then $\{f_{i}e_{j}\}$ is a $K$-basis of $F$. The rest is for you!
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+If $\alpha \in F$ is algebraic over $K$, then $K(\alpha )\,/\,K$ is finite, hence algebraic. This is because 
+\[\mathrm{dim}_{K}\,K(\alpha )= \mathrm{deg}\Big(\mathrm{irr}(\alpha ,K)\Big)\]
+Here,
+\[\mathrm{dim}_{K}K(\alpha )=\mathrm{dim}_{K}K[t]\,/\,(\mathrm{irr}(\alpha ,K))\]
+as
+\[K[t]/(\mathrm{irr}(\alpha ,K))\cong K[\alpha ]=K(\alpha )\]
+due to the 3rd isomorphism theorem.
+\end{rmk}
+\vspace{2ex}
+\begin{prop}
+A field extension $F\,/\,K$ is finite if and only if there are algebraic elements $\alpha_1,\alpha_2,\ldots,\alpha_{r}$ over $K$ such that $F=K(\alpha_1,\alpha_2,\ldots ,\alpha_{r})$.
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (F) at (0,4) {$F$};
+  \node (K) at (0,0)   {$K$};
+  \node (L) at (2,2)   {$K(\alpha_1,\alpha_2,\ldots,\alpha_n)$};
+
+  % lines (like the chalk sketch)
+  \draw (F) -- (K);
+  \draw (F) -- (L);
+  \draw (K) -- (L);
+\end{tikzpicture}
+\end{center}
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+(if) Suppose we are given algebraic elements $\alpha_1,\ldots ,\alpha _{r}$ over $K$ such that $F=K(\alpha_1,\ldots ,\alpha_{r})$. Consider the tower of finite towers
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (F) at (0,2) {$F=K(\alpha_1,\ldots ,\alpha _{r})$};
+  \node (G) at (0,0)   {$(K(\alpha_1,\alpha_2))(\alpha_3)$};
+  \node (H) at (0,-2) {$(K(\alpha_1))(\alpha_2)=K(\alpha_1,\alpha_2)$};
+  \node (I) at (0,-4) {$K(\alpha_1)$};
+  \note (J) at (0,-6) {$K$};
+
+
+  % lines (like the chalk sketch)
+  \draw (F) -- (G);
+  \draw (G) -- (H);
+  \draw (H) -- (I);
+  \draw (I) -- (J);
+\end{tikzpicture}
+\end{center}
 
 \end{proof}
 \vspace{2ex}
