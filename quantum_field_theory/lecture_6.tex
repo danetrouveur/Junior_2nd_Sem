@@ -1,2 +1,137 @@
 \section{Lecture 6 (September 17th)}
-
+\begin{ex}
+($U(1)$ symmetry in a complex scalar field theory) Consider the Lagrangian 
+\[\mathcal{L}=-\partial ^{\mu }\phi \partial _{\mu }\phi ^{*}-\mathcal{V}(|\phi |^2)\]
+The $U(1)$ symmetry is given as
+\[\phi '(x)=e^{i\alpha }\phi (x)=\phi (x)+\underbrace{i\alpha \phi (x)}_{\delta \phi (x)}+O(\alpha ^2)\]
+Invariance of the action is given by $\delta \mathcal{L}=\partial _{\mu }f^{\mu }=0\rightarrow f^{\mu }=0$. The Noether current is
+\[\begin{align*}
+j^{\mu }=\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )}\,\delta \phi + \dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi ^{*})}\,\delta \phi ^{*}-f^{\mu }=(-\partial ^{\mu }\phi ^{*})(i\alpha \phi )+(-\partial ^{\mu }\phi )(-i\alpha \phi ^{*})\\
+=&\alpha (-i\phi \partial ^{\mu }\phi ^{*}+i\phi ^{*}\partial ^{\mu }\phi )
+\end{align*}\]
+which implies that $\partial _{\mu }j^{\mu }=0$ on-shell. Then, Noether charge would be, physically, the charge carried by particles described by $\phi $.
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+($U(1)$ symmetries in Dirac theory) Consider the Lagragian
+\[\mathcal{L}=\bar{\psi  }(i\cancel{\partial }-m)\psi \]
+The $U(1)$ symmetry is given as
+\[\psi '(x)=e^{i\alpha }\psi (x)=\psi (x)+\underbrace{i\alpha \psi (x)}_{\delta \psi (x)}+O(\alpha ^2)\]
+Again, $\delta \mathcal{L}=0$ implies that $f^{\mu }=0$ and the Noether current is given by
+\[j^{\mu }=\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\psi )}\,\delta \psi +\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\psi ^{\dagger})}\,\delta \psi^{\dagger}-f^{\mu }=i\bar{\psi}\gamma ^{\mu }(i\alpha \psi )  \]
+and $\partial _{\mu }j^{\mu }=0$. The rather annoying sign can be eliminated via renormalisation giving
+\[j^{\mu }=\bar{\psi }\gamma ^{\mu }\psi \]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Chiral transformation) Another $U(1)$ symmetry arises for the massless case $m=0$.
+\[\psi '(x)=e^{i\alpha \gamma ^{5}}\psi (x)=\psi (x)+i\alpha \gamma ^{5}\psi (x)+O(\alpha^2)\]
+The Nother current is given as, through renormalising $\delta \psi =-i\gamma ^{5}\psi $
+\[j^{\mu }_{5}=\bar{\psi }\gamma ^{\mu }\gamma ^{5}\psi \]
+We call $j^{\mu }$ and $j^{\mu}_{5}$ are called vectors and axial-vector current respectively. For $\psi $ coupled to an electromagnetic field (EM) $A_{\mu }$, $j^{\mu }$ is called the electric current density. For a massless $\psi $ coupled with a EM field,
+\[\begin{cases}
+j^{\mu }_{L}=\dfrac{1}{2}(j^{\mu }-j_{5}^{\mu })=\bar{\psi }\gamma ^{\mu }\dfrac{1-\gamma ^{5}}{2}\psi =\bar{\psi }_{L}\gamma ^{\mu }\psi _{L}\\
+j^{\mu }_{R}=\dfrac{1}{2}(j^{\mu }+j^{\mu }_{5})=\bar{\psi }\gamma ^{\mu }\dfrac{1+\gamma ^{5}}{2}\psi =\bar{\psi }_{R}\gamma ^{\mu }\psi _{R}
+\end{cases}\]
+and these denote the electric current densities for left-handed and right-handed Weyl spinors. 
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Translation symmetry in a real scalar field) Consider the Lagrangian
+\[\mathcal{L}=-\dfrac{1}{2}\partial ^{\mu }\phi \partial _{\mu }\phi -\mathcal{V}(\phi )\]
+We need to see what $\delta \phi $ is under $x\rightarrow x'=x+a$. By definition, 
+\[\phi '(x')=\phi (x)=\phi (x'-a)=\phi (x')-\underbrace{a^{\mu }\partial _{\mu }\phi (x')}_{\delta \phi (x')}+O(a^2)\]
+Now what is $f^{\mu }$? We can easily expect $\delta \mathcal{L}=\mathcal{L}'-\mathcal{L}=-a^{\mu }\partial _{\mu }\mathcal{L}$. Therefore, $f^{\mu }=-a^{\mu }\mathcal{L}$. Our Noether current is
+\[j^{\mu }=\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )}\,\delta \phi -f^{\mu }=a_{\nu }(\partial ^{\mu }\partial ^{\nu }\phi +\eta ^{\mu \nu }\mathcal{L}) \]
+The rank 2 tensor in the second term is called the stress tensor $T^{\mu \nu }$. We find that
+\[\partial _{\mu }j^{\mu }=0=\partial _{\mu }(a_{\nu }T^{\mu \nu })\]
+for all $a^{\mu }$ and 
+\[\partial _{\mu }T^{\mu \nu }=0\]
+It is natural to think that the conserved quantity has four degrees of freedom as we have translated with four degrees of freedom. The Noether charges exactly the 4-momentum!
+\[P^{\nu }=\int d^3\vec{x}\,T^{0\nu }\]
+We can then check that
+\[P^{0}=H=\int d^3\vec{x}(\pi \dot{\phi }-\mathcal{L})\]
+Simply beautiful!
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Lorentz symmetry in a real scalar field theory) Consider the infinitesimal transformation $x'=\mathrm{\Lambda }x=(1+\omega )x$. Componentwise, we can write
+\[x'^{\mu }=\mathrm{\Lambda }^{\mu }{}_{\nu }x^{\nu }=(\delta ^{\mu }{}_{\nu }+\omega ^{\mu }{}_{\nu })x^{\nu }\]
+Using the Taylor expansion again,
+\[\phi'(x')=\phi (x)=\phi (\mathrm{\Lambda }^{-1}x')=\phi (x')-\omega ^{\mu }{}_{\nu }x'^{\nu }\partial _{\mu }\phi (x')+O(\omega ^2)\]
+the trick is that $(1+\omega )(1-\omega )=1+O(\omega ^2)$. What is $f^{\mu }$?
+\[\delta \mathcal{L}=\mathcal{L}'-\mathcal{L}=-\omega ^{\mu }{}_{\nu }x^{\nu }\partial _{\mu }\mathcal{L}=\partial _{\mu }(-\omega ^{\mu }{}_{\nu }x^{\nu }\mathcal{L})=\partial _{\mu }f^{\mu }\]
+Thus, $f^{\mu }=-\omega ^{\mu }{}_{\nu }x^{\nu }\mathcal{L}$. The Noether current is correspondingly
+\[\begin{align*}
+j^{\mu }=&\dfrac{\partial \mathcal{L}}{\partial (\partial _{\mu }\phi )}\,\delta \phi -f^{\mu }\\
+=&\omega ^{\nu \rho }x_{\rho }\partial _{\nu }\phi \partial ^{\mu }\phi +\omega ^{\nu \rho }x_{\rho }\delta ^{\mu }{}_{\nu }\mathcal{L}\\
+=&\omega _{\nu \rho }x^{\rho }\underbrace{(\partial ^{\nu }\phi \partial ^{\mu }\phi +\eta ^{\mu \nu }\mathcal{L})}_{T^{\mu \nu }}\\
+=&\dfrac{1}{2}\omega _{\nu \rho }(x^{\rho }T^{\mu \nu }-x^{\nu }T^{\mu \rho })
+\end{align*}\]
+we call the second term $\mathcal{J}^{\mu \nu \rho }$. Concluding,
+\[\partial _{\mu }j^{\mu }=0\]
+for all $\omega _{\nu \rho }$ implies that
+\[\partial _{\mu }\mathcal{J}^{\mu \nu \rho }=0\]
+Thus, the Noether charges are generalised (with boosts) angular momenta!
+\[J^{\mu \nu }=\int d^3\vec{x}\,\mathcal{J}^{0\mu \nu }\]
+for example, $\mu \nu =12$ shows
+\[\int d^3\vec{x}\,(x^2T^{01}-x^{1}T^{02})\]
+\end{ex}
+\vspace{2ex}
+\begin{rmk}
+There are also discrete symmetries that we learn from here.
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(Space inversion or parity) The transformation is given by
+\[x=(t,\vec{x})=(t',\vec{x}')=(t,-\vec{x})\]
+The parity on fields give
+\[\phi '(x')=\phi (x)\qquad\&\qquad \phi '(x')=\gamma ^{0}\psi (x)\]
+lastly,
+\[A'^{\mu }(x')=\begin{cases}
+A^{\mu }(x)&(\mu =0)\\
+-A^{\mu }(x)&(\mu =1,2,3)
+\end{cases}\]
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+(Parity on $U(1)$ currents in Dirac theory) For vectors,
+\[j^{\mu }=\bar{\psi }\gamma ^{\mu }\psi \rightarrow (\gamma ^{0}\psi )^{\dagger}\gamma ^{0}\gamma ^{\mu }(\gamma ^{0}\psi )=\psi ^{\dagger}\gamma ^{\mu }\gamma ^{0}\psi \]
+and
+\[\begin{cases}
+ \bar{\psi }\gamma ^{0}\psi &(\mu =0)\\
+-\bar{\psi }\gamma ^{i}\psi &(\mu =i)
+\end{cases}\]
+while for axial-vectors,
+\[j^{\mu }_{5}=\bar{\psi }\gamma ^{\mu }\gamma _{5}\psi \rightarrow (\gamma ^{0}\psi )^{\dagger}\gamma ^{0}\gamma ^{\mu }\gamma _{5}(\gamma ^{0}\psi )=\psi ^{\dagger}\gamma ^{\mu }\gamma _{5}\gamma ^{0}\psi \]
+and
+\[\begin{cases}
+-\bar{\psi }\gamma ^{0}\gamma _{5}\psi &(\mu =0)\\
+\bar{\psi }\gamma ^{\mu }\gamma _{5}\psi &(\mu =i)
+\end{cases}\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Charge conjugation) This transformation simply swaps particles with anti-particles and has nothing to do with position. Charge conjugation on fields result in
+\[\phi '(x)=\phi (x)\& \phi '(x)=C\gamma ^{0}\psi ^{*}(x)\& A_{\mu }'(x)=-A_{\mu }(x)\]
+here,
+\[C\gamma ^{\mu }C^{-1}=-(\gamma ^{\mu })^{T}\& C^{-1}=C^{\dagger}=C^{T}=-C\]
+and a typical choice is
+\[C=i\gamma ^2\gamma ^{0}\]
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Time reversal) The time reversal transformation of $x$ is given as $x=(t,\vec{x})\rightarrow (t',\vec{x}')=(-t,\vec{x})$. The time reversal on fields give
+\[\phi '(x')=\phi (x)^{*}\qquad\&\qquad \psi '(x')=T\psi (x)^{*}\]
+and finally
+\[A'^{\mu }(x')=\begin{cases}
+A^{\mu }(x)&(\mu =0)\\
+-A^{\mu }(x)&(\mu =i)
+\end{cases}\]
+Here, $T$ is the time-reversal matrix, satisfying 
+$T^{-1}\gamma ^{\mu }T=(\gamma ^{\mu })^{T}\qquad \&\qquad T=T^{-1}=T^{\dagger}=-T^{*}=-T^{T}$
+again, a typical choice is
+\[T=i\gamma ^{1}\gamma ^{3}=-\gamma ^{5}C\]
+\end{defi}
+\vspace{2ex}
+ 

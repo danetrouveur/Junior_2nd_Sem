@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  16 SEP 2025 13:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  18 SEP 2025 13:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -730,29 +730,33 @@ and I'll forget about whatever was undefined.
 
 [8]
 
-[9])
+[9]) (./lecture_5.tex
 
-[10] (./default.aux)
+[10]
+
+[11])
+
+[12] (./default.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `default.out' has not changed.
-(rerunfilecheck)             Checksum: 8C033AEEA7086C918AAD99BA11D49ACF;737.
+(rerunfilecheck)             Checksum: E7BABB4BD2118366E0C00F5062491667;925.
  ) 
 Here is how much of TeX's memory you used:
- 24018 strings out of 473190
- 462677 string characters out of 5715800
+ 24032 strings out of 473190
+ 462922 string characters out of 5715800
  960516 words of memory out of 5000000
- 46810 multiletter control sequences out of 15000+600000
+ 46818 multiletter control sequences out of 15000+600000
  568045 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  95i,11n,96p,1196b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on default.pdf (10 pages, 191808 bytes).
+Output written on default.pdf (12 pages, 200618 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 15 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

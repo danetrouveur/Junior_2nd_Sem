@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  17 SEP 2025 10:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  21 SEP 2025 17:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -972,29 +972,85 @@ l.68 \end{align*}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-)
 
-[16] (./default.aux)
+./lecture_5.tex:91: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[16]) (./lecture_6.tex
+
+./lecture_6.tex:11: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (24.98114pt too wide) detected at line 11
+[][]
+ []
+
+
+
+[17]
+
+[18]
+
+./lecture_6.tex:70: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[19]
+
+[20])
+
+[21] (./default.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `default.out' has not changed.
-(rerunfilecheck)             Checksum: B477649739C4C01C72350F2E6BF35B9B;1084.
+(rerunfilecheck)             Checksum: B0759B5BF97A6FAC471B3F336878ED0F;1272.
  ) 
 Here is how much of TeX's memory you used:
- 24046 strings out of 473190
- 463130 string characters out of 5715800
+ 24059 strings out of 473190
+ 463286 string characters out of 5715800
  961517 words of memory out of 5000000
- 46823 multiletter control sequences out of 15000+600000
+ 46827 multiletter control sequences out of 15000+600000
  568407 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 95i,12n,96p,1196b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 95i,14n,96p,1196b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on default.pdf (16 pages, 251175 bytes).
+Output written on default.pdf (21 pages, 265914 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 69 words of extra memory for PDF output out of 10000 (max. 10000000)
 

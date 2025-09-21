@@ -206,15 +206,33 @@ Simplifying the first expression we found and subtracting the pure AdS part, we 
 \[\begin{align*}
 	\dfrac{2mr}{\mathrm{\Sigma} H_1}(c_1\,dt-a\sin ^2\theta \,d\phi )^2
 \end{align*}\]
-Meanwhile, we expect
-\[\begin{align*}
-\dfrac{2mr}{\mathrm{\Sigma} H_1}\dfrac{1}{s_1^2}\Big(c_1\,dt-c_2c_3c_4a\sin ^2\theta \,d\phi \Big)^2
-\end{align*}\]
-Letting us consider a coordinate transformation like
-\[t\rightarrow \dfrac{1}{s_1s_2s_3s_4}\,t\qquad \& \qquad \phi \rightarrow c_1c_2c_3c_4\,\phi \]
-
 \end{ex}
 \vspace{2ex}
 
-
+\section{Ungauged Four Charge Ansatz}
+Using the knowledge from the coefficient determination process above and also educated guess work, I was able to arrive at the following form of the ungauged four charge ansatz.
+\[\begin{align*}
+ds^2=\dfrac{W}{r^2+a^2\cos ^2\theta }\bigg[&-dt^2+(r^2+a^2\cos ^2\theta )\Big(\dfrac{dr^2}{r^2+a^2-2mr}+d\theta ^2\Big)\\&+(r^2+a^2)\sin ^2\theta \,d\phi ^2+\frac{W^2}{2m}\bigg(\sum ^{4}_{i=1}F_{i}A_{i}^2+\sum _{i=1}^{4}(G_{i}-F_{i})[A^{(\phi )}_{i}]^2\bigg)\bigg]
+\end{align*}\]
+where $A^{(\phi )}_{i}$ denotes the $\phi $-part of the gauge field $A_{i}$ and $F_{i}$ and $G_{i}$ each denote the following:
+\[\begin{cases}
+F_{i}=\bigg(\dfrac{r_1r_2r_3r_4}{r_{i}}+ra^2\cos ^2\theta +2ma^2\cos ^2\theta\, \dfrac{e_{i}}{c_{i}s_{i}}\bigg)^{-1}s_{i}^{4}\bigg(\displaystyle\prod_{j\ne i}^{}{(s_{i}^2-s_{j}^2)}^{-1}\bigg)\\\\
+G_{i}=\Big(\dfrac{r_1r_2r_3r_4}{r_{i}}+ra^2\cos ^2\theta +2ma^2\cos ^2\theta\,\dfrac{s_1s_2s_3s_4c_{i}^2}{c_1c_2c_3c_4s_{i}^2-s_1s_2s_3s_4c_{i}^2}\Big)^{-1}s_{i}^{4}\bigg(\displaystyle\prod_{j\ne i}(s_{i}^2-s_{j}^2)^{-1}\bigg)
+\end{cases}\]
+\section{Gauged Four Charge Ansatz Construction}
+The ungauged four charge ansatz above compels us to start constructing the gauged four charge ansatz we've been building towards. Due to the elegance of the Wu form, the pure anti-de Sitter part has a trivial gauged generalisation, namely
+\[\begin{align*}
+ds^2=\dfrac{W}{r^2+a^2\cos ^2\theta }\bigg[&-\dfrac{(1+g^2r^2)(1-a^2g^2\cos ^2\theta )}{1-a^2g^2}\,dt^2+(r^2+a^2\cos ^2\theta )\Big(\dfrac{dr^2}{\mathrm{\Delta}}+\dfrac{d\theta ^2}{1-a^2g^2\cos ^2\theta }\Big)\\&+\dfrac{r^2+a^2}{1-a^2g^2}\sin ^2\theta \,d\phi ^2+\dfrac{W^2}{2m}\Big(\sum ^{4}
+_{i=1}F_{i}A_{i}^2+\sum ^{4}_{i=1}(G_{i}-F_{i})[A_{i}^{(\phi )}]^2\Big)\bigg]
+\end{align*}\]
+and the new gauge fields would be defined through the equality
+\[\begin{align*}
+\dfrac{W^2}{2m}A_{i}=&K_1\Big(\dfrac{r_1r_2r_3r_4}{r_{i}}+2ma^2\cos ^2\theta \dfrac{e_{i}}{c_{i}s_{i}}+ra^2\cos ^2\theta \Big)\\&\times \Big[K_2\,c_{i}s_{i}\,dt-K_3\,a\sin^2 \theta \Big(\dfrac{c_1c_2c_3c_4s_{i}}{c_{i}}-\dfrac{s_1s_2s_3s_4c_{i}}{s_{i}}\Big)\,d\phi\Big]\\ &+K_4\,2ma^2\cos ^2\theta \Big(\dfrac{c_1c_2c_3c_4}{c_{i}^2}(e_{i}-c_{i}s_{i})-\dfrac{s_1s_2s_3s_4}{s_{i}^2}(e_{i}-c_{i}s_{i})\Big)a\sin ^2\theta \,d\phi 
+\end{align*}\]
+Notice that we have a total of 5 undetermined elements, namely $(\mathrm{\Delta },K_1,K_2,K_3,K_4)$. We suggest the following methods for the determination process:
+\begin{itemize}
+\item[(i)] Proper truncation limits for the two independent charge case and the pairwise identification case
+\item[(ii)] Educated guesswork using symmetry and the original Wu paper
+\end{itemize}
+We will try to employ these techniques in this exact order. 
 \end{document}

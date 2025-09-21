@@ -1,0 +1,92 @@
+\section{Lecture 5 (September 18th)}
+\begin{defi}
+Notice that the linear fractional transformation defined for $ad-bc\ne 0$ as
+\[T(z)=\dfrac{az+b}{cz+d}\]
+we see that the derivative is 
+\[T'(z)=\dfrac{ad-bc}{(cz+d)^2}\ne 0\]
+and that it is analytic and $T'$ is never 0. Meanwhile,
+\[T^{-1}(z)=\dfrac{dz-b}{-cz+a}\]
+Conformal are by definition, angle preserving maps (both size and orientation).
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+Let $z=z(t)$ for $a\leq t\leq b$ represent the contour $C$. Also, let $w=f(z)$, that is, $w(t)=f(z(t))$ represent the contour $\mathrm{\Gamma} $. If $z_0=z(t_0)$ and $w_0=f(z_0)=f(z(t_0))$, $f$ is analytic at $z_0$ such that $f'(z_0)\ne 0$. Then, from \[w'(t_0)=f'(z_0)z'(t_0)\]
+we have
+\[\mathrm{arg}\,w'(t_0)=\mathrm{arg}\,f'(z_0)+\mathrm{arg}\,z'(t_0)\]
+Thus, we see that analytic functions with nonzero deriviatives are conformal mappings.
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+Consider
+\[T(z)=\dfrac{az+b}{cz+d}\]
+(with $ad-bc\ne 0$) and 
+\[S(z)=\dfrac{ez+f}{gz+h}\]
+(with $eh-gf\ne 0$) we ultimately have
+\[(T \circ S)(z)=\dfrac{(ae+bg)z+(af+bh)}{(ce+dg)z+(cf+dh)}\]
+also,
+\[T^{-1}(z)=\dfrac{dz-b}{-cz+a}\]
+Ultimately, we see that these mappings are equivalent to matrix multiplication. 
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+(The fixed points of $T(z)=z$) We see that
+\[\dfrac{az+b}{cz+d}=z\qquad \implies \qquad cz^2+(d-a)z-b=0\]
+and that there can't be more than two fixed points. If $S$ and $T$ are linear fractional transformations such that $S(z_{k})=T(z_{k})$ for $k=1,2,3$, then $S=T$ since $S^{-1}\circ T=I$.
+\end{prop}
+\vspace{2ex}
+\begin{thm}
+If distinct points $\{z_1,z_2,z_3\}$ and distinct points $\{w_1,w_2,w_3\}$ are points of $S^2={\bm C}\cup \{\infty \}$ then there exists a unique linear fractional transformation $T$ such that $T(z_{k})=w_{k}$ for $k=1,2,3$.
+\[\{a,b,c\}\rightarrow \{0,1,\infty \}\leftrightarrow \{\alpha ,\beta ,\gamma \}\]
+Then
+\[T(z)=\dfrac{(b-c)(z-a)}{(b-a)(z-c)}\qquad \&\qquad S(z)=\dfrac{(\beta -\gamma )(z-\alpha )}{(\beta -\alpha )(z-\gamma )}\]
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+Find $V$ such that
+\[\{0,1,2\}\rightarrow \{-1,0,4\}\]
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+\[S(z)=\dfrac{-4(z+1)}{1(z-4)}=\dfrac{-4z-4}{z-4}\]
+(we say it maps to$\{0,1,\infty \}$) which is equivalent to
+\[\begin{pmatrix}
+-4&-4\\1&-4
+\end{pmatrix}
+\]
+For $T$ that sends $\{0,1,2\}$ to the same points, we find the matrix, and $V(z)$ is given as
+\[V(z)=\dfrac{8z-8}{-3z+8}\]
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Let 
+\[T(z)=\dfrac{1+z}{1-z}\]
+which corresponds to 
+\[\begin{pmatrix}
+1&1\\-1&1
+\end{pmatrix}
+\]
+Let $U=\{|z|<1\}$, and say that we want to find $T(U)$. Notice that 
+\[\{-1,0,1\}\mapsto \{0,1,\infty \}\]
+As $T([-1,1])$ maps to the positive $x$-axis, we can see that $T(-1)=\infty $ and that $T(|z|=1)$ is a line passing $T(-1)=0$. Then, $T(i)=i$ and $T(|z|=1)$ is the $y$-axis. Another way to do this is through conformality of $T(|z|=1)$ and the positive real axis being $\pi /2$ at $z=0$.
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+Let $U$ be the unit disk and $T=\{|z|=1\}$ be a unit circle. For $\alpha \in U$, we define
+\[\phi _{\alpha }(z)=\dfrac{z-\alpha }{1-\bar{\alpha }z}:\begin{pmatrix}
+1&-\alpha \\
+-\bar{\alpha }&1
+\end{pmatrix}
+\]
+Then $\phi _{\alpha }$ is analytic on $\bar{U}$ such that $\phi ^{-1}_{\alpha }=\phi _{-\alpha }$, $\phi _{\alpha }(0)=-\alpha $, $\phi_{\alpha }(\alpha )=0$, $\phi _{\alpha }(U)=U$, $\phi _{\alpha }(T)=T$, and $\phi _{\alpha }'(0)=1-|\alpha |^2$, $\phi '(\alpha )=1/(1-|\alpha |^2)$.
+\end{defi}
+\vspace{2ex}
+\begin{proof}
+We'll show that $\phi _{\alpha }(T)=T$.
+\[\begin{align*}
+\phi _{\alpha }(e^{it})=&\dfrac{e^{it}-\alpha }{1-e^{-it}\bar{\alpha }}=\dfrac{e^{it}(1-e^{-it}\alpha )}{1-e^{-it}\bar{\alpha }}\\
+|\phi _{\alpha }(e^{it})|=1
+\end{align*}\]
+
+\end{proof}
+\vspace{2ex}
+

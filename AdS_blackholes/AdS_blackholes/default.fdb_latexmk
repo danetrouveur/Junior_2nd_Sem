@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1757408247.80396 "default.tex" "default.pdf" "default" 1757408249.05091 2
+["pdflatex"] 1758197352.94613 "default.tex" "default.pdf" "default" 1758197354.20321 2
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvbc7t.tfm" 1136768653 2672 88159036c64e674fcd9515bc9c7052d4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -190,9 +190,9 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753710123 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1753710051 3345733 17bb5a30f736e9ad56976bebac113531 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "default.aux" 1757408248.91548 557 2ed1abc0f7336834dd1b2c7fc9b3d8be "pdflatex"
-  "default.out" 1757408248.91614 676 5fd534342cadbc333ff6e98f35cdc4f4 "pdflatex"
-  "default.tex" 1757408247.25394 11557 b9685bb878c395b8d454760b3432c07d ""
+  "default.aux" 1758197354.0624 816 4ab01ca2ac62a3e87fd119b4585e9f5c "pdflatex"
+  "default.out" 1758197354.06311 1108 213f61ea2301371f317ca53cf1c5980e "pdflatex"
+  "default.tex" 1758197352.40396 13948 38c0bcaa28e8dad02965f85e388284ac ""
   "jheppub.sty" 1745656376 11794 6d17a977bbb994fa9e704befb431a7fa ""
   "preamble.tex" 1753938292.25342 1256 f112818f6a357418ac5f53f884cdd68c ""
   (generated)

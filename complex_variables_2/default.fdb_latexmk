@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1757996084.32434 "default.tex" "default.pdf" "default" 1757996085.61632 2
+["pdflatex"] 1758168804.30639 "default.tex" "default.pdf" "default" 1758168806.20006 2
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvbc7t.tfm" 1136768653 2672 88159036c64e674fcd9515bc9c7052d4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -196,14 +196,15 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753710123 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1753710051 3345733 17bb5a30f736e9ad56976bebac113531 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "default.aux" 1757996085.47346 652 fb9ae65271e5a602db01a1ef6b8bab44 "pdflatex"
-  "default.out" 1757996085.47444 737 8c033aeea7086c918aad99ba11d49acf "pdflatex"
-  "default.tex" 1757991730.38903 481 546700c53203f06d9fc776aad13655c5 ""
+  "default.aux" 1758168806.01363 776 6c507c76892725ea64686cd413dfccd8 "pdflatex"
+  "default.out" 1758168806.01511 925 e7babb4bd2118366e0c00f5062491667 "pdflatex"
+  "default.tex" 1758164400.98108 503 98d9d80446ff5eff383f05d8a1902b07 ""
   "jheppub.sty" 1745656376 11794 6d17a977bbb994fa9e704befb431a7fa ""
   "lecture_1.tex" 1756785458.82906 3086 698655021131961f81c846f8005a2771 ""
   "lecture_2.tex" 1756959358.62333 5181 f8df60ed17410ea99309031df6c5960f ""
   "lecture_3.tex" 1757391319.07593 3083 eae906bffbdc8e55ab83380d76d49113 ""
-  "lecture_4.tex" 1757996083.81991 4056 5f5dac0152589698d064430096b6fc52 ""
+  "lecture_4.tex" 1757996204.5648 4055 3b508d9b692252d561a9d5dde762089b ""
+  "lecture_5.tex" 1758168803.63934 3445 2b7af92a1b361581fe14471fef1c1a27 ""
   "preamble.tex" 1745656378 1280 a572ecc18c43e8c2e95a6070fdac8ba6 ""
   (generated)
   "default.aux"

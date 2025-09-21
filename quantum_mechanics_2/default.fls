@@ -339,6 +339,7 @@ INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./lecture_2.tex
 INPUT ./lecture_2.tex
 INPUT lecture_2.tex
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ./lecture_3.tex
 INPUT ./lecture_3.tex
 INPUT lecture_3.tex
@@ -348,6 +349,9 @@ INPUT lecture_4.tex
 INPUT ./lecture_5.tex
 INPUT ./lecture_5.tex
 INPUT lecture_5.tex
+INPUT ./lecture_6.tex
+INPUT ./lecture_6.tex
+INPUT lecture_6.tex
 INPUT default.aux
 INPUT ./default.out
 INPUT ./default.out
@@ -356,9 +360,9 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

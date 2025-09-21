@@ -1,0 +1,112 @@
+\section{Lecture 6 (September 18th)}
+\begin{rmk}
+Las time, we learned about a tower of finite extensions. Today, we will learn about towers of algebraic extensions and constructability.
+\end{rmk}
+\vspace{2ex}
+\begin{prop}
+If $\alpha \in F$ is algebraic over $K$, then 
+\[[K(\alpha ):K]=\mathrm{deg}(\mathrm{irr}(\alpha ,K))\]
+\end{prop}
+\vspace{2ex}
+\begin{prop}
+(13.13) If $K\subset E$ and $E\subset F$ are finite extensions, then so is $K\subset F$. Furthermore,
+\[[F:K]=[F:E][E:K]\]
+\end{prop}
+\vspace{2ex}
+\begin{rmk}
+The converse is also true.
+\end{rmk}
+\vspace{2ex}
+\begin{prop}
+An extension $F\,/\,K$ is finite if and only if there are algebraic elements $\alpha_1,\ldots ,\alpha _{r}$ over $K$ such that $F=K(\alpha_1,\ldots ,\alpha _{r})$.
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+(only if) Assume that $F\,/\,K$ is finite. Then $F=K(\alpha_1,\ldots ,\alpha _{r})$ where $\{ \alpha_1,\ldots,\alpha _{k}\}$ is a $K$-basis of $F$. 
+
+\bigskip
+
+(if) If $r=1$, then $K(\alpha_1)\,/\,K$ is finite by the proposition above. Inductively, we may assume that $r=2$. In this case, consider the tower
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (F) at (0,2) {$K(\alpha_1,\alpha_2)$};
+  \node (E) at (0,1) {$K(\alpha_1)$};
+  \node (K) at (0,0) {$K$};
+
+  % lines (like the chalk sketch)
+  \draw (F) -- (E);
+  \draw (E) -- (K)
+\end{tikzpicture}
+\end{center}
+Since $\alpha_2$ is algebraic over $K(\alpha _1)$, it follows from the above proposition that $K(\alpha_1,\alpha _2)=\Big(K(\alpha_1)\Big)(\alpha_2)$ is finite over $K(\alpha_1)$. Using proposition (13.13), we see that $K(\alpha_1,\alpha_2)\,/\,K$ is finite ($K(\alpha_1)\,/\,K$ is finite by the proposition above). 
+\end{proof}
+\vspace{2ex}
+\begin{prop}
+(13.35) If $K\subset E$ and $E\subset F$ are field extensions, so is $K\subset F$. 
+\end{prop}
+\vspace{2ex}
+\begin{rmk}
+The converse is also true.
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (F) at (0,2) {$\alpha \in F$};
+  \node (E) at (0,1) {$E$};
+  \node (K) at (0,0) {$K$};
+
+  % lines (like the chalk sketch)
+  \draw (F) -- (E);
+  \draw (E) -- (K)
+\end{tikzpicture}
+\end{center}
+\end{rmk}
+\vspace{2ex}
+\begin{proof}
+Let $\alpha \in F$ be an element. Then $f(\alpha )=0$ for some non-zero polynomial
+\[f(t)=e_0+e_1t+e_2t^2+\ldots +e_{n}t^{n}\]
+where $e_{i}\in E$ for all $i$. Consider a tower
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (F) at (0,3) {$F$};
+  \node (E) at (0,1.5) {$E$};
+  \node (K) at (0,0) {$K$};
+  \node (L) at (2,1.5) {$K(e_0,e_1,\ldots ,e_{n})$};
+
+  % lines (like the chalk sketch)
+  \draw (F) -- (E);
+  \draw (E) -- (K)
+  \draw (E) -- (L);
+  \draw (K) -- (L);
+  \draw (F) -- (L);
+\end{tikzpicture}
+\end{center}
+Note that $\alpha $ is algebraic over $K(e_0,e_1,\ldots ,e_{n})$ so that $K(e_0,e_1,\ldots ,e_{n},\alpha )\,/\,K(e_1,\ldots ,e_{n})$ is finite. Since $E\,/\,K$ is algebraic, it follows from proposition (the proposition tha tif $F\,/\,K$ is finite, $F=K(\alpha_1,\ldots ,\alpha _{r})$ for algebraic elements $\alpha _{i}$) that $K(e_0,\ldots ,e_{n})\,/\,K$ is finite, hence algebraic. In particular, $\alpha $ is algebraic over $K$.
+\end{proof}
+\vspace{2ex}
+\begin{prop}
+(13.33) Let $E\subset F$ be the subset consisting of algebraic elements over $K$. Then $E$ is a subfield of $F$. 
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+Let $\alpha $ and $\beta $ be algebraic elements over $K$. We show that $\alpha \pm \beta $, $\alpha \beta $, and $\alpha /\beta $ if $\beta \ne 0$ are all algebraic over $K$. Do this yourself using the above!
+\end{proof}
+\vspace{2ex}
+\section{13.5 Applications: Geometric Impossibilies}
+\begin{rmk}
+Drawing shapes only using a straightedge and a compass. We know that two possible shapes are an equalateral triangle and a line perpendicular to the line passing through the middle point. What about the following?
+\begin{itemize}
+\item[(i)] The side of a square with the same area as a circle
+\item[(ii)] The side of a cube whose volume is 2
+\item[(iii)] A line trisecting the angle formed by two lines
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(13.36) A real number is constructable if it is a coordinate of a point one can construct by a straightedge and a compass:
+\begin{itemize}
+\item[(i)] Draw a line through two points you have already constructed
+\item[(ii)] Draw a circle with the center at a point you have constructed through another point you have constructed 
+\item[(iii)] Mark a point of interesection of two lines, a line and a circle, or two circles you have already constructed 
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+

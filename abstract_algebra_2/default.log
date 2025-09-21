@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  16 SEP 2025 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  21 SEP 2025 14:41
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -263,25 +263,17 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count297
 \l__lipsum_a_int=\count298
 \l__lipsum_b_int=\count299
-(/usr/local/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip58
-\enit@outerparindent=\dimen159
-\enit@toks=\toks26
-\enit@inbox=\box55
-\enit@count@id=\count300
-\enitdp@description=\count301
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks27
-\thm@bodyfont=\toks28
-\thm@headfont=\toks29
-\thm@notefont=\toks30
-\thm@headpunct=\toks31
-\thm@preskip=\skip59
-\thm@postskip=\skip60
-\thm@headsep=\skip61
-\dth@everypar=\toks32
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
+\thm@preskip=\skip58
+\thm@postskip=\skip59
+\thm@headsep=\skip60
+\dth@everypar=\toks31
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/fixmath/fixmath.sty
 Package: fixmath 2022/10/06 v0.9.1 (WaS)
 LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 27.
@@ -339,11 +331,11 @@ Package: esint
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks33
-\pgfutil@tempdima=\dimen160
-\pgfutil@tempdimb=\dimen161
+\pgfutil@everybye=\toks32
+\pgfutil@tempdima=\dimen159
+\pgfutil@tempdimb=\dimen160
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box56
+\pgfutil@abb=\box55
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
@@ -351,31 +343,31 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks34
-\pgfkeys@temptoks=\toks35
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks36
+\pgfkeys@tmptoks=\toks35
 ))
-\pgf@x=\dimen162
-\pgf@y=\dimen163
-\pgf@xa=\dimen164
-\pgf@ya=\dimen165
-\pgf@xb=\dimen166
-\pgf@yb=\dimen167
-\pgf@xc=\dimen168
-\pgf@yc=\dimen169
-\pgf@xd=\dimen170
-\pgf@yd=\dimen171
+\pgf@x=\dimen161
+\pgf@y=\dimen162
+\pgf@xa=\dimen163
+\pgf@ya=\dimen164
+\pgf@xb=\dimen165
+\pgf@yb=\dimen166
+\pgf@xc=\dimen167
+\pgf@yc=\dimen168
+\pgf@xd=\dimen169
+\pgf@yd=\dimen170
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count302
-\c@pgf@countb=\count303
-\c@pgf@countc=\count304
-\c@pgf@countd=\count305
-\t@pgf@toka=\toks37
-\t@pgf@tokb=\toks38
-\t@pgf@tokc=\toks39
-\pgf@sys@id@count=\count306
+\c@pgf@counta=\count300
+\c@pgf@countb=\count301
+\c@pgf@countc=\count302
+\c@pgf@countd=\count303
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
+\pgf@sys@id@count=\count304
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -386,8 +378,8 @@ File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count307
-\pgfsyssoftpath@bigbuffer@items=\count308
+\pgfsyssoftpath@smallbuffer@items=\count305
+\pgfsyssoftpath@bigbuffer@items=\count306
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -409,52 +401,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen172
-\pgfmath@count=\count309
-\pgfmath@box=\box57
-\pgfmath@toks=\toks40
-\pgfmath@stack@operand=\toks41
-\pgfmath@stack@operation=\toks42
+\pgfmath@dimen=\dimen171
+\pgfmath@count=\count307
+\pgfmath@box=\box56
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count310
+\c@pgfmathroundto@lastzeros=\count308
 )) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen173
-\pgf@picmaxx=\dimen174
-\pgf@picminy=\dimen175
-\pgf@picmaxy=\dimen176
-\pgf@pathminx=\dimen177
-\pgf@pathmaxx=\dimen178
-\pgf@pathminy=\dimen179
-\pgf@pathmaxy=\dimen180
-\pgf@xx=\dimen181
-\pgf@xy=\dimen182
-\pgf@yx=\dimen183
-\pgf@yy=\dimen184
-\pgf@zx=\dimen185
-\pgf@zy=\dimen186
+\pgf@picminx=\dimen172
+\pgf@picmaxx=\dimen173
+\pgf@picminy=\dimen174
+\pgf@picmaxy=\dimen175
+\pgf@pathminx=\dimen176
+\pgf@pathmaxx=\dimen177
+\pgf@pathminy=\dimen178
+\pgf@pathmaxy=\dimen179
+\pgf@xx=\dimen180
+\pgf@xy=\dimen181
+\pgf@yx=\dimen182
+\pgf@yy=\dimen183
+\pgf@zx=\dimen184
+\pgf@zy=\dimen185
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen187
-\pgf@path@lasty=\dimen188
+\pgf@path@lastx=\dimen186
+\pgf@path@lasty=\dimen187
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen189
-\pgf@shorten@start@additional=\dimen190
+\pgf@shorten@end@additional=\dimen188
+\pgf@shorten@start@additional=\dimen189
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box58
-\pgf@hbox=\box59
-\pgf@layerbox@main=\box60
-\pgf@picture@serial@count=\count311
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
+\pgf@picture@serial@count=\count309
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen191
+\pgflinewidth=\dimen190
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen192
-\pgf@pt@y=\dimen193
-\pgf@pt@temp=\dimen194
+\pgf@pt@x=\dimen191
+\pgf@pt@y=\dimen192
+\pgf@pt@temp=\dimen193
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -463,17 +455,17 @@ File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen195
+\pgfarrowsep=\dimen194
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen196
-\pgf@sys@shading@range@num=\count312
-\pgf@shadingcount=\count313
+\pgf@max=\dimen195
+\pgf@sys@shading@range@num=\count310
+\pgf@shadingcount=\count311
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box61
+\pgfexternal@startupbox=\box60
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
@@ -484,51 +476,51 @@ File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box62
+\pgfnodeparttextbox=\box61
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen197
-\pgf@nodesepend=\dimen198
+\pgf@nodesepstart=\dimen196
+\pgf@nodesepend=\dimen197
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen199
-\pgffor@skip=\dimen256
-\pgffor@stack=\toks43
-\pgffor@toks=\toks44
+\pgffor@iter=\dimen198
+\pgffor@skip=\dimen199
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
 )) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count314
-\pgfplotmarksize=\dimen257
+\pgf@plot@mark@count=\count312
+\pgfplotmarksize=\dimen256
 )
-\tikz@lastx=\dimen258
-\tikz@lasty=\dimen259
-\tikz@lastxsaved=\dimen260
-\tikz@lastysaved=\dimen261
-\tikz@lastmovetox=\dimen262
-\tikz@lastmovetoy=\dimen263
-\tikzleveldistance=\dimen264
-\tikzsiblingdistance=\dimen265
-\tikz@figbox=\box63
-\tikz@figbox@bg=\box64
-\tikz@tempbox=\box65
-\tikz@tempbox@bg=\box66
-\tikztreelevel=\count315
-\tikznumberofchildren=\count316
-\tikznumberofcurrentchild=\count317
-\tikz@fig@count=\count318
+\tikz@lastx=\dimen257
+\tikz@lasty=\dimen258
+\tikz@lastxsaved=\dimen259
+\tikz@lastysaved=\dimen260
+\tikz@lastmovetox=\dimen261
+\tikz@lastmovetoy=\dimen262
+\tikzleveldistance=\dimen263
+\tikzsiblingdistance=\dimen264
+\tikz@figbox=\box62
+\tikz@figbox@bg=\box63
+\tikz@tempbox=\box64
+\tikz@tempbox@bg=\box65
+\tikztreelevel=\count313
+\tikznumberofchildren=\count314
+\tikznumberofcurrentchild=\count315
+\tikz@fig@count=\count316
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count319
-\pgfmatrixcurrentcolumn=\count320
-\pgf@matrix@numberofcolumns=\count321
+\pgfmatrixcurrentrow=\count317
+\pgfmatrixcurrentcolumn=\count318
+\pgf@matrix@numberofcolumns=\count319
 )
-\tikz@expandcount=\count322
+\tikz@expandcount=\count320
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2025/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
@@ -537,10 +529,10 @@ File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen266
-\pgfarrowlength=\dimen267
-\pgfarrowwidth=\dimen268
-\pgfarrowlinewidth=\dimen269
+\pgfarrowinset=\dimen265
+\pgfarrowlength=\dimen266
+\pgfarrowwidth=\dimen267
+\pgfarrowlinewidth=\dimen268
 )))) (/usr/local/texlive/2025/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
@@ -567,37 +559,37 @@ File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box67
-\pgfnodeparttwobox=\box68
-\pgfnodepartthreebox=\box69
-\pgfnodepartfourbox=\box70
-\pgfnodeparttwentybox=\box71
-\pgfnodepartnineteenbox=\box72
-\pgfnodeparteighteenbox=\box73
-\pgfnodepartseventeenbox=\box74
-\pgfnodepartsixteenbox=\box75
-\pgfnodepartfifteenbox=\box76
-\pgfnodepartfourteenbox=\box77
-\pgfnodepartthirteenbox=\box78
-\pgfnodeparttwelvebox=\box79
-\pgfnodepartelevenbox=\box80
-\pgfnodeparttenbox=\box81
-\pgfnodepartninebox=\box82
-\pgfnodeparteightbox=\box83
-\pgfnodepartsevenbox=\box84
-\pgfnodepartsixbox=\box85
-\pgfnodepartfivebox=\box86
+\pgfnodepartlowerbox=\box66
+\pgfnodeparttwobox=\box67
+\pgfnodepartthreebox=\box68
+\pgfnodepartfourbox=\box69
+\pgfnodeparttwentybox=\box70
+\pgfnodepartnineteenbox=\box71
+\pgfnodeparteighteenbox=\box72
+\pgfnodepartseventeenbox=\box73
+\pgfnodepartsixteenbox=\box74
+\pgfnodepartfifteenbox=\box75
+\pgfnodepartfourteenbox=\box76
+\pgfnodepartthirteenbox=\box77
+\pgfnodeparttwelvebox=\box78
+\pgfnodepartelevenbox=\box79
+\pgfnodeparttenbox=\box80
+\pgfnodepartninebox=\box81
+\pgfnodeparteightbox=\box82
+\pgfnodepartsevenbox=\box83
+\pgfnodepartsixbox=\box84
+\pgfnodepartfivebox=\box85
 ))) (/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box87
-\beforetitleunit=\skip62
-\aftertitleunit=\skip63
-\ttl@plus=\dimen270
-\ttl@minus=\dimen271
-\ttl@toksa=\toks45
-\titlewidth=\dimen272
-\titlewidthlast=\dimen273
-\titlewidthfirst=\dimen274
+\ttl@box=\box86
+\beforetitleunit=\skip61
+\aftertitleunit=\skip62
+\ttl@plus=\dimen269
+\ttl@minus=\dimen270
+\ttl@toksa=\toks44
+\titlewidth=\dimen271
+\titlewidthlast=\dimen272
+\titlewidthfirst=\dimen273
 ) (./default.aux)
 \openout1 = `default.aux'.
 
@@ -621,17 +613,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen275
-\scratchbox=\box88
-\nofMPsegments=\count324
-\nofMParguments=\count325
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen276
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count321
+\scratchdimen=\dimen274
+\scratchbox=\box87
+\nofMPsegments=\count322
+\nofMParguments=\count323
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count324
+\MPscratchDim=\dimen275
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
+\everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -733,312 +725,103 @@ l.20 \end{tikzcd}
 
 [2]
 
-./lecture_2.tex:68: Package pgf Error: No shape named `tikz@f@3-3-1' is known.
+./lecture_2.tex:69: Package pgf Error: No shape named `tikz@f@3-3-1' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help
 ...
-l.67 I think the culprit is a tikzcd arrow in cell 2-1.
+l.68 I think the culprit is a tikzcd arrow in cell 2-1.
 \errmessage ...currentrow -\tikzcd@currentcolumn }
                                                   
-l.68 \end{tikzcd}
+l.69 \end{tikzcd}
                  
 (That was another \errmessage.)
 
 
-./lecture_2.tex:68: Package pgf Error: No shape named `tikz@f@3-3-1' is known.
+./lecture_2.tex:69: Package pgf Error: No shape named `tikz@f@3-3-1' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help
 ...
-l.67 I think the culprit is a tikzcd arrow in cell 2-1.
+l.68 I think the culprit is a tikzcd arrow in cell 2-1.
 \errmessage ...currentrow -\tikzcd@currentcolumn }
                                                   
-l.68 \end{tikzcd}
+l.69 \end{tikzcd}
                  
 (That was another \errmessage.)
 
-./lecture_2.tex:80: Undefined control sequence.
-l.80 \longskip
-              
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-) (./lecture_3.tex
 
-[3]
+[3]) (./lecture_3.tex) (./lecture_5.tex
 
-[4]) (./lecture_5.tex
+[4]
 
 [5]
-./lecture_5.tex:35: Undefined control sequence.
-\enit@enditemize ->\enit@after 
-                               \endlist \ifx \enit@series \relax \else \ifnu...
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./lecture_5.tex:35: Undefined control sequence.
-\enit@enditemize ...x \else \ifnum \enit@resuming 
-                                                  =\@ne \enit@setresumekeys ...
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[6]) (./lecture_6.tex
 
-./lecture_5.tex:35: Missing number, treated as zero.
-<to be read again> 
-                   =
-l.35 \end{itemize}
-                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+[7]
 
-./lecture_5.tex:35: Undefined control sequence.
-\enit@setresumekeys ...xpandafter {\enit@savekeys 
-                                                  }\xdef \enit@afterlist {#2...
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+./lecture_6.tex:39: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
-./lecture_5.tex:35: Undefined control sequence.
-\enit@setresumekeys ...it@toks }\ifnum \enit@type 
-                                                  =\z@ #3\def \enit@noexcs {...
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lecture_5.tex:35: Missing number, treated as zero.
-<to be read again> 
-                   =
-l.35 \end{itemize}
-                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./lecture_5.tex:35: Undefined control sequence.
-<argument> enit@resume@series@\enit@series 
-                                           
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lecture_5.tex:35: Undefined control sequence.
-\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
-                                                  \endcsname \the \csname c@...
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lecture_5.tex:35: Undefined control sequence.
-\enit@setresumekeys ...e \the \csname c@\@listctr 
-                                                  \endcsname }\fi }
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lecture_5.tex:35: You can't use `\relax' after \the.
-<recently read> \c@ 
-                    
-l.35 \end{itemize}
-                  
-I'm forgetting what you said and using zero instead.
-
-./lecture_5.tex:35: Undefined control sequence.
-\enit@enditemize ...ist \fi \ifnum \enit@resuming 
-                                                  =\thr@@ \enit@setresumekey...
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lecture_5.tex:35: Missing number, treated as zero.
-<to be read again> 
-                   =
-l.35 \end{itemize}
-                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./lecture_5.tex:35: Undefined control sequence.
-\enit@setresumekeys ...xpandafter {\enit@savekeys 
-                                                  }\xdef \enit@afterlist {#2...
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lecture_5.tex:35: Undefined control sequence.
-\enit@setresumekeys ...it@toks }\ifnum \enit@type 
-                                                  =\z@ #3\def \enit@noexcs {...
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lecture_5.tex:35: Missing number, treated as zero.
-<to be read again> 
-                   =
-l.35 \end{itemize}
-                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./lecture_5.tex:35: Undefined control sequence.
-\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
-                                                  \endcsname \the \csname c@...
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lecture_5.tex:35: Undefined control sequence.
-\enit@setresumekeys ...e \the \csname c@\@listctr 
-                                                  \endcsname }\fi }
-l.35 \end{itemize}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lecture_5.tex:35: You can't use `\relax' after \the.
-<recently read> \c@ 
-                    
-l.35 \end{itemize}
-                  
-I'm forgetting what you said and using zero instead.
-
-
-./lecture_5.tex:35: LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
+See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 \end{itemize}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./lecture_5.tex:35: Extra \endgroup.
-\end  ...end#1\endcsname \@checkend {#1}\endgroup 
-                                                  \UseHook {env/#1/after}\if...
-l.35 \end{itemize}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
-
-
-[6]
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no J in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-./lecture_5.tex:127: Package pgf Error: No shape named `J' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.127   \draw (I) -- (J)
-                        ;
+l.39 \end{tikzpicture}
+                      
 (That was another \errmessage.)
 
 
-./lecture_5.tex:127: Package pgf Error: No shape named `J' is known.
+./lecture_6.tex:59: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
-See the pgf package documentation for explanation.
+See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127   \draw (I) -- (J)
-                        ;
+l.59 \end{tikzpicture}
+                      
 (That was another \errmessage.)
 
 
 
-[7])
+[8]
 
-[8] (./default.aux)
+./lecture_6.tex:77: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77   \draw
+             (E) -- (L);
+(That was another \errmessage.)
+
+
+
+[9])
+
+[10] (./default.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `default.out' has not changed.
-(rerunfilecheck)             Checksum: 2D1D70A6BC6C271714366D521E5D17F5;1435.
+(rerunfilecheck)             Checksum: 60969F0410D67DBA4AD4ABE61C831495;1885.
  ) 
 Here is how much of TeX's memory you used:
- 25115 strings out of 473190
- 495171 string characters out of 5715800
- 984409 words of memory out of 5000000
- 47876 multiletter control sequences out of 15000+600000
- 572206 words of font info for 87 fonts, out of 8000000 for 9000
+ 24782 strings out of 473190
+ 489522 string characters out of 5715800
+ 976752 words of memory out of 5000000
+ 47552 multiletter control sequences out of 15000+600000
+ 568045 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,15n,108p,1196b,1072s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,15n,108p,1196b,1069s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on default.pdf (8 pages, 148580 bytes).
+Output written on default.pdf (10 pages, 155337 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
