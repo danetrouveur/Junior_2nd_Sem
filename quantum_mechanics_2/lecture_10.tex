@@ -1,0 +1,68 @@
+\section{Lecture 10 (September 24th)}
+\begin{recall}
+We have considered a box of side length $L$ with energy levels denoted as
+\[E_{k}=\dfrac{\hbar ^2\pi ^2}{2mL^2}(n_1^2+n_2^2+n_3^2)\]
+considering the number of states with energy level $E\leq E_{k}$. In a lattice structure, take $\mathrm{\Delta }\vec{n}=1$ with spin up and down. Taking 
+\[R^2=n_1^2+n_2^2+n_3^2\]
+we can take
+\[R=\sqrt{\dfrac{E_{k}2mL^2}{\hbar ^2\pi ^2}}\]
+and express the number of energy levels inside a sphere with radius $R$ lower than $E_{k}$ as
+\[2\times \dfrac{1}{8}\times \dfrac{\dfrac{4\pi }{3}R^3}{\mathrm{\Delta }\vec{n}}=N\]
+Than what is the number of non-interacting electrons with the lowest energy state? We have
+\[N_{e}=NE_{F}\]
+where we call $E_{F}$ is called the Fermi energy. 
+\[E_{F}=\dfrac{\hbar ^2\pi ^2}{2m}\Big(\dfrac{3n}{\pi }\Big)^{2/3}\qquad\&\qquad n=\dfrac{N_{e}}{L^3}=\dfrac{N_{e}}{V}\]
+What is the lowest energy? It is
+\[\dfrac{1}{8}\int _{E\leq E_{F}}d^3\vec{n}\,2\cdot \dfrac{\vec{p}^2}{2m}=\dfrac{1}{8}\int d^3\vec{n}\,2\Big(\dfrac{\hbar ^2\pi ^2}{2m}\vec{n}^2\Big)=\dfrac{\hbar ^2\pi ^2}{10mL^2}R^{5}\]
+substituting, we find
+\[N_{e}\dfrac{3}{5}\dfrac{\hbar ^2\pi ^2}{2m}\Big(\dfrac{2n}{\pi }\Big)^{2/3}=\dfrac{3}{5}N_{e}F_{E}\]
+Notice that we can write the Fermi energy in terms of a constant called the Fermi wave number,
+\[E_{F}=\dfrac{\hbar ^2k_{F}^2}{2m}\]
+\end{recall}
+\vspace{2ex}
+\begin{thm}
+Taking this box system as a system of a quantum gas cloud, we can compute its pressure from its total energy as
+\[P=-\Big(\dfrac{\partial E_{tot}}{\partial V} \Big)_{T=0}\]
+A good way do this is by considering it's logarithm,
+\[\ln E_{tot}=\ldots +\Big(-\dfrac{2}{3}\Big)\ln V\]
+giving
+\[\dfrac{1}{E_{tot}}\dfrac{\partial E_{tot}}{\partial V}=-\dfrac{2}{3}\dfrac{1}{V} \]
+Notice how it doesn't follow the ideal gas law. We call this pressure ultimately as the degeneracy pressure. 
+\end{thm}
+\vspace{2ex}
+\begin{rmk}
+In the atomic and molecular level, the number of considerations become emacculate:
+\begin{itemize}
+\item[(i)] The kinetic energy of the electron
+\item[(ii)] The attraction between the electron ($e^{-}$) and the nucleus ($Ze$)
+\item[(iii)] The repulsion between the electrons 
+\item[(iv)] The spin-orbit interactions 
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(Helium) We first consider the Helium atom with the Hamiltonian
+\[H=\dfrac{\vec{p}_{1}^2}{2m_{e}}+\dfrac{\vec{p}_{2}^2}{2m_{e}}+\dfrac{1}{4\pi \varepsilon _{0}}\dfrac{(+Ze)(-e)}{r_1}+\dfrac{1}{4\pi\varepsilon _{0}}\dfrac{(+Ze)(-e)}{r_{2}}+\dfrac{(-e)(-e)}{4\pi \varepsilon _{0}}\dfrac{1}{r_{12}}\]
+where the last term is $\hat{V}_{12}$ and the other terms are $H_0$ (Hyodrogen like). This is exactly soluble, and we need to Pauli exclusion principle for the two electrons. The Schrodinger equation that they will follow will be
+\[H_0\psi (\vec{r}_{1},\vec{r}_{2},\sigma_{1},\sigma_{2})=E\psi (\vec{r}_{1},\vec{r}_{2},\sigma_{1},\sigma_{2})\]
+and the energy would be the energy sum $E_1+E_2$. The solutions will look something like
+\[\phi _{n_1l_1m_1}(\vec{r}_{1})\qquad\&\qquad \phi _{n_2l_2m_2}(\vec{r}_{2})\]
+The energy levels being
+\[E_{n_1}^{(1)}=-\dfrac{Z^2}{n_1^2}(13.6)\qquad\&\qquad E^{(2)}_{n_{2}}=-\dfrac{Z^2}{n_{2}^2}(13.6)\]
+depending on what energy level the electrons are in. In the lowest energy state for both particles, we simply add the lowest energies,
+\[E_{grd}=E^{(1)}+E^{(2)}=2E_{1}=2\times (-54.5)=-108.8\]
+where the units would be electron-volts. The possible spin states are the singlets ($S=0$) or the triplets ($S=1$). However, ote that as there are two particles, we cannot expect the wave functions to be odd under exchange, and the triplet state canont exist due to the Pauli exclusion principle. We automatically conclude that the spin state is a singlet! 
+
+\bigskip
+
+We next consider the first excited state. The total energy should be the sum of the energy state of a $(1,0,0)$ state and a $(2,l,m)$ state giving
+\[E_1+E_2=-54.4-13.6=-68.0\]
+We would have the wavefunctions, on the other hand, as 
+\[(1,0,0)(r_1)(2,l,m)(r_2)\pm (1,0,0)(r_2)(2,l,m)(r_1)\]
+\end{thm}
+\vspace{2ex}
+\begin{defi}
+(Ionisation energy) The ionisation energy is the difference between energies as an electron escapes the molecule. Finding the difference of energies between two particles with energy $-54.4$ and just one particle at that level, we find $\mathrm{\Delta }E_{ion}=+54.4$. Consider how when two particles were in the second energy state, $n=2$ excited from the first, we find the difference of energy levels to be $\mathrm{\Delta }E=-27.2+54.4=28.2$. This tells us that it requires less energy to ionize then to be excited to a new state! We call this autoionzisation.
+\end{defi}
+\vspace{2ex}
+

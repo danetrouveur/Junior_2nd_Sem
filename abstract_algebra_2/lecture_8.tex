@@ -1,0 +1,45 @@
+\section{Lecture 8 (September 25th)}
+\begin{rmk}
+Last time, we've seen how $[{\bm Q}(\alpha ):{\bm Q}]$ is a finite power of 2 for a constructible $\alpha $. Today, we'll learn about splitting fields.
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(13.38) Let $\alpha $ be a constructible number. Then,
+\begin{itemize}
+\item[(i)] $\alpha \in F$, where $[F:{\bm Q}]$ is a finite power of 2
+\item[(ii)] $\alpha $ is algebraic over ${\bm Q}$
+\item[(iii)] $[{\bm Q}(\alpha ),{\bm Q}]$ is again a finite power of 2 
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{thm}
+To prove this theorem, it is enough to show that: $C=\{$numbers that have been constructed$\}\subset E$, a field, acted on by the basic operators gives $C\cup\{$newly constructed numbers$\}\subset E(u)$ where $[E(u):E]\leq 2$. For example, 
+\[\{y=mx+r\}\cap \{x^2+y^2+ax+by+c=0\}\]
+solves to give
+\[x'=\dfrac{-(2mr+ bm +a\pm \sqrt{(2mr+bm+a)^2-4(m^2+1)(r^2+br+c)})}{2(m^2+1)}\]
+By setting $u=\sqrt{(2mr+b m+a)^2-4(m^2+1)(r^2+br+c)}$, we find that both $x'$ and $y'=mx'+r$ lies in $E(u)$. It is trivial from here that the field extension has a dimension lower than or equal to 2.
+\end{thm}
+\vspace{2ex}
+\section{Chapter 14. Normal and Separable Extensions, and Splitting Fields}
+\begin{thm}
+(Kronecker) Let $K$ be a field, and let $p(t)\in K[t]$ be irreducible. Then there exists an extension field that contains a zero $\alpha $ of $p(t)$. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Set
+\[E=K[t]/(p(t))\]
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Let $K={\bm R}$ and $p(t)=t^2+1\in {\bm R}[t]$. The field of complex numbers can be defined as
+\[{\bm C}={\bm R}[t]/(t^2+1)\]
+and would contain the root $\alpha =\bar{t}$. Note that
+\begin{itemize}
+\item[(i)] \[\bar{t}^2+\bar{1}=\overline{t^2+1}=\bar{0}\in {\bm R}[t]/(t^2+1)\]
+That is, $\bar{t}$ is a zero of
+\[x^2+1\in \Big({\bm R}[t]/(t^2+1)\Big)[x]\]
+\item[(ii)] Note that ${\bm R}\rightarrow {\bm R}[t]\rightarrow {\bm R}[t]/(t^2+1)$ is injective
+\item[(iii)] ${\bm R}[t]/(t^2+1)$ is a field since ${\bm R}[t]$ is a PID and $t^2+1$ is irreducible in ${\bm R}$. 
+\end{itemize}
+\end{ex}
+\vspace{2ex}

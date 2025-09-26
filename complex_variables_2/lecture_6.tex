@@ -1,0 +1,90 @@
+\section{Lecture 6 (September 23rd)}
+\begin{recall}
+Last class, we've took $U=\{|z|<1 \}$ and $T=\{|z|=1\}$ with $\alpha \in U$. The map $\phi _{\alpha }(z)$ was defined as
+\[\phi_{\alpha }(z)=\dfrac{z-\alpha }{1-\bar{\alpha }z}:\begin{pmatrix}
+1&-\alpha \\-\bar{\alpha }&1
+\end{pmatrix}
+\]
+We've noted that $1-\bar{\alpha }z=0$ implied that $z=\overline{(1/\alpha )}\notin \bar{U}$. You see that $\phi _{\alpha }$ is analytic and one-to-one. We find explicitly that
+\[\phi _{\alpha }^{-1}=\begin{pmatrix}
+1&\alpha \\\bar{\alpha }&1
+\end{pmatrix}
+\]
+such that $\phi ^{-1}_{\alpha }=\phi _{-\alpha }$
+\[\phi ^{-1}_{\alpha }(z)=\phi _{-\alpha }=\dfrac{z+\alpha }{1+\bar{\alpha }z}\]
+and
+\[\phi '_{\alpha }(z)=\dfrac{1-|\alpha |^2}{(1-\bar{\alpha }z)^2}\]
+so that $\phi _{\alpha }'(0)=1-|\alpha |^2$ and $\phi '_{\alpha }(\alpha )=1/(1-|\alpha |^2)$. What about mappings from $T$? If $z=e^{it}$, then
+\[\begin{align*}
+\phi _{\alpha }(e^{it})=\dfrac{e^{it}-\alpha }{1-\bar{\alpha }e^{it}}=\dfrac{e^{it}-\alpha }{e^{it}(e^{-it}-\bar{\alpha })}=\dfrac{1}{e^{it}}\dfrac{e^{it}-\alpha }{\overline{(e^{it}-\alpha )}}
+\end{align*}\]
+such that $|\phi _{\alpha }(e^{it})|=1$ and $\phi _{\alpha }(T)\subset T$. Furthermore, we know that $\phi _{-\alpha }(T)\subset T$. We thus find, that $\phi _{\alpha }(T)=T$. With this information, via the maximum modulus theorem, we find that
+\[\mathop{\mathrm{max}}_{z\in \bar{U}}|\phi_{\alpha }(z)|=\mathop{\mathrm{max}}_{z\in T}|\phi _{\alpha }(z)|=1  \]
+which implies that
+\[|\phi _{\alpha }(z)|<1\]
+for all $z\in U$. 
+\end{recall}
+\vspace{2ex}
+\begin{rmk}
+We summerize like the following:
+\begin{itemize}
+\item[(i)] For $\alpha \in U$,
+\[\phi _{\alpha }(z)=\dfrac{z-\alpha }{1-\bar{\alpha }z}\]
+\item[(ii)] $\phi _{\alpha }:U\rightarrow U$ is one-to-one, analytic and onto.
+\item[(iii)] $\phi _{\alpha }(T)=T$
+\item[(iv)] $\phi '_{\alpha }(0)=1-|\alpha |^2$
+\item[(v)] $\phi '_{\alpha }(\alpha )=1/(1-|\alpha |^2)$
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(Schwartz lemma) Let $f:U\rightarrow U$ is analytic with $f(0)=0$. For every $z\in U$, we have $|f(z)|\leq |z|$ and $|f'(0)|\leq 1$. Furthermore, if one of the equalities hold, for some $z\in U \backslash \{0\}$ then $f$ is a rotation.
+\[f(z)=e^{i\theta }z\]
+for some $\theta $.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Notice that there exists a $g$ analytic on $U$ such that $f(z)=zg(z)$. For every fixed $z\in U$,
+\[\begin{align*}
+|g(z)|=\Big|\dfrac{f(z)}{z}\Big|\leq &\max_{\theta }\Big|\dfrac{f(re^{i\theta })}{r}\Big|\\
+\leq & \dfrac{1}{r}
+\end{align*}\]
+if $|z|<r<1$. Taking $r\rightarrow 1^{-}$, $|f(z)/z|\leq 1$. That is, $|f(z)|\leq |z|$ for all $z\in U$. Also, $f'(z)=g(z)+zg'(z)$ which implies that $f'(0)=g(0)$. This again implies that $|f'(0)|=|g(0)|\leq 1$. 
+
+\bigskip
+
+Notice the following. If $f(0)=\alpha $, then define $g(z)=\phi _{\alpha }(f(z))$. Then, $g:U\rightarrow U$ is analytic with $g(0)=0$. Applying the Schwartz lemma to $g$, $|g'(0)|\leq 1$ implies that
+\[|f'(0)|\leq 1-|\alpha |^2\]
+But, 
+\[g'(0)=\phi _{\alpha }'(f(0))f'(0)=\phi '_{\alpha }(\alpha )f'(0)=\dfrac{1}{1-|\alpha |^2}f'(0)\]
+
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Pick theorem) If $f:U\rightarrow U$ is analytic with $f(\alpha )=\beta $, then
+\[|f'(\alpha )\leq \dfrac{1-|\beta |^2}{1-|\alpha |^2}\]
+The equality holds when 
+\[f(z)=\phi _{-\beta }(e^{i\theta }\phi _{\alpha }(z))\]
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+We define $g$ on $U$ so that $g(0)=0$. Indeed,
+\[g=\phi _{\beta }\circ f\circ \phi _{-\alpha }\]
+is analytic from $U$ into $U$ with $g(0)=0$. Applying the Schwartz lemma to $g$, we have $|g'(0)|\leq 1$. But 
+\[g'(0)=\Big(\phi _{\beta }'[f(\phi _{\alpha }(0))]\Big)f'(\phi _{\alpha }(0))\phi '_{\alpha }(0)=\phi '_{\beta }(\beta )\cdot f'(0 )\cdot \phi '_{-\alpha }(0)=\dfrac{1-|\alpha |^2}{1-|\beta |^2}f'(0)\leq 1\]
+When does the equality hold? Let $g(z)=\lambda z$ for some $|\lambda |=1$. Then
+\[\phi _{\beta }(f(\phi _{\alpha }(z)))=\lambda z\]
+By putting $z\rightarrow \phi _{\alpha }(z)$, 
+\[\phi _{\beta }(f(z))=\lambda \phi _{\alpha }(z)\]
+and
+\[\phi _{-\beta }\Big[\phi _{\beta }(f(z))\Big]=\phi _{-\beta }(\lambda \phi _{\alpha }(z))\]
+and ultimately
+\[f(z)=\phi _{-\beta }(\lambda \phi _{\alpha}(z))\]
+
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+If $f$ is one-to-one analytic from $U$ onto $U$, then there exists $\alpha \in U$ and $\theta \in {\bm R}$ such that $f(z)=e^{i\theta }\phi _{\alpha }(z)$ for all $z\in U$.
+\end{thm}
+\vspace{2ex}
+

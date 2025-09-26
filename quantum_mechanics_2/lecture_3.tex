@@ -11,22 +11,21 @@ where we fully know ${H}_{0}$ analytically. In general, we deal with
 \vspace{2ex}
 \begin{ex}
 (Non-degenerate pertubation) Given the information of ${H}_{0}$ we want to inquire the following,
-	\[E_{n}^{(0)}\quad\&\quad |n^{(0)}\rangle\qquad\implies \qquad |n\rangle _{\lambda }\quad\&\quad E_{n} \]
- where $\hat{H}|n\rangle _{\lambda }=E_{n}|n\rangle _{\lambda }$. We are to of course expect the following relationship for an arbitrary function $\mathrm{\Delta }_{n}(\lambda )$
-\[E_{n}= E_{n}^{(0)}+\mathrm{\Delta }_{n}(\lambda )\]
-and thus
-\[(\hat{H}_{0}-E_{n}^{(0)})|n\rangle _{\lambda }=(\mathrm{\Delta }_{n}(\lambda )-\lambda \hat{V})|n\rangle _{\lambda }\]
-As $H_{0}|n^{(0)}\rangle =E_{n}^{(0)}|n^{(0)}\rangle $, $\langle n^{(0)}|(H_{0}-E_{n}^{(0)})=0$ which leads to
-\[\langle n^{(0)}|\mathrm{\Delta }_{n}(\lambda )-\lambda \hat{V}|n\rangle _{\lambda }=0\]
-Telling us that $|n^{(0)}\rangle $ is missing from the ket of the right-hand side. Now define the projection from
-\[{\bf 1}=\sum _{k}|k^{(0)}\rangle \langle k^{(0)}|\]
-where the Hilbert space $\mathcal{H}$ has the basis $\{|k^{(0)}\rangle  \}$ as
-\[\phi _{n}={\bf 1}-|n^{(0)}\rangle \langle n^{(0)}|=\sum _{k\ne n}|k^{(0)}\rangle \langle k^{(0)}|\]
-givens some $n$. Now,
-	\[\boxed{|n\rangle _{\lambda }=C_{n}(\lambda )|n^{(0)}\rangle +\dfrac{1}{E_{n}^{(0)}-\hat{H}_{0}}\phi _{n}(-\mathrm{\Delta  }_{n}(\lambda )+\lambda \hat{V})|n\rangle _{\lambda }}\]
-Notice that $\langle n^{(0)}|n\rangle _{\lambda }=C_{n}(\lambda )$ and that $C_{n}(\lambda )$ dictates normalisation (how much $|n^{(0)}\rangle $ is in $|n\rangle _{\lambda }$). We expect the following
-	\[|n\rangle _{\lambda }=C_{n}(\lambda )\Big(|n^{(0)}\rangle +\lambda |n^{(1)}\rangle +\lambda ^2|n^{(2)}\rangle +\ldots \Big)\]
-now we of course want to substitute. 
+	\[E_{n}^{(0)}\quad\&\quad |\phi _{n}\rangle \qquad\implies \qquad E_{n}(\lambda )\quad\&\quad |\psi _{n}\rangle  \]
+ where $H(\lambda )|\phi _{n}\rangle =E_{n}(\lambda )|\phi _{n}\rangle $ (we omit the hats on operators from now on). We are now going to preform a power series on the energy levels, expected to follow the following relationship for the series $\mathrm{\Delta }_{n}(\lambda )$:
+\[E_{n}(\lambda )= E_{n}^{(0)}+\underbrace{\lambda E_{n}^{(1)}+\lambda ^2E_{n}^{(2)}+\ldots}_{\mathrm{\Delta }_{n}(\lambda )} \]
+By noticing that $E_{n}(\lambda )|\psi  _{n}\rangle =(H_0+\lambda H_{1})|\psi _{n}\rangle $ and equating it with the above expression, we find 
+\[({H}_{0}-E_{n}^{(0)})|\psi _{n}\rangle =(\mathrm{\Delta }_{n}(\lambda )-\lambda H_{1})|\psi _{n}\rangle \]
+Also, as $H_{0}|\phi _{n}\rangle  =E_{n}^{(0)}|\phi _{n}\rangle $, we can find its dual $\langle \phi _{n}|(H_{0}-E_{n}^{(0)})=0$ which leads to the conclusion
+\[\langle \phi _{n}|\mathrm{\Delta }_{n}(\lambda )-\lambda H_1|\psi _{n}\rangle =0\]
+What does this tell us? It tells us that $|\phi _{n}\rangle $ is missing from the ket of the right-hand side. Now define the projection onto $|\phi _{n}\rangle ^{\perp}$ through
+\[{\bf 1}=\sum _{k}|\phi _{k}\rangle \langle \phi _{k}|\]
+where the Hilbert space $\mathcal{H}$ has the basis $\{|\phi _{k}\rangle  \}$ as
+\[\mathrm{Proj}_{n}={\bf 1}-|\phi _{n}\rangle \langle \phi _{n}|=\sum _{k\ne n}|\phi _{k}\rangle \langle \phi _{k}|\]
+givens some $n$. Now, we could operate this on the equation above to obtain
+	\[\boxed{|\psi _{n}\rangle =N_{n}(\lambda )|\phi _{n}\rangle +(E_{n}^{(0)}-H_0)^{-1}\mathrm{Proj}_{n}(-\mathrm{\Delta  }_{n}(\lambda )+\lambda H_1)|\psi _{n}\rangle }\]
+Notice that $\langle \phi _{n}|\psi _{n}\rangle =C_{n}(\lambda )$ and that $C_{n}(\lambda )$ dictates normalisation (how much $|\phi _{n}\rangle $ is in $|\psi _{n}\rangle $). Meanwhile, we expect the following	\[|\psi _{n}\rangle =N_{n}(\lambda )\Big(\underbrace{|\phi _{n}\rangle}_{|\phi _{n}^{()}} +\lambda \underbrace{\sum _{k\ne n}C_{1k} |\phi _{k}\rangle}_{|\phi _{n}^{(1)}\rangle } +\lambda ^2\underbrace{\sum _{k\ne n}C_{2k}|\phi _{k}\rangle }_{|\phi _{n}^{(2)}\rangle }+\ldots \Big)\]
+now we of course want to substitute and find each ket in the expansion!
 \end{ex}
 \vspace{2ex}
 

@@ -357,6 +357,12 @@ INPUT lecture_5.tex
 INPUT ./lecture_6.tex
 INPUT ./lecture_6.tex
 INPUT lecture_6.tex
+INPUT ./lecture_7.tex
+INPUT ./lecture_7.tex
+INPUT lecture_7.tex
+INPUT ./lecture_8.tex
+INPUT ./lecture_8.tex
+INPUT lecture_8.tex
 INPUT default.aux
 INPUT ./default.out
 INPUT ./default.out
@@ -379,3 +385,4 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/esint-type1/esint10.
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

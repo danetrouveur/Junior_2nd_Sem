@@ -1,0 +1,79 @@
+\section{Lecture 8 (September 24th)}
+\begin{rmk}
+(I) The vacuum energy $E$ is the sum of all ground state energies for the harmonic oscillator, and therefore is divergent! We might think of possible resolutions. 
+\begin{itemize}
+\item[(i)] Ignore, as energy is only meanful as a difference 
+\item[(ii)] Introducing some regulator called the IR regulator, taking
+\[\delta ^{(3)}(\vec{p})=\int \dfrac{d^3\vec{x}}{(2\pi )^3}\,e^{i\vec{p}\cdot \vec{x}}\longrightarrow \delta ^{(3)}({\bf 0})=\int \dfrac{d^3\vec{x}}{(2\pi )^3}=\dfrac{V}{(2\pi )^3}\]
+which implies that
+\[E_{0}=\dfrac{V}{(2\pi )^3}=\int d^3\vec{p}\,(E_{p}/2)\]
+\item[(iii)] Renormalisation, and redefining our theory by employing a infinite counterterm 
+\[\mathcal{L}_{ren}=-\dfrac{1}{2}(\partial \phi )^2-\dfrac{1}{2}m\phi ^2+\mathrm{\Lambda }_{0}\longrightarrow \hat{H}_{rem}=\hat{H}-\int d^3\vec{x}\,\mathrm{\Lambda }_{0}\]
+where $\mathrm{\Lambda }_{0}$ would be the cosmological constant and we would set it such that the integral in the right would become $E_0$. In this case, the action would become infinite, but the observables would become finite!
+\end{itemize}
+(II) Another important remark is that the order of the operators matter. We define the normal ordering to be putting creation operators to the left. Well, how could this be helpful? 
+
+\bigskip 
+
+(III) The Klein-Gordan field operators satisfy the time evolution property in the Heisenberg picture. Well, see that
+\[\begin{align*}
+e^{i\hat{H}x^{0}}\hat{\phi }(0,\vec{x})e^{-i\hat{H}x^{0}}=&\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^32E_{p}}}e^{i\hat{H}x^{0}}\Big(\hat{a}(\vec{p})e^{i\vec{p}\cdot \vec{x}}+\hat{a}(\vec{p})^{\dagger}e^{-i\vec{p}\cdot \vec{x}}\Big)e^{-i\hat{H}x^{0}} \\
+=&\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^32E_{p}}}\Big(\hat{a}(\vec{p})e^{-iE_{p}x^{0}+i\vec{p}\cdot \vec{x}}+\hat{a}(\vec{p})^{\dagger}e^{iE_{p}x^{0}-i\vec{p}\cdot \vec{x}}\Big)\\
+=&\hat{\phi }(x^{0},\vec{x})=\hat{\phi }(x)
+\end{align*}\]
+with
+\[\begin{align*}
+[\hat{H},\hat{a}(\vec{p})]=&\int d^3\vec{q}\,E_{q}[\hat{a}_{q}^{\dagger}\hat{a}_{q},\hat{a}_{p}]\\
+=&\int d^3\vec{q}\,E_{q}\Big(\hat{a}^{\dagger}_{q}[\hat{a}_{q},\hat{a}_{p}]+[\hat{a}_{p}^{\dagger},\hat{a}_{p}]\hat{a}_{q}\Big)\\
+=&-E_{p}\hat{a}(\vec{p})
+\end{align*}\]
+and
+\[[\hat{H},\hat{a}(\vec{p})^{\dagger}]=E_{p}\hat{a}(\vec{p})^{\dagger}\]
+Notably, the commutator relations with the ladder operators and the Hamiltonian allows the fields to transform unitarily under the time-evoluation operator. For general spacetime translations, we'll see also that
+\[e^{-i\hat{P}_{\mu }a^{\mu }}\hat{\phi }(x)e^{i\hat{P}_{\mu }a^{\mu }}=\hat{\phi }(x+a)\]
+this characterises the translation invariance of a scalar field operator.
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+(Testing the Fock space) Acting the time-ordered Hamiltonian on the momentum ket, we find
+\[\hat{H}|\vec{p}\rangle =\int d^3\vec{q}\,E_{q}\hat{a}_{q}^{\dagger}[\hat{a}_{q},\hat{a}_{p}^{\dagger}]|0\rangle=E_{p}\hat{a}_{p}^{\dagger}|0\rangle =E_{p}|\vec{p}\rangle  \]
+and
+\[\hat{H}|\vec{p}_{1},\ldots ,\vec{p}_{N}\rangle =(E_{p_1}+\ldots E_{p_{n}})|\vec{p}_{1},\ldots ,\vec{p}_{N}\rangle \]
+which is the intuition we have. Also,
+\[\hat{P}|\vec{p}_{1},\ldots ,\vec{p}_{n}\rangle \]
+\end{rmk}
+We also make the note that if we deal with complex Klein-Gordan theory, we get another interesting charge which is associated with the $U(1)$ symmetry!
+\vspace{2ex}
+\begin{defi}
+(Feynman propagator and the time ordered product) The Feynman propagator is a crucial ingredient in interacting quantum field theory.
+\[\mathrm{\Delta }_{F}(x,y)=\langle 0|T\hat{\phi }(x)\hat{\phi }(y)|0\rangle =\mathrm{\Delta }_{F}(x-y)\]
+where the equality followings from translation symmetry. The $T$ that we wrote is the time ordered product defined as
+\[T\hat{A}(x)\hat{B}(y)=\mathrm{\Theta}(x^{0}-y^{0})\hat{A}(x)\hat{B}(y)\pm \mathrm{\Theta}(y^{0}-x^{0})\hat{B}(y)\hat{A}(x)\]
+where the plus is for bosonic cases and the minus is for fermionic cases. Let's try evaluating the Feynman propagator. Having
+\[\hat{\phi }(x)=\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^32E_{p}}}\Big(\hat{a}_{p}e^{ip\cdot x}+\hat{a}_{p}^{\dagger}e^{-ip\cdot x}\Big)\qquad\&\qquad \langle 0|\hat{a}_{p}^{\dagger}=\hat{a}_{p}|0\rangle =0\]
+This then gives
+\[\begin{align*}
+\mathrm{\Delta }_{F}(x-y)=&\int \dfrac{d^3\vec{p}d^3\vec{q}}{(2\pi )^3\sqrt{2E_{p}2E_{q}}}\bigg(\mathrm{\Theta}(x^{0}-y^{0})\langle 0|[\hat{a}_{q},\hat{a}_{q}^{\dagger}]|0\rangle e^{i(p\cdot x-q\cdot y)}\\
+&+\mathrm{\Theta}(y^{0}-x^{0})\langle 0|[\hat{a}_{q},\hat{a}_{p}^{\dagger}]|0\rangle e^{-i(p\cdot x-q\cdot y)}
+\\
+=&\int \dfrac{d^3\vec{p}}{(2\pi )^32E_{p}}\Big(\mathrm{\Theta}(x^{0}-y^{0})e^{ip\cdot (x-y)}+\mathrm{\Theta}(y^{0}-x^{0})e^{-ip\cdot (x-y)}\Big)\\
+=&\int \dfrac{d^3\vec{p}}{(2\pi )^3}e^{i\vec{p}\cdot (\vec{x}-\vec{y})}\times \dfrac{1}{2E_{p}}\Big(\mathrm{\Theta}(x^{0}-y^{0})e^{-iE_{p}(x^{0}-y^{0})}+\mathrm{\Theta}(y^{0}-x^{0})e^{-iE_{p}(x^{0}-y^{0})}\Big)\\
+=&\int \dfrac{d^{4}p}{(2\pi )^{4}}\dfrac{-ie^{ip\cdot (x-y)}}{p^2+m^2-i\varepsilon }
+\end{align*}\]
+where $\varepsilon \varepsilon_0>0$ is arbitrarily small. Surprisingly,
+\[\int \dfrac{dp^{0}}{2\pi i}\dfrac{e^{-ip^{0}(x^{0}-y^{0})}}{-(p^{0})^2+\vec{p}^2+m^2-i\varepsilon }=\int \dfrac{dp^{0}}{2\pi i}\dfrac{-e^{-ip^{0}(x^{0}-y^{0})}}{(p^{0}+E_p-i\varepsilon )(p^{0}-E_{p}+i\varepsilon )}\]
+with two residues at $-E_{p}$ and $E_{p}$ each. We find
+\[\mathrm{\Theta}(x^{0}-y^{0})\Big(\dfrac{e^{-iE_{p}(x^{0}-y^{0})}}{2E_{p}}\Big)+\mathrm{\Theta}(y^{0}-x^{0})\Big(\dfrac{-e^{iE_{p}(x^{0}-y^{0})}}{-2E_{p}}\Big)\]
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+The Feynman propagator acts as a Green's function of the Klein-Gordan equation, with
+\[\begin{align*}
+(-\partial _{x}^2+m^2-i\varepsilon )\mathrm{\Delta }_{F}(x-y)\\
+=&(-\partial _{x}^2+m^2-i\varepsilon )\int \dfrac{d^{4}p}{(2\pi )^{4}}\cdot \dfrac{-ie^{ip\cdot (x-y)}}{p^2+m^2-i\varepsilon }\\
+=&\int \dfrac{d^{4}p}{(2\pi )^{4}}\,(p^2+m^2-i\varepsilon )\dfrac{-ie^{ip\cdot (x-y)}}{p^2+m^2-i\varepsilon }=-i\delta ^{(4)}(x-y)
+\end{align*}\]
+where $p^{\mu }p_{\mu }=p^2$.
+\end{prop}
+\vspace{2ex}
+

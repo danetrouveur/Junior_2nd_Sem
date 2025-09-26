@@ -219,20 +219,53 @@ where $A^{(\phi )}_{i}$ denotes the $\phi $-part of the gauge field $A_{i}$ and 
 F_{i}=\bigg(\dfrac{r_1r_2r_3r_4}{r_{i}}+ra^2\cos ^2\theta +2ma^2\cos ^2\theta\, \dfrac{e_{i}}{c_{i}s_{i}}\bigg)^{-1}s_{i}^{4}\bigg(\displaystyle\prod_{j\ne i}^{}{(s_{i}^2-s_{j}^2)}^{-1}\bigg)\\\\
 G_{i}=\Big(\dfrac{r_1r_2r_3r_4}{r_{i}}+ra^2\cos ^2\theta +2ma^2\cos ^2\theta\,\dfrac{s_1s_2s_3s_4c_{i}^2}{c_1c_2c_3c_4s_{i}^2-s_1s_2s_3s_4c_{i}^2}\Big)^{-1}s_{i}^{4}\bigg(\displaystyle\prod_{j\ne i}(s_{i}^2-s_{j}^2)^{-1}\bigg)
 \end{cases}\]
-\section{Gauged Four Charge Ansatz Construction}
+\section{General Gauged Four Charge Ansatz}
 The ungauged four charge ansatz above compels us to start constructing the gauged four charge ansatz we've been building towards. Due to the elegance of the Wu form, the pure anti-de Sitter part has a trivial gauged generalisation, namely
 \[\begin{align*}
-ds^2=\dfrac{W}{r^2+a^2\cos ^2\theta }\bigg[&-\dfrac{(1+g^2r^2)(1-a^2g^2\cos ^2\theta )}{1-a^2g^2}\,dt^2+(r^2+a^2\cos ^2\theta )\Big(\dfrac{dr^2}{\mathrm{\Delta}}+\dfrac{d\theta ^2}{1-a^2g^2\cos ^2\theta }\Big)\\&+\dfrac{r^2+a^2}{1-a^2g^2}\sin ^2\theta \,d\phi ^2+\dfrac{W^2}{2m}\Big(\sum ^{4}
+ds^2=\dfrac{W}{r^2+a^2\cos ^2\theta }\bigg[&-\dfrac{(1+g^2r^2)(1-a^2g^2\cos ^2\theta )}{1-a^2g^2}\,dt^2+(r^2+a^2\cos ^2\theta )\Big(\dfrac{dr^2}{\mathrm{\Delta}_{r}}+\dfrac{d\theta ^2}{1-a^2g^2\cos ^2\theta }\Big)\\&+\dfrac{r^2+a^2}{1-a^2g^2}\sin ^2\theta \,d\phi ^2+\dfrac{W^2}{2m}\Big(\sum ^{4}
 _{i=1}F_{i}A_{i}^2+\sum ^{4}_{i=1}(G_{i}-F_{i})[A_{i}^{(\phi )}]^2\Big)\bigg]
 \end{align*}\]
 and the new gauge fields would be defined through the equality
 \[\begin{align*}
-\dfrac{W^2}{2m}A_{i}=&K_1\Big(\dfrac{r_1r_2r_3r_4}{r_{i}}+2ma^2\cos ^2\theta \dfrac{e_{i}}{c_{i}s_{i}}+ra^2\cos ^2\theta \Big)\\&\times \Big[K_2\,c_{i}s_{i}\,dt-K_3\,a\sin^2 \theta \Big(\dfrac{c_1c_2c_3c_4s_{i}}{c_{i}}-\dfrac{s_1s_2s_3s_4c_{i}}{s_{i}}\Big)\,d\phi\Big]\\ &+K_4\,2ma^2\cos ^2\theta \Big(\dfrac{c_1c_2c_3c_4}{c_{i}^2}(e_{i}-c_{i}s_{i})-\dfrac{s_1s_2s_3s_4}{s_{i}^2}(e_{i}-c_{i}s_{i})\Big)a\sin ^2\theta \,d\phi 
+\dfrac{W^2}{2m}A_{i}=&\Big(\dfrac{r_1r_2r_3r_4}{r_{i}}+2ma^2\cos ^2\theta \dfrac{e_{i}}{c_{i}s_{i}}+ra^2\cos ^2\theta \Big)\\&\times \Big[K_1\,c_{i}s_{i}\,dt-K_2\,a\sin^2 \theta \Big(\dfrac{c_1c_2c_3c_4s_{i}}{c_{i}}-\dfrac{s_1s_2s_3s_4c_{i}}{s_{i}}\Big)\,d\phi\Big]\\ &+K_3\,2ma^2\cos ^2\theta \Big(\dfrac{c_1c_2c_3c_4}{c_{i}^2}e_{i}-\dfrac{s_1s_2s_3s_4}{s_{i}^2}(e_{i}+c_{i}s_{i})\Big)a\sin ^2\theta \,d\phi 
 \end{align*}\]
-Notice that we have a total of 5 undetermined elements, namely $(\mathrm{\Delta },K_1,K_2,K_3,K_4)$. We suggest the following methods for the determination process:
+Notice that we have a total of 5 undetermined elements, namely $(\mathrm{\Delta }_{r},K_1,K_2,K_3)$. We suggest the following methods for the determination process:
 \begin{itemize}
 \item[(i)] Proper truncation limits for the two independent charge case and the pairwise identification case
 \item[(ii)] Educated guesswork using symmetry and the original Wu paper
 \end{itemize}
 We will try to employ these techniques in this exact order. 
+\vspace{2ex}
+\section{Gauged Electric Potentials}
+\begin{defi}
+(Discrete inversion symmetry) The solution is expected to be invariant under the transformation
+\[a\rightarrow \dfrac{a}{(ag)^2}\quad r\rightarrow \dfrac{r}{(ag)}\quad a\cos \theta \rightarrow \dfrac{a\cos \theta }{(ag)}\quad m\rightarrow \dfrac{m}{(ag)^3}\quad \phi \leftrightarrow gt\quad  s_{i}\rightarrow (ag)s_{i}\]
+We define the weight of some function $w(f)$ as the power of $ag$ it obtains as it goes through the transformation.
+\end{defi}
+\vspace{2ex}
+\begin{lem}
+(Symmetrising $W$) We try to determine the gauged $W$ through matching the weights of the term as they go through the inversion transformation denoted above. Consider the following function
+\[\begin{align*}
+W^2= r_1r_2r_3r_4+u^{4}+u^2\bigg[&2r^2+2mr(s_1^2+s_2^2+s_3^2+s_4^2)
++8m^2c_1c_2c_3c_4s_1s_2s_3s_4\\&-4m^2(s_{123}^2+s_{124}^2+s_{134}^2+s_{234}^2+2s_{1234}^2)\bigg]
+\end{align*}\]
+we can make this function uniformly of weight $w(W^2)=-4$ by writing
+\[\begin{align*}
+W^2=&r_1r_2r_3r_4+u^{4}+u^{2}\bigg[2r^2+2mr(s_1^2+s_2^2+s_3^2+s_4^2)+8m^2c_{1234}s_{1234}\\
+&-4m^2s_{1234}\sqrt{(c_1^2-1)(c_2^2-1)(c_3^2-1)(c_4^2-1)}\Big(\dfrac{1}{c_4^2-1}+\dfrac{1}{c_3^2-1}+\dfrac{1}{c_2^2-1}+\dfrac{1}{c_1^2-1}+2\Big)\bigg]
+\end{align*}\]
+If we additionally impose (naturally, as our metric has a factor $W/(r^2+a^2\cos ^2\theta )$) that $W^2\rightarrow W^2/(ag)^4$, we need to multiply each $c_{i}$ by $\tilde{c}_{i}$, giving 
+\[\begin{align*}
+W^2=&r_1r_2r_3r_4+u^{4}+u^{2}\bigg[2r^2+2mr(s_1^2+s_2^2+s_3^2+s_4^2)+8m^2\tilde{c}_{1234}c_{1234}s_{1234}\\
+&-4m^2s_{1234}\Big(\prod_{i=1}^{4}\sqrt{\tilde{c_i}^2c_i^2-1}\Big)\Big(\dfrac{1}{\tilde{c}_{4}^2c_4^2-1}+\dfrac{1}{\tilde{c}_{3}^2c_3^2-1}+\dfrac{1}{\tilde{c}_{2}^2c_2^2-1}+\dfrac{1}{\tilde{c}_{1}^2c_1^2-1}+2\Big)\bigg]
+\end{align*}\]
+The uniqueness of this invariant form must be thought of further.
+\end{lem}
+\vspace{2ex}
+\begin{prop}
+(Symmetrising $A_{i}$) We try to determine the gauged $A$ by going through a similar process denoted above. Consider:wq
+\end{prop}
+\vspace{2ex}
+
+
 \end{document}

@@ -1,0 +1,102 @@
+\section{Lecture 7 (September 22nd)}
+\section{Free Quantum Field Theory}
+\begin{rmk}
+There are two different approaches to quantum field theory.
+\begin{itemize}
+\item[(i)] (Canonical quantisation) Useful to see how classical field theories become free quantum field theories. This is analogous to second quantisation, and lets us understand the resulting $\mathcal{H}$ more explicitly.
+\item[(ii)] (Path integral) Useful to studying interacting quantum field theories. You'll be seeing a lot of expressions like
+\[\langle 0|T\hat{\phi }(x_1)\ldots \hat{\phi }(x_{n})|0\rangle \]
+involving time ordered correlated functions. This is much easier to study in path integrals.
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(Canonical quantisation) The standard dogma from classical field theory into quantum field theory is
+\begin{itemize}
+\item[(i)] All dynamical fields become operators
+\[(\phi,\pi ,\psi ,\pi _{\psi })\mapsto (\hat{\phi },\hat{\pi },\hat{\psi },\hat{\pi }_{\psi })\]
+\item[(ii)] Poisson brackets become commutator relations
+\[\{\cdot ,\cdot \}_{PB}\mapsto \dfrac{1}{i\hbar }[\cdot ,\cdot ]\]
+(note that from now on, we will be using natural units with $\hbar =1$)
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+We make the following remarks: 
+\begin{itemize}
+\item[(i)] Most books follow the Heisenberg picture, with operators evolving over time and states remaining the same.
+\item[(ii)] To incorporate fermions, the Poisson brackets become super-poisson brackets and commutators become anti-commutators.
+\item[(iii)] The spin-statistics theorem dictates the quantisation rules.
+\item[(iv)] 2nd quantisation is very different from 1st quantisation in quantum mechanics. 
+\item[(v)] We will use the abbreviation ETCR for equal time correlation relations.
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(Spin-0 Klein-Gordan Fields) We first consider the classical Klein-Gordan action, 
+\[S_{KG}=\int d^{4}x\,\Big(-\dfrac{1}{2}(\partial \phi )^2-\dfrac{1}{2}m^2\phi ^2\Big)\]
+After canonical quantisation (ETCR) the fields $(\phi ,\pi )=(\phi,\dot{\phi })$ become operators and we impose that
+\[\begin{cases}
+[\phi (t,\vec{x}),\phi (t,\vec{y})]=i\delta ^{(3)}(\vec{x}-\vec{y})\\
+[\phi(t,\vec{x}),\phi (t,\vec{y})]=[\pi (t,\vec{x}),\pi(t,\vec{y})]=0
+\end{cases}\]
+What about the equations of motion? Let's first observe that the Hamiltonian becomes
+\[\hat{H}=\int d^3\vec{x}\,\dfrac{1}{2}(\hat{\pi }^2+(\nabla \hat{\phi })^2+m^2\hat{\phi }^2)\]
+Hamilton's equations then become
+\[\dfrac{d \hat{\phi }}{d t}=-i[\hat{\phi },\hat{H}]\qquad\&\qquad \dfrac{d \hat{\pi }}{d t}=-i[\hat{\pi },\hat{H}]  \]
+we can then show that they automatically follow
+\[(\partial ^{\mu }\partial _{\mu }-m^2)\hat{\phi }=0\]
+Soltuions to the quantised Klein-Gordan equation become
+\[\phi (x)=\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^3\cdot 2E_{p}}}\,\Big(\hat{a}(\vec{p})e^{ip\cdot x}+\hat{a}(\vec{p})^{\dagger}e^{-ip\cdot x}\Big)\]
+The quantised conjugate field is then
+\[\hat{\pi }(x)=\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^3\cdot 2E_{p}}}(-iE_{p})\Big(\hat{a}(\vec{p})e^{ip\cdot x}-\hat{a}(\vec{p})^{\dagger}e^{-p\cdot x}\Big)\]
+The inverse relations are also given as
+\[u_{\vec{p}}(x)=\dfrac{1}{\sqrt{(2\pi )^3\cdot 2E_{p}}}e^{ip\cdot x}\qquad \& \qquad A\mathop{\partial }^{\leftrightarrow} B=A(\partial B)-(\partial A)B\]
+Then,
+\[\begin{cases}
+\hat{a}(\vec{p})=i\int d^3x\,u_{\vec{p}}^{*}\mathop{\partial }^{\leftrightarrow }_{0}\hat{\phi }(x)\\
+\hat{a}(\vec{p})^{\dagger}=-i\int d^3\vec{x}\,u_{\vec{p}}(x)\mathop{\partial }_{0}^{\leftrightarrow }\hat{\phi }(x)
+\end{cases}\]
+Using 
+\[\int \dfrac{d^3\vec{x}}{(2\pi )^3}\,e^{i\vec{p}\cdot \vec{x}}=\delta ^{(3)}(\vec{p})\]
+The commmutation relations for the Fourier mode operators are given as
+\[[\hat{a}(\vec{p}),\hat{a}(\vec{q})^{\dagger}]=\delta ^{(3)}(\vec{p}-\vec{q})\qquad\&\qquad [\hat{a}(\vec{p}),\hat{a}(\vec{q})]=[\hat{a}(\vec{p})^{\dagger},\hat{a}(\vec{q})^{\dagger}]=0\]
+This can be seen as infinitely many sets of creation and annihilation operators for a harmonic oscillator.
+\end{thm}
+\vspace{2ex}
+\begin{prop}
+(Fock space $\mathcal{H}$) Given the above, we want to now construct the Hilbert space that these fields should act on using the ladder operator method. We define
+\begin{itemize}
+\item[(i)] For all $\vec{p}$,
+\[\hat{a}(\vec{p})|0\rangle =0\]
+\item[(ii)] A single particle state with momentum $\vec{p}$
+\[|\vec{p}\rangle =\hat{a}(p)^{\dagger}|0\rangle \]
+\item[(iii)] For a multiple particle state (for example a two particle state with momentum $\vec{p}$ and $\vec{q}$),
+\[|\vec{p},\vec{q}\rangle =\hat{a}(\vec{p})^{\dagger}\hat{a}(\vec{q})^{\dagger}|0\rangle \]
+\end{itemize}
+Therefore, we can think that the Fock space is a vector space made out of all linear combinations of all possible multipe particle states.
+\end{prop}
+\vspace{2ex}
+\begin{defi}
+(Momentum and Hamiltonian) The momentum operator is given as
+\[\hat{P}^{\mu }=\int d^3\vec{x}\,\hat{T}^{0\mu }=\int d^3\vec{x}\Big(\partial ^{0}\hat{\phi }\partial ^{\mu }\hat{\phi }+\eta ^{0\mu }\Big(-\dfrac{1}{2}(\partial \hat{\phi })^2-\dfrac{1}{2}m^2\hat{\phi }^2\Big)\Big)\]
+whereas the Hamiltonian operator is given as
+\[\begin{align*}
+\hat{H}=&\dfrac{1}{2}\int d^3\vec{x}\,(\hat{\pi }^2+(\nabla \phi )^2+m^2\hat{\phi }^2)\\
+=&\dfrac{1}{2}\int d^3\vec{x}\,\int \dfrac{d^3\vec{p}\,d^3\vec{q}}{(2\pi )^3\sqrt{2E_{p}\cdot 2E_{p}}}\Big[(-iE_{p})(-iE_{q})\Big(\hat{a}_{p}e^{ip\cdot x}-\hat{a}_{p}^{\dagger}e^{-ip\cdot x}\Big)\Big(\hat{a}_{q}e^{ipq\cdot x}-\hat{a}^{\dagger}_{q}e^{-iq\cdot x}\Big)\Big]+\ldots \\
+=&\dfrac{1}{2}\int \dfrac{d^3\vec{p}}{2E_{p}}\Big((\hat{a}_{p}\hat{a}_{-p}e^{-2iE_{p}t}+\hat{a}_{p}^{\dagger}\hat{a}_{-p}^{\dagger}e^{2iE_{p}t})(-E_{p}^2+\vec{p}^2+m^2)+(\hat{a}_{p}\hat{a}_{p}^{\dagger}+\hat{a}_{p}^{\dagger}\hat{a}_{p})(E_{p}^2+\vec{p}^2+m^2)\Big)\\
+=&\dfrac{1}{2}\int d^3\vec{p}\,E_{p}(\hat{a}^{\dagger}\hat{a}(\vec{p})+\hat{a}(\vec{p})\hat{a}(\vec{p})^{\dagger})\\
+=&\int d^3\vec{p}\,E_{p}\hat{a}(\vec{p})^{\dagger}\hat{a}(\vec{p})+\int d^3\vec{p}\,\dfrac{E}{2}\delta ^{(3)}(0)
+\end{align*}\]
+Doing something similar to momentum,
+\[\begin{align*}
+\hat{\vec{p}}=&\int d^3x\,(-\hat{\pi }\nabla \hat{\phi })\\
+=&\int d^3\vec{p}\,\vec{p}\hat{a}^{\dagger}(\vec{p})\hat{a}(\vec{p})+\dfrac{1}{2}\int d^3\vec{p}\,\vec{p}\delta ^{(3)}(\vec{0})
+\end{align*}\]
+where the second term is named the vacuum momentum $\vec{P}_{0}$. We have some comments:
+\begin{itemize}
+\item[(i)] Vaccum energy can be understood as the sum of all ground state energies for harmonic oscillators and is divergent!
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+

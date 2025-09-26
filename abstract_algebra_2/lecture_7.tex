@@ -1,0 +1,81 @@
+\section{Lecture 7 (September 23rd)}
+\begin{rmk}
+Last time we talked about constructible numbers. This class, we address some old questions on constructibility. Recall that we only allowed a straightedge (a ruler without marks) and compasses. 
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(13.36) A constructible number is obtained from the following operations: 
+\begin{itemize}
+\item[(i)] Making a straightline between two points
+\item[(ii)] Drawing a circle around a point
+\item[(iii)] Making interactions between lines and circles 
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+$\dfrac{1}{2}$ and $\dfrac{\sqrt{3}}{2}$ are constructible. In fact, all rational numbers are constructible. How about
+\begin{itemize}
+\item[(i)] Squaring a circle, or $\sqrt{\pi }$
+\item[(ii)] Doubling the cuble, or $\cbrt{\pi }$
+\item[(iii)] Trisecting the angle $60^{\circ}$, or $20^{\circ}$
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+\begin{rmk}
+If $\alpha $ and $\beta $ are constructible real numbers, then so are $\alpha \pm \beta $, $\alpha \beta $, and $\alpha /\beta $ (if $\beta \ne 0$). Consequently, the set of constructible numbers is a subfield of ${\bm R}$ containing ${\bm Q}$.
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+If $\alpha $ is constructible, then so is its square root $\sqrt{\alpha }$.
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(13.38) Let $\alpha$ be a constructible number. Then $\alpha \in F$, where $F$ is a field extension of ${\bm Q}$ such that $[F:Q]$ is a finite power of 2. In particular, $\alpha $ is an algebraic number and $[{\bm Q}(\alpha ):{\bm Q]}$ is a finite power of 2.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+It suffices to show the following -- in any stage of a construction, if all the constructed numbers lie in a field $E$, then applying one of the basic operations the same data lies in a field $E(u)$, where $u$ is algebraic of degree at most over $E$.
+
+\bigskip
+
+Note that at any stage of a construction, we consider:
+\begin{itemize}
+\item[(i)] A coordinate of points that have been constructed.
+\item[(ii)] A coefficient in the equations of the lines and circles that have been constructed.
+\end{itemize}
+
+\bigskip
+
+It is enough to intersect a circle and a line to get new constructible points. For this, we need to solve
+\[\begin{cases}
+x^2+y^2+ax+by+c=0\\
+y=mx+r
+\end{cases}\]
+where $a,b,c\in E$ and $m,r\in E$. Notice that
+\[x=\dfrac{-(mr+bm+a)\pm \sqrt{(2mr+bm+a)^2-4(m^2+1)(r^2+br+c)}}{2(m^2+1)}\]
+which is in $E(u)$ and $u=\mathrm{\Delta }$.
+\end{proof}
+\vspace{2ex}
+\begin{cor}
+(13.40) The three inquries from above are impossible. That is, none of the numbers $\sqrt{\pi }$, ${2}^{1/3}$, and $\cos 20^{\circ}$ are constructible.
+\end{cor}
+\vspace{2ex}
+\begin{proof}
+(I) If $\sqrt{\pi }$ is constructible, then so is $\pi $. However, as we expect all constructible numbers to be algebraic, and $\pi $ is strictly not over ${\bm Q}$, the claim is false.
+
+\bigskip
+
+(II) If ${2}^{1/3}=\alpha $, the irreducible polynomial is $t^3-2\in {\bm Q}[t]$. However,
+\[\begin{align*}
+[{\bm Q}(\alpha ):{\bm Q}]\;=\;&\mathrm{deg}(\mathrm{irr}(\alpha ,{\bm Q}))\\
+\;=\;&\mathrm{deg}(t^3-2)\\
+\;=\;&3 
+\end{align*}\]
+which is not a finite power of 2. 
+
+\bigskip
+
+(III) For $\cos 20^{\circ}=\alpha $, note that $\alpha $ is a zero of $8t^3-6t-1\in {\bm Q}[t]$. Again, the root test gureentees that the polynomial is irreducible over ${\bm Q}$. Same as the above, the degree of the polynomial is not a finite power of 2, and the number is not construtible.
+\end{proof}
+\vspace{2ex}
+

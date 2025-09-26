@@ -358,6 +358,12 @@ INPUT lecture_5.tex
 INPUT ./lecture_6.tex
 INPUT ./lecture_6.tex
 INPUT lecture_6.tex
+INPUT ./lecture_7.tex
+INPUT ./lecture_7.tex
+INPUT lecture_7.tex
+INPUT ./lecture_8.tex
+INPUT ./lecture_8.tex
+INPUT lecture_8.tex
 INPUT default.aux
 INPUT ./default.out
 INPUT ./default.out
