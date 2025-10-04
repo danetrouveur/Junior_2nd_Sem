@@ -263,9 +263,42 @@ The uniqueness of this invariant form must be thought of further.
 \end{lem}
 \vspace{2ex}
 \begin{prop}
-(Symmetrising $A_{i}$) We try to determine the gauged $A$ by going through a similar process denoted above. Consider:wq
+(Ansatz for symmetric $A_{i}$) We try to determine the gauged $A$ by going through a similar process denoted above. Consider the ungauged electric potential
+\[\begin{align*}
+A_1=\dfrac{2m}{W^2}\bigg[&(r_1r_2r_3+ra^2\cos ^2\theta )\underbrace{(c_1s_1\,dt-a\sin ^2\theta (c_2c_3c_4s_1-s_2s_3s_4c_1)\,d\phi )}_{(\mathrm{I})}\\
+&+2ma^2\cos ^2\theta \underbrace{(e_1\,dt-a\sin ^2\theta s_2s_3s_4c_1\,d\phi )}_{(\mathrm{II})}\bigg]
+\end{align*}\]
+Firstly, we must notice that a overall factor of $1/\mathrm{\Xi }$ is obvious, given the need of a sign flip under inversion. In the process of employing inversion symmetry, we divide the gauge fields into two parts, (I) and (II). Gauging part (I) is relatively simple. We need to start by first noticing that the overall coeffients simply have a weight of 0, and that we expect the section to map onto itself perfectly up to a sign difference.  
+\[\begin{align*}
+A_{1}^{(\mathrm{I})}=(c_1s_1\tilde{c_2}\tilde{c_3}\tilde{c_4}-(ag)^2\tilde{c}_1s_2s_3s_4)\mathrm{\Delta }_{\theta }\,dt-a\sin ^2\theta (\tilde{c_1}c_2c_3c_4s_1-s_2s_3s_4c_1)\,d\phi \end{align*}\]
 \end{prop}
 \vspace{2ex}
+Here, a problem is that any factor of $\tilde{c}_{i}$ can add to the last term, which needs further investigation. What about part (II)? This time, the overall factors scale by $-2$ and we are compelled to think that part (II) should scale by 2. We conclude
+\[A^{(\mathrm{II})}_{1}=e_1 \mathrm{\Delta }_{\theta }\,dt-\Big[(\tilde{c}_{1}^2+(ag s_1)^2)\tilde{c_2}\tilde{c_3}\tilde{c_4}s_2s_3s_4-(a g)^2\tilde{c_1}s_1(s_2^2s_3^2+s_2^2s_4^2+s_3^2s_4^2+2(ag)^2s_2^2s_3^2s_4^2)\Big]a\sin ^2\theta \,d\phi \]
+for $e_1=c_2 c_3 c_4 s_2 s_3 s_4 (c_1^2+s_1^2)-c_1s_2 (s_2^2 s_3^2+s_2^2 s_3^2+s_3^2 s_4^2+2 s_2^2 s_3^2 s_4^2 )$. Notice that again, we have the freedom to add $\tilde{c}_{i}$ terms to any term dependent of the factor $(ag)$. Momentarily ignoring the fact, generalising the two, we find
+\[A_{i}^{(\mathrm{I})}=\Big(c_is_i\dfrac{\tilde{c_1}\tilde{c_2}\tilde{c_3}\tilde{c_4}}{\tilde{c}_{i}}-(ag)^2\tilde{c}_{i}\dfrac{s_1s_2s_3s_4}{s_{i}}\Big)\mathrm{\Delta }_{\theta }\,dt-\Big(\tilde{c}_{i}s_{i}\dfrac{c_1c_2c_3c_4}{c_{i}}-c_i\dfrac{s_1s_2s_3s_4}{s_{i}}\Big)a\sin ^2\theta \,d\phi \]
+and
+\[A_{i}^{(\mathrm{II})}=e_{i}\mathrm{\Delta }_{\theta }\,dt-\Big[(\tilde{c}_{i}^2+(ags_{i})^2)\dfrac{\tilde{c_1}\tilde{c_2}\tilde{c_3}\tilde{c_4}}{\tilde{c_{i}}}\dfrac{s_1s_2s_3s_4}{s_{i}}-(ag)^2\tilde{c}_{i}s_{i}\Big(\sum _{\substack{j<k\\j,k\ne i}}s_{j}^2s_{k}^2+2(ag)^2\dfrac{s_1^2s_2^2s_3^2s_4^2}{s_{i}^2}\Big)\Big]a\sin ^2\theta \,d\phi \]
+It is easy to verify that these expressions accurately reduce to the ungauged limit for the four charge case. 
+\end{prop}
+\vspace{2ex}
+\begin{rmk}
+At this point, we've found a parity conforming ansatz for our electric potentials $A_{i}$. However, recall that our radial functions $F_{i}$ and $G_{i}-F_{i}$ were also functions of charge which were derived from a particular linearisation process. 
+\[\dfrac{W^2}{2m}\Big(\sum ^{4}_{i=1}F_{i}A_{i}^2+\sum ^{4}_{i=1}(G_{i}-F_{i})[A_{i}^{(\phi)}]^2\Big)\]
+In order to gauge these functions, we apply to logic to the gauged electric potentials. An ultimate test that this sector of the ansatz must pass would be the fact that it would be invariant under parity. Including this certain parity test, we have the following limits that the we want to use to verify and edit our current ansatz and gauge potentials.
+\begin{itemize}
+\item[(i)] Correct independent charge limit
+\item[(ii)] Correct two pairwise equal charge limit
+\item[(iii)] Symmetric under parity
+\end{itemize}
+Well if our current form or perhaps a bit of an improvement yields these results (especially the last one) correctly, it would be really nice! 
+\end{rmk}
+\vspace{2ex}
+\begin{prop}
+(Two independent charge limit) We see that under the two independent charge limit, the gauged electric potential reduces to
+\[A_1=\dfrac{2m}{W^2}\Big[(r_1r_2r_3+ra^2\cos ^2\theta )A^{(\mathrm{I})}_{1}+2ma^2\cos ^2\theta A^{(\mathrm{II})}_{1}\Big]\]
 
+\end{prop}
+\vspace{2ex}
 
 \end{document}

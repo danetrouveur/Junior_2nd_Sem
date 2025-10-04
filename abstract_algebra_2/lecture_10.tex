@@ -1,0 +1,161 @@
+\section{Lecture 10 (October 2nd)}
+\begin{rmk}
+Last class we talked about algebraically closed fields. This class we will be talking about isomorphism extensions theorem.
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(13.19) A field $K$ is algebraically closed if for every algebraic extension $F$ of $K$, $F=K$, or equivalently, every nonconstant polynomial $f(t)\in K[t]$ splits into linear factors. 
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(14.4) $\bar{K}$ is an algebraic closure of $K$ if 
+\begin{itemize}
+\item[(i)] $\bar{K}/K$ is algebraic
+\item[(ii)] $\bar{K}$ is algebraically closed
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Isomorphic extension) Let $\sigma:K_1\rightarrow K_2$ be an isomorphism of fields. Let $F/K_1$ be an algebraic extension. Then there exists a field embedding $\bar{\sigma }:F\rightarrow \bar{K_2}$ extendeding $\sigma $ (that is, $\bar{\sigma }|_{K_1}=\sigma $). 
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
+  node font=\small]
+
+  % corners
+  \node (A) at (0,3) {$F$};
+  \node (B) at (0,0) {$K_1$};
+  \node (C) at (3,0) {$K_2$};
+  \node (D) at (3,3) {$\bar{K}_{2}$};
+
+  % vertical arrows (pointing up)
+  \draw[->] (B) -- (A);
+  \draw[->] (C) -- (D);
+
+  % horizontal arrows (pointing right) with labels above
+  \draw[->] (A) -- node[midway, above] {$\bar{\sigma }$} (D);
+  \draw[->] (B) -- node[midway, above] {$\sigma $} (C);
+
+  % commutator symbol in the middle (clockwise)
+  \node at (1.5,1.5) {\scalebox{2}{$\circlearrowright$}};
+
+\end{tikzpicture}
+\end{center}
+\end{thm}
+\vspace{2ex}
+\begin{prop}
+(14.1) Let $F/K$ be a field extension and let $p(x)\in K[x]$ be irreducible. Then there is a 1-1 correspondence between the sets of zeros of $p(t)$ in $F$ and the set of $K$-embeddings $K[t]/(p(t))\rightarrow F$ which extends the inclusion $K\xhookrightarrow{}F$.
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+Suppose that $\alpha \in F$ is a zero of $p(t)$. Consider the evaluation homomorphism $\mathrm{ev}_{\alpha }:K[t]\rightarrow F$. Then, $\mathrm{ker}(\mathrm{ev}_{\alpha })=(p(t))$. Conversely, if $\sigma :K[t]/(p(t))\rightarrow F$ is a $K$-embedding, then $\sigma (\bar{t})\in F$ is a zero of $p(t)$ in $F$.
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
+  node font=\small]
+
+  % corners
+  \node (A) at (0,3) {$K[t]/(p(t))$};
+  \node (B) at (0,0) {$K$};
+  \node (C) at (3,0) {$K$};
+  \node (D) at (3,3) {$F$};
+
+  % vertical arrows (pointing up)
+  \draw[->] (B) -- (A);
+  \draw[->] (C) -- (D);
+
+  % horizontal arrows (pointing right) with labels above
+  \draw[->] (A) -- node[midway, above] {} (D);
+  \draw[->] (B) -- node[midway, above] {{\bf 1}} (C);
+
+  % commutator symbol in the middle (clockwise)
+  \node at (1.5,1.5) {\scalebox{2}{$\circlearrowright$}};
+
+\end{tikzpicture}
+\end{center}
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+We now write $\sigma :R_1\rightarrow R_2$ for a ring homomorphism. If $f(t)\in R_1[t]$ is a polynomial, we let $f_{\sigma }(t)$ denote the image of $f(t)$ under the induced homomorphism $R_1[t]\rightarrow R_2[t]$. Concretely, for $f(t)=\sum ^{n}_{i=0}a_{i}t^{i}$ we have $f_{\sigma }(t)=\sum ^{n}_{i=0}\sigma (a_{i})t^{i}$.
+\end{rmk}
+\vspace{2ex}
+\begin{prop}
+Let $\sigma :K_1\rightarrow K_2$ be an isomorphism of fields. Let $F_1/K_1$ and $F_2/K_2$ be field extensions. Let $p(t)$ be an irreducible polynomial in $K_1[t]$. Suppose that $\alpha\in F_1 $ is a zero of $p(t)$ and that $\beta \in F_2$ is a zero of $p_{\sigma }(t)$. Then there exists a unique isomorphism $\bar{\sigma }:K_1(\alpha )\rightarrow K_2(\beta )$ such that $\bar{\sigma }|_{K_1}=\sigma $ and that $\bar{\sigma }(\alpha )=\beta $.
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
+  node font=\small]
+
+  % corners
+  \node (E) at (0,4.5) {$F_1$};
+  \node (F) at (3,4.5) {$F_2$};
+  \node (A) at (0,3) {$K_1(\alpha )$};
+  \node (B) at (0,0) {$K_1$};
+  \node (C) at (3,0) {$K_2$};
+  \node (D) at (3,3) {$K_2(\beta )$};
+
+  % vertical arrows (pointing up)
+  \draw[->] (B) -- (A);
+  \draw[->] (C) -- (D);
+  \draw[->] (A) -- (E);
+  \draw[->] (D) -- (F);
+
+  % horizontal arrows (pointing right) with labels above
+  \draw[->] (A) -- node[midway, above] {$\bar{\sigma }$} (D);
+  \draw[->] (B) -- node[midway, above] {$\sigma $} (C);
+
+  % commutator symbol in the middle (clockwise)
+  \node at (1.5,1.5) {\scalebox{2}{$\circlearrowright$}};
+
+\end{tikzpicture}
+\end{center}
+with irreducible
+\[\begin{cases}
+p(t)\in K_1[t]\\
+p(\alpha )=0 
+\end{cases}\qquad \&\qquad \begin{cases}
+p_{\sigma }(t)\in  K_2[t]\\
+p_{\sigma }(\beta )=0
+\end{cases}\]
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+(I) Define $\bar{{\bf 1}}:K(\alpha )\rightarrow K(\beta )$ by sending $f(\alpha )/g(\alpha )\in K(\alpha )$ to $f(\beta )/g(\beta )\in K(\beta )$.
+
+\bigskip
+
+(II) Define the function $\bar{{\bf 1}}$ through 
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
+  node font=\small]
+
+  % corners
+  \node (E) at (0,4.5) {$K[t]/(p(t))$};
+  \node (F) at (3,4.5) {$K[t]/(p(t))$};
+  \node (A) at (0,3) {$K(\alpha )$};
+  \node (B) at (0,0) {$K$};
+  \node (C) at (3,0) {$K$};
+  \node (D) at (3,3) {$K(\beta )$};
+
+  % vertical arrows (pointing up)
+  \draw[->] (B) -- (A);
+  \draw[->] (C) -- (D);
+  \draw[->] (A) -- (E);
+  \draw[->] (D) -- (F);
+
+  % horizontal arrows (pointing right) with labels above
+  \draw[->] (A) -- node[midway, above] {$\bar{{\bf 1}}$} (D);
+  \draw[->] (B) -- node[midway, above] {$ {\bf 1}$} (C);
+
+  % commutator symbol in the middle (clockwise)
+  \node at (1.5,1.5) {\scalebox{2}{$\circlearrowright$}};
+
+\end{tikzpicture}
+\end{center}
+Keeping this in mind, we write
+\[\bar{\mathrm{ev}}_{\beta }\circ(\bar{\mathrm{ev}}_{\alpha })^{-1}\]
+
+\end{proof}
+\vspace{2ex}
+

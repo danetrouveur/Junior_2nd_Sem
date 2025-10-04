@@ -1,0 +1,49 @@
+\input{preamble}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{scalerel}
+\usepackage{stackengine,wasysym}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes}
+
+\title{}
+\author{Dane Jeon}
+\affiliation{Sogang University,\\
+35 Baekbeom-ro, Mapo-gu, Seoul 04107, Republic of Korea}
+\emailAdd{danetrouveur@gmail.com}
+\abstract{}
+
+\begin{document}
+
+\begin{ex}
+Lets write $n^{i}=p^{i}/|p|$. Recalling that for both representations, the Lorentz generators can be written as $M^{ij}=\epsilon^{ijk}\sigma ^{k}/2$:
+\[\begin{align*}
+H=&S_{i}n^{i}=\dfrac{1}{2}\epsilon_{ijk}M^{jk}n^{i}=\dfrac{1}{2}\epsilon_{ijk}\Big(\dfrac{1}{2}\epsilon ^{jkl}\sigma ^{l}\Big)n^{i}=\dfrac{1}{4}(2\delta ^{l}_{i}\sigma ^{l})n^{i}=\dfrac{1}{2}\sigma _{i}n^{i}
+\end{align*}\]
+In vector notation, we can write $\vec{\sigma }\cdot \vec{p}/2$ where the components of $\vec{\sigma }$ are the Pauli matrices.
+
+(b) Recalling that the Pauli matrices are orthogonal and idempotent, we have
+\[H^2=\dfrac{1}{4}(\sin ^2\theta \cos ^2\phi\, \sigma_1^2+\sin ^2\theta \sin ^2\phi\, \sigma_2^2+\cos ^2\theta \,\sigma_3^2)=\dfrac{1}{4}(\sin ^2\theta \cos ^2\phi +\sin ^2\theta \sin ^2\phi +\cos ^2\theta )=\dfrac{1}{4}\]
+Therefore, the eigenvalues of $H$ are $\pm \frac{1}{2}$. Writing the matrix as
+\[H=\dfrac{1}{2}\begin{pmatrix}
+\cos \theta &e^{-i\phi }\sin \theta \\
+e^{i\phi }\sin \theta &-\cos \theta 
+\end{pmatrix}
+\]
+We can find the vectors with eigenvalues $+1/2$ and $-1/2$ as
+\[\xi  ^{+}(\vec{p})=\begin{pmatrix}
+\cos (\theta /2)\\
+e^{i\phi }\sin (\theta /2)
+\end{pmatrix}\qquad\&\qquad
+ \xi ^{-}(\vec{p})\begin{pmatrix}
+-e^{-i\phi }\sin (\theta /2)\\
+\cos (\theta /2)
+\end{pmatrix}
+
+\]
+
+\end{ex}
+\vspace{2ex}
+
+
+\end{document}

@@ -1,0 +1,65 @@
+\section{Lecture 9 (October 2nd)}
+\begin{proof}
+(I) Take any $w_0\notin D$, and then there is $g$ that is analytic in $D$ such that $g^2(z)=z-w_0$. If $D(a,r)\subset g(D)$, then $D(-a,r)\cap g(D)=\varnothing$. Now define 
+\[h(z)=\dfrac{r}{g(z)+a}\]
+then $h\in \mathrm{\Sigma} $.
+
+\bigskip
+
+(II) We claim that if $\psi \in \mathrm{\Sigma} $ and $\psi (D)\ne U$, then for every $z_0\in D$, these is $\psi_0\in \mathrm{\Sigma} $ such that $|\psi '_{0}(z_0)|>|\psi '(z_0)|$. Let $\alpha \ne \psi (D)$, then $\phi _{\alpha }\circ\psi $ is analytic in $D$ with no zeros in $D$. Thus, there is $g$ analytic in $D$ such that $g^2=\phi _{\alpha }\circ \psi $ in $D$. Given $z_0\in D$, if $\beta =g(z_0)$, then $\psi_0=\phi _{\beta }\circ g$ satisfies the claim.
+
+\bigskip
+
+Notice how $g\in \mathrm{\Sigma}$ since $g$ is 1-1 in $D$ (if $g(z_1)=g(z_2)$, then $(\phi _{\alpha }\circ\psi  )(z_1)=(\phi _{\alpha }\circ \psi )(z_2)$ concluding that $z_1=z_2$). Additionally denote the square function by $s(z)=z^2$. Then,
+\[\phi _{\alpha }\circ \psi =g^2=s\circ g\]
+so that $\psi =\phi _{-\alpha }\circ s\circ g$. Additionally, $\psi _{0}=\phi _{\beta }\circ g$ so that $g=\phi _{-\beta }\circ \psi _{0}$. Therefore,
+\[\psi =\phi _{-\alpha }\circ s\circ\phi _{-\beta }\circ \psi _{0}\]
+on $D$. Now we will show that the claimed inequality holds. Defining $F=\phi _{\alpha }\circ s\circ\phi _{-\beta }$ or $F:U\rightarrow U$ is analytic. By the Schwartz lemma,
+\[|F'(0)|\leq 1\]
+since $F$ is not 1-1. From $\psi =F\circ\psi _{0}$, we have 
+\[\psi '(z_0)=F'(\psi _{0}(z_0))\psi _{0}'(z_0)=F'(0)\psi '_{0}(z_0)\]
+Since $\psi $ is 1-1, the derivative $\psi'\ne 0$ in $D$ and we have proved the claim.
+
+\bigskip
+
+(III) We now claim that if we take any $z_0\in D$ and let $\eta _{0}=\sup\{|\psi '(z_0)|\,|\,\psi \in \mathrm{\Sigma} \}$, there is $h\in \mathrm{\Sigma} $ such that $|h'(z_0)|=\eta _{0}$. From this, as $h(D)$ doesn't conform to the condition of step (II), we will have that $h(D)=U$. The key method here is using "normal families". 
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+On ${\bm R}^{n}$,
+\begin{itemize}
+\item[(i)] If $G$ is a bounded infinite, then $G$ has a limit point
+\item[(ii)] If $\{a_{n}\}$ is a bounded sequence, then $\{a_{n}\}$ has a convergent subsequence
+\item[(iii)] If $K$ is closed and bounded, then every open cover of $K$ has a finite subcover
+\end{itemize}
+However, consider the following. The Hilbert space $l^2({\bm N})$ can be seen as the space closest to $\mathrm{R}^{\infty }$. 
+\[{\bf x}=(x_1,x_2,\ldots )\subset l^2({\bm N})\qquad\mathrm{if}\qquad ||{\bf x}||^2=\sum ^{\infty }_{n=1}x_{n}^2 < \infty \]
+Defined this manner, $l^2({\bm N})$ is a complete normed vector space. Consider $E=\{{\bf e}_{n}\,|\,n\in {\bm N}\}\subset l^2({\bm N})$ where ${\bf e}_{k}=(0,\ldots ,0,1,0,\ldots )$ where only the $k$-th element is nonzero. This basis satisfies $||{\bf e}_{k}||=1$. 
+\begin{itemize}
+\item[(i)] Then, $E$ is a bounded infinite subset of $l^2({\bm N})$ which has no limit point.
+\item[(ii)] Also, $E$ is a bounded sequence in $l^2({\bm N})$ with no convergent subsequence.
+\item[(iii)]  Lastly, $E$ is closed and bounded in $l^2({\bm N})$ but is not compact. 
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(Three types of convergences \& boundednesses) If $D$ is open and $f_{n}:D\rightarrow {\bm C}$, then we can define three types of convergences.
+\begin{itemize}
+\item[(i)] Pointwise convergence in $D$
+\item[(ii)] Uniform convergence in $D$
+\item[(iii)] Uniform convergence in every compact subset of $D$
+\end{itemize}
+There are also three types of boundednesses of $\{f_{n}\}$ on $D$ 
+\begin{itemize}
+\item[(i)] Uniformly bounded on $D$, meaning that $|f_{n}|\leq M$ for all $n\in {\bm N}$ and $z\in D$.
+\item[(ii)] Pointwise bounded on $D$, meaning there is $M_{z}>0$ such that $|f_{n}(z)|\leq M_{z}$ for every $n\in {\bm N}$.
+\item[(iii)] Uniformly bounded on every compact subset of $D$, meaning that for every compact subset of $K$ of $D$, there is $M_{K}>0$ such that $|f(z)|\leq M_{K}$ for all $n\in {\bm N}$ and $z\in K$.
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Arzela-Ascoli theorem) A separable metric space is space that has a countable dense subset and a metric space is a space endowed with a metric. If $\{f_{n}\}$ is a pointwise bounded and equicontinuous sequence of functions on a separable metric space, $\{f_{n}\}$ has a subsequence that converges uniformly on all compact subsets. 
+\end{thm}
+
+\vspace{2ex}
+

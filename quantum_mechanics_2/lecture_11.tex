@@ -1,0 +1,40 @@
+\section{Lecture 11 (September 29th)}
+\begin{ex}
+(Effects of electron-electron repulsion) In the presence of the a potential, the electron-electron Coulomb repulsion can be treated as a pertubation. The energy shift is given as
+\[\mathrm{\Delta }E=\iint d^3\vec{r}_{1}d^3\vec{r}_{2}\,\Big(\phi _{100}(\vec{r}_{1})\phi _{100}(\vec{r}_{2})\Big)^{*}\dfrac{e^2}{2\pi \varepsilon_0|\vec{r}_{1}-\vec{r}_{2}}\Big(\phi _{100}(\vec{r}_{1})\phi _{100}(\vec{r}_{2})\Big)\]
+Notice that this reduces to
+\[\mathrm{\Delta }E=\iint d^3\vec{r}_{1}d^3\vec{r}_{2}\,|\phi _{100}(\vec{r}_{1})|^2|\phi _{100}(\vec{r}_{2})|^2\dfrac{e^2}{2\pi \varepsilon _{0}|\vec{r}_{1}-\vec{r}_{2}|}\]
+This can be worked out to give
+\[\mathrm{\Delta }E=\dfrac{5}{8}\dfrac{Ze^2}{2\pi \varepsilon_0a_0}=\dfrac{5}{4}Z\Big(\dfrac{1}{2}mc^2\alpha ^2\Big)\]
+as we know the zeroth order result to be $-108.8$ eV, we find up to first order, $E=-74.8$ eV.
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(First excited state) As we have two states with equal energies (spin triplet and spin singlet) we need to employ degenerate pertubation and diagonalise the $2\times 2$ matrix in the degenerate subspace. The matrix will look like, for
+\[\psi _{\pm}=\dfrac{1}{\sqrt{2}}\Big(\phi _{100}(\vec{r}_{1})\phi _{2lm}(\vec{r}_{2})\pm \phi _{100}(\vec{r}_{2})\phi _{2lm}(\vec{r}_{1})\Big)\cdot X_{s,t}\]
+The matrix is expected to look like
+\[\begin{pmatrix}
+\langle +|V_{12}|_{\rangle }&\langle +|V_{12}|-\rangle \\
+\langle -|V_{12}|+\rangle &\langle -|V_{12}|-\rangle 
+\end{pmatrix}
+\]
+However, the off-diagonal terms become zero and the matrix is already diagonal. We find the diagonal terms to be
+\[\begin{align*}
+\langle \pm |V_{12}|\pm\rangle =&\int d^3\vec{r}_{1}d^3\vec{r}_{2}\,\psi _{\pm}^{*}(\vec{r}_{1},\vec{r}_{2})\dfrac{e^2}{4\pi \varepsilon _{0}|\vec{r}_{1}-\vec{r}_{2}|}\psi _{\pm}(\vec{r}_{1},\vec{r}_{2})\\
+=&J_{nl}+K_{nl}
+\end{align*}\]
+where $J_{nl}$ comes from the squares and $K_{nl}$ comes from the cross terms. 
+\[\begin{cases}
+\mathrm{\Delta }E^{(s)}_{nl}=J_{nl}+K_{nl}\\
+\mathrm{\Delta }E^{(t)_{nl}}=J_{nl}-K_{nl}
+\end{cases}\]
+We find that the singlet state has a higher energy than the triplet state and that the spin had influence on the energy shift. We call this the spin exchange effect. Using Pauli matrices, we can write
+\[\mathrm{\Delta }E=J_{nl}-\dfrac{1}{2}(1+\vec{\sigma }_{1}\cdot \vec{\sigma }_{2})K_{nl}\]
+This develops to become Heisenberg's model of quantum magnetism. 
+\end{ex}
+\vspace{2ex}
+\begin{rmk}
+For the ground state, we discover that $(L=0,S=0,J=L+S=0)$. Using the spectroscopy notation ${}^{2S+1}L_{J}$ we find ${}^{1}S_{0}$ and we call this state parahelium. For the first excited state, we note that $(100)(2s)$ is lower in energy than the higher $(100)(2p)$ due to the orbital shape. Each are denoted ${}^{1}S_{0}$ and ${}^{3}S_{1}$ where the latter is called ortho helium.
+\end{rmk}
+\vspace{2ex}
+

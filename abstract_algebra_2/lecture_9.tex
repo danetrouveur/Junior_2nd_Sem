@@ -1,0 +1,80 @@
+\section{Lecture 9 (September 30th)}
+\begin{defi}
+(14.2) Let $f(t)\in K[t]$. A splitting field for $f(t)$ is a field extension $F/K$ such that $f(t)$ factors into linear terms 
+\[c\cdot \prod ^{n}_{i=1}(t-\alpha _{i})\]
+with $F=K(\alpha_1,\alpha_2,\ldots ,\alpha _{n})$. 
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(13.19) A field $F$ is  algebraically closed if every nonconstant polynomial $f(t)\in F[t]$ has a zero in $F$.
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+If $K={\bm Q}$, the existence of a the splitting field of $f(t)$ is immediate: if $f(t)=c\cdot \prod^{n}_{i=1}(t-\alpha _{i})$ in ${\bm C}[t]$, then
+\[F=K(\alpha_1,\ldots ,\alpha _{n})\subset {\bm C}\]
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(14.6) There exists a splitting field of $f(t)\in K[t]$. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Let simply lay out the idea. For any $f(t)\in K[t]$, $f(t)=p_1(t)f_1(t)$ where $p_1(t)$ is irreducible. By Kronecker's theorem, we can set $K_1=K(\alpha_1)/K$, where $p_1(\alpha_1)=f(\alpha_1)=0$. Then,
+\[p_1(t)=p_2(t)f_3(t)\]
+and we can set $K_2=K_1(\alpha_2)$ where $p_2(\alpha_2)=0$. Thus,
+\[f(t)=(t-\alpha_1)(t-\alpha_2)g(t)\in K_2[t]\]
+and so on.
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(14.3) Let $K$ be a field. Then there exists an algebraic extension $\bar{K}/K$ such that $\bar{K}$ is algebraically closed.
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (F) at (0,3) {$\bar{K}$};
+  \node (K) at (0,0) {$K$};
+  \node (L) at (2,1.5) {$L$};
+
+  % lines (like the chalk sketch)
+  \draw (F) -- (L);
+  \draw (K) -- (L);
+  \draw (F) -- (K);
+\end{tikzpicture}
+\end{center}
+\end{thm}
+\vspace{2ex}
+\begin{rmk}
+Such an extension is unique: if $F$ and $L$ are two such extensions of $K$, then there exists an isomorphism $\sigma :F\rightarrow L$ such that $\sigma |_{K}=\mathrm{id}_{K}$ (that is, $\sigma (a)=a$ for all $a\in K$).
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
+  node font=\small]
+
+  % corners
+  \node (A) at (0,3) {$F$};
+  \node (B) at (0,0) {$K$};
+  \node (C) at (3,0) {$K$};
+  \node (D) at (3,3) {$L$};
+
+  % vertical arrows (pointing up)
+  \draw[->] (B) -- (A);
+  \draw[->] (C) -- (D);
+
+  % horizontal arrows (pointing right) with labels above
+  \draw[->] (A) -- node[midway, above] {$\sigma $} (D);
+  \draw[->] (B) -- node[midway, above] {${\bf 1}$} (C);
+
+  % commutator symbol in the middle (clockwise)
+  \node at (1.5,1.5) {\scalebox{2}{$\circlearrowright$}};
+
+\end{tikzpicture}
+\end{center}
+
+\end{rmk}
+\begin{defi}
+(14.4) We call $\bar{K}$ the algebraic closure of $K$.
+\end{defi}
+\vspace{2ex}
+
+
+
+

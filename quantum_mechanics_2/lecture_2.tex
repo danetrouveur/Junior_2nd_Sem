@@ -1,24 +1,24 @@
 \section{Lecture 2 (September 3rd)}
 \begin{thm}
-(Born rule in the language of density operators) Using the spectral decomposition of a certain state ${A}=\sum a|a\rangle \langle a|=\sum a\mathop{\mathrm{Pr}}_{a}$, we can express the probability of observing ${A}$ and obtaining $a$ as 
-\[\boxed{\mathop{\mathrm{Tr}}({\rho }\mathop{\mathrm{Pr}_{a}})}\]
-What would happen in the case of a pure state?
-\[\dfrac{\mathop{\mathrm{Pr}}_{a}\hat{\rho }\mathop{\mathrm{Pr}}_{a}}{\mathop{\mathrm{Tr}}(\hat{\rho }\mathop{\mathrm{Pr}}_{a})}=\dfrac{1}{\mathrm{\mathop{Tr}}(\hat{\rho }\mathop{\mathrm{Pr}_{a}})}\mathop{\mathrm{Tr}}(\mathop{\mathrm{Pr}_{a}}\hat{\rho }\mathop{\mathrm{Pr}_{a}})=1\]
-and that the trace is 1.
+(Born rule for density operators) Using the spectral decomposition of a certain state ${A}=\sum a|a\rangle \langle a|=\sum a\mathrm{Pr}_{a}$, we can express the probability of observing ${A}$ and obtaining $a$ as 
+\[\mathop{\mathrm{Tr}}({\rho }\mathop{\mathrm{Pr}_{a}})\]
 \end{thm}
 \vspace{2ex}
 \begin{thm}
-(Time evolution of the density operator) We check that the density matrix satisfies, for a pure state,
+(Von Neumann equation) We check that the density matrix satisfies, for a pure state,
 \[\begin{align*}
-\dfrac{d \rho }{d t}=& \dfrac{d }{d t}\Big(|\psi (t)\rangle \langle \psi (t)|\Big)=\Big(\dfrac{d }{d t}|\psi (t)\rangle  \Big)\langle \psi (t)|+|\psi (t)\rangle \Big(\dfrac{d }{d t}\langle \psi (t)| \Big)\\
-=&-\dfrac{i}{\hbar }H|\psi \rangle \langle \psi |+\dfrac{i}{\hbar }|\psi \rangle \langle \psi |H=-\dfrac{i}{\hbar }[H,\rho ]
+\dfrac{d \rho }{d t}=&\sum _{i}\Big(p_{i}|\psi _{i}\rangle \langle \psi _{i}|\Big)\\
+=&\sum _{i}p_{i}\dfrac{d }{d t}|\psi _{i}\rangle \langle \psi _{i} |+\sum _{i}p_{i}|\psi _{i}\rangle \dfrac{d }{d t}\langle \psi_{i}|\\
+=&\sum _{i}p_{i}\Big(\dfrac{H}{i\hbar }|\psi _{i}\rangle \Big)\langle \psi _{i}|+\sum _{i}p_{i}|\psi _{i}\rangle \Big(\dfrac{H}{-i\hbar }\langle \psi _{i}\Big)\\
+=&\dfrac{H}{i\hbar }\sum _{i}p_{i}|\psi _{i}\rangle \langle \psi _{i}|-\sum p_{i}|\psi _{i}\rangle \langle \psi _{i}|\dfrac{H}{i\hbar }\\
+=&\dfrac{1}{i\hbar }[H,\rho ]=-\dfrac{i}{\hbar }[H,\rho ]
 \end{align*}\]
-We that, therefore, the ``objects that move" is the state.
+We see that mixed states and pure states evolve under the same Hamiltonian law.
 \end{thm}
 \vspace{2ex}
 \begin{rmk}
-(Classification of ${\rho }$) Notice that the square of the density matrix is equal to
-\[\hat{\rho }^2=\sum _{j}p_{j}^2|\psi _{j}\rangle \langle \psi _{j}|\]
+(Necessary condition for a pure state) Notice that the square of the density matrix is equal to
+\[{\rho }^2=\sum _{j}p_{j}^2|\psi _{j}\rangle \langle \psi _{j}|\]
 Therefore, in general, we say mixed states are states whose density matrix satisfies
 \[\hat{\rho }\ne \hat{\rho }^2\]
 and a pure state otherwise.
@@ -27,11 +27,11 @@ and a pure state otherwise.
 \begin{proof}
 Let's compare $\rho ^2$ and $\rho $
 	\[{\rho }-{\rho }^2=\sum _{j}(p_{j}-p_{j}^2)|\psi _{j}\rangle \langle \psi _{j}|\]
-and the expected value is always bigger than 0. Sometimes, we write ${\rho }\geq {\rho }^2$. We also ask, what is the norm of $|{\rho }\psi \rangle $ for an arbitrary $|\psi \rangle $? We notice that
+We see that the expectation value is always bigger than 0 (sometimes, we write ${\rho }\geq {\rho }^2$). We may also ask, what is the norm of $\rho |\psi \rangle $ for an arbitrary $|\psi \rangle $? We notice that
 \[\langle{\rho }\psi |{\rho }\psi \rangle =\langle \psi |{\rho }^2|\psi \rangle =\langle \psi|\rho \psi \rangle \leq  \sqrt{\langle \psi |\psi \rangle }\sqrt{\langle {\rho } \psi |{\rho } \psi\rangle } \]
 Resulting in
 \[\langle {\rho }\psi |{\rho }\psi \rangle\leq \langle \psi |\psi \rangle  \]
-We see that the density matrix is a contraction mapping. We now prove the contraposition -- if ${\rho }^2={\rho }$, the state is pure. Last class we have seen that the eigenvalue of the matrix becomes either 1 or 0. In the spectral decomposition,
+We see that the density matrix is a contraction mapping. We now prove the contraposition, that if ${\rho }^2={\rho }$, the state is pure. Last class we have seen that the eigenvalue of the matrix becomes either 1 or 0. In the spectral decomposition,
 \[{\rho }=\sum _{j}p_{j}|\psi _{j}\rangle \langle \psi _{j}|\]
 we see that only one of the $p_{j}$'s should become one and that the others should be zero. We have now concluded the proof. 
 \end{proof}

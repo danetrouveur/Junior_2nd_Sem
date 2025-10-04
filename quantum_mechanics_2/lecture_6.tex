@@ -1,23 +1,28 @@
 \section{Lecture 6 (September 17th)}
-\begin{prop}
-The real hydrogen atom is only truely solved when dealing with the Dirac equation and the potential
-\[\dfrac{-e^2}{r}\]
-The spin-orbit interaction is given by
-\[
-\[\begin{cases}
-\vec{E}'=\gamma (\vec{E}+\vec{\beta }\times \vec{B})-\dfrac{\gamma ^2}{\gamma +1}\vec{\beta }(\vec{\beta }\cdot \vec{E})\\
-\vec{B}'=\gamma (\vec{B}-\vec{\beta }\times \vec{E})
-\end{cases}\]
-In the electron's rest frame, the lab frame variables $(\vec{E},\vec{B})$ becomes $(\vec{E}',\vec{B}')$. Here,
-\[\vec{\beta }=\vec{v}/c\qquad\&\qquad \gamma =\dfrac{1}{\sqrt{1-\beta ^2}}\]
-Take $\vec{B}=0$, we have 
-\[\begin{cases}
-\vec{E}'=\vec{E}\\
-\vec{B}'=-\vec{\beta }\times \vec{E}=-\dfrac{\vec{v}}{c^2}\times \vec{E}=-\dfrac{\vec{v}}{c^2}\times (-\nabla \phi )=\dfrac{\vec{v}}{c^2}\times \hat{r}\,\dfrac{\partial \phi }{\partial r} 
-\end{cases}\]
-We have
-\[H_{SO}=-\vec{\mu }_{e}\cdot \vec{B}'\]
+\section{Chapter 12. The Real Hydrogen Atom}
+\begin{lem}
+(Relativistic kinetic energy) Recall that the relativistic energy kinetic energy was given as
+\[E=\sqrt{(\vec{p}c)^2+(mc^2)^2}-mc^2\]
+Taylor expanding, we find
+\[E=\dfrac{\vec{p}\,^2}{2m_{e}}-\dfrac{1}{8}\dfrac{(\vec{p}\,^2)^2}{m^3_{e}c^2}+\ldots \]
+and we will use
+\[H_1=-\dfrac{1}{2}\Big(\dfrac{\vec{p}\,^2}{2m_{e}}\Big)^2\dfrac{1}{m_{e}c^2}\]
+Finding the first order pertubation for this potential, we find
+\[\langle \phi _{nlm}|H_1|\phi _{nlm}\rangle =-\dfrac{1}{2}m_{e}c^2(Z\alpha )^2\Big[\dfrac{2(Z\alpha )^2}{n^3(2l+1)}-\dfrac{3(Z\alpha )^2}{4n^{4}}\Big]\]
 
-\end{prop}
+\end{lem}
+\vspace{2ex}
+\begin{lem}
+(Spin-orbit coupling) The spin of the electron and its associated magnetic moment 
+\[\vec{\mu }=-\dfrac{e}{2m_{e}}g\vec{S}=-\dfrac{e}{m_{e}}\vec{S}\]
+change the interaction of the electron with the electric field that is produced by the proton charge. An electron moving with a uniform velocity $\vec{v}$ experiences a magnetic field
+\[\vec{B}=-\dfrac{\vec{v}\times \vec{E}}{c^2}=-\dfrac{\vec{v}\times \vec{E}}{c^2}=-\dfrac{\vec{v}\times (-\nabla \phi (r))}{c^2}=\dfrac{1}{c^2}\vec{v}\times \dfrac{\vec{r}}{r}\dfrac{d \phi (r)}{d r} \]
+from here, the additional interaction becomes
+\[H_{2}=-\vec{\mu }\cdot \vec{B}=-\dfrac{e}{m_{e}}\vec{S}\cdot \vec{v}\times \dfrac{\vec{r}}{rc^2}\dfrac{d \phi (r)}{d r}=-\dfrac{e}{m_{e}^2c^2}\vec{S}\cdot \vec{L}\,\dfrac{1}{r}\dfrac{d \phi (r)}{d r}  \]
+Taking $\phi (r)=Ze/(4\pi \varepsilon_0 r)$, we find
+\[H_{2}=\dfrac{Ze^2}{4\pi \varepsilon_0}\dfrac{1}{m^2_{e}c^2}\dfrac{\vec{S}\cdot \vec{L}}{r^3}\]
+where a relativistic calculation adds another factor of $1/2$. We conclude
+\[H_{2}=\dfrac{Ze^2}{4\pi \varepsilon _{0}}\dfrac{1}{2m_{e}^2c^2}\dfrac{\vec{S}\cdot \vec{L}}{r^3}\]
+\end{lem}
 \vspace{2ex}
 

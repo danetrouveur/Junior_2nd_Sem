@@ -1,0 +1,101 @@
+\section{Lecture 10 (October 1st)}
+\begin{thm}
+Last class we have found the Hamiltonian, momentum operator, and the particle number operator for the Fock space for the Dirac field. We want to now test this Fock space. 
+\[:\hat{H}:|(\vec{p},i)\rangle =:\hat{H}:\hat{b}^{i}(\vec{p})^{\dagger}|0\rangle =E_{p}|(\vec{p},i)\rangle \]
+and
+\[:\hat{H}:|(\vec{p}_{1},i_1),\ldots ,(\vec{p}_{N}',i_{N}')\rangle =(E_{p_1}+\ldots E_{p_{N}'})|\cdot \rangle \]
+The momentum operator acts as
+\[:\hat{\vec{P}}:|(\vec{p}_{1},i_1),\ldots ,(\vec{p}_{N}',i_{N}')\rangle =(\vec{p}_{1}+\ldots +\vec{p}_{N}')|\cdot \rangle \]
+The particle number opeartor 
+\[:\hat{N}:|(\vec{p}_{1},i_{1}),\ldots (\vec{p}_{M},i_{M}),(\vec{p}_{1}',i_{1}'),\ldots ,(\vec{p}_{N}',i_{N}')\rangle =(M-N)|\cdot \rangle \]
+The generalised momentum is rather complicated. Let's focus on the special case! For example, lets take the angular momentum operator acting on a single particle, zero momentum state. We find
+\[\hat{S}_{z}=\int d^3\vec{x}\,\hat{S}^{012}\longrightarrow \hat{S}_{z}|({\bf 0},i)\rangle =\pm \dfrac{1}{2}|({\bf 0},i)\rangle \]
+\end{thm}
+\vspace{2ex}
+\begin{defi}
+(Feynman propagator) For the Dirac field, we will be writing 
+\[S_{F\alpha \beta }(x,y)=\langle 0|T\hat{\psi }_{\alpha }(x)\hat{\bar{\psi }}_{\beta }(y)|0\rangle \]
+This is equal to
+\[\begin{align*}
+S_{F\alpha \beta }(x,y)=\int \dfrac{d^3\vec{p}\,d^3\vec{q}}{(2\pi )^3\sqrt{2E_{p}\cdot 2E_{q}}}\sum ^{2}_{i,j=1}\Big[&\mathrm{\Theta}(x^{0}-y^{0})u^{i}_{+\alpha }(\vec{p})\bar{u}^{j}_{+\beta }(\vec{q})\langle 0|\hat{b}^{i}(\vec{p})\hat{b}^{j}(\vec{q})^{\dagger}|0\rangle e^{i(p\cdot x-q\cdot y)}\\
+&-\mathrm{\Theta}(y^{0}-x^{0})u^{i}_{-\alpha }(\vec{p})\bar{u}^{j}_{-\beta }(\vec{q})\langle 0|\hat{d}^{j}(\vec{q})\hat{d}^{i}(\vec{p})^{\dagger}|0\rangle e^{-i(p\cdot x)-q\cdot y}\Big]
+\end{align*}\]
+\[\begin{align*}
+=\int \dfrac{d^3\vec{p}}{(2\pi )^32E_{p}}\sum ^{2}_{i=1}\Big[\mathrm{\Theta}(x^{0}-y^{0})u^{i}_{+\alpha }(\vec{p})\bar{u}^{i}_{+\beta }(\vec{p})e^{-ip\cdot (x-y)}-\mathrm{\Theta}(y^{0}-x^{0})u_{-\alpha }^{i}(\vec{p})\bar{u}_{-\beta }^{i}(\vec{p})e^{-ip\cdot (x-y)}\Big]
+\end{align*}\]
+where we used
+\[\begin{align*}
+\sum ^{2}_{i=1}u_{\pm\alpha }^{i}(\vec{p})\bar{u}^{i}_{\pm\beta }(\vec{p})=(-\cancel{p}\pm m{\bf 1}_{4})_{\alpha \beta }\qquad\&\qquad \langle 0|\hat{b}^{i}(\vec{p})\hat{b}^{j}(\vec{q})^{\dagger}|0\rangle =\delta ^{ij}\delta ^{(3)}(\vec{p}-\vec{q})
+\end{align*}\]
+This becomes
+\[\begin{align*}
+=\int \dfrac{d\vec{p}}{(2\pi )^32E_{p}}\Big[&\mathrm{\Theta}(x^{0}-y^{0})(-\cancel{p}+m{\bf 1}_{4})_{\alpha \beta }e^{ip\cdot (x-y)}\\&+\mathrm{\Theta}(y^{0}-x^{0})(\cancel{p}+m{\bf 1}_{4})_{\alpha \beta }e^{-ip\cdot (x-y)}\Big]
+\end{align*}\]
+\[\begin{align*}
+=&(i\cancel{\partial }_{x}+m{\bf 1}_{4})_{\alpha \beta }\int \dfrac{d^3\vec{p}}{(2\pi )^32E_{p}}\Big[\mathrm{\Theta}(x^{0}-y^{0})e^{ip\cdot (x-y)}+\mathrm{\Theta}(y^{0}-x^{0})e^{ip\cdot (x-y)}\Big]\\
+=&(i\cancel{\partial }_{x}+m{\bf 1}_{4})_{\alpha \beta }\mathrm{\Delta }_{F}(x-y)
+\end{align*}\]
+where
+\[\mathrm{\Delta }_{F}(x-y)=\int \dfrac{d^{4}\vec{p}}{(2\pi )^{4}}\dfrac{-i}{p^2+m^2-i\varepsilon }e^{ip\cdot (x-y)}\]
+and
+\[S_{F\alpha \beta }(x,y)=\int \dfrac{d^{4}\vec{p}}{(2\pi )^{4}}\dfrac{i(\cancel{p}-m{\bf 1}_{4})_{\alpha \beta }}{p^2+m^2-i\varepsilon }e^{ip\cdot (x-y)}=\Big[\int \dfrac{d^{4}p}{(2\pi )^{4}}\dfrac{-i}{\cancel{p}+m-i\varepsilon }e^{ip\cdot (x-y)}\Big]_{\alpha \beta }\]
+Let's now verify that the Feynman propagator is indeed the green function of the Dirac equation.
+\[\begin{align*}
+(i\cancel{\partial }_{x}-m+i\varepsilon )S_{F}(x-y)=&(-\cancel{\partial }_{x}-m+i\varepsilon )\int \dfrac{d^{4}p}{(2\pi )^{4}}\dfrac{-i}{\cancel{p}+m-i\varepsilon }e^{ip\cdot (x-y)}\\
+=&\int \dfrac{d^{4}p}{(2\pi )^{4}}ie^{ip\cdot (x-y)}{\bf 1}_{4}=i{\bf 1}_{4}\delta ^{(4)}(x-y)
+\end{align*}\]
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Spin-1 Maxwell fields) These have a subtlety due to gauge symmetry. There are esstentially two approaches, (1) non-covariant quantisation and (2) covariant quantisation. For (1),
+\begin{itemize}
+\item[(i)] Based on the Coulomb gauge $\nabla \cdot \vec{A}=0$.
+\item[(ii)] Free from unphysical longitudinal degrees of freedom.
+\item[(iii)] Lacks manifest Lorentz covariance, and is unsuitable for pertubative quantum field theory.
+\end{itemize}
+For (2),
+\begin{itemize}
+\item[(i)] Based on the Lorentz gauge $\partial _{\mu }A^{\mu }=0$.
+\item[(ii)] Unphysical longitudinal mode is quantised. In this case, the associated states are eliminated from the Hilbert space (Gupta-Bleuler formalism). 
+\item[(iii)] Preserves manifest Lorentz invariance and is suitable for pertubative quantum field theory.
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{rmk}
+Useful expressions for covariant quantisation 
+\[\hat{A}_{\mu }(x)=\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^32E_{p}}}\sum _{r=0}^{3}\Big(\hat{a}^{r}(\vec{p})\epsilon ^{r}_{\mu }(\vec{p})e^{ip\cdot x}+\hat{a}^{r}(\vec{p})^{\dagger}\epsilon ^{r}_{\mu }(\vec{p})^{*}e^{-ip\cdot x}\Big)\]
+Taking
+\[u_{\vec{p}}(\vec{x})=\dfrac{1}{\sqrt{(2\pi )^32E_{p}}}e^{ip\cdot x}\]
+we have
+\[\hat{a}^{r}(\vec{p})=i\eta ^{rr}\int d^3\vec{x}\,\varepsilon ^{r}_{\mu }(\vec{p})^{*}u_{\vec{p}}(\vec{x})^{*}\mathop{\partial_0 }^{\leftrightarrow }\hat{A}&\mu (x)\]
+Here are some comments
+\begin{itemize}
+\item[(i)] $\partial _{\mu }\hat{A}\ne 0$ (Lorentz gauge does not hold as an operator identity)
+\item[(ii)] The Gupta-Bleur is used to enforce the Lorentz gauge
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(Spin-statistics theorem) The spin-statistics theorem states that integer spin particles are bosons, following Bose-Einstein statistics. Then, quantisation is achieved through commutator relations. On the other hand, half-integer spin particles are fermions, following Fermi-Dirac statistics. In this case, quantisation is by anti-commutator relations.
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(Klein-Gordan fields must by quantised by commuator relations) The logical sequence is as follows:
+\begin{itemize}
+\item[(i)] Micro-causality must follow, meaning that the measurement of two observables at spacelike separation cannot influence each other. For any observables $\hat{A}(x)$ and $\hat{B}(y)$, they must satisfy $[\hat{A}(x),\hat{B}(y)]=0$ for $(x-y)^2>0$ and must be spacelike.
+\item[(ii)] Observables are bilinear forms of field operators in quantum field theory. This means that commutation or anti-commutation of field operators at spacelike separation must vanish.
+\[\begin{align*}
+[XY,Z]=&X[Y,Z]+[X,Z]Y\\
+=&X\{Y,Z\}-\{X,Z\}Y
+\end{align*}\]
+\item[(iii)] Quantised Klein-Gordan field was given as
+\[\hat{\phi }(x)=\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^32E_{p}}}(\hat{a}(\vec{p})e^{ip\cdot x}+\hat{a}(\vec{p})^{\dagger}e^{-ip\cdot x})\]
+the first case is that the field, and consquently the mode operators commute, and the second case is that they anti-commute.
+\item[(iv)] In the case that they commutator is used, in the equal time frame,
+\[[\hat{\phi }(x),\hat{\phi }(y)]=\int \dfrac{d^3\vec{p}}{(2\pi )^32E_{p}}(e^{i\vec{p}\cdot (\vec{x}-\vec{y})}-e^{-i\vec{p}\cdot (\vec{x}-\vec{y})})=0\]
+\item[(v)] In the case that the anti-commutator is used, \[[\hat{\phi}(x),\hat{\phi }(y)]\ne 0\qquad\&\qquad \{\hat{\phi }(x),\hat{\phi }(y)\}\ne 0\]
+
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+

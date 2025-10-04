@@ -1,0 +1,22 @@
+\section{Lecture 12 (October 1st)}
+\begin{defi}
+(Ritz variational principle) We are trying to find a good trial wavefunction $|\psi \rangle $ with some parameters for the ground state. Afterwards, we want to calculate $\langle \psi |\hat{H}|\psi \rangle $ and minimise this. Let
+\[|\psi \rangle =\sum _{m=0}c_{m}|m\rangle \]
+and $|m\rangle $ be $\hat{H}$'s true energy eigenkets which we do not know.
+\[\langle \psi |\hat{H}|\psi \rangle =\sum _{n,m}c_{n}^{*}c_{m}\langle n|\hat{H}|m\rangle=\sum _{m}|c_{m}|^2E_{m}\geq \sum _{m}|c_{m}|^2E_0\geq 0 \]
+where $\hat{H}|m\rangle =E_{m}|m\rangle $. We there for find that the expectation value is always higher than the true ground state and that the ground state acts as an lower bound!
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+($Z^{*}$ hydrogenlike problem) We try to find the ground state using the trial ground state wavefunction as follows
+\[\Big(\dfrac{\vec{p}^2}{2m_{e}}+\dfrac{(-e)(Z^{*}e)}{4\pi \varepsilon_0 r}\Big)\phi _{Z^{*}100}(r)=\Epsilon_{g}\phi _{Z^{*}100}(r)=\Big(-\dfrac{1}{2}m_{e}c^2\alpha ^2\Big)(Z^{*})^2\]
+however, we expect
+\[\psi _{Z^{*}}(\vec{r}_{1},\vec{r}_{2})=\phi _{Z^{*}100}(\vec{r}_{1})\phi _{Z^{*}100}(\vec{r}_{2})\]
+From the hydrogen atom hamiltonian,
+\[\hat{H}=\dfrac{\vec{p}_{1}^2}{2m_{e}}+\dfrac{\vec{p}_{2}^2}{2m_{e}}+\dfrac{Ze(-e)}{4\pi \varepsilon _{0}r_1}+\dfrac{Ze(-e)}{4\pi \varepsilon_0r_2}+\dfrac{e^2}{4\pi \varepsilon_0}\dfrac{1}{|\vec{r}_{1}-\vec{r}_{2}}\]
+we add and substract $Z^{*}(-e^2)/(4\pi \varepsilon_0r_1)$ and we find
+\[\langle \psi |\hat{H}|\psi \rangle =2\Epsilon_{g}-2\dfrac{(Z-Z^{*})}{4\pi \varepsilon _{0}}\langle \dfrac{1}{r}\rangle +\dfrac{e^2}{4\pi \varepsilon_0}\langle \dfrac{1}{|\vec{r}_{1}-\vec{r}_{2}|}\rangle \]
+giving $Z^{*}_{\mathrm{min}}=Z-5/16$. Comparing our $E_{\mathrm{min}}=-77.38$ eV and the experimental $E_{\mathrm{exp}}=-78.975$ eV, we find a large accuracy. 
+\end{ex}
+\vspace{2ex}
+

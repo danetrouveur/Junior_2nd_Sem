@@ -1,0 +1,51 @@
+\section{Lecture 8 (September 30th)}
+\begin{thm}
+Let $\{f_{n}\}$ be a sequence of 1-1 analytic functions on a domain $D$ such that $f_{n}\rightarrow f$ uniformly on every compact subset of $D$. Then, either $f$ is constant or $f$ is 1-1 on $D$. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Let $f$ be non-constant. Suppose that there exists $z_1,z_2\in D$ such that $f(z_1)=f(z_2)=a$ and that the function is not 1-1. Then, there exists $r>0$ such that:
+\begin{itemize}
+\item[(i)] $\bar{D}(z_1,r)\subset D$ and $\bar{D}(z_2, r)\subset D$
+\item[(ii)] By the identity theorem, $f(z)-a$ has no zeros in both $0<|z-z_1|\leq r$ and $0<|z-z_2|\leq r$. Denote simple circles $C_1:|z-z_1|=r$ and $C_2:|z-z_2|=r$. Let 
+\[m=\min_{z\in C_1\cup C_2}|f(z)-a|\geq 0\]
+where $C_1\cup C_2$ is compact.
+\item[(iii)] $\bar{D}(z_1,r)\cap  \bar{D}(z_2,r)=\varnothing$
+\end{itemize}
+By the uniform convergence of $\{f_{n}\}$ on $C_1\cup C_2$, there is $N$ such that 
+\[|f_{N}(z)-f(z)|<m\]
+for $z\in C_1\cup C_2$. On $C_1$, $|f_{N}(z)-f(z)|<m\leq |f(z)-a|$. By Rouche's theorem, $f(z)-a$ and $f_{N}(z)-a$ have the same numbers of zero inside $C_1$. Also, $f(z)-a$ and $f_{N}(z)-a$ have the same number of zeros inside $C_2$. Thus, $f_{N}(z)-a$ has zeros inside $C_1$ and inside $C_2$. Thus, $f_{N}$ is not 1-1.
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+There are multiple cases where the first option holds. For example, take $f_{n}(z)=\dfrac{z}{n}$ and $f=0$. 
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+(Riemann mapping theorem) If $D$ ($\ne {\bm C}$) is a simply connected domain, then there is a 1-1 analytic function $h$ from $D$ onto $U$. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Let $\mathrm{\Sigma}=\{f:D\rightarrow U \,|\,f\mathrm{\ is\ injective\ and\ analytic} \}$.
+
+\bigskip
+
+(I) We prove that $\mathrm{\Sigma} \ne \varnothing$. To prove this, we use the prior result that if $f$ is analytic on a simply connected domain $D$, such that $f(z)\ne 0$ for any $z\in D$, then there is $g$ analytic in $D$ such that $g^2=f$ on $D$. Suppose that $w_0\notin D$. Then there is $g$ analytic on $D$ such that $g^2(z)=z-w_0$. As $w^2=z$ implies that $w=\sqrt{r}e^{i\theta /2}$, $g(D)$ does not intersect some half of the plane! Furthermore,
+\begin{itemize}
+\item[(i)] $0\notin g(D)$, which is trivial. 
+\item[(ii)] $g$ is 1-1 on $D$, as if $g(z_1)=g(z_2)$, then $g^2(z_1)=g^2(z_2)$ and $z_1-w_0=z_2-w_0$.
+\item[(iii)] If $w\in g(D)$, then $-w\notin g(D)$, as if $g(z_1)=-g(z_2)$ for distinct points, then $g^2(z_1)=g(z_2)^2$ and $z_1=z_2$ which is a contradiction.
+\item[(iv)] If $a\in g(D)$, then there exists an $r>0$ such that $D(a,r)\subset g(D)$ due to the open mapping theorem. In particular, $D(-a,r)\cap g(D)=\varempty$ as if $w\in D(-a,r)$, then $|w+a|<r$ and $|-w-a|=|w+a|<r$ which implies that $-w\in D(a,r)\subset g(D)$. 
+\end{itemize}
+Now, define $h:D\rightarrow {\bm C}$ by 
+\[h(z)=\dfrac{r}{g(z)+a}\]
+Notice that $|g(z)+a|>r$ for all $z\in D$ and that $|h(z)|<1 $ for all $z\in D$. We see that if $h(z_1)=h(z_2)$.
+\[\dfrac{r}{g(z_1)+a}=\dfrac{r}{g(z_2)+a}\]
+and that $g(z_1)=g(z_2)$ with $z_1=z_2$. We see that $h(z)$ is a 1-1 function from an arbitrary domain $D$ to $U$!
+
+\bigskip 
+
+(II) Let $\psi \in \mathrm{\Sigma} $ such that $\psi (D)\ne U$. We claim that for every $z_0\in D$, there is $\psi_0\in \mathrm{\Sigma} $ such that $|\psi_0'(z_0)|>|\psi '(z_0)|$. Suppose that $\alpha \in U\ \psi (D)$. Then, $\phi _{\alpha }\circ \psi $ is analytic on $D$ with no zeros. Since $D$ is simply connected, there is $g$ analytic in $D$ such that $g^2=\phi _{\alpha }\circ \psi $. Let $g(z_0)=\beta $. Define $\psi_0=\phi _{\beta }\circ g$. Then, $\psi_0\in \mathrm{\Sigma} $ and due to the Schwartz lemma, the claim holds.k
+\end{proof}
+\vspace{2ex}
+

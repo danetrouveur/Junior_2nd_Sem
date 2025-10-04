@@ -1,0 +1,101 @@
+\section{Lecture 9 (September 29th)}
+\begin{defi}
+(Spin-$\dfrac{1}{2}$ Dirac Fields) The Dirac action was given as
+\[S_{D}=\int d^{4}x\,\bar{\psi }(i\cancel{\partial }-m)\psi \]
+The canonical quantisation or ETCR were give as
+\[\hat{\psi }(x),\hat{\pi }(x)=i\hat{\psi }^{\dagger}(x)\longrightarrow 
+\begin{cases}
+\{\hat{\psi }_{\alpha }(t,\vec{x}),\hat{\psi }_{\beta }(t,\vec{y})\}=\{\hat{\pi }_{\alpha }(t,\vec{x}),\hat{\pi }_{\beta }(t,\vec{y})\}=0\\
+\{\hat{\psi }_{\alpha }(t,\vec{x}),\hat{\pi }_{\beta }(t,\vec{y})\}=i\delta _{\alpha \beta }^{(4)}(\vec{x}-\vec{y})
+\end{cases}\]
+where the symmetriser comes from the spin-statistics theorem (anti-commutation for fermions). The equations of motion are promoted from the Hamiltonian as
+\[\hat{H}=\int d^3\vec{x}\,\hat{\psi }^{\dagger}(-i\gamma^{0}\vec{\gamma }\cdot \vec{\nabla }+\gamma ^{0}m)\hat{\psi }\]
+The Hamilton's equation become 
+\[\dfrac{d \hat{\psi }}{d t}=-i[\hat{\psi },\hat{H}]\longrightarrow (-i\cancel{\partial }-m)\hat{\psi }=0\]
+The solutions to the quantised Dirac equation look like
+\[\hat{\psi } (x)=\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^32E_{p}}}\sum ^{2}_{i=1}\Big(\hat{b}^{i}(\vec{p})u^{i}_{+}(\vec{p})e^{ip\cdot x}+\hat{d}^{i}_{\vec{p}}^{*}u_{-}^{i}(\vec{p})e^{-ip\cdot x}\Big)\]
+while the conjugate field looks like 
+\[\hat{\pi }(x)=i\int \dfrac{d^3\vec{p}}{\sqrt{(2\pi )^3}2E_{p}}\sum ^{2}_{i=1}\Big(\hat{b}^{i}(\vec{p})^{\dagger}u_{+}^{i}(\vec{p})^{\dagger}e^{-ip\cdot x}+\hat{d}^{i}(\vec{p})u^{i}_{-}(\vec{p})^{\dagger}e^{ip\cdot x}\Big)\]
+Recall that after we found the fields, we wanted the mode operators in terms of the fields and we obtain
+\[\hat{b}^{i}(\vec{p})=\int \dfrac{d^3\vec{x}}{\sqrt{(2\pi )^32E_{p}}}\,u^{i}_{+}(\vec{p})^{\dagger}\hat{\psi }(x)e^{-ip\cdot x}\]
+and
+\[\hat{d}^{i}(\vec{p})^{\dagger}=\int \dfrac{d^3\vec{x}}{\sqrt{(2\pi )^32E_{p}}}\,u_{-}^{i}(\vec{p})^{\dagger}\hat{\psi }(x)e^{ip\cdot x}\]
+(this can be proved through using $u^{i}_{\pm}(\vec{p})^{\dagger}u^{j}_{\pm}(\vec{p})=2E_{p}\delta ^{ij}$ and $u_{\pm}^{i}(\vec{p})u^{j}_{\mp}(-\vec{p})=0$). The anti-commuation relations for $\hat{b}^{i}$ and $\hat{d}^{i}$ should be
+\[\{\hat{b}^{i}(\vec{p}),\hat{b}^{j}(\vec{q})^{\dagger}\}=\{\hat{d}^{i}(\vec{p}),\hat{d}^{j}(\vec{q})^{\dagger}\}=\delta^{ij}\delta ^{(3)}(\vec{p}-\vec{q})\]
+which is exactly the infinitely many sets of creation and annihilation operators for a fermionic harmonic oscillator.
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Construction of the Hilbert/Fock space) The vaccum state is defined using the annihilator operator 
+\[\hat{b}^{i}(\vec{p})|0\rangle =\hat{d}^{i'}(\vec{p})|0\rangle =0\]
+The first excited states look something like
+\[\hat{b}^{i}(\vec{p})^{\dagger}|0\rangle =|(\vec{p},i)\rangle \qquad\&\qquad \hat{d}^{i'}(\vec{p})^{\dagger}|0\rangle =|(\vec{p}',i')\rangle \]
+The multiple particle states trivially follow as
+\[|(\vec{p},i_1),\ldots ,(\vec{p}_{M},i_{N}),(\vec{p}_{1}',i'_{1}),\ldots ,(\vec{p}'_{N},i_{N}')\rangle =\hat{b}^{i_1}(\vec{p}_{1})^{\dagger}\ldots \hat{d}^{i_{N}'}(\vec{p}_{N}')^{\dagger}|0\rangle \]
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Pauli exclusion principle) This naturally follows from
+\[\Big(\hat{b}^{i}(\vec{p})^{\dagger}\Big)^2=\Big(\hat{d}^{i'}(\vec{p}\,')\Big)^2=0\]
+and the general multiple particle state vanishes when exists $(m,n)$ such that
+\[(\vec{p}_{m},i_{m})=(\vec{p}_{n},i_{n})\qquad\mathrm{or}\qquad (\vec{p}_{m}\,',i_{m}')=(\vec{p}_{n}\,',i_{n}')\]
+\end{thm}
+\vspace{2ex}
+\begin{defi}
+The momentum and Hamiltonian in terms of the mode operators are
+\[\hat{P}^{\mu }=\int d^3\vec{x}\,\hat{T}^{0\mu }=-\int d^3\vec{x}\,i\hat{\bar{\psi }}\gamma ^{0}\partial ^{\mu }\hat{\psi }\]
+and
+\[\hat{H}=i\int d^3\vec{x}\,\hat{\psi }^{\dagger}\partial _{t}\hat{\psi }\]
+resulting in
+\[\begin{align*}
+\hat{H}=&i\int \dfrac{d^3\vec{p}}{2E_{p}}(-iE_{p})\sum _{i,j=1}^{2}2E_{p}\delta ^{ij}\Big(\hat{b}^{i}(\vec{p})^{\dagger}\hat{b}^{j}(\vec{p})-\hat{d}^{i}(\vec{p})\hat{d}^{j}(\vec{p})^{\dagger}\Big)\\
+=&\int d^3\vec{p}\,E_{p}\sum ^{2}_{i=1}\Big(\hat{b}^{i}(\vec{p})^{\dagger}\hat{b}^{i}(\vec{p})-\hat{d}^{i}(\vec{p})\hat{d}^{i}(\vec{p})^{\dagger}\Big)\\
+=&\int d^3\vec{p}\,E_{p}\sum ^{2}_{i=1}\Big(\hat{b}^{i}(\vec{p})^{\dagger}\hat{b}^{i}(\vec{p})+\hat{d}^{i}(\vec{p})^{\dagger}\hat{d}^{i}(\vec{p})\Big)-\int d^3\vec{p}\,E_{p}\delta ^{(3)}({\bf 0})
+\end{align*}\]
+The momentum operator is naturally 
+\[\begin{align*}
+\hat{\vec{P}}=&-i\int d^3\vec{x}\,\hat{\psi }^{\dagger}\nabla \hat{\psi }\\
+=&\int d^3\vec{p}\,\vec{p}\sum ^{2}_{i=1}\Big(\hat{b}^{i}(\vec{p})^{\dagger}\hat{b}^{i}(\vec{p})+\hat{d}^{i}(\vec{p})^{\dagger}\hat{d}^{i}(\vec{p})\Big)
+\end{align*}\]
+There are also other important conserved charges! The $U(1)$ symmetry becomes the particle numbers ($+1$ for $\hat{b}^{\dagger}$ and $-1$ for $\hat{d}^{\dagger}$). The Noether current is $j^{\mu }=\bar{\psi }\gamma ^{\mu }\psi $ leading to the conserved quantity
+\[\hat{N}=\int d^3\vec{x}\,\hat{j}^{0}=\int d^3\vec{x}\,\hat{\psi }^{\dagger}\hat{\psi }\]
+and
+\[\begin{align*}
+\hat{N}=&\int d^3\vec{p}\,\sum ^{2}_{i=1}\Big(\hat{b}^{i}(\vec{p})^{\dagger}\hat{b}^{i}(\vec{p})+\hat{d}^{i}(\vec{p})\hat{d}^{i}(\vec{p})^{\dagger}\Big)\\
+=&\int d^3\vec{p}\,\sum ^{2}_{i=1}\Big(\hat{b}^{i}(\vec{p})^{\dagger}\hat{b}^{i}(\vec{p})-\hat{d}^{i}(\vec{p})^{\dagger}\hat{d}^{i}(\vec{p})\Big)+N_0
+\end{align*}\]
+Also, the normal Lorentz symmetries give the generalised angular momenta. For the Dirac field, 
+\[\mathcal{J}^{\mu \nu \rho }=\underbrace{x^{\rho }T^{\mu }-x^{\nu }T^{\mu \rho }}_{\mathrm{orbital}}+\underbrace{\bar{\psi }\gamma ^{\mu }\Big(\dfrac{i}{2}\gamma ^{\nu \rho }\Big)\psi}_{\mathrm{spinorial}=\mathcal{S}^{\mu \nu \rho }} \]
+We are compelled to think that
+\[\begin{cases}
+\hat{J}^{\mu \nu }=\int d^3\vec{x}\,\hat{\mathcal{J}}^{0\mu \nu }\\
+\hat{S}^{\mu \nu }=\int d^3\vec{x}\,\hat{\mathcal{S}}^{0\mu \nu }
+\end{cases}\]
+is the second part generalised spin? There are a lot of subtleties, addressed in the homework problems.
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+The vaccum energy $E$ can be seen as the sum of all ground state energies of the fermionic oscillators. They are therefore negative and divergent. Let us interpret the ground state recalling that 
+\[\{\hat{d},\hat{d}^{\dagger}\}\qquad\&\qquad \hat{d}|0\rangle =0\]
+where the first is symmetric.
+
+\bigskip
+
+The first perspective is that $\hat{d}^{\dagger}$ and $\hat{d}$ create and annihilate positive energy states. Therefore, $|0\rangle $ can be seen as the vaccum without any excited positive energy states. Also, $\hat{b}^{\dagger}$ and $\hat{d}^{\dagger}$ would be creating particles and anti-particle states (positive). 
+
+\bigskip
+
+The second perspective is that $\hat{d}$ and $\hat{d}^{\dagger}$ create and annihilate negative energy states. Then, the state $|0\rangle $ would be interpreted as a state with fully filled negative energy states, exactly the "Dirac sea". Also, $\hat{d}^{\dagger}$ would create a hole in the Dirac sea. 
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(Normal ordering) Again, the normal ordering operator sends all annihilation operators to the right, giving
+\[\begin{align*}
+:\hat{H}:=&\int d^3\vec{p}\,E_{p}\sum ^{2}_{i=1}\Big(\hat{b}^{i}(\vec{p})^{\dagger}\hat{b}^{i}(\vec{p})+\hat{d}^{i}(\vec{p})^{\dagger}\hat{d}^{i}(\vec{p})\Big)\\
+:\hat{\vec{P}}:=&\int d^3\vec{p}\,\vec{p}\sum ^{2}_{i=1}(\ldots )\\
+:\hat{N}:=&\int d^3\vec{p}\,\sum ^{2}_{i=1}\Big(\hat{b}^{i}(\vec{p})^{\dagger}\hat{b}^{i}(\vec{p})-\hat{d}^{i}(\vec{p})^{\dagger}\hat{d}^{i}(\vec{p})\Big)
+\end{align*}\]
+Note that $:\hat{a}\hat{a}^{\dagger}:=\hat{a}^{\dagger}\hat{a}$ for bosons whereas $:\hat{b}\hat{b}^{\dagger}:=-\hat{b}^{\dgger}\hat{b}$ for fermions.
+\end{defi}
+\vspace{2ex}
+
