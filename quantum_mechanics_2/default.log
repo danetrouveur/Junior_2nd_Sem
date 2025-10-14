@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  3 OCT 2025 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  6 OCT 2025 17:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -664,63 +664,54 @@ If that doesn't work, type  X <return>  to quit.
 
 
 
-[2]
+[2]) (./lecture_3.tex
 
-./lecture_2.tex:47: Package amsmath Error: Erroneous nesting of equation structures;
+./lecture_3.tex:8: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 \end{align*}
-                 \]
+l.8 \end{align*}
+                \]
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (1.76608pt too wide) in paragraph at lines 49--51
-\OT1/cmr/m/n/10.95 we can gen-er-alise this to the mode op-er-a-tors, and as-sum-ing $\OML/cmm/m/it/10.95 a\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p; x\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 U\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 a\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p; \OT1/cmr/m/n/10.95 0)\OML/cmm/m/it/10.95 U\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )[]$
- []
 
+[3]) (./lecture_4.tex
 
-./lecture_2.tex:55: Package amsmath Error: Erroneous nesting of equation structures;
+./lecture_4.tex:7: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55 \end{align*}
+l.7 \end{align*}
+                \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./lecture_4.tex:16: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \end{align*}
                  \]
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
 
-[3]) (./lecture_3.tex
-
-[4]) (./lecture_4.tex
+[4]) (./lecture_5.tex
 
 [5]
-
-[6]
-
-./lecture_4.tex:31: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 \end{align*}
-                 \]
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) (./lecture_5.tex
-
-[7]
 
 ./lecture_5.tex:27: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -736,11 +727,11 @@ If that doesn't work, type  X <return>  to quit.
 
 
 
-[8]) (./lecture_6.tex
+[6]
 
-[9]) (./lecture_7.tex
+[7]) (./lecture_6.tex
 
-[10]
+[8]) (./lecture_7.tex
 
 ./lecture_7.tex:9: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -756,15 +747,15 @@ If that doesn't work, type  X <return>  to quit.
 
 ) (./lecture_9.tex
 
+[9]
+
+[10]) (./lecture_10.tex
+
 [11]
 
-[12]) (./lecture_10.tex
+[12]
 
-[13]
-
-[14]
-
-[15]) (./lecture_11.tex
+[13]) (./lecture_11.tex
 
 ./lecture_11.tex:25: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -780,7 +771,7 @@ If that doesn't work, type  X <return>  to quit.
 
 
 
-[16]) (./lecture_12.tex
+[14]) (./lecture_12.tex
 ./lecture_12.tex:12: Undefined control sequence.
 l.12 ...ilon_0 r}\Big)\phi _{Z^{*}100}(r)=\Epsilon
                                                   _{g}\phi _{Z^{*}100}(r)=\B...
@@ -792,7 +783,7 @@ and I'll forget about whatever was undefined.
 
 
 
-[17]
+[15]
 ./lecture_12.tex:18: Undefined control sequence.
 l.18 ...ngle \psi |\hat{H}|\psi \rangle =2\Epsilon
                                                   _{g}-2\dfrac{(Z-Z^{*})}{4\...
@@ -804,7 +795,7 @@ and I'll forget about whatever was undefined.
 
 )
 
-[18] (./default.aux)
+[16] (./default.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -813,18 +804,18 @@ Package rerunfilecheck Info: File `default.out' has not changed.
 (rerunfilecheck)             Checksum: 641059C3D3CC4C7A5F3A3AA19233992B;2287.
  ) 
 Here is how much of TeX's memory you used:
- 24088 strings out of 473190
- 463693 string characters out of 5715800
- 959519 words of memory out of 5000000
+ 24083 strings out of 473190
+ 463664 string characters out of 5715800
+ 960519 words of memory out of 5000000
  46840 multiletter control sequences out of 15000+600000
  568045 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  95i,11n,96p,1196b,601s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on default.pdf (18 pages, 231129 bytes).
+Output written on default.pdf (16 pages, 221206 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

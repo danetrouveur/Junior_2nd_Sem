@@ -37,23 +37,15 @@ we see that only one of the $p_{j}$'s should become one and that the others shou
 \end{proof}
 \vspace{2ex}
 \begin{thm}
-(Alternative decompositions) Let's say that we have a certain mixed state. How do we find the relationship between a mixed state expressed in an arbitrary basis and a basis that is not necessarily orthogonal? Let say you have a orthogonal basis $\{|\psi _{i}\rangle \}$ where $n$ is the number of eigenketes with non-zero eigenvalues. How does it map onto another representation?
-\[{\rho }=\sum ^{n}_{i=1}p_{i}|\psi _{i}\rangle \langle \psi _{i}|\qquad \mapsto \qquad {\rho }=\sum ^{m}_{j=1}q_{j}|\varphi  _{j}\rangle \langle \varphi  _{j}|\]
-We obviously know that $n\leq m$. Take
-\[\langle \psi _{k}|\hat{\rho }|\psi _{k}\rangle =0\]
-Then,
-\[\sum ^{N}_{j=1}w_{j}|\langle \psi _{i}|\alpha _{j}\rangle |^2=0\]
-which tells us that
-\[\langle \psi _{i}|\alpha  _{j}\rangle =0\]
-Therefore,
-\[|\alpha _{j}\rangle =\sum ^{n}_{k=1}\langle \psi _{k}|\alpha _{j}\rangle |\psi _{k}\rangle \]
-We now define a $m\times n$ matrix
-\[V_{ij}=\sqrt{\dfrac{w_{i}}{p_{j}}}\langle \psi _{j}|\alpha _{i}\rangle \]
-It is obvious that
-\[\sum ^{n}_{j=1}V_{ij}\sqrt{p_{j}}|\psi _{j}\rangle =\sqrt{w_{i}}|\alpha _{i}\rangle \]
-and we have
-	\[\sum ^{m}_{i=1}(V^{\dagger})_{ji}V_{ij}=\dfrac{1}{\sqrt{p_{j}p_{k}}}\sum ^{m}_{i=1}w_{i}\langle \psi _{j}|\alpha _{i}\rangle \langle \alpha _{i}|\psi _{k}\rangle =\dfrac{1}{\sqrt{p_{j}p_{k}}}\langle \psi _{i}|\rho ^2|\psi _{k}\rangle =\delta _{jk}\]
-
+(Equivalence of representations) Consider an orthonormal basis $\{|\psi _{i}\rangle \}_{i=1}^{n}$ and a not necessarily orthonormal basis $\{|\phi _{j}\rangle \}_{j=1}^{m}$. 
+\[{\rho }=\sum ^{n}_{i=1}p_{i}|\psi _{i}\rangle \langle \psi _{i}|\qquad \& \qquad {\rho }=\sum ^{m}_{j=1}q_{j}|\phi   _{j}\rangle \langle \phi   _{j}|\]
+As $n$ is the minimum number of vectors the span the set, $m\geq n$. Define a $m\times n$ matrix
+\[V_{ij}=\sqrt{\dfrac{q_{i}}{p_{j}}}\langle \psi _{j}|\phi _{i}\rangle \]
+and we see that
+\[\sum ^{m}_{j=1}(V^{\dagger })_{ij}V_{jk}=\sum ^{m}_{j=1}\sqrt{\dfrac{q_{j}}{p_{i}}}\langle \phi _{j}|\psi _{i}\rangle \sqrt{\dfrac{q_{j}}{p_{k}}}\langle \psi _{k}|\phi  _{j}\rangle =\sum _{i=1}^{n}\sqrt{\dfrac{p_{i}^2}{p_{i}p_{k}}}\langle \psi _{i}|\psi _{i}\rangle \langle \psi _{k}|\psi _{i}\rangle=\delta _{ik} \]
+and therefore $V^{\dagger }V=I_{n}$. After adding $m-n$ column vectors to $V$, we can make it unitary, and it would arrive at
+\[\sum ^{n}_{j=1}U_{ij}\sqrt{p_{j}}|\psi _{j}\rangle =\sqrt{q_{i}}|\phi _{i}\rangle \]
+This can be used to prove that $\rho $ can indeed be expressed as $\sum ^{m}_{i=1}q_{i}|\phi _{i}\rangle \langle \phi _{i}|$.
 \end{thm}
 \vspace{2ex}
 

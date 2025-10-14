@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  2 OCT 2025 13:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  8 OCT 2025 13:10
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -632,7 +632,7 @@ Package hyperref Info: Link coloring ON on input line 16.
 \openout4 = `default.out'.
 
 Couldn't patch \deferred@thm@head!
-(./lecture_8.tex
+(./lecture_1.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -648,7 +648,159 @@ File: uesint.fd
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./lecture_2.tex
+
+[2]
+
+./lecture_2.tex:15: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./lecture_2.tex:39: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[3]
+
+[4]
+
+[5]) (./lecture_3.tex
+
+./lecture_3.tex:20: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./lecture_3.tex:26: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[6]
+./lecture_3.tex:49: Undefined control sequence.
+<recently read> \Bigcup 
+                        
+l.49 and $\Bigcup
+                  G_{n}=D$ by the Archimeidan property.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) (./lecture_4.tex
+
+[7]
+
+[8]
+
+[9]) (./lecture_5.tex
+
+[10]
+
+[11]
+
+./lecture_5.tex:88: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (./lecture_6.tex
+
+./lecture_6.tex:20: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[12]
+
+./lecture_6.tex:51: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[13]) (./lecture_7.tex
+
+[14]
+./lecture_7.tex:13: Undefined control sequence.
+l.13 \bigksip
+             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+
+[15]
+
+[16]) (./lecture_8.tex
+
+[17]
+
+[18]
 ./lecture_8.tex:38: Undefined control sequence.
 l.38 ...In particular, $D(-a,r)\cap g(D)=\varempty
                                                   $ as if $w\in D(-a,r)$, th...
@@ -660,31 +812,31 @@ and I'll forget about whatever was undefined.
 
 ) (./lecture_9.tex
 
-[2]
+[19]
 
-[3])
+[20])
 
-[4] (./default.aux)
+[21] (./default.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `default.out' has not changed.
-(rerunfilecheck)             Checksum: 77F6B4D91A545116CCCE992D232D7FB8;361.
+(rerunfilecheck)             Checksum: 3E0A0E4C22F3E9F8AE0206FA68504A38;1662.
  ) 
 Here is how much of TeX's memory you used:
- 23985 strings out of 473190
- 462124 string characters out of 5715800
- 962514 words of memory out of 5000000
- 46791 multiletter control sequences out of 15000+600000
+ 24073 strings out of 473190
+ 463469 string characters out of 5715800
+ 960517 words of memory out of 5000000
+ 46834 multiletter control sequences out of 15000+600000
  568045 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 95i,8n,96p,1196b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on default.pdf (4 pages, 150847 bytes).
+ 95i,11n,96p,1196b,599s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on default.pdf (21 pages, 229690 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

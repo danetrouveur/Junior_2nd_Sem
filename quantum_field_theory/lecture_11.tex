@@ -1,0 +1,92 @@
+\section{Lecture 11 (October 13th)}
+\begin{ex}
+(Dirac fields must be quantised by anti-commutation relations) The logical sequence is as follows:
+\begin{itemize}
+\item[(i)] The Dirac Hamiltonian is given as 
+\[\hat{H}=i\int d^3\vec{x}\,\hat{\psi }^{\dagger }\partial _{t}\hat{\psi }=\int d^3\vec{p}\,E_{p}\sum _{i=1}^{2}[\hat{b}^{i}(\vec{p})^{\dagger }\hat{b}^{i}(\vec{p})-\hat{d}^{i}(\vec{p})\hat{d}^{i}(\vec{p})^{\dagger }]\]
+\item[(ii)] The choice of (anti)-commutation realtions (ETCR)
+\[\begin{cases}
+\{\hat{\psi }_{\alpha }(t,\vec{x}),\hat{\psi }_{\beta }^{\dagger }(t,\vec{y})\}=i\delta _{\alpha \beta }\delta (\vec{x}-\vec{y})\\
+[\hat{\psi }_{\alpha }(t,\vec{x}),\hat{\psi }^{\dagger }_{\beta }(t,\vec{y})]=i\delta _{\alpha \beta }\delta (\vec{x}-\vec{y})
+\end{cases}\]
+Each respectively lead to
+\[\begin{cases}
+\{\hat{b}^{i}(\vec{p}),\vec{b}^{j}(\vec{q})^{\dagger }\}=\delta (\vec{p}-\vec{q})\delta ^{ij}\\
+[\hat{b}^{i}(\vec{p}),\vec{b}^{j}(\vec{q})^{\dagger }]=\delta (\vec{p}-\vec{q})\delta ^{ij}
+\end{cases}\]
+\item[(iii)] Choosing $[\cdot ,\cdot ]$ yields 
+\[\hat{H}=\int d^3\vec{p}\,E_{p}\sum ^{2}_{i=1}[\hat{b}^{i}(\vec{p})^{\dagger }\hat{b}^{i}(\vec{p})-\hat{d}^{i}(\vec{p})^{\dagger }\hat{d}^{i}(\vec{p})]+E_{0}\]
+As seen, $\hat{d}^{\dagger }(\vec{p})$ creates negative energy states! The system can attain an arbitarily large negative energy which is seen as unphysical (for example, theres a breakdown of statistical mechanics due to infinite entropy). 
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+\begin{rmk}
+(Setting up interactive quantum field theory) Interesting physics involves interactions! We need to understand that interactions at the small scale can be only examined through scattering experiments. This is why scattering is one of the central topics in interacting quantum field theories. 
+\begin{itemize}
+\item[(i)] Scattering processes in interacting quantum field theories are described by a key quantity called the S-matrix.
+\item[(ii)] Observable quantities (scattering cross sections \& decay rates) are derived from S-matrices.
+\item[(iii)] Time-ordered correlation functions are studied, as they determine the S-matrices. Here, an essential tools is the path integral.
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(Scattering processes) We preliminarily study different pictures in quantum theory. The interacting time-independent Hamiltonian is given by 
+\[\hat{H}_{S}=\hat{H}_{0S}+\hat{H}_{1S}\]
+and the operators in different (S/H/I) pictures are given as
+\[\hat{A}_{S}(t)=\hat{A}_{S}(0)=\hat{A}_{S}\qquad\&\qquad \hat{A}_{H}(t)=e^{i\hat{H}_{S}t}\hat{A}_{H}(0)e^{-\hat{H}_{S}t}\]
+with $\hat{A}_{H}(0)=\hat{A}_{S}$ and $\hat{H}_{S}=\hat{H}_{H}(t)=\hat{H}$. Also,
+\[\hat{A}_{I}(t)=e^{i\hat{H}_{0s}t}\hat{A}_{S}e^{-i\hat{H}_{0s}t}\]
+What about the states? The states in these different pictures are given by 
+\[|\psi (t)\rangle _{S}=e^{-i\hat{H}t}|\psi (0)\rangle _{S}\qquad\&\qquad |\psi (t)\rangle _{H}=|\psi (0)\rangle _{H}=|\psi \rangle _{H}\]
+with $|\psi (0)\rangle _{S}=|\psi \rangle _{H}$. Also,
+\[|\psi (t)\rangle _{I}=e^{iH_{0s}}|\psi (t)\rangle _{S}=e^{i\hat{H}_{0s}t}e^{-i\hat{H}t}|\psi \rangle _{H}\]
+However, the expectation values in different pictures are all the same,
+\[{}_{S}\langle \psi (t)|\hat{A}_{S}|\psi (t)\rangle _{S}={}_{H}\langle \psi |\hat{A}_{H}(t)|\psi \rangle _{H}={}_{I}\langle \psi (t)|\hat{A}_{I}(t)|\psi (t)\rangle _{I}\]
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Scattering in the I-picture; Dyson-series) The characteristics of the interaction picture are the following:
+\begin{itemize}
+\item[(i)] The Schrodinger-like equation can be written from
+\[i\partial _{t}|\psi (t)\rangle _{S}=\hat{H}|\psi (t)\rangle _{S}\quad\implies \quad i\partial _{t}|\psi (t)\rangle _{I}=\hat{H}_{1I}|\psi (t)\rangle _{I}\]
+\item[(ii)] The Heisenberg-like equation can be written from
+\[\begin{align*}
+i\dfrac{d \hat{A}_{H}}{d t}(t)=&[\hat{A}_{H}(t),\hat{H}]\quad\implies \quad i\dfrac{d \hat{A}_{I}}{d t}(t)=&[\hat{A}_{I}(t),\hat{H}_{0s}] 
+\end{align*}\]
+Obtaining the time-evolution operator $\hat{U}_{I}(t,t_0)$ in the interaction picture yields the Dyson-series. 
+\begin{itemize}
+\item[(i)] The time evolution operator $\hat{U}_{t}(t,t_0)$ will be given by
+\[|\psi (t)\rangle _{I}=\hat{U}_{I}(t,t_0)|\psi (t_0)\rangle _{I}\]
+\item[(ii)] The differential equation for $\hat{U}_{I}(t,t_0)$ from the above Schrodinger-like equation is given as
+\[i\dfrac{d \hat{U}_{I}}{d t}(t,t_0)=\hat{H}_{1I}(t)\hat{U}_{I}(t,t_0) \]
+with the intial condition $\hat{U}_{I}(t_0,t_0)={\bf 1}$. 
+\item[(iii)] The integral equation from the differential equation and the intial condition is given as
+\[\hat{U}_{I}(t,t_0)={\bf 1}-i\int ^{t}_{t_0}dt'\,\hat{H}_{1I}(t')\hat{U}_{I}(t',t_0)\]
+\item[(iv)] The pertubative solution for this gives the Dyson series:
+\[\hat{U}_{I}(t,t_0)={\bf 1}-i\int ^{t}_{t_0}dt_1\,\hat{H}_{1t}(t_1)\Big(1-i\int ^{t_1}_{t_0}dt_2\,\hat{H}_{1I}(t_2)\hat{U}_{I}(t_2,t_0)\Big)\]
+which under the assumption of convergence, we have
+\[\begin{align*}
+\hat{U}_{I}(t,t_0)=&\sum ^{\infty }_{k=0}(-i)^{k}\int ^{t}_{t_0}dt_1\,\int ^{t_1}_{t_0}dt_2\ldots \int ^{t_{k-1}}_{t_0}dt_{k}\,\hat{H}_{1I}(t_1)\ldots \hat{H}_{1I}(t_{k})\\
+=& \sum ^{\infty }_{k=0}\dfrac{(-i)^{k}}{k!}\int ^{t}_{t_0}dt_1\,\int ^{t}_{t_0}dt_2\ldots \int ^{t}_{t_0}dt_{k}\,T[\hat{H}_{1I}(t_1)\ldots \hat{H}_{1I}(t_{k})\\
+=&T\exp \Big[-i\int ^{t}_{t_0}dt'\,\hat{H}_{1I}(t')\Big]
+\end{align*}\]
+We can get a gist of how the second line becomes the third from the fact that 
+\[\begin{align*}
+\int ^{t}_{t_0}\int ^{t}_{t_0}dt_1\,dt_2\,T[\hat{H}_{1I}(t_1),\hat{H}_{1I}(t_2)]=&\int ^{t}_{t_0}dt_1\,\int ^{t_1}_{t_0}dt_2\,\hat{H}_{1I}(t_1)\hat{H}_{1I}(t_2)\\
+&\int ^{t}_{t_0}dt_2\,\int ^{t_1}_{t_0}dt_1\,\hat{H}_{1I}(t_1)\hat{H}_{1I}(t_2)\\
+=&2!\int ^{t}_{t_0}dt_1\,\int ^{t_1}_{t_0}dt_2\,\hat{H}_{1I}(t_1)\hat{H}_{1I}(t_2)
+\end{align*}\]
+\item[(v)] The Dyson operator in ``local" interacting quantum field theories become
+\[\hat{U}_{I}(t,t_0)=T\exp \Big[-i\int ^{t}_{t_0}dt'\,\int d^3\vec{x}\,\hat{\mathcal{H}}_{1I}(t',\vec{x}) \Big]\]
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(S-matrix in the interaction picture) Notice that $|\mathrm{\Psi} (t)\rangle _{I}$ evolves from the `free' initial state. 
+\[|\mathrm{\Phi} _{i}\rangle =\lim _{t\rightarrow -\infty }|\mathrm{\Psi}  (t)\rangle _{I}\]
+The S-matrix element from this state to scatter into the `free' final state $|\mathrm{\Psi} _{f}\rangle $ is 
+\[S_{fi}=\lim _{t\rightarrow \infty }\langle \mathrm{\Phi} _{f}|\mathrm{\Psi} (t)\rangle _{I}=\langle \mathrm{\Phi} _{f}|\hat{U}_{I}(\infty ,-\infty )|\mathrm{\Phi} _{i}\rangle =T\exp \Big[-i\int d^{4}x\,\hat{\mathcal{H}}_{1I}(x)\Big]\]
+
+\end{defi}
+\vspace{2ex}
+

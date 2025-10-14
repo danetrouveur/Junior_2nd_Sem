@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  3 OCT 2025 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  11 OCT 2025 18:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -668,109 +668,34 @@ Package hyperref Info: Link coloring ON on input line 16.
 \openout4 = `default.out'.
 
 Couldn't patch \deferred@thm@head!
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+esint on input line 19.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 18.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 19.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 18.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 
-./default.tex:22: Package amsmath Error: Erroneous nesting of equation structures;
+./default.tex:57: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.22 \end{align*}
+l.57 \end{align*}
                  \]
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (13.85866pt too wide) detected at line 26
-\OML/cmm/m/it/10.95 H[] \OT1/cmr/m/n/10.95 = []([][] \OML/cmm/m/it/10.95 ^^R [][] ^^^ ^^[[] \OT1/cmr/m/n/10.95 + [][] \OML/cmm/m/it/10.95 ^^R [][] ^^^ ^^[[] \OT1/cmr/m/n/10.95 + [][] \OML/cmm/m/it/10.95 ^^R ^^[[]\OT1/cmr/m/n/10.95 ) = []([][] \OML/cmm/m/it/10.95 ^^R [][] ^^^ \OT1/cmr/m/n/10.95 + [][] \OML/cmm/m/it/10.95 ^^R [][] ^^^ \OT1/cmr/m/n/10.95 + [][] \OML/cmm/m/it/10.95 ^^R\OT1/cmr/m/n/10.95 ) = []
- []
-
-./default.tex:42: Missing $ inserted.
-<inserted text> 
-                $
-l.42 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./default.tex:42: Missing } inserted.
-<inserted text> 
-                }
-l.42 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./default.tex:42: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.42 
-     
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./default.tex:42: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.42 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-./default.tex:43: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.43 \]
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./default.tex:43: Missing $ inserted.
-<inserted text> 
-                $
-l.43 \]
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./default.tex:43: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.43 \]
-       
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
 
 
 
@@ -785,18 +710,18 @@ Package rerunfilecheck Info: File `default.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24338 strings out of 473190
- 467621 string characters out of 5715800
- 960723 words of memory out of 5000000
- 47135 multiletter control sequences out of 15000+600000
+ 24336 strings out of 473190
+ 467573 string characters out of 5715800
+ 970723 words of memory out of 5000000
+ 47133 multiletter control sequences out of 15000+600000
  567757 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 95i,11n,96p,544b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on default.pdf (1 page, 85591 bytes).
+ 95i,13n,96p,544b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on default.pdf (1 page, 67471 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -369,6 +369,9 @@ INPUT lecture_9.tex
 INPUT ./lecture_10.tex
 INPUT ./lecture_10.tex
 INPUT lecture_10.tex
+INPUT ./lecture_11.tex
+INPUT ./lecture_11.tex
+INPUT lecture_11.tex
 INPUT default.aux
 INPUT ./default.out
 INPUT ./default.out
