@@ -19,11 +19,13 @@ If $K={\bm Q}$, the existence of a the splitting field of $f(t)$ is immediate: i
 \end{thm}
 \vspace{2ex}
 \begin{proof}
-Let simply lay out the idea. For any $f(t)\in K[t]$, $f(t)=p_1(t)f_1(t)$ where $p_1(t)$ is irreducible. By Kronecker's theorem, we can set $K_1=K(\alpha_1)/K$, where $p_1(\alpha_1)=f(\alpha_1)=0$. Then,
-\[p_1(t)=p_2(t)f_3(t)\]
-and we can set $K_2=K_1(\alpha_2)$ where $p_2(\alpha_2)=0$. Thus,
-\[f(t)=(t-\alpha_1)(t-\alpha_2)g(t)\in K_2[t]\]
-and so on.
+We prove this theorem inductively. Assume $\mathrm{deg}(f)=1$. We simply take $L=K$ and $L/K$ is a field extension such that $f(t)$ factors into linear terms. 
+
+\bigskip
+
+Assume that the statement holds for all polynomials with $\mathrm{deg}(f)< n$. For a polynomial $f(t)$ of degree $n$, we can pull out an irreducible factor $p(t)$ and using Kronecker's theorem, we have a field $K_1$ such that $f(t)=(t-\alpha )^{m}f_1(t)$ in $K_1$ with $\mathrm{deg}\,f_1(t)< n$. By assumption, we can find a splitting field of $K_1$ where $f_1(t)$ splits into linear factors:
+\[f(t)=(t-\alpha )^{m}\cdot c\cdot \prod^{n-1}_{i=1}(t-\alpha _{i})\in L\]
+and $L/K$ is a field extension such that $f(t)$ factors into linear terms with $L=K(\alpha_1,\alpha_2,\ldots ,\alpha_{n})$.
 \end{proof}
 \vspace{2ex}
 \begin{thm}

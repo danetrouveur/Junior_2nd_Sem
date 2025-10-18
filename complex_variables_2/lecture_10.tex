@@ -1,0 +1,56 @@
+\section{Lecture 10 (October 14th)}
+\begin{thm}
+(Arzerla Ascoli) Let $\{f_{n}\}$ be a pointwise bounded and equicontinuous sequence of functions on a separable metric space $X$. Then, $\{f_{n}\}$ has a subsequence which converges uniformly on all compact subsets of $X$. This subsequence converges pointwise since every $\{x_{n}\}\subset X$ is compact. 
+\end{thm}
+\vspace{2ex}
+\begin{defi}
+(Pointwise bounded) A sequence $\{f_{n}\}$ is pointwise bounded on $X$ provided that for every $x\in X$ there is $M_{x}>0$ such that $|f_{n}(x)|\leq M_{x}$ for all $n\in {\bm N}$. 
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Equicontinuity) A sequence $\{f_{n}\}$ is equicontinuous on $X$ provided that for every $\varepsilon >0$, there is $\delta >0$ such that if $d(x,y)<\delta $ then $|f_{n}(x)-f_{n}(y)|<\varepsilon $ for all $n\in {\bm N}$.
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+If $\{f_{n}\}$ is equicontinuous on $X$, then each $f_{n}$ is uniformly continuous on $X$. The converse is not true, for example set $f_{n}:{\bm R}\rightarrow {\bm R}$ as 
+\[f_{n}(x)=nx\]
+Notice how $|f_{n}(x)-f_{n}(y)|=n|x-y|$ and each $f_{n}$ is uniformly continuous, but $\{f_{n}\}$ is not equicontinuous on ${\bm R}$.
+\end{rmk}
+\vspace{2ex}
+\begin{proof}
+Let $E=\{x_1,x_2,\ldots \}$ be a countable dense subset of $X$. The proof is done in two steps:
+
+\bigskip
+
+(Step 1) We need to use pointwise boundedness to find a subsequence $\{g_{n}\}$ of $\{f_{n}\}$ which converges pointwise on $E$. Notice that $\{f_{n}(x_1)\}$ is a bounded sequence in ${\bm C}$, such that it has a convergent subsequence $\{f_{n,1}(x_1)\}$. Then, $\{f_{n,1}(x_2)\}$ is bounded and has a bounded subsequence in ${\bm C}$, such that it has a convergent subsequence $\{f_{n,2}(x_2)\}$. Notice that meanwhile, $\{f_{n,2}(x_1)\}$ also converges. Continuing and taking the diagonal, we have $\{f_{n,n}(x)\}$ which converges for every $x_{n}\in E$. Set $g_{n}=f_{n,n}$, and we see that for any $x_{m}$, $g_{m},g_{m+1},\ldots $ is a subsequence of $\{f_{n,m}\}^{\infty }_{n=1}$ which converges at $x_{m}$. 
+
+\bigskip
+
+(Step 2) We now use equicontinuity to prove that this sequence converges uniformly on any compact subset $K$ of $X$. We now use equicontinuity to show that there exists a $N\in {\bm N}$ satisfying if $n,m>N$ then $|f_{n}(x)-f_{m}(x)|<\varepsilon $ for every $x\in K$ ($\{f_{n}\}$ is uniformly Cauchy on $K$). Observe that due to the equicontinuity of $\{g_{n}\}$, for every $\varepsilon >0$, there exists $\delta >0$ such that if $p,q\in X$ satisfies $d(p,q)<\delta $, then $|f_{n}(p)-f_{n}(q)|<\varepsilon /3$. Also, 
+\[\mathcal{F}=\Big\{B\Big(x,\dfrac{\delta }{2}\Big)\;\Big|\;x\in K\Big\}\]
+is an open cover of $K$ so that there is a finite subcover $\{B_1,B_2,\ldots ,B_{M}\}$ (here, note that if $x,y\in B_{k}$, then $d(x,y)<\delta $). Since $E$ is dense in $X$, then $p_{i}\in E\cap B_{i}$ for $1\leq i\leq M$. From step 1, $\lim _{n\rightarrow \infty } g_{n}(p_{i})$ converges for $1\leq i\leq M$ and thus $\{g_{n}(p_{i})\}$ is a Cauchy sequence for $1\leq i\leq M$. Thus there is $N\in {\bm N}$ such that if $n,m>N$ then $|g_{n}(p_{i})-g_{m}(p_{i})|<\varepsilon /3$ for $1\leq i\leq M$ with $N=\max\{N_1,\ldots ,N_{M}\}$. Now we show the same for an arbitrary $x\in K$.
+\[\begin{align*}
+|g_{n}(x)-g_{m}(x)|=&|g_{n}(x)-g_{n}(p_{k})+g_{n}(p_{k})-g_{m}(p_{k})+g_{m}(p_{k})-g_{m}(x)|\\
+\leq&|g_{n}(x)-g_{n}(p_{k})|+|g_{n}(p_{k})-g_{m}(p_{k})|+|g_{m}(p_{k})-g_{m}(x)|\\
+\leq&\varepsilon 
+\end{align*}\]
+as $d(x,p_{k}),d(x,p_{m})<\delta $.
+\end{proof}
+\vspace{2ex}
+\begin{defi}
+(Uniformly bounded on a compact $K$) For every compact $K\subset D$ , there is $M_{K}>0$ such that $|f_{n}(z)|\leq M_{K}$ for all $z\in K$, $m\in {\bm N}$.
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Montel's theorem) If $\{f_{n}\}$ is a squence of analytic functions on a domain $D$ which is uniformly bounded on each compact subset of $D$, then $\{f_{n}\}$ has a subsequence which converges uniformly on all compact subsets of $D$.
+\end{thm}
+\vspace{2ex}
+\begin{thm}
+If $\{f_{n}\}$ is a sequence of analytic functions on a domain $D$ which is uniformly bounded on a compact subset of $D$, then $\{f_{n}\}$ is equicontinuous on every compact subset of $D$. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+The proof is done through the Cauchy integral formula along with the exhaustion of $D$ by compact subsets. 
+\end{proof}
+\vspace{2ex}
+

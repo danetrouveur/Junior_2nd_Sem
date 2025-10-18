@@ -1,0 +1,85 @@
+\section{Lecture 12 (October 15th)}
+\begin{rmk}
+We have previously defined
+\[S_{fi}=\langle \mathrm{\Phi} _{f}|\hat{U}_{I}(\infty ,-\infty )|\mathrm{\Phi} _{i}\rangle =T\exp \Big[-i\int d^{4}x\,\hat{\mathcal{H}}_{1I}(x)\Big]\]
+We make the following comments:
+\begin{itemize}
+\item[(i)] The S-matrix is the unitary time evolution operator whose matrix elements capture the transition amplitude between the free initial state and final state.
+\item[(ii)] The elements of the S-matrix is given by the time ordered correlation functions of field operators in the I-picture. For example, if you are considering $\phi ^{4}$ theory, the Lagrangian density is given as:
+\[\mathcal{L}=\mathcal{L}_{KG}-\dfrac{\lambda }{4!}\cdot \phi ^{4}\]
+The hamiltonian density is then given as
+\[\hat{\mathcal{H}}_{1I}(x)=\dfrac{\lambda }{4!}\cdot \hat{\phi }_{I}(x)^{4} \]
+This particular approach is the one followed by Peskin.
+\item[(iii)] The S-matrix elements are thus used to compute observables! 
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(Scattering in the H-picture; LSZ reduction formula) Consider an interacting scalar field theory by ETCR:
+\[\begin{cases}
+[\hat{\phi }(t,\vec{x}),\hat{\phi }(t,\vec{y})]=[\dot{\hat{\phi }}(t,\vec{x}),\dot{\hat{\phi }}(t,\vec{y})]=0\\
+[\hat{\phi }(t,\vec{x}),\dot{\hat{\phi }}(t,\vec{y})]=i\delta ^{(3)}(\vec{x}-\vec{y})
+\end{cases}\]
+we can still quantise the interaction terms using this recipe. We assume that the theory becomes free in the asympotic regions ($t\rightarrow \pm \infty $). Mathematically,
+\[\lim _{x^{0}\rightarrow -\infty }\langle a|\hat{\phi }(x)|b\rangle =Z^{1/2}\langle a|\hat{\phi }_{\mathrm{in}}(x)|b\rangle\qquad\&\qquad \lim _{x^{0}\rightarrow +\infty }\langle a|\hat{\phi}(x)|b\rangle =Z^{1/2}\langle a|\hat{\phi }_{\mathrm{out}}(x)|b\rangle  \]
+where the in and out $\phi $'s are the free KG fields. Here, $Z$ is called the renormalisation constant, which we will not delve into further. We now construct the Hilbert space using these ingredients. We now assume
+\begin{itemize}
+\item[(i)] A stable and unique vaccum states $|0\rangle =|0;\mathrm{in}\rangle =|0;\mathrm{out}\rangle $
+\item[(ii)] We take the creation and annihilation operators for the in and out field operators as
+\[u_{\vec{p}}(x)=\dfrac{1}{\sqrt{(2\pi )^3\cdot 2E_{p}}}e^{ip\cdot x}\qquad\&\qquad \hat{a}_{\mathrm{in/out}}(\vec{p})=i\int d^3\vec{x}\,u_{\vec{p}}(x)^{*}\mathop{\partial _{0}}^{\leftrightarrow }\hat{\phi }_{\mathrm{in/out}}(x)\]
+\item[(iii)] The Fock space in the asympotic regimes are given as
+\[\begin{align*}
+|\vec{p}_{1},\vec{p}_{2},\ldots,\vec{p}_{n};\mathrm{in }\rangle =\hat{a}_{\mathrm{in}}(\vec{p}_{1})^{\dagger }\ldots \hat{a}_{\mathrm{in}}(\vec{p}_{n})^{\dagger }|0\rangle \\
+|\vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{out}\rangle =\hat{a}_{\mathrm{out}}(\vec{q}_{1})^{\dagger }\ldots \hat{a}_{\mathrm{out}}(\vec{q}_{m})^{\dagger }|0\rangle 
+\end{align*}\]
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(S-matrix in the H-picture; LSZ formula for scalars) We consider the S-matrix element for $n\rightarrow m$ scattering. This means that
+\[S_{fi}=\langle \vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{out}|\vec{p}_{1},\ldots ,\vec{p}_{n};\mathrm{in}\rangle \]
+Some comments are that:
+\begin{itemize}
+\item[(i)] We assume `asymptotic completeness', meaning that in and out states are contained in the same Hilbert space for the full interacting theory. 
+\item[(ii)] We can use alternative expressions,
+\[\hat{\phi }_{\mathrm{out}}(x)=\hat{S}^{-1}\hat{\phi }_{\mathrm{in}}(x)\hat{S}\]
+where $\hat{S}=\hat{U}_{H}(\infty ,-\infty )$. Then,
+\[S_{fi}=\langle \vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{in}|\hat{S}|\vec{p}_{1},\ldots ,\vec{p}_{n};\mathrm{in}\rangle \]
+where the in's are replacable with the out's. 
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Derivation of the LSZ formula) (Step 1) Reducing one of the incoming momenta 
+\[\begin{align*}
+S_{fi}=&\langle \vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{out}|\hat{a}_{\mathrm{in}}(\vec{q}_{1})^{\dagger }|\vec{p}_{2},\ldots ,\vec{p}_{n};\mathrm{in}\rangle \\
+=&\int d^3\vec{x}\,u_{\vec{p}_{1}}(x)(-i\mathop{\partial _{x^{0}}}^{\leftrightarrow })\langle \vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{out}|\hat{\phi }_{\mathrm{in}}(x)|\vec{p}_{2},\ldots ,\vec{p}_{n};\mathrm{in}\rangle \\
+=&\lim _{x^{0}\rightarrow -\infty }Z^{-1/2}\int d^3\vec{x}\,u_{\vec{p}_{1}}(x)(-i\mathop{\partial }^{\leftrightarrow }_{x^{0}})\langle \vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{out}|\hat{\phi }_{\mathrm{in}}(x)|\vec{p}_{2},\ldots ,\vec{p}_{n};\mathrm{in}\rangle \\
+=&\lim _{x^{0}\rightarrow +\infty }(\cdot )-Z^{-1/2}\int d^4x\,\partial _{x^{0}}\Big[u_{\vec{p}_{1}}(x)(-\mathop{\partial }^{\leftrightarrow }_{x^{0}})\langle \vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{out}|\hat{\phi }_{\mathrm{in}}(x)|\vec{p}_{2},\ldots ,\vec{p}_{n};\mathrm{in}\rangle  \Big]\\
+=&\langle \vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{out}|\hat{a}_{\mathrm{out}}(\vec{p}_{1})^{\dagger }|\vec{p}_{2},\ldots ,\vec{p}_{n};\mathrm{in}\rangle \\
+&+iZ^{-1/2}\infty d^{4}x\,u_{\vec{p}_{1}}(x)(\partial ^2_{x^{0}}-\mathop{\partial^2 }^{\leftrightarrow }_{x^{0}})\langle \vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{out}|\hat{\phi }(x)|\vec{p}_{2},\ldots ,\vec{p}_{n};\mathrm{in}\rangle \\
+=&\sum ^{m}_{j=1}\langle \vec{q}_{1},\ldots ,\vec{q}_{j-1},\vec{j+1},\ldots \vec{q}_{m};\mathrm{out}|\vec{p}_{2},\ldots ,\vec{p}_{n};\mathrm{in}\rangle \delta ^{(3)}(\vec{p}_1-\vec{q}_{j})\\
+&+iZ^{-1/2}\int d^{4}x\,u_{\vec{p}_{1}}(x)(-\partial _{x}^2+m^2)\langle \vec{q}_{1},\ldots ,\vec{q}_{m};\mathrm{out}|\vec{p}_{2},\ldots ,\vec{p}_{n};\mathrm{in}\rangle
+\end{align*}\]
+where we have used $(-\partial ^2+m^2)u_{\vec{p}}(x)=(\partial _{0}^2-\nabla ^2+m^2)u_{\vec{p}}(x)=0$. From here on, we focus on the ``connected part" with $\vec{p}_{i}\ne \vec{q}_{j}$ for all $(i,j)$.
+
+\bigskip
+
+(Step 2) We now reduce one of the out going momenta. We will find
+\[\begin{align*}
+S_{fi}\sim& iZ^{-1/2}\int d^{4}x\,u_{\vec{p}_{1}}(x)(-\partial _{x}^2+m^2)\langle \vec{q}_{2},\ldots ,\vec{q}_{m};\mathrm{out}|\hat{a}_{\mathrm{out}}(\vec{q}_{1})\hat{\phi }(x)|\ldots \rangle \\
+=&\lim _{y^{0}\rightarrow \infty }iZ^{-1/2}\int d^{4}x\,\int d^3\vec{y}\,u_{\vec{p}_{1}}(x)(-\partial _{x}^2+m^2)u_{\vec{q}_{1}}(y)^{*}(i\mathop{\partial_{y^{0}} }^{\leftrightarrow })\langle \vec{q}_{2},\ldots ,\vec{q}_{m};\mathrm{out}|\hat{\phi }(y)\hat{\phi }(x)|\vec{p}_{2},\ldots ,\vec{p}_{n};\mathrm{in}\rangle \\
+=&\lim _{y^{0}\rightarrow -\infty }(\ldots )+iZ^{-1}\int d^{4}x\,\int d^{4}y\,\partial _{y^{0}}\Big[u_{\vec{p}_{1}}(x)(-\partial _{x}^2+m^2)u_{\vec{q}_{1}}^{*}(i\mathop{\partial _{y^{0}}}^{\leftrightarrow })\langle \ldots |T\hat{\phi }(y)\hat{\phi }(x)|\ldots \rangle \Big]
+\end{align*}\]
+Meanwihle, note that 
+\[\lim _{y^{0}\rightarrow \infty }\hat{\phi }(y)\hat{\phi }(x)=\lim _{y^{0}\rightarrow -\infty }\hat{\phi }(x)\hat{\phi }(y)+\int dy^{0}\,\partial _{y^{0}}(T\hat{\phi }(y)\hat{\phi }(x))\]
+resulting in
+\[S_{fi}\]
+\bigskip
+
+(Step 4) The LSZ formula in the momentum space is then given as
+
+\end{thm}
+\vspace{2ex}
+
+

@@ -46,10 +46,10 @@ for some $\theta $.
 \begin{proof}
 Notice that there exists a $g$ analytic on $U$ such that $f(z)=zg(z)$. For every fixed $z\in U$,
 \[\begin{align*}
-|g(z)|=\Big|\dfrac{f(z)}{z}\Big|\leq &\max_{\theta }\Big|\dfrac{f(re^{i\theta })}{r}\Big|\\
-\leq & \dfrac{1}{r}
+|g(z)|=\Big|\dfrac{f(z)}{z}\Big|\;\leq\; &\max_{\theta }\Big|\dfrac{f(re^{i\theta })}{r}\Big|\\
+\leq \;&\; \dfrac{1}{r}
 \end{align*}\]
-if $|z|<r<1$. Taking $r\rightarrow 1^{-}$, $|f(z)/z|\leq 1$. That is, $|f(z)|\leq |z|$ for all $z\in U$. Also, $f'(z)=g(z)+zg'(z)$ which implies that $f'(0)=g(0)$. This again implies that $|f'(0)|=|g(0)|\leq 1$. 
+if $|z|<r<1$. Taking $r\rightarrow 1^{-}$, $|f(z)/z|\leq 1$. That is, $|f(z)|\leq |z|$ for all $z\in U$. Also, $f'(z)=g(z)+zg'(z)$ which implies that $f'(0)=g(0)$. This again implies that $|f'(0)|=|g(0)|\leq 1$. Notice how if the first equality holds, $|f(z)|=|z|$, and the function $f$ only rotates the input. If the second equality holds, $|f'(0)|\leq 1$, and $|f(z)|\leq |z|$, meaning the same thing!
 
 \bigskip
 
@@ -73,7 +73,7 @@ We define $g$ on $U$ so that $g(0)=0$. Indeed,
 is analytic from $U$ into $U$ with $g(0)=0$. Applying the Schwartz lemma to $g$, we have $|g'(0)|\leq 1$. But 
 \[g'(0)=\Big(\phi _{\beta }'[f(\phi _{\alpha }(0))]\Big)f'(\phi _{\alpha }(0))\phi '_{\alpha }(0)=\phi '_{\beta }(\beta )\cdot f'(0 )\cdot \phi '_{-\alpha }(0)=\dfrac{1-|\alpha |^2}{1-|\beta |^2}f'(0)\leq 1\]
 When does the equality hold? Let $g(z)=\lambda z$ for some $|\lambda |=1$. Then
-\[\phi _{\beta }(f(\phi _{\alpha }(z)))=\lambda z\]
+\[\phi _{\beta }(f(\phi _{-\alpha }(z)))=\lambda z\]
 By putting $z\rightarrow \phi _{\alpha }(z)$, 
 \[\phi _{\beta }(f(z))=\lambda \phi _{\alpha }(z)\]
 and

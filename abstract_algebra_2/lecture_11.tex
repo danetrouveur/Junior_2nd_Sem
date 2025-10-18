@@ -1,0 +1,145 @@
+\section{Lecture 11 (October 14th)}
+\begin{rmk}
+A (long long long)$^3$ time ago, we learned about the existence of spliiting fields and isomorphism extensions. Today, we learn about how splitting fields are unique.
+\end{rmk}
+\vspace{2ex}
+\begin{prop}
+(14.1) Let $K\subset F$ be a field extension and $p(t)\in K[t]$ be an irreducible element. There is a one-to-one correspondence between the set 
+\[\{\alpha \in F \;|\; p(\alpha )=0\}\]
+and
+\[\{\sigma :K[t]/(p(t))\rightarrow F\;|\;\sigma |_{K}=\mathrm{1}_{K}\}\]
+\end{prop}
+\vspace{2ex}
+\begin{thm}
+(Isomorphism extension for simple algebraic extensions)
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
+  node font=\small]
+
+  % corners
+  \node (E) at (0,4.5) {$E$};
+  \node (F) at (3,4.5) {$F$};
+  \node (A) at (0,3) {$K(\alpha )$};
+  \node (B) at (0,0) {$K$};
+  \node (C) at (3,0) {$K$};
+  \node (D) at (3,3) {$K(\beta )$};
+  \node (G) at (-3,3) {$K[t]/(p(t))$};
+  \node (H) at (6,3) {$K[t]/(p(t))$};
+
+  % vertical arrows (pointing up)
+  \draw[->] (B) -- (A);
+  \draw[->] (C) -- (D);
+  \draw[->] (A) -- (E);
+  \draw[->] (D) -- (F);
+  \draw[->] (A) --  node[midway,above] {$\cong$}(G);
+  \draw[->] (D) --  node[midway,above] {$\cong$}(H); 
+  \draw[->] (A) -- node[midway,above] {$\cong$}(D);
+  \draw[->] (G) to[bend left=50] node[midway,above] {${\bf 1}$} (H);
+
+  % horizontal arrows (pointing right) with labels above
+  \draw[->] (B) -- node[midway, above] {$ {\bf 1}$} (C);
+
+  % commutator symbol in the middle (clockwise)
+
+\end{tikzpicture}
+\end{center}
+Let $\alpha \in E$ be algebraic over $K$ and $\beta \in F$ be a zero of $p(t)=\mathrm{irr}(\alpha ,K)$. Then, there exists an isomorphism $\sigma :K(\alpha )\rightarrow K(\beta )$ such that $\sigma |_{K}=\mathrm{1}_{K}$
+\end{thm}
+\vspace{2ex}
+\begin{thm}
+(Isomorphism extension for finite extensions) Let $E/K$ be a finite extension. Fix an algebraic closure $\bar{K}$ of $K$. Then there exists a $K$-embedding $\sigma :E\rightarrow \bar{K}$. 
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
+  node font=\small]
+
+  % corners
+  \node (E) at (0,3) {$\big(K(\alpha_1)\big)(\alpha _2)$};
+  \node (F) at (3,3) {$\big(K(\beta _1)\big)(\beta_2)$};
+  \node (A) at (0,1.5) {$K(\alpha_1 )$};
+  \node (B) at (0,0) {$K$};
+  \node (C) at (3,0) {$K$};
+  \node (D) at (3,1.5) {$K(\beta_1 )$};
+  \node (G) at (0,4.5) {$E$};
+  \node (H) at (3,4.5) {$\bar{K}$};
+
+  % vertical arrows (pointing up)
+  \draw[->] (B) -- (A);
+  \draw[->] (C) -- (D);
+  \draw[->] (A) -- (E);
+  \draw[->] (D) -- (F);
+  \draw[->] (A) -- node[midway,above] {$\sigma_1$}(D);
+  \draw[->] (E) -- node[midway,above] {$\sigma_2$}(F);
+  \draw[->] (E) -- (G);
+  \draw[->] (F) -- (H);
+
+  % horizontal arrows (pointing right) with labels above
+  \draw[->] (B) -- node[midway, above] {$ {\bf 1}$} (C);
+
+\end{tikzpicture}
+\end{center}
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Since $E/K$ is finite, $E=K(\alpha_1,\alpha_2,\ldots ,\alpha_{n})$ for some algebraic elements $\alpha_1,\ldots ,\alpha_{n}$ over $K$. Using this fact and induction, we can prove our theorem.
+
+\bigskip
+
+For $\alpha \in E$ which is algebraic in $K$, we can set $p_1(t)=\mathrm{irr}(\alpha ,K)\in K[t]$. Let $\beta_1\in \bar{K}$, a zero of $p(t)$ in $\bar{K}$. Then, let $\alpha_2\in E$, which is again algebraic in $K(\alpha _1)$. We can set $p_2(t)=\mathrm{irr}(\alpha_2,K(\alpha_1))\in \big(K(\alpha_1)\big)[t]$. We can choose a zero $\beta_2\in  \bar{K}$ of $p_2(t)\in \big(K(\beta_1))\big)[t]$.  
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+Let $p(t)\in K[t]\subset \bar{K}[t]$ be an irreducible element and 
+\[p(t)=(t-\alpha_1)^{m_1}(t-\alpha_2)^{m_2}\ldots (t-\alpha _{n})^{m_{n}}\]
+is $m_{i}=m_{j}$ for $i\ne j$?
+\end{rmk}
+\vspace{2ex}
+
+\begin{thm}
+(Isomorphism extension theorem) Let $K$ be a field, and let $f(t)\in K[t]$ be a nonconstant polynomial. Suppose that $F_1/K$ and $F_2/K$ are splitting fields for $f(t)$. Then there exists a $K$-isomorphism $\sigma :F_1\rightarrow F_2$.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+\begin{itemize}
+\item[(i)] Choose a zero $\alpha_1$ of $f(t)$ in $F_1$ and let $p(t)=\mathrm{irr}(\alpha_1,K)$
+\item[(ii)] Choose a zero $\beta_1$ of $p(t)$ in $F_2$
+\end{itemize}
+We then have an isomorphism $\sigma_1$ between $K(\alpha_1)$ and $K(\beta _1)$. We can continue and achieve:
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
+  node font=\small]
+
+  % corners
+  \node (E) at (0,3) {$\big(K(\alpha_1)\big)(\alpha _2)$};
+  \node (F) at (3,3) {$\big(K(\beta _1)\big)(\beta_2)$};
+  \node (A) at (0,1.5) {$K(\alpha_1 )$};
+  \node (B) at (0,0) {$K$};
+  \node (C) at (3,0) {$K$};
+  \node (D) at (3,1.5) {$K(\beta_1 )$};
+  \node (G) at (0,4.5) {$F_1$};
+  \node (H) at (3,4.5) {$F_2$};
+
+  % vertical arrows (pointing up)
+  \draw[->] (B) -- (A);
+  \draw[->] (C) -- (D);
+  \draw[->] (A) -- (E);
+  \draw[->] (D) -- (F);
+  \draw[->] (A) -- node[midway,above] {$\sigma_1$}(D);
+  \draw[->] (E) -- node[midway,above] {$\sigma_2$}(F);
+  \draw[->] (E) -- (G);
+  \draw[->] (F) -- (H);
+
+  % horizontal arrows (pointing right) with labels above
+  \draw[->] (B) -- node[midway, above] {$ {\bf 1}$} (C);
+
+\end{tikzpicture}
+\end{center}
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+Let $f(t)=(t-\alpha_1)\ldots (t-\lambda_{n})$ in $\bar{K}[t]$. Then there exists a $K$-isomorphism $\sigma _{i}:F_1\rightarrow K(\lambda_1,\ldots ,\lambda_{n})\subset \bar{K}$.
+\end{rmk}
+\vspace{2ex}
+

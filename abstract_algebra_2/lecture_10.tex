@@ -16,7 +16,7 @@ Last class we talked about algebraically closed fields. This class we will be ta
 \end{defi}
 \vspace{2ex}
 \begin{thm}
-(Isomorphic extension) Let $\sigma:K_1\rightarrow K_2$ be an isomorphism of fields. Let $F/K_1$ be an algebraic extension. Then there exists a field embedding $\bar{\sigma }:F\rightarrow \bar{K_2}$ extendeding $\sigma $ (that is, $\bar{\sigma }|_{K_1}=\sigma $). 
+(Isomorphic extension) Let $\sigma:K_1\rightarrow K_2$ be an isomorphism of fields. Let $F/K_1$ be an algebraic extension. Then there exists a field embedding $\bar{\sigma }:F\rightarrow \bar{K_2}$ extending $\sigma $ (that is, $\bar{\sigma }|_{K_1}=\sigma $). 
 \begin{center}
 \begin{tikzpicture}[baseline=(current bounding box.center),
   >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
@@ -26,11 +26,12 @@ Last class we talked about algebraically closed fields. This class we will be ta
   \node (A) at (0,3) {$F$};
   \node (B) at (0,0) {$K_1$};
   \node (C) at (3,0) {$K_2$};
-  \node (D) at (3,3) {$\bar{K}_{2}$};
+  \node (D) at (3,3) {};
+  \node (E) at (3,4.5) {$\bar{K}_{2}$};
 
   % vertical arrows (pointing up)
   \draw[->] (B) -- (A);
-  \draw[->] (C) -- (D);
+  \draw[->] (C) -- (E);
 
   % horizontal arrows (pointing right) with labels above
   \draw[->] (A) -- node[midway, above] {$\bar{\sigma }$} (D);
@@ -48,31 +49,11 @@ Last class we talked about algebraically closed fields. This class we will be ta
 \end{prop}
 \vspace{2ex}
 \begin{proof}
-Suppose that $\alpha \in F$ is a zero of $p(t)$. Consider the evaluation homomorphism $\mathrm{ev}_{\alpha }:K[t]\rightarrow F$. Then, $\mathrm{ker}(\mathrm{ev}_{\alpha })=(p(t))$. Conversely, if $\sigma :K[t]/(p(t))\rightarrow F$ is a $K$-embedding, then $\sigma (\bar{t})\in F$ is a zero of $p(t)$ in $F$.
-\begin{center}
-\begin{tikzpicture}[baseline=(current bounding box.center),
-  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
-  node font=\small]
+Suppose that there is a $K$-embedding $\sigma :K[t]/(p(t))\rightarrow F$. $\sigma (\bar{t}) \in F$ and $\sigma (p(\bar{t}))=p(\sigma (\bar{t}))=0$, such that $\sigma (\bar{t})$ is a root of the polynomial $p(t)$ in $F$. 
 
-  % corners
-  \node (A) at (0,3) {$K[t]/(p(t))$};
-  \node (B) at (0,0) {$K$};
-  \node (C) at (3,0) {$K$};
-  \node (D) at (3,3) {$F$};
+\bigskip
 
-  % vertical arrows (pointing up)
-  \draw[->] (B) -- (A);
-  \draw[->] (C) -- (D);
-
-  % horizontal arrows (pointing right) with labels above
-  \draw[->] (A) -- node[midway, above] {} (D);
-  \draw[->] (B) -- node[midway, above] {{\bf 1}} (C);
-
-  % commutator symbol in the middle (clockwise)
-  \node at (1.5,1.5) {\scalebox{2}{$\circlearrowright$}};
-
-\end{tikzpicture}
-\end{center}
+Conversely, let $\alpha $ be a zero of $p(t)$ in $F$. $\mathrm{ev}_{\alpha }:K[t]\rightarrow F$ satisfies $\mathrm{ker}(\mathrm{ev}_{\alpha })=(p(t))$ and there exists $\sigma :K[t]/(p(t))\rightarrow F$ by the 1st isomorphism theorem.
 \end{proof}
 \vspace{2ex}
 \begin{rmk}
@@ -109,7 +90,7 @@ Let $\sigma :K_1\rightarrow K_2$ be an isomorphism of fields. Let $F_1/K_1$ and 
 
 \end{tikzpicture}
 \end{center}
-with irreducible
+Again, we have
 \[\begin{cases}
 p(t)\in K_1[t]\\
 p(\alpha )=0 
@@ -120,40 +101,44 @@ p_{\sigma }(\beta )=0
 \end{prop}
 \vspace{2ex}
 \begin{proof}
-(I) Define $\bar{{\bf 1}}:K(\alpha )\rightarrow K(\beta )$ by sending $f(\alpha )/g(\alpha )\in K(\alpha )$ to $f(\beta )/g(\beta )\in K(\beta )$.
+(I) For isomorphism $\sigma ={\bf 1}:K\rightarrow K$, we can simply consider a irreducible polynomial such that $p(\alpha )=p(\beta )=0$. Then, we define $\bar{{\bf 1}}:K(\alpha )\rightarrow K(\beta )$ by sending $f(\alpha )/g(\alpha )\in K(\alpha )$ to $f(\beta )/g(\beta )\in K(\beta )$.
 
 \bigskip
 
-(II) Define the function $\bar{{\bf 1}}$ through 
+(II) More concretely, define the function $\bar{{\bf 1}}:K(\alpha )\rightarrow K(\beta )$ to be defined through the following diagram,
 \begin{center}
 \begin{tikzpicture}[baseline=(current bounding box.center),
   >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
   node font=\small]
 
   % corners
-  \node (E) at (0,4.5) {$K[t]/(p(t))$};
-  \node (F) at (3,4.5) {$K[t]/(p(t))$};
+  \node (E) at (0,4.5) {$F_1$};
+  \node (F) at (3,4.5) {$F_2$};
   \node (A) at (0,3) {$K(\alpha )$};
   \node (B) at (0,0) {$K$};
   \node (C) at (3,0) {$K$};
   \node (D) at (3,3) {$K(\beta )$};
+  \node (G) at (-3,3) {$K[t]/(p(t))$};
+  \node (H) at (6,3) {$K[t]/(p(t))$};
 
   % vertical arrows (pointing up)
   \draw[->] (B) -- (A);
   \draw[->] (C) -- (D);
   \draw[->] (A) -- (E);
   \draw[->] (D) -- (F);
+  \draw[-] (A) --  node[midway,above] {$\bar{\mathrm{ev}}_{\alpha }$}(G);
+  \draw[-] (D) --  node[midway,above] {$\bar{\mathrm{ev}}_{\beta }$}(H); 
+  \draw[->] (A) -- node[midway,above] {$\bar{{\bf 1}}$}(D);
+  \draw[->] (G) to[bend left=50] node[midway,above] {${\bf 1}$} (H);
 
   % horizontal arrows (pointing right) with labels above
-  \draw[->] (A) -- node[midway, above] {$\bar{{\bf 1}}$} (D);
   \draw[->] (B) -- node[midway, above] {$ {\bf 1}$} (C);
 
   % commutator symbol in the middle (clockwise)
-  \node at (1.5,1.5) {\scalebox{2}{$\circlearrowright$}};
 
 \end{tikzpicture}
 \end{center}
-Keeping this in mind, we write
+as
 \[\bar{\mathrm{ev}}_{\beta }\circ(\bar{\mathrm{ev}}_{\alpha })^{-1}\]
 
 \end{proof}

@@ -14,47 +14,35 @@
 \abstract{}
 
 \begin{document}
-Note that in the above, we have used both
-\[\dfrac{1}{2}\mathrm{\Sigma} ^3u^{k}_{+}(0)=\pm \dfrac{1}{2}u_{+}^{k}(0)\qquad\&\qquad \dfrac{1}{2}\mathrm{\Sigma} ^3u^{j}_{-}(0)=\pm \dfrac{1}{2}u^{j}_{-}(0)\]
-which comes from the following list of facts:
+\begin{ex}
+Let's first preform the calculation for a normal particle. Generalising the result of $S_{z}|(0,k)\rangle $ from the above (notice how we never used the fact that the momentum of the arbitrary state was 0 up to the second last line), we have
+\[S_{j}|(p,i)\rangle =\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}b^{k}(p)^{\dagger }u^{k}_{+}(p)^{\dagger }\Big(\dfrac{1}{2}\mathrm{\Sigma} ^j\Big)u^{i}_{+}(p)|0\rangle\]
+The helicity operator can then be written as
 \[\begin{align*}
-\mathrm{(i)}\qquad\dfrac{1}{2}\begin{pmatrix}
-\sigma ^{3}&0\\0&\sigma ^{3}
-\end{pmatrix}u^{1}_{+}(0)=&\dfrac{1}{2}\begin{pmatrix}
-\sigma ^{3}&0\\0&\sigma ^{3}
-\end{pmatrix}\begin{pmatrix}
-\varphi_{+}^{1}\\ \varphi ^{1}_{+}
-\end{pmatrix}=\dfrac{1}{2}\begin{pmatrix}
-\varphi_{+}^{1}\\ \varphi ^{1}_{+}
-\end{pmatrix}\\
- \mathrm{(ii)}\qquad\dfrac{1}{2}\begin{pmatrix}
-\sigma^3&0\\0&\sigma ^3
-\end{pmatrix}u^{2}_{+}(0)=&\dfrac{1}{2}\begin{pmatrix}
-\sigma ^3&0\\0&\sigma ^3
-\end{pmatrix}\begin{pmatrix}
-\varphi^{2}_{+}\\\varphi^{2}_{+}
-\end{pmatrix}=-\dfrac{1}{2}\begin{pmatrix}
-\varphi^{2}_{+}\\\varphi^{2}_{+}
-\end{pmatrix}\\
-\mathrm{(iii)}\qquad\dfrac{1}{2}\begin{pmatrix}
-\sigma ^{3}&0\\0&\sigma ^{3}
-\end{pmatrix}u^{1}_{-}(0)=&\dfrac{1}{2}\begin{pmatrix}
-\sigma ^{3}&0\\0&\sigma ^{3}
-\end{pmatrix}\begin{pmatrix}
-\varphi_{-}^{1}\\ \varphi ^{1}_{-}
-\end{pmatrix}=\dfrac{1}{2}\begin{pmatrix}
-\varphi_{-}^{1}\\ \varphi ^{1}_{-}
-\end{pmatrix}\\
- \mathrm{(iv)}\qquad\dfrac{1}{2}\begin{pmatrix}
-\sigma^3&0\\0&\sigma ^3
-\end{pmatrix}u^{2}_{-}(0)=&\dfrac{1}{2}\begin{pmatrix}
-\sigma ^3&0\\0&\sigma ^3
-\end{pmatrix}\begin{pmatrix}
-\varphi^{2}_{-}\\\varphi^{2}_{-}
-\end{pmatrix}=-\dfrac{1}{2}\begin{pmatrix}
-\varphi^{2}_{-}\\\varphi^{2}_{-}
-\end{pmatrix}
+\sum _{j=1}^{3}n_{j}S_{j}|(p,i)\rangle =&\sum _{j=1}^{3}n_{j}\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}b^{k}(p)^{\dagger }u^{k}_{+}(p)^{\dagger }\Big(\dfrac{1}{2}\mathrm{\Sigma} ^{j}\Big)u^{i}_{+}(p)|0\rangle \\
+=&\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}b^{k}(p)^{\dagger }u_{+}^{k}(p)^{\dagger }\Big[\sum ^{3}_{j=1}\dfrac{1}{2}n_{j}\mathrm{\Sigma} ^{j}u^{i}_{+}(p)\Big]|0\rangle 
 \end{align*}\]
+where $n_{j}$ is again defined as $p^{j}/|p|$. We can now employ the results from the previously problem, where 
+\[\begin{align*}
+\sum _{j}\dfrac{1}{2}n_{j}\mathrm{\Sigma} ^{j}u^{i}_{+}(p)=&\sum _{j}\dfrac{1}{2}\begin{pmatrix}
+n_{j}\sigma ^{j}&0\\0&n_{j}\sigma ^{j}
+\end{pmatrix}\begin{pmatrix}
+\xi ^{\pm}(p)\\
+\xi ^{\pm}(p)
+\end{pmatrix}=\sum _{j}\dfrac{1}{2}\begin{pmatrix}
+n_{j}\sigma ^{j}\xi ^{\pm}(p)\\
+n_{j}\sigma ^{i}\xi ^{\pm}(p)
+\end{pmatrix}\\=& \pm \dfrac{1}{2}\begin{pmatrix}
+\xi ^{\pm}(p)\\\xi ^{\pm}(p)
+\end{pmatrix}=\pm\dfrac{1}{2}u^{i}_{+}(p)
+\end{align*}\]
+\end{ex}
+\vspace{2ex}
+(the $+$ sign for $i=1$ and $-$ for $i=2$). Substituting this into the above, we obtain
+\[H|(p,i)\rangle =\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}b^{k}(p)^{\dagger }u^{k}_{+}(p)^{\dagger }\Big[\pm\dfrac{1}{2}u^{i}_{+}(p)\Big]=\sum ^{2}_{k=1}b^{k}(p)^{\dagger }\Big[\pm\dfrac{1}{2}\Big]\delta ^{ki}|0\rangle =\pm \dfrac{1}{2}b^{i}(p)^{\dagger }|0\rangle =\pm\dfrac{1}{2}|(p,i)\rangle \]
+which is exactly the result we expected! Similarly,
+\[H|(p,i')\rangle =\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}-d^{k}(p)^{\dagger }u^{k}_{-}(p)^{\dagger }\Big[\pm\dfrac{1}{2}u^{i'}_{-}(p)\Big]=\sum ^{2}_{k=1}-d^{k}(p)^{\dagger }\Big[\pm \dfrac{1}{2}\Big]\delta ^{ki'}|0\rangle =\mp \dfrac{1}{2}d^{i'}(p)^{\dagger }|0\rangle =\mp\dfrac{1}{2}|(p,i')\]
+which concludes the proof.
 
 \end{document}
 

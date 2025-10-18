@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  11 OCT 2025 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.28)  15 OCT 2025 17:28
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -685,17 +685,40 @@ LaTeX Font Info:    Trying to load font information for U+wasy on input line 18.
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 
-./default.tex:57: Package amsmath Error: Erroneous nesting of equation structures;
+./default.tex:24: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.57 \end{align*}
+l.24 \end{align*}
                  \]
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
+
+
+./default.tex:38: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \end{align*}
+                 \]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (22.84462pt too wide) detected at line 42
+\OML/cmm/m/it/10.95 H\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p; i\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = [] [] \OML/cmm/m/it/10.95 b[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 u[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[][] \OMS/cmsy/m/n/10.95 ^^F []\OML/cmm/m/it/10.95 u[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[] = [] \OML/cmm/m/it/10.95 b[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[][] \OMS/cmsy/m/n/10.95 ^^F [][]\OML/cmm/m/it/10.95 ^^N[]\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 0\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^F[]\OML/cmm/m/it/10.95 b[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[]\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 0\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^F[]j\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p; i\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 i
+ []
+
+
+Overfull \hbox (41.10283pt too wide) detected at line 44
+\OML/cmm/m/it/10.95 H\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p; i[]\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = [] [] \OML/cmm/m/it/10.95 d[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 u[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[][] \OMS/cmsy/m/n/10.95 ^^F []\OML/cmm/m/it/10.95 u[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[] = [] \OMS/cmsy/m/n/10.95 ^^@\OML/cmm/m/it/10.95 d[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[][] \OMS/cmsy/m/n/10.95 ^^F [][]\OML/cmm/m/it/10.95 ^^N[]\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 0\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^G[]\OML/cmm/m/it/10.95 d[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 )[]\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 0\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^G[]j\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p; i[]\OT1/cmr/m/n/10.95 )
+ []
 
 
 
@@ -710,18 +733,18 @@ Package rerunfilecheck Info: File `default.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24336 strings out of 473190
- 467573 string characters out of 5715800
- 970723 words of memory out of 5000000
- 47133 multiletter control sequences out of 15000+600000
+ 24338 strings out of 473190
+ 467621 string characters out of 5715800
+ 971723 words of memory out of 5000000
+ 47135 multiletter control sequences out of 15000+600000
  567757 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  95i,13n,96p,544b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on default.pdf (1 page, 67471 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on default.pdf (1 page, 96429 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

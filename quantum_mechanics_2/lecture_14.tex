@@ -1,0 +1,39 @@
+\section{Lecture 14 (October 15th)}
+\begin{defi}
+(SVD decomposition) We have last time seen how $T^{\dagger }T:V_{n}\rightarrow V_{n}$ is a Hermitian automorphism where $T:V_{n}\rightarrow V_{m}$ is any linear map. We can find its $n$-eigenvalues and will find $r$ that are non-negative. We note that $r\leq \min (n,m)$. To find $A=U\mathrm{\Sigma} V^{\dagger }$, we first find the set
+\[|y_{i}\rangle =\dfrac{1}{\sqrt{\lambda _{i}}}T|x_{i}\rangle \]
+where $\{\lambda _{i}\}$ is the set of non-negative eigenvalues and $\{|x_{i}\rangle \}$ is the set of their respective eigenevectors. Notice how these are orthogonal, as
+\[\langle y_{i}|y_{j}\rangle =\dfrac{1}{\sqrt{\lambda _{i}\lambda _{j}}}\langle x_{i}|T^{\dagger }T|x_{j}\rangle=\dfrac{\lambda _{j}\delta _{ij}}{\sqrt{\lambda _{i}\lambda _{j}}} =\delta _{ij}\]
+We now claim that the operator
+\[U=\sum ^{r}_{i=1}\sqrt{\lambda _{i}}|y_{i}\rangle \langle x_{i}|\]
+is actually $T$. Notice how
+\[U^{\dagger }U=\sum ^{r}_{i,j}\sqrt{\lambda _{i}\lambda _{j}}|x_{j}\rangle \langle x_{j}|y_{i}\rangle \langle x_{i}|=\sum ^{r}_{i=1}\lambda _{i}|x_{i}\rangle \langle x_{i}|=T^{\dagger }T\]
+and indeed that they are equal. What about in matrix form? 
+\[\begin{align*}
+\tilde{T}_{\alpha \beta }=&\langle \tilde{y}_{\alpha }|T|\tilde{x}_{\beta }\rangle =\langle \tilde{y}_{\alpha }|\sum ^{m}_{i=1}|y_{i}\rangle \langle y_{i}|T\sum ^{n}_{j=1}|x_{j}\rangle \langle x_{j}|\tilde{x}_{\beta }\rangle \\
+=&\langle \tilde{y}_{\alpha }|\sum ^{m}_{i=1}|y_{i}\rangle \sum ^{r}_{k=1}\sqrt{\lambda _{k}}\delta _{ik}\delta _{kj}\langle x_{j}|\sum _{j=1}^{n}|\tilde{x}_{\beta }\rangle \\
+=&U_{\alpha i}\mathrm{\Sigma} _{ij}V_{j \beta }^{\dagger }
+\end{align*}\]
+and therefore, $T=U\mathrm{\Sigma} V^{\dagger }$.
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+A clear example is the matrix $A:V\rightarrow W$ with $\mathrm{dim}(V)=2$ and $\mathrm{dim}(W)=3$. Computing $A^{\dagger }A$ we find
+\[A^{\dagger }A=\begin{pmatrix}
+2&1\\1&2
+\end{pmatrix}
+\]
+The characteristic equation yields $\lambda ^2-4\lambda +3=0$ and $\lambda_1=1$ and $\lambda_{2}=3$. The explicit solution is in the homework.
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Schmidt decomposition) A general state inside the tensor product of two Hilbert spaces
+\[\mathcal{H}_{A} \otimes \mathcal{H}_{B}\]
+can be written as
+\[|\mathrm{\Psi}  \rangle =\sum ^{i,j}^{N_{A},N_{B}}|i\rangle _{A}\otimes |j\rangle _{B}=\sum _{i,j}U_{il}S_{l}\delta _{ll'}(V^{\dagger })_{l'j}|i_{A}\rangle \otimes |j\rangle _{B}\]
+In a basis where the transformation is clear, we can write
+\[|\mathrm{\Psi} \rangle =\sum _{l=1}^{r}S_{l}|l\rangle _{A}\otimes |l\rangle _{B} \]
+and this is called the Schmidt decomposition. Notice how when the summation is singular, we find that the tensor product can be written as a decomposable product of two elements and that the eigenvector is not entangled. We call the number of non-zero eigenvalues the Schmidt index, and if this is $\geq 2$, the state is indeed intangled.
+\end{ex}
+\vspace{2ex}
+

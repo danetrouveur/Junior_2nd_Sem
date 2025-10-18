@@ -27,18 +27,23 @@ By setting $u=\sqrt{(2mr+b m+a)^2-4(m^2+1)(r^2+br+c)}$, we find that both $x'$ a
 \vspace{2ex}
 \begin{proof}
 Set
-\[E=K[t]/(p(t))\]
+\[L=K[t]/(p(t))\]
+and we have a field extension that contains a root of $p(t)$. Let $\alpha =t+(p(t))\in L$. Observe that 
+\[p(t+(p(t)))=p(t)+(p(t))=(p(t))=0\]
+and that $\alpha $ is a root of the polynomial $p(t)$ in $L$. It is always great to gain mastery in multiple notations. We can also write the above using `bar' notation as
+\[\overline{p}(\alpha )=\overline{p}(\overline{t})=\overline{p(t)}=0\]
+
 \end{proof}
 \vspace{2ex}
 \begin{ex}
 Let $K={\bm R}$ and $p(t)=t^2+1\in {\bm R}[t]$. The field of complex numbers can be defined as
 \[{\bm C}={\bm R}[t]/(t^2+1)\]
-and would contain the root $\alpha =\bar{t}$. Note that
+and would contain the root $\alpha =\overline{t}$. Note that
 \begin{itemize}
-\item[(i)] \[\bar{t}^2+\bar{1}=\overline{t^2+1}=\bar{0}\in {\bm R}[t]/(t^2+1)\]
+\item[(i)] \[\overline{t}^2+\overline{1}=\overline{t^2+1}=\overline{0}\in {\bm R}[t]/(t^2+1)\]
 That is, $\bar{t}$ is a zero of
 \[x^2+1\in \Big({\bm R}[t]/(t^2+1)\Big)[x]\]
-\item[(ii)] Note that ${\bm R}\rightarrow {\bm R}[t]\rightarrow {\bm R}[t]/(t^2+1)$ is injective
+\item[(ii)] Note that the map $\iota:{\bm R}\hookrightarrow {\bm R}[t]/(t^2+1)$ is injective
 \item[(iii)] ${\bm R}[t]/(t^2+1)$ is a field since ${\bm R}[t]$ is a PID and $t^2+1$ is irreducible in ${\bm R}$. 
 \end{itemize}
 \end{ex}

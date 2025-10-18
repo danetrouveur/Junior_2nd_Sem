@@ -1,0 +1,69 @@
+\section{Lecture 11 (October 16th)}
+\begin{thm}
+Let $\{f_{n}\}$ be analytic in $D$ uniformly bounded on each compact subset. Then, $\{f_{n}\}$ is equicontinuous on every compact subset of $D$.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Take any compact subset $K$ of $D$. We'll show that $\{f_{n}\}$ is equicontinuous on $K$. Take any $\varepsilon >0$, and we have to find $\delta >0$ such that if $z,w\in K$ satisfies $|z-w|<\delta $, then $|f_{n}(z)-f_{n}(w)|<\varepsilon $ for all $n\in {\bm N}$.
+
+\bigskip
+
+By the exhausion of compact subsets, there is a sequence of compact sets $\{K_{n}\}$ and $\delta _{n}>0$ such that $\bigcup ^{\infty }_{n=1} K_{n}=D$, and for every $z\in K_{n}$ we have $\bar{D}(z,2\delta _{n})\subset K_{n+1}$ for each $n$. Take $N\in {\bm N}$ such that $K\subset K_{N}$ so that for $z,w\in K$ and $|z-w|<\delta _{N}$ we have 
+\[f_{n}(z)=\dfrac{1}{2\pi i}\int _{|\xi -z|=2\delta _{N}}\dfrac{f_{n}(\xi )}{\xi -z}\,d\xi \qquad\&\qquad f_{n}(w)=\dfrac{1}{2\pi i}\int _{|\xi -z|=2\delta _{N}}\dfrac{f_{n}(\xi )}{\xi -w}\,d\xi \]
+(where $w$ is inside $|\xi -z|=2\delta _{N}$) so that for $z,w\in K$ with $|z-w|<\delta _{N}$,
+\[\begin{align*}
+f_{n}(z)-f(w)=&\dfrac{z-w}{2\pi i}\int _{|\xi -z|=2\delta _{N}}\dfrac{f_{n}(\xi )}{(\xi -z)(\xi -w)}\,d\xi 
+\end{align*}\]
+Noting that $|f_{n}(\xi )|\leq M_{K_{N+1}}$ and $|\xi -z|=2\delta _{N}$ implying $|\xi -w|>\delta _{N}$, we have
+\[|f_{n}(z)-f_{n}(w)|\leq\dfrac{|z-w|}{2\pi }\dfrac{M_{K_{N+1}}}{(2\delta _{N})\delta _{N}}\cdot 4\pi \delta _{N}=\dfrac{M_{K_{N+1}}}{\delta _{N}}|z-w|\]
+So far we have proved that if $z,w\in K$ satisfies $|z-w|<\delta _{N}$, then 
+\[|f_{n}(z)-f_{n}(w)|\leq \dfrac{M_{N+1}}{\delta_{N}}|z-w|\]
+for all $n\in {\bm N}$. Take
+\[\delta _{n}=\min \Big\{ \delta _{N},\dfrac{\delta _{N}\varepsilon }{M_{K_{N+1}}} \Big\}\]
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Montel's theorem) Let $\{f_{n}\}$ be analytic in a domain $D$, which is uniformly bounded on each compact subset of $D$. Then $\{f_{n}\}$ is a subsequence which converges uniformly on all compact subsets of $D$. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Use the Arzela Ascoli theorem and there is a subsequence $\{f_{n_{k}}\}$ which converges uniformly on $K$. 
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Let $D=\{\mathrm{Re}(z)>0\}$, the right have plane. Let $f:D\rightarrow U$ be analytic with $f(1)=\alpha $. Find the upper bound of $|f'(1)|$. 
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+Take 
+\[\phi =\dfrac{z-1}{z+1}\]
+Using Schwartz's lemma for $F=\phi _{\alpha }\circ f \circ \phi^{-1} $, $F(0)=0$ and 
+\[|F'(0)|\leq 1\]
+with
+\[F'(0)=\phi '_{\alpha }(\alpha )f'(1)\phi '(0)=\dfrac{1}{1-|\alpha |^2}f'(1)2\]
+Concluding,
+\[|f'(1)|\leq \dfrac{1-|\alpha |^2}{2}\]
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Let $\mathrm{\Omega} $ be the upper halfplane $\{z\;|\; \mathrm{Im}(z)>0\}$ and $f:\mathrm{\Omega} \rightarrow U$ be an analytic function with $f(2i)=\alpha $. Find the upper bound of $|f'(2i)|$. 
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+First find a linear fractional transformation $\psi$ from $\mathrm{\Omega} $ onto $U$ satisfying $\psi (2i)=0$. Consider 
+\[\psi (z)=\dfrac{z-2i}{z+2i}\]
+For any $x\in {\bm R}$, $|\psi (x)|=1$. If $\alpha \in \mathrm{\Omega} $ ($\mathrm{Im}\,\alpha >0$), then
+\[\psi (z)=\dfrac{z-\alpha }{z-\bar{\alpha }}\]
+satisfies 
+\[|\psi (x)|=\Big|\dfrac{x-\alpha }{x-\bar{\alpha }}\Big|=1\]
+for $x\in {\bm R}$. From this we understand that $\psi $ is a linear fractional transformation from $\{\mathrm{Im}\,z>0\}$ onto $U$. Thus, construct $F:U\rightarrow U$ that is analytic with $F(0)=0$. We use 
+\[\psi =\dfrac{z-2i}{z+2i}\]
+satisfying $\psi (\mathrm{\Omega} )=U$, $\psi ^{-1}(U)=\mathrm{\Omega} $, and $\psi ^{-1}(0)=2i$. 
+\[F=\phi _{\alpha }\circ f\circ \psi ^{-1}\]
+which leads to $F(0)=0$ and 
+\[F'(0)=\phi '_{\alpha }(\alpha )\cdot f'(2i)\cdot [\psi ^{-1}]'(0)\]
+Concluding,
+\[|f'(2i)|\leq \dfrac{1-|\alpha |^2}{4}\]
+\end{proof}
+\vspace{2ex}
+
