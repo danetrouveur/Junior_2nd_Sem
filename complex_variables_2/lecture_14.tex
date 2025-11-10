@@ -1,0 +1,95 @@
+\section{Lecture 14 (November 4th)}
+\begin{defi}
+(Fourier transform of $f$ on ${\bm R}$) The Fourier transform of $f$ on ${\bm R}$ is defined as
+\[\widehat{f}(t)=\mathcal{F}(f)(t)=\int ^{\infty }_{-\infty }f(x)e^{-itx}\,dx \]
+then 
+\[f(x)\sim \dfrac{1}{2\pi }\int _{-\infty }^{\infty }\widehat{f}(t)e^{itx}\,dt\]
+for a very huge class of functions $f$, the above is an equality. If we define 
+\[\hat{f}(t)=\int ^{\infty }_{-\infty }f(x)e^{-2\pi ixt}\,dx\]
+then 
+\[f(x)\sim \int ^{\infty }_{-\infty }\hat{f}(t)e^{2\pi ixt}\,dt\]
+(this still works for $f$ on ${\bm R}^{n}$) We also conventionally use
+\[\widehat{f}(t)=\dfrac{1}{\sqrt{2\pi }}\int ^{\infty }_{-\infty }f(x)e^{-itx}\,dx\]
+then
+\[f(x)\sim \dfrac{1}{\sqrt{2\pi }}\int ^{\infty }_{-\infty }\widehat{f}(t)e^{ixt}\,dt\]
+Lastly, we also use
+\[\widehat{f}(t)=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }f(x)e^{-itx}\,dx\]
+then
+\[f(x)\sim \int ^{\infty }_{-\infty }\hat{f}(t)e^{ixt}\,dx\]
+The above works for $f\in L^{1}$, meaning that $\int ^{\infty }_{-\infty }|f(x)|\,dx<\infty $. We can also define the above as
+\[\widehat{f}(t)=\lim _{A\rightarrow \infty }\int ^{A}_{-A}f(x)e^{-itx}\,dx\]
+when the limits exists.
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+(Example of transform not being $L^{1}$) Consider the $L^{1}$ function
+\[f(x)=\begin{cases}
+1&-1<x<1\\
+0&|x|>1
+\end{cases}\]
+the Fourier transform is then
+\[\hat{f}(t)=\int ^{\infty }_{-\infty }f(x)e^{-itx}\,dx=\int ^{1}_{-1}e^{-itx}\,dx=-\dfrac{1}{it}e^{-itx}|^{1}_{0}=-\dfrac{1}{it}\Big[e^{-it}-e^{it}\Big]=\dfrac{2\sin t}{t}\]
+(which is $2$ at $t=0$) Notice that
+\[\int ^{N\pi }_{0}\Big|\dfrac{\sin t}{t}\Big|\,dt=\sum ^{N-1}_{k=0}\int ^{(k+1)\pi }_{k\pi }\Big|\dfrac{\sin t}{t}\Big|\,dt\]
+where
+\[\int ^{(k+1)\pi }_{k\pi }\Big|\dfrac{\sin t}{t}\Big|\,dt\geq \int ^{k\pi +\frac{5\pi }{6}}_{k\pi +\frac{\pi }{6}}\Big|\frac{\sin t}{t}\Big|\,dt\geq \dfrac{1}{2(k+1)\pi }\dfrac{2\pi }{3}=\dfrac{1}{3(k+1)}\]
+and that the result is not $L^{1}$. Is the inverse transform of $g(t)=2\sin /t$ 
+\[\lim_{A\rightarrow \infty }\int ^{A}_{-A}g(t)e^{ixt}\,dt=f(x)\]
+is a good question.
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+Let $a>0$ and consider the $L^{1}$ function
+\[f(x)=\dfrac{1}{x^2+a^2}\]
+and
+\[\hat{f}(t)=\int ^{\infty }_{-\infty }\dfrac{e^{-itx}}{x^2+a^2}\,dx\]
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+Define 
+\[f(z)=\dfrac{e^{-itz}}{z^2+a^2}\]
+and use the residue theorem. In the upper hemisphere contour $C_{R}$ with $R>a$,
+\[\int _{C_{R}}f(z)\,dz=2\pi i\mathop{\mathrm{Res}}_{z=ai}f(z)=2\pi i\dfrac{e^{-it(ai)}}{2ai}=\dfrac{\pi }{a}e^{at}\]
+Recall that for a simple pole,
+\[\mathop{\mathrm{Res}}_{z=z_0}\Big(\dfrac{p(z)}{q(z)}\Big)=\dfrac{p(z_0)}{q'(z_0)}\]
+The above is equal to
+\[\int _{-R}^{R}\dfrac{e^{-itx}}{x^2+a^2}\,dx+\int _{0}^{\pi }\dfrac{e^{-itRe^{i\theta }}}{R^2e^{2i\theta }+a^2}iRe^{i\theta }\,d\theta \]
+The absolute value of the numerator is
+\[\Big|e^{-itRe^{i\theta }}\Big|=\Big|e^{-it(R\cos \theta +iR\sin \theta )}\Big|=e^{tR\sin \theta }\]
+and the second term of the above vanishes at $R\rightarrow \infty $ if the above is bounded and $t\leq 0$. In the case that $t>0$, we take the lower hemisphere and the pole is at $-ai$.
+\[\int _{C_{R}}f(z)\,dz=-2\pi i\mathop{\mathrm{Res}}_{z=ai}f(z)=2\pi i\dfrac{e^{-it(-ai)}}{-2ai}=\dfrac{\pi }{a}e^{-a t}\]
+Likewise,
+\[\int _{C_{R}}f(z)\,dz=\int ^{R}_{-R}\dfrac{e^{-itx}}{x^2+a^2}\,dx+\int ^{-\pi }_{0}\dfrac{e^{-itRe^{i\theta }}}{R^2e^{2i\theta }+a^2}iRe^{i\theta }\,d\theta \]
+and
+\[\Big|e^{-itRe^{i\theta }}\Big|=e^{tR\sin \theta }<1\]
+since $-\pi \theta <\theta <0$. Thus,
+\[\hat{f}(t)=\int ^{\infty }_{-\infty }\dfrac{e^{-itx}}{x^2+a^2}\,dx=\dfrac{\pi }{a}e^{-a|t|}\]
+which is $L^{1}$. Let $a=1$ and try to invert the above. If $g(t)=\pi e^{-|t|}$ then
+\[\begin{align*}
+\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }g(t)e^{ixt}\,dt=&\dfrac{1}{2}\int _{-\infty }^{\infty }e^{-|t|}e^{ixt}\,dt=\dfrac{1}{2}\Big[\int^{0}_{-\infty }e^{t}e^{ixt}\,dt+\int ^{\infty }_{0}e^{-t}e^{ixt}\,dt\Big]\\
+=&\dfrac{1}{2}\Big[\int ^{0}_{-\infty }e^{(1+ix)t}\,dt+\int ^{\infty }_{0}e^{(-1+ix)t}\,dt\Big]\\
+=&\dfrac{1}{2}\Big[\dfrac{e^{(1+ix)t}}{1+ix}\Big]^{0}_{t=-\infty }+\dfrac{1}{2}\Big[\dfrac{e^{(-1+ix)t}}{-1+ix}\Big]^{\infty }_{t=0}\\
+=&\dfrac{1}{2}\Big[\dfrac{1}{1+ix}\Big]+\dfrac{1}{2}\Big[\dfrac{1}{1-ix}\Big]\\
+=&\dfrac{1}{2}\Big(\dfrac{1}{1+ix}+\dfrac{1}{1-ix}\Big)=\dfrac{1}{1+x^2}
+\end{align*}\]
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Let $f(x)=e^{-x^2/2}$. Then, 
+\[\begin{align*}
+\hat{f}(t)=&\int ^{\infty }_{-\infty }f(x)e^{-itx}\,dx=\int ^{\infty }_{-\infty }e^{-x^2/2}e^{-itx}\,dx\\
+=&\int ^{\infty }_{-\infty }e^{-(x^2+2itx)}\,dx=\Big[\int ^{\infty }_{-\infty }e^{-(x+it)^2/2}\,dx\Big]e^{-t^2/2}
+\end{align*}\]
+which is $\sqrt{2\pi }$ when $t=0$. When $t>0$, we take the rectangular contour with base $2R$ and height $x+it$. By Cauchy,
+\[0=\int _{C_{R}}e^{-z^2/2}\,dz=\int ^{R}_{-R}e^{-x^2/2}\,dx+\mathrm{(II)}+\mathrm{(III)}+\mathrm{(IV)}\]
+We see that
+\[\mathrm{(III)}=\int ^{-R}_{R}e^{-(x+it)^2/2}\,dt\]
+and
+\[\mathrm{(II)}=\int ^{t}_{0}e^{(R+iy)^2/2}i\,dy\]
+We now use the fact that the absolute value of (II) and (III) goes to zero as $R\rightarrow \infty $. We finally have
+\[\int ^{\infty }_{-\infty }e^{-(x+it)^2}\,dx=\sqrt{2\pi }\]
+with
+\[\hat{f}(t)=\sqrt{2\pi }e^{-t^2/2}\]
+\end{ex}
+\vspace{2ex}
+

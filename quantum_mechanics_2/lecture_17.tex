@@ -1,0 +1,61 @@
+\section{Lecture 17 (November 3rd)}
+\begin{defi}
+(Interaction picture) Let $\hat{H}=\hat{H}_{0}+\lambda V(t)$. Let
+\[|\alpha,t_{0},t\rangle _{I}=e^{iH_0t/\hbar }|\alpha ,t_0,t\rangle _{S}\]
+and
+\[|\alpha ,t_0,t_0\rangle _{S}=e^{-iE_{\alpha }t_0/\hbar }|\alpha \rangle \]
+as the defintions of a interaction picture. We then have
+\[i\hbar \dfrac{\partial }{\partial t}|\alpha ,t_0,t\rangle _{I}=V_{I}(t)|\alpha ,t_0,t\rangle _{I} \]
+and
+\[\dfrac{d V_{I}}{d t}=\dfrac{1}{i\hbar }[V_{I},H_0]+e^{iH_0t/\hbar }\dfrac{\partial V_{S}}{\partial t}e^{-iH_0t/\hbar }\]
+where $(H_0)_{I}=H_0$.
+\end{defi}
+\vspace{2ex}
+\begin{proof}
+\[\begin{align*}
+i\hbar \dfrac{\partial }{\partial t}|\alpha ,t_0,t\rangle _{I}=&\Big(i\hbar \dfrac{\partial }{\partial t}e^{iH_0t/\hbar } \Big)|\alpha ,t_0,t\rangle _{S}+e^{iH_0t/\hbar }\Big(i\hbar \dfrac{\partial }{\partial t}|\alpha ,t_0,t\rangle _{S} \Big)\\
+=&-H_0e^{iH_0t/\hbar }|\alpha ,t_0,t\rangle _{S}+e^{iH_0t/\hbar }\Big(H_0+V(t)\Big)|\alpha ,t_0,t\rangle _{S}\\
+=&e^{iH_0t/\hbar }V(t)|\alpha ,t_0,t\rangle _{S}=e^{iH_0t/\hbar }V(t)e^{-iH_0t/\hbar }e^{iH_0t/\hbar }|\alpha ,t_0,t\rangle _{S}\\
+=&V_{I}(t)|\alpha ,t_0,t\rangle _{I}
+\end{align*}\]
+\end{proof}
+\vspace{2ex}
+\begin{cor}
+Previously, we have seen how
+\[|\psi (t)\rangle _{S}=\sum _{n}c_{n}(t)e^{-iE_{n}t/\hbar }|n\rangle \]
+Then,
+\[\begin{align*}
+|\psi (t)\rangle =& e^{iH_0t/\hbar }|\psi (t)\rangle _{S}=e^{iH_0t/\hbar }\sum _{n}c_{n}(t)e^{-iE_{n}t/\hbar }|n\rangle \\
+=&\sum _{n}c_{n}(t)|n\rangle 
+\end{align*}\]
+\end{cor}
+\vspace{2ex}
+\begin{cor}
+In quantum field theory, the time evolution operator $U_{I}(t,t_0)$ resulted in 
+\[|\alpha ,t_0,t\rangle _{I}=U_{I}(t,t_0)|\alpha ,t_0,t_0\rangle _{I}\]
+applying this to the time evolution equation for the interaction picture ket from the above,
+\[i\hbar \dfrac{\partial }{\partial t}U_{I}(t,t_0)=V_{I}(t)U_{I}(t,t_0) \]
+applying the pertubation here, we obtain the Dyson series or the Dyson expansion.
+\[\begin{align*}
+U^{(0)}_{I}(t,t_0)={\bf 1}
+\end{align*}\]
+and
+\[\begin{align*}
+U_{I}(t,t_0)={\bf 1}+\Big(-\dfrac{i}{\hbar }\Big)\int ^{t}_{t_0}dt'\,V_{I}(t')U_{I}(t',t_0)
+\end{align*}\]
+from the differential equation gives
+\[U^{(1)}_{I}={\bf 1}+\Big(-\dfrac{i}{\hbar }\Big)\int ^{t}_{t_0}dt'\,V_{I}(t')\]
+up to the first order. The second order is trivial as
+\[\begin{align*}
+U_{I}^{(2)}=&{\bf 1}+\Big(-\dfrac{i}{\hbar }\Big)\int ^{t}_{t_0}dt'\,V_{I}(t')U^{(1)}_{I}(t')\\=&{\bf 1}+\Big(-\dfrac{i}{\hbar }\Big)\int ^{t}_{t_0}dt'\,V_{I}(t')+\Big(-\dfrac{i}{\hbar }\Big)^2\int ^{t}_{t_0}dt'\,V_{I}(t')\int ^{t'}_{t_0}dt''\,V_{I}(t'')
+\end{align*}\]
+\end{cor}
+\vspace{2ex}
+\begin{defi}
+(Berry phase) Berry phase is closely relevant to topology in physics. The geometry of quantum states is given by $|\mathrm{\Psi} (R(t))\rangle \sim  e^{i\theta }|\mathrm{\Psi} (R(t))\rangle $ where $R(t)$ is a set of parameters (such as ${\bm R}$ for a line and $S^2$ for perhaps applied field direction). Imagine that we slowly vary the parameters, thus looking at an adiabatic transition. That is, we take $\mathrm{\Delta } > \hbar \omega $ where $\mathrm{\Delta }$ is the difference of energy levels. For instantaneous eigenkets, we have
+\[H(R)|n(R)\rangle =E_{n}(R)|n(R)\rangle \]
+
+\end{defi}
+\vspace{2ex}
+
+

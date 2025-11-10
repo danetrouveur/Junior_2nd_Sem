@@ -1,0 +1,89 @@
+\section{Lecture 15 (November 3rd)}
+\begin{recall}
+We have previously seen the Hamiltonian $\hat{H}=\hat{p}^2/2m+V(\hat{q})$ and split time intervals 
+\[t_{n}+t_{i}+n\cdot \dfrac{t_{f}-t_{i}}{N+1}\]
+where $(t_{f}-t_{i})/(N+1)$ is $\Delta t$. We can then calculate
+\[{}_{H}\langle q_{f};t_{f}|q_{i};t_{i}\rangle _{H}=\int dq_{1}\ldots dq_{N}\,\langle q_{f};t_{f}|q_{N};t_{N}\rangle \ldots \langle q_{1};t_{1}|q_{i}t_{i}\rangle \]
+\end{recall}
+\vspace{2ex}
+\begin{lem}
+Let's rewrite each piece.
+\[\begin{align*}
+\langle q_{n+1};t_{n+1}|q_{n};t_{n}\rangle=&\int dp_{n}\,\langle q_{n+1}|e^{-i\hat{H}(\hat{q},\hat{p})\cdot \Delta t}|p_{n}\rangle \langle p_{n}|q_{n}\rangle \\
+=&\int dp_{n}\,e^{-iH(q_{n+1},p_{n})\Delta t}\dfrac{1}{2\pi }e^{ip_{n}(q_{n+1}-q_{n})}
+\end{align*}\]
+as $\langle q_{n}|q_{n}\rangle =\exp (-ip_{n}q_{n})/\sqrt{2\pi }$. Note that the exponential only pulls out because of other orderings (e.g., Weyl). Taking the limit to $N\rightarrow \infty $, ($\Delta t\rightarrow 0$),
+\[\begin{align*}
+=&\int \dfrac{dp_{n}}{2\pi }\,e^{-iH(q_{n},p_{n})\Delta t}e^{ip_{n}\dot{q}_{n}\Delta t}(1+O(\Delta t^2))
+\end{align*}\]
+where $\dot{q}_{n}=(q_{n+1}-q_{n})/(t_{n+1}-t_{n})$. The resulting transition amplitude is
+\[\begin{align*}
+\langle q_{f};t_{f}|q_{i};t_{i}\rangle =&\lim _{N\rightarrow \infty }\int \dfrac{dp_{0}}{2\pi }\prod^{N}_{i=1}\dfrac{dp_{i}\,q_{i}}{2\pi }\exp \Big[i\sum ^{N}_{n=1}\Big(p_{n}\dot{q}_{n}\Delta t-iH(q_{n},p_{n})\Delta t\Big)\Big]\\
+=&\int ^{q(t_{f})=q_{f}}_{q(t_{i})=q_{i}}[dq][dp]\,\exp \Big[i\int ^{t_{f}}_{t_{i}}dt\,\Big(p(t)\dot{q}(t)-H(q(t),p(t))\Big)\Big]
+\end{align*}\]
+The expression in the exponential is called the 1st order Lagrangian,
+\[L^{(1\mathrm{st})}(q,\dot{q},p)=p(t)\dot{q}(t)-H(q(t),p(t))\]
+Also, the path integral is called the phase space path integral with the measure
+\[[dq][dp]=\lim _{N\rightarrow \infty }\dfrac{dp_{0}}{2\pi }\prod^{\infty }_{n=1}\dfrac{dq_{n}\,dp_{n}}{2\pi }\]
+\end{lem}
+\vspace{2ex}
+\begin{thm}
+(Configuration space path integral) 
+\[\begin{align*}
+\int \dfrac{dp_{n}}{2\pi }\,\exp \Big[i\Big(p_{n}\dot{q}_{n}-\dfrac{p_{n}^2}{2\pi }\Big)\Delta t\Big]=&\int \dfrac{dp_{n}}{2\pi }\,\exp \Big[-\dfrac{i\Delta t}{2m}(p_{n}-m\dot{q}_{n})^2+i\Delta t\dfrac{m\dot{q}_{n}^2}{2}\Big]\\
+=&\sqrt{\dfrac{m}{2\pi i\Delta t}}e^{i\Delta t\cdot m\dot{q}^2/2}
+\end{align*}\]
+using the key result $\int dx\,e^{-ax^2}=\sqrt{\pi /a}$. The resulting transition amplitude is 
+\[\begin{align*}
+\langle q_{f};t_{f}|q_{i};t_{i}\rangle =&\lim _{N\rightarrow \infty }\int \Big(\dfrac{m}{2\pi i\cdot \Delta t}\Big)^{(N+1)/2}\prod^{N}_{n=1}dq_{n}\,\exp \Big[i\sum ^{N}_{n=0}\Big(\dfrac{1}{2}m\dot{q}_{n}^2-V(q_{n})\Big)\cdot \Delta t\Big]\\
+=&\int ^{q(t_{f})=q_{f}}_{q(t_{i})=q_{i}}\mathcal{D}q\,\exp \Big[i\int ^{t_{f}}_{t_{i}}dt\,\Big(\dfrac{1}{2}m\dot{q}(t)^2-V(q(t))\Big)\Big]
+\end{align*}\]
+The expression in the brackets is now the 2nd order Lagrangian
+\[L^{(2\mathrm{nd})}(q,\dot{q})=\dfrac{1}{2}m\dot{q}^2-V(q)\]
+and the configuration space path integral measure is
+\[\mathcal{D}q=\lim _{N\rightarrow \infty }\Big(\dfrac{m}{2\pi i\Delta t}\Big)^{(N+1)/2}\prod^{N}_{n=1}dq_{n}\]
+\end{thm}
+\vspace{2ex}
+\begin{defi}
+(Correlation functions) The correlation functions can be obtained by applying functional derivatives to the transition amplitude! This is done through adding time-dependent external sources to the Hamiltonian.
+\[\langle q_{f};t_{i}|q_{i},t_{i}\rangle _{f,h}=\int ^{q(t_{f})=q_{f}}_{q(t_{i})=q_{i}}[dq][dp]\,\exp \Big[i\int ^{t_{f}}_{t_{i}}dt\,\Big(p\dot{q}-H+qf+ph\Big)\Big]\]
+where $f=f(t)$ and $h=h(t)$. Now consider a functional derivative on the transition amplitude with respect to the external source, $f(t_{*})$. 
+\[\begin{align*}
+\dfrac{\delta }{i\delta f(t_{*})}\langle q_{f};t_{f}|q_{i};t_{i}\rangle _{f,h}|_{f=h=0}=& \int ^{q(t_{f})=q_{f}}_{q(t_{i})=q_{i}}[dq][dp]\,q(t_{*})\exp \Big[i\int ^{t_{f}}_{t_{i}}dt\,L^{1\mathrm{st}}\Big]\\
+=&\int dq_{*}\,\int ^{q(t_{f})=q_{f}}_{q(t_{*})=q_{*}}[dq][dp]\,\exp \Big[i\int ^{t_{f}}_{t_{*}}dt\,L^{(1\mathrm{st})}\Big]\times q_{*}\int ^{q_{t_{*}}}_{q(t_{i})=q_{i}}[dq][dp]\,\exp \Big[i\int ^{t_{*}}_{t_{i}}dt\,L^{(1\mathrm{st})}\Big]\\
+=&\int dq_{*}\,\langle q_{t_{f}};t_{f}|q_{*};t_{*}\rangle q_{*}\langle q_{*};t_{*}|q_{i};t_{i}\rangle \\
+=&\int dq_{*}\,\langle q_{f};t_{f}|e^{i\hat{H}t_{*}}\hat{q}|q_{*}\rangle \langle q_{*}|e^{-i\hat{H}t_{*}}|q_{i};t_{i}\rangle 
+=&\langle q_{f};t_{i}|\hat{q}(t_{*})|q_{i};t_{i}\rangle 
+\end{align*}\]
+which is exactly the 1-point correlction function of a position operator. For a time-ordered $N$-point correlation function,
+\[\dfrac{\delta }{i\delta f(t_{i})}\ldots \dfrac{\delta }{i\delta h(t_{N})}\langle q_{f};t_{f}|q_{i};t_{i}\rangle _{f,h}|_{f,h=0}=\langle q_{f};t_{f}|T\hat{q}(t_{1})\ldots \hat{p}(t_{N})|q_{i};t_{i}\rangle \]
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Feynman's $i\varepsilon $-prescription) 
+\[\langle q_{f};t_{f}|q_{i};t_{i}\rangle ^{(i\varepsilon )}_{f,h}=\int [dq][dp]\,\exp \Big[i\int ^{t_{f}}_{t_{i}}dt\,\Big(p\dot{q}-(1-i\varepsilon )H(q,p)+qf+ph\Big)\Big]\]
+As the setup, we localise external sources, meaning
+\[f(t),h(t)\ne 0\qquad\mathrm{only}\qquad [t_{a},t_{b}]\]
+and we choose discrete energy eigenstates $\{|n\rangle\; |\;n=0,1,2,\ldots \}$ and eigenvalues are $\{E_{n}\;|\;n=0,1,2,\ldots \}$ and wavefunction $\psi _{n}(q)=\langle q|n\rangle $. 
+\[\begin{align*}
+\langle q_{f};\infty |q_{i};-\infty \rangle ^{(i\varepsilon )}_{f,h}=&\sum ^{\infty }_{m,n=0}\langle q_{f};\infty |m;t_{b}\rangle ^{(i\varepsilon )}\langle m;t_{b}|n;t_{b}\rangle ^{(i\varepsilon )}_{f,h}\langle n;t_{a}|q_{i};-\infty \rangle ^{(i\varepsilon )}\\
+=&\sum ^{\infty }_{m,n=0}\langle q_{f}|e^{-i(1-i\varepsilon )E_{m}(\infty -t_{b})}|m\rangle \langle m;t_{b}|n;t_{a}\rangle ^{(i\varepsilon )}_{f,h}\\
+&\times \langle n|e^{-i(1-i\varepsilon )E_{n}(t_{a}+\infty )}|q_{i}\rangle \\
+=&\langle q_{f}|0\rangle \langle 0;t_{b}|0;t_{a}\rangle ^{(i\varepsilon )}_{f,h}\langle 0|q_{i}\rangle \\
+=&\psi _{0}(q_{f})\psi _{0}(q_{i})^{*}\langle 0;t_{b}|0;t_{a}\rangle ^{(i\varepsilon )}_{f,h}
+\end{align*}\]
+the front is independent of $f$ and $h$ which grants this the name the ``vacumm persistence amplitude".
+\[\langle 0;t_{b}|0;t_{a}\rangle ^{(i\varepsilon )}_{f,h}=\mathcal{N}\int [dq][dp]\,\exp \Big[i\int dt\,\Big(p\dot{q}-(1-i\varepsilon )H+qf+ph\Big)\Big]\]
+We comment that
+\begin{itemize}
+\item[(i)] $\mathcal{N}$ is independent of $f$ and $h$.
+\item[(ii)] The vacumm persistence amplitude is insensitive to the boundary position eigenstates. 
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{cor}
+(Correlation function with respect to the vaccum state) 
+\[\dfrac{\delta }{i\delta f(t_{i})}\ldots \dfrac{\delta }{i\delta h(t_{N})}\langle 0;t_{b}|0;t_{a}\rangle ^{(i\varepsilon )}_{f,h}=\langle 0;t_{b}|T\hat{q}(t_{i})\ldots \hat{p}(t_{N})|0;t_{b}\rangle ^{(i\varepsilon )}\]
+\end{cor}
+\vspace{2ex}
+

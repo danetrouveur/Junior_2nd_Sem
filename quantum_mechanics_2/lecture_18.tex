@@ -1,0 +1,68 @@
+\section{Lecture 18 (November 10th)}
+\begin{defi}
+We have previously defined
+\[F^{(n)}_{\mu \nu }=i\Big[\sum _{\mathrm{all},n}\langle \dfrac{\partial n}{\partial R^{\mu }}|n' \rangle \langle n'|\dfrac{\partial n}{\partial R^{\nu }}\rangle  -\sum _{\mathrm{all},n}\langle \dfrac{\partial n}{\partial R^{\nu }}|n'\rangle \langle n'|\dfrac{\partial n}{\partial R^{\mu }} \rangle  \Big]\]
+where
+\[\langle n|\dfrac{\partial H}{\partial R}|n'\rangle =(E_{n}-E_{n}')\langle \dfrac{\partial n}{\partial R}|n'\rangle   \]
+for $n\ne n'$. What about the case where $n'=n$?
+\[\langle \dfrac{\partial n}{\partial R^{\mu }}|n\rangle \langle n|\dfrac{\partial n}{\partial R^{\nu }}\rangle -\langle \dfrac{\partial n}{\partial R^{\nu }}|n\rangle \langle n|\dfrac{\partial n}{\partial R^{\mu }}=(ia)(ib)-(-ib)(-ia)=0    \]
+Thus, we can change the summation index above from $n'\ne n$. We obtain
+\[F^{(n)}_{\mu \nu }=i\sum _{n'\ne n}\Big[\dfrac{\langle n|\dfrac{\partial H}{\partial R^{\mu }}|n'\rangle \langle n'|\dfrac{\partial H}{\partial R^{\nu }}|n\rangle   }{(E_{n}-E_{n'})^2}-(\cdots)^{*}\Big]\]
+This is the most direct formula. Summing both sides over with respect to $n$, we can then change $n$ with $n'$ and find that the summation over $n$ is zero. for convenience, let's define a $2\times 2$ Herimian matrix that is traceless iwth basis $O_{x},O_{y},O_{z}$ as the basis. 
+\[H=h_{x}O_{x}+h_{y}O_{y}+h_{z}O_{z}=\begin{pmatrix}
+h_{z}&h_{x}-ih_{y}\\
+h_{x}+ih_{y}&-h_{z}
+\end{pmatrix}
+\]
+We take $\vec{h}=(h_{x},h_{y},h_{z})\in {\bm R}$ to be real and we slowly vary the parameters. The eigenvalues are $-h$ and $h$ where $h=\sqrt{h_{x}^2+h_{y}^2+h_{z}^2}$. Let's now express everything in spherical coordinates $h_{x}=\sin \theta \cos \phi $, $h_{y}=h \sin \theta \sin \phi $, and $h_{z}=h\cos \theta $. Consider the eigenstates $|-\rangle $ and $|+\rangle $. Recall that there is phase ambiguity in making the choices
+\[|-\rangle =\begin{pmatrix}
+\sin (\theta /2)e^{-i\phi }\\
+-\cos (\theta /2)
+\end{pmatrix}
+\]
+and
+\[|+\rangle =\begin{pmatrix}
+\cos (\theta /2)e^{-i\phi }\\
+\sin (\theta /2)
+\end{pmatrix}
+\]
+The nontrivialness of the parameter space's topology leads to non-uniqueness of global eigenvectors!
+\end{defi}
+\vspace{2ex}
+\begin{cor}
+(In the test) Let's calculate the Berry phase. We can easily check that $\langle \pm |\vec{O}|\pm \rangle =\pm \vec{h}/h$. For example, $\langle -|O_{z}|-\rangle =\sum ^2(\theta /2)-\cos ^2(\theta /2)=-\cos ^2\theta =-h_{z}/h$. Notice that
+\[\begin{align*}
+A^{(-)}_{\theta }=\langle -|i\dfrac{\partial }{\partial \theta }|-\rangle =0 
+\end{align*}\]
+and
+\[A^{(-)}_{\phi }=\langle -|i\dfrac{\partial }{\partial \phi }|-\rangle =\sin ^2(\theta /2)=\dfrac{1}{2}(1-\cos \theta )\]
+We will in the far future learn that $1/2$ actually denotes spin. Recall that the field strength was defined as
+\[F^{(-)}_{\theta \phi }=\partial _{\theta }A_{\phi }-\partial _{\phi }A_{\theta }=\dfrac{1}{2}\sin \theta \]
+In the language of differential forms,
+\[F^{(-)}=\dfrac{1}{2}\sin \theta \,d\theta \wedge d\phi \]
+which we can rewrite as
+\[F^{(-)}\dfrac{S}{h ^2}(h ^2\sin \theta \,d\theta \wedge d\phi )\]
+Integrating over the sphere,
+\[\int _{S^2}F^{(-)}\,d\vec{S}=\dfrac{s}{h ^2}(4\pi h ^2)=4\pi s\]
+We find $\int \vec{B}\cdot d\vec{S}=\int_{S^2} F^{(-)}$ and 
+\[\vec{B}=\dfrac{s}{h ^2}\hat{h}\]
+where the magnetic sitting at $h=0$ is unique. By the way, check $F^{(+)}=-F^{(-)}$. 
+\end{cor}
+\vspace{2ex}
+\begin{ex}
+We try to obtain the above by this time using the direct formula. Recall that $F_{xy}=B_{z}$. Using
+\[F^{(-,+)}_{\mu \nu }=i\sum _{m\ne n}\Big(\Big\langle n\Big|\dfrac{\partial H}{\partial R^{\mu }}\Big|m\Big\rangle \Big\langle m\Big|\dfrac{\partial H}{\partial R^{\mu }}\Big|n\Big\rangle -(\cdots)^{*}\Big)  \]
+and 
+\[\dfrac{\partial H}{\partial h_{x}}=O_{x}\qquad\&\qquad \dfrac{\partial H}{\partial h_{y}}=O_{y}  \]
+At the end of the day,
+\[F_{xy}=\dfrac{1}{2}\dfrac{h_{z}}{h^3}\]
+which I want you to check! 
+\end{ex}
+\vspace{2ex}
+\begin{cor}
+Let $H=\vec{p}\,^2/2m+V(\vec{x},t)$. What is $\vec{A}$? Recall that $ma=\vec{F}=q(\vec{E}+\vec{v}\times \vec{B})$. We find that 
+\[H=\dfrac{(\vec{p}-q\vec{A})^2}{2m}+q\phi \]
+which would be memorised. Note, $\vec{B}=\nabla \times \vec{A}$ and $\vec{E}=-\nabla \phi -\partial \vec{A}/\partial t$. We later check that the Hamilton's equations of motion work from this. 
+\end{cor}
+\vspace{2ex}
+

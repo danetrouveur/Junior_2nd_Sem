@@ -1,0 +1,63 @@
+\section{Lecture 16 (October 29th)}
+\begin{thm}
+(Fermi Golden Rule)
+Finishing last time's calculations,
+\[|c_{m\leftarrow k}(t)|^2=\dfrac{1}{\hbar ^2}\Big[\dfrac{2-2\cos ((\omega _{mk}-\omega )t)}{(\omega _{mk}-\omega )^2}|M_{mk}|^2+\dfrac{2-2\cos ((\omega _{mk}+\omega )t)}{(\omega _{mk}+\omega )^2}|M^{\dagger }_{mk}|^2\Big]\]
+as $t\rightarrow \infty $. We can write the above in terms of sine squared and we have
+\[|c_{m \leftarrow k}|^2=\dfrac{1}{\hbar ^2}\Big[\dfrac{\sin ^2((\omega _{mk}-\omega )t/2)}{((\omega _{mk}-\omega )/2)^2}+\ldots \Big]\]
+where
+\[\lim _{t\rightarrow \infty }\dfrac{\sin ^2((\omega _{mk}-\omega )t/2)}{((\omega _{mk}-\omega )/2)^2}=2\pi t\delta (\omega _{mk}-\omega )\]
+Now,
+\[|c_{m\leftarrow k}(t)|^2=\dfrac{2\pi t}{\hbar ^2}\Big[\delta (\omega _{mk}-\omega )|M_{mk}|^2+\delta (\omega _{mk}+\omega )|M^{\dagger }_{mk}|^2\Big]\]
+recalling that $\omega _{mk}=(E_{m}-E_{k})/\hbar $, we can write
+\[|c_{m\leftarrow k}(t)|^2=\dfrac{2\pi t}{\hbar }\Big[\delta (E_{m}-E_{k}-\hbar \omega )|M_{mk}|^2+\delta (E_{m}-E_{k}+\hbar \omega )|M^{\dagger }_{mk}|^2\Big]\]
+which gives the transition probability per time, the transition rate, as
+\[\mathrm{\Gamma} =\Big(\dfrac{2\pi }{\hbar }\Big)\Big[\delta (E_{m}-E_{k}-\hbar \omega )|M_{mk}|^2+\delta (E_{m}-E_{k}+\hbar \omega )|M^{\dagger }_{mk}|^2\Big]\]
+which is called the Fermi Golden Rule. Let's further investigate this and check units. We want it to be $[\mathrm{\Gamma} ]=T$. We see that, indeed,
+\[[\mathrm{\Gamma} ]=\dfrac{1}{E\cdot T}\times \dfrac{1}{E}\times E^2=\dfrac{1}{T}\]
+In the general case,
+\[\mathrm{\Gamma} (i\rightarrow f)=\dfrac{2\pi }{\hbar }\sum \delta (\mathrm{\Sigma} E)|M|^2\]
+where the sum is over all final sttates.
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(Two-state harmonic pertubation) For simplicity, let $V_{11}=V_{22}=0$ for some perturbing Hamiltonian $\hat{V}$. Let
+\[V_{12}=\gamma e^{i\omega t}\]
+and let $\gamma >0$. Then, $V_{21}=\gamma ^{*}e^{-i\omega t}$ where $\gamma ^{*}=\gamma $. Up to first order, the time-dependent pertubation becomes
+\[|\psi (t)\rangle =\sum _{n=1,2}c_{n}(t)e^{-iE_{n}t/\hbar }|\phi_{n} \rangle \]
+The differential equation we need to solve is:
+\[\begin{cases}
+i\hbar \dfrac{d c_{1}}{d t}(t)=V_{12}e^{i\omega _{12}t}c_{2}(t)\\\\
+i\hbar \dfrac{d c_{2}}{d t}(t)=V_{21}e^{i\omega _{21}t}c_{1}(t)
+\end{cases}\]
+where $\omega _{12}=-\omega _{21}$. Setting $\omega -\omega _{21}=\mathrm{\Omega} $, we can write
+\[\begin{align*}
+i\hbar \dfrac{d c_{1}}{dt }(t)=&\gamma e^{i\mathrm{\Omega} t}c_{2}(t)\\
+i\hbar \dfrac{dc_{2}}{t}(t)=&\gamma e^{-i\mathrm{\Omega} t}c_1(t)
+\end{align*}\]
+Solving the coupled differential equations,
+\[i\hbar \ddot{c}_{2}(t)=r\Big(-i\mathrm{\Omega} e^{-i\mathrm{\Omega} t}\dfrac{i\hbar \dot{c}_{2}(t)}{\gamma }e^{i\mathrm{\Omega} t}+e^{-i\mathrm{\Omega} t}\dfrac{\gamma }{i\hbar }e^{i\mathrm{\Omega} t}c_2(t)\Big)\]
+we obtain
+\[\ddot{c}_{2}(t)=-i\mathrm{\Omega} \dot{c}_{2}(t)-\dfrac{\gamma ^2}{\hbar ^2}c_{2}(t)\]
+The general solution can be obtained through substituting $c_2(t)=Ae^{i\alpha t}$. We get the equation $-\alpha ^2=\alpha \mathrm{\Omega} -\gamma ^2/\hbar ^2$ giving two real solutions for $\alpha $.
+\[\alpha _{\pm}=\dfrac{-\mathrm{\Omega} \pm \Delta }{2}\]
+where $\Delta =\sqrt{\mathrm{\Omega} ^2+5\gamma ^2/\hbar ^2}$. With the initial conditions $c_1(0)=1$ and $c_2(0)=0$,
+\[c_2(t)=c_{+}e^{i\alpha _{+}t}+c_{-}e^{-i\alpha _{-}t}\]
+with $c_{+}=-c_{-}$ and
+\[c_2(t)=c_{+}\Big(e^{i\alpha _{+}t}-e^{i\alpha _{-}t}\Big)=(2i)c_{+}e^{i(\alpha _{+}\alpha _{-})t/2}\sin \Big(\dfrac{\Delta t}{2}\Big)\]
+where the condition $c_{1}(0)=1$ gives $c_{+}=-\gamma /\Delta \hbar $. Thus,
+\[|c_2(t)|^2=\dfrac{\gamma ^2/\hbar ^2}{\dfrac{\gamma ^2}{\hbar ^2}+\Big(\dfrac{\omega -\omega _{21}}{2}\Big)^2}\sin ^2\Big(\sqrt{\dfrac{\gamma ^2}{\hbar ^2}+\Big(\dfrac{\omega +\omega _{21}}{2}\Big)^2}t\Big)\]
+which is known as the Rabi formula.
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Interaction representation) We see a middle ground representation of the Heisenberg and Schrodinger picture. The idea is simple -- we write $\hat{H}=\hat{H}_{0}+\lambda \hat{V}(t)$ and only let the time evolve via $\lambda \hat{V}(t)$.  We express
+\[|\alpha ,t_{0},t\rangle _{I}=e^{i\hat{H}_{0}t/\hbar }|\alpha ,t_0,t\rangle _{S}\]
+and
+\[|\alpha ,t_0,t_0\rangle _{S}=e^{-iE_{\alpha }t_0/\hbar }|\alpha \rangle \]
+which is important to remember. Then,
+\[\hat{V}_{I}(t)=e^{iH_0t/\hbar }V_{s}e^{-iH_0t/\hbar }\]
+
+\end{defi}
+\vspace{2ex}
+

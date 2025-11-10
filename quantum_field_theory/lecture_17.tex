@@ -1,0 +1,99 @@
+\section{Lecture 17 (November 10th)}
+\begin{rmk}
+We have seen how the generating function for Dirac theory was
+\[Z[\bar{\eta },et]=\exp \Big[-\int d^{4}x\,\int d^{4}y\,\bar{\eta }(x)S_{F}(x-y)\eta (y)\Big]\]
+where
+\[S_{F}(x-y)=\int \dfrac{d^{4}k}{(2\pi )^{4}}\dfrac{-i}{\cancel{k}+m-i\epsilon }e^{-ik\cdot (x-y)}\]
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(Correlation functions from $Z[\bar{\eta },\eta ]$) We see that
+\[\begin{align*}
+G^{(1;1)}_{\alpha ;\beta }(x;y)=&\langle 0|T\hat{\psi }_{\alpha }(x)\hat{\bar{\psi }}_{\beta }(y)|0\rangle \\
+=&\dfrac{\delta }{i\delta \bar{\eta }^{\alpha }(x)}\cdot \dfrac{i\delta }{\delta \eta ^{\beta }(y)}\\
+=&S_{F\,\alpha \beta }(x-y)
+\end{align*}\]
+For an arbitrary number of particles you have Wick's theorem for generalised fermions, 
+\[\begin{align*}
+G^{(N;N)}_{\alpha ,\ldots ,\alpha _{N};\beta _{1},\ldots ,\beta _{N}}(x_1,\ldots ,x_{N};y_{1},\ldots ,y_{N})=&\langle T\hat{\psi }_{\alpha_1}(x_1)\ldots \hat{\psi }_{\alpha _{N}}(x_{N})\hat{\bar{\psi }}_{\beta_1}(y_1)\ldots \hat{\bar{\psi }}_{\beta _{N}}(y_{N})\rangle \\
+=&(-1)^{N(N-1)/2}\sum \epsilon (\sigma )G^{(1;1)}_{\alpha_1,\beta _{\sigma (1)}}(x_1;y_{\sigma (1)})\ldots G^{(1;1)}_{\alpha _{N};\beta _{\sigma (N)}}(x_{N};y_{\sigma (N)})
+\end{align*}\]
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(4 point function) 
+\[G^{(2;2)}_{\alpha_1\alpha_2;\beta_1\beta_2}(x_1,x_2;y_1,y_2)=-G^{(1;1)}_{\alpha_1;\beta_1}(x_l;y_1)G^{(1;1)}_{\alpha_2;\beta_2}(x_2;y_2)+G^{(1;1)}_{\alpha_1;\beta_2}(x_1;y_2)G^{(1;1)}_{\alpha_2;\beta_1}(x_2;y_1)\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Path integrals in quantum field theory; vectors) The ``naive" generating functional for the free Maxwell fields is
+\[Z[J]=\int \mathcal{D}A_{\mu }\,\exp \Big[i\int d^{4}x\,\Big(-\dfrac{1}{4}F_{\mu \nu }F^{\mu \nu }+J^{\mu }A_{\mu }\Big)\Big]\]
+This is ill-defined due to gauge symmetry!
+\begin{itemize}[leftmargin=*]
+\item[(i)] Let's focus on the case with
+\[\begin{cases}
+J^{\mu }\rightarrow 0&\mathrm{fast\ enough\ }x\rightarrow \infty \\
+\partial _{\mu }J^{\mu }=0
+\end{cases}\]
+\item[(ii)] The integrand of the path integral is an invariant vector, $A_{\mu }\rightarrow A_{\mu }^{(\lambda )}=A_{\mu }+\partial _{\mu }\lambda $
+\item[(iii)] The integration over the ``gauge-equivalent" configurations of $A_{\mu }$ leads to divergences. This requires gauge-fixing procedures.
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+(Gauge-fixing procedure) (I) Let's temporarily write
+\[Z[J]=\int \mathcal{D}A_{\mu }\Big(\int \mathcal{D}\lambda \,|\mathrm{det}(\partial ^{\mu }\partial _{\mu })|\delta (\partial ^{\mu }A_{\mu }^{(\lambda )}-\chi )\Big)\exp \Big[i\int d^{4}x\,\Big(-\dfrac{1}{4}F^2+J\cdot A\Big)\Big]\]
+Note that
+\[1=\int d(g(x))\,\delta (g(x))=\int dx\,|g'(x)|\delta (g(x))\]
+for multiple variables,
+\[\int d^{n}x\,\Big|\mathrm{det}\dfrac{\partial g_{i}(x)}{\partial x_{j}} \Big|\delta ^{n}(g(x))\]
+(II) Change of dummy field $A_{\mu }\rightarrow A_{\mu }^{(-\lambda )}$.
+\[Z[J] =\int \mathcal{D}A_{\mu }^{(-\lambda )}\,\int \mathcal{D}\lambda \,|\mathrm{det}(\partial ^2)|\delta (\partial ^{\mu }A_{\mu }-\chi )\exp \Big[i\int d^{4}x\,ibgr-\dfrac{1}{4}Frs+J^{\mu }A_{\mu }\Big]\]
+A few assumptions are that:
+\begin{itemize}
+\item[(i)] External currents are local and conserved
+\item[(ii)] Path-integral measure is not invariant under gauge symmetry. If the measure is not invariant, the symmetry is called anomalous. A gauge anomaly is pathological and a global anomaly is acceptable. 
+\end{itemize}
+Step (III) comes from noticing that $\mathcal{D}\lambda $ captures the divergence due to to gauge symmetry. The well-defined generating functional is
+\[Z_{\chi }[J]=\int \mathcal{D}A_{\mu }\,\delta (\partial ^{\mu }A_{\mu }-\chi )\exp \Big[i\int d^{4}x\,\Big(-\dfrac{1}{4}F^2+J\cdot A\Big)\Big]\]
+Let's make some comments:
+\begin{itemize}
+\item[(i)] The determinant is called the Faddeev-Popov (FP) determinant $|\mathrm{det}(\partial ^2)|$ only affects irrelvant normalisation only! 
+\item[(ii)] Note that otherwise, we introduce FP ghosts to account for its contribution.
+\end{itemize}
+The last step (IV) comes from introducing the weight function
+\[\begin{align*}
+Z[J]=&\int \mathcal{D}\chi \,Z_{\chi }[J]\exp \Big[\dfrac{i}{2\xi }\int d^{4}x\,\chi ^2\Big]\\
+=&\int \mathcal{D}A_{\mu }\,\exp \Big[i\int d^{4}x\,\Big(-\dfrac{1}{4}F^2+\dfrac{1}{2\xi }(\partial ^{\mu }A_{\mu })^2+J\cdot A\Big)\Big]
+\end{align*}\]
+where the second is the gauge-fixing term. Note that this does not affect the $J$-dependence of $Z[J]$, $Z[J]$ is not independent of $\chi $, and $\xi=-1$ is called the Feynman gauge.
+\end{prop}
+\vspace{2ex}
+\begin{ex}
+(Free spin-1, Maxwell) 
+\begin{itemize}[leftmargin=*]
+\item[(i)] Fourier transform gives 
+\[\hat{A}_{\mu }(k)=\int d^{4}k\,e^{-ikx}A_{\mu }(x)\]
+this implies that
+\[\begin{align*}
+Z[J]=&\int \mathcal{D}A_{\mu }\,\exp \Big[\dfrac{i}{2}\int \dfrac{d^{4}k}{(2\pi )^{4}}\Big(-\tilde{A}_{\mu }(k)\Big((k^2-i\epsilon )\eta ^{\mu \nu }-\Big(1+\dfrac{1}{\xi }\Big)k^{\mu }k^{\nu }\Big)\tilde{A}_{\nu }(-k)\tilde{A}^{\mu }(k)\Big)\Big]
+\end{align*}\]
+\item[(ii)] Chage of the path integral measure gives
+\[D_{\mu \nu }(k)=\dfrac{-i(\eta _{\mu \nu }-(1+\xi )\hat{k}_{\mu }\hat{k}_{\nu })}{k^2-i\epsilon }\]
+if and only if
+\[D_{\mu \nu }^{-1}=i\Big((k^2-i\epsilon )\eta _{\mu \nu }-\Big(1+\dfrac{1}{\xi }\Big)k_{\mu }k_{\nu }\Big)\]
+Note that without gauge fixing $(\xi =\infty )$ implies that $k^2\eta ^{\mu \nu }-k^{\mu }k^{\nu }$ is not invertible.
+\[B_{\mu }(x)=A_{\mu }(x)-i\int \dfrac{d^{4}k}{(2\pi )^{4}}\,e^{ik\cdot x}D_{\mu \nu }(k)\tilde{J}^{\nu }(k)\]
+implies that
+\[Z[J]=\int \mathcal{D}B_{\mu }\,\exp \Big[-\dfrac{1}{2}\int \dfrac{d^{4}k}{(2\pi )^{4}}\Big(\tilde{B}_{\mu }(k)(D^{-1})^{\mu \nu }(k)\tilde{B}_{\nu }(-k)+\tilde{J}^{\mu }(k)D_{\mu \nu }(k)\tilde{J}^{\nu }(-k)\Big)\Big]\]
+and
+\[Z[J]=\exp \Big[\dfrac{-1}{2}\int \dfrac{d^{4}k}{(2\pi )^{4}}\,\tilde{J}^{\mu }(k)D_{\mu \nu }(k)\tilde{J}^{\nu }(-k)\Big]\int \mathcal{D}B_{\mu }\,\exp \Big[-\dfrac{1}{2}\int \dfrac{d^{4}k}{(2\pi )^{4}}\,\tilde{B}_{\mu }(k)(D^{-1})^{\mu \nu }_{\mu }(k)(P^{-1})^{\mu \nu }(k)\tilde{B}_{\nu }(-k)\Big]\]
+\item[(iii)] And $Z[0]=1$
+\end{itemize}
+We therefore have, finally,
+\[Z[J]=\exp \Big[-\dfrac{1}{2}\int d^{4}xd^{4}y\,J^{\mu }(x)D_{F\,\mu \nu }(x-y)J^{\nu }(y)\Big]\]
+where 
+\[D_{F\,\mu \nu }(x-y)=\int \dfrac{d^{4}k}{(2\pi )^{4}}\cdot \dfrac{-i(\eta _{\mu \nu }-(1+\xi )\hat{k}_{\mu }\hat{k}_{\nu })}{k^2-i\epsilon }e^{ik\cdot (x-y)}\]
+\end{ex}
+\vspace{2ex}
+

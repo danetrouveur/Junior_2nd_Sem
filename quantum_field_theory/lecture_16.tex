@@ -1,0 +1,95 @@
+\section{Lecture 16 (November 5th)}
+\begin{rmk}
+(From quantum mechanics to quantum field theory) The map bewteen the two pictures are as follows:
+\[\begin{align*}
+q(t)\rightarrow &\phi (x)\\
+p(t)=m\dot{q}\rightarrow & \pi (x)=\dfrac{\partial \mathcal{L}}{\partial (\partial _{0}\phi )}=\partial _{0}\phi  \\
+H=\dfrac{p^2}{2m}+V(q)\rightarrow & \mathcal{H}(\phi ,\nabla \phi ,\pi )=\dfrac{1}{2}\pi ^2+\dfrac{1}{2}|\nabla \phi |^2+\dfrac{1}{2}m^2\phi ^2-\mathcal{L}_{\mathrm{\int }}\\
+L^{(2\mathrm{nd})}=\dfrac{1}{2}m\dot{q}^2-V(q)\rightarrow &\mathcal{L}(\phi ,\partial _{\mu }\phi )=-\dfrac{1}{2}(\partial ^{\mu }\phi )(\partial _{\mu }\phi )-\dfrac{1}{2}m^2\phi ^2+\mathcal{L}_{\mathrm{\int }}
+\end{align*}\]
+Recall that Feynman's $i\epsilon $-precription in quantum field theory was
+\[\mathcal{H}\rightarrow (1-i\epsilon )\mathcal{H}\]
+or equivalently $m^2\rightarrow m^2-i\epsilon $. The vaccum persistence amplitude in quantum field theory is thus
+\[\langle 0;t_{b}|0;t_{a}\rangle _{f,h}=\mathcal{N}\int [dq][dp]\,\exp \Big[i\int dt\,\Big(p\dot{q}-(1-i\epsilon )H+qf+ph\Big)\Big]\]
+implying that
+\[\begin{align*}
+\langle 0|0\rangle _{J}=&\int [d\phi ][d\pi]\,\exp \Big[i\int d^{4}x\,\Big(\mathcal{L}^{(1\mathrm{st})}(\phi ,\partial _{\mu }\phi ,\pi )+\phi J\Big)\Big]\\
+=&\int \mathcal{D}\phi\,\exp \Big[i\int d^{4}x\,\Big(\mathcal{L}^{(2\mathrm{nd})}(\phi ,\partial _{\mu }\phi )+\phi J\Big)\Big]
+\end{align*}\]
+The correlation functions in quantum field theory can then be written as
+\[\dfrac{\delta }{i\delta J(x_1)}\ldots \dfrac{\delta }{i\delta J(x_{N})}\langle 0|0\rangle |_{J=0}=\langle 0|T\hat{\phi }(x_1)\ldots \hat{\phi }(x_{N})|0\rangle \]
+We make some comments:
+\begin{itemize}
+\item[(i)] Quantum field theory path integral measure includes a $J$-independent normalisation
+\item[(ii)] $i\epsilon $-prescription is implicitly assumed
+\item[(iii)] $t_{a}\rightarrow -\infty $ and $t_{b}\rightarrow \infty $ which is from now on omitted
+\item[(iv)] We assume $\mathcal{L}^{(2\mathrm{nd})}\rightarrow \mathcal{L}$ for notational convenience
+\end{itemize}
+The variance persistence amplitude is also called a ``generating functional" for correlation functions. There are multiple types for this! For example,
+\begin{itemize}
+\item[(i)] (Generating functional) $Z[J]=\langle 0|0\rangle _{J}$ generates $N$-point functions
+\[G^{(N)}(x_1,\ldots ,x_{n})=\dfrac{\delta ^{N}Z[J]}{i\delta J(x_1)\ldots i\delta J(x_{N})}=\langle T\hat{\phi }(x_1)\ldots \hat{\phi }(x_{N})\rangle \]
+\item[(ii)] (Normalised generating functional) 
+\[Z_{n}[J]=\dfrac{Z[J]}{Z[0]}\]
+generates the normalised $N$-point function
+\[G^{(N)}_{n}(x_1,\ldots ,x_{N})=\dfrac{\delta ^{N}Z_{n}[J]}{i\delta J(x_1)\ldots i\delta J(x_{N})}\]
+Note that the normalisation kills the ``vacuum bubble" diagrams.
+\item[(iii)] (Generating functional for ``connected diagrams") $W[J]=\log Z[J]$ which generates connected $N$-point functions
+\[G^{(N)}_{c}(x_1,\ldots ,x_{N})=\dfrac{\delta ^{N}W[J]}{i\delta J(x_1)\ldots i\delta J(x_{N})}\]
+\item[(iv)] (Generating functional for ``1-particle irreducible" diagrams) 
+\[\mathrm{\Gamma} [\phi _{c}]=W[J]-i\int d^{4}x\,\phi _{c}(x)J(x)\]
+where
+\[\phi _{c}(x)=\dfrac{\delta W[J]}{i\delta J(x)}\]
+this generates the 1-PI $N$-point functions 
+\[G^{(N)}_{1PI}(x_1,\ldots ,x_{N})=\dfrac{\delta ^{N}\mathrm{\Gamma} [\phi _{c}]}{i\delta \phi _{c}(x_1),\ldots ,i\phi _{c}(x_{N})}\]
+here, 1 PI-diagrams are connected diagrams that cannot be split into two by cutting one leg.
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{ex}
+(Free spin-0, Klein-Gordan) 
+\[Z[J]=\int \mathcal{D}\phi \,\exp \Big[i\int d^{4}x\,\Big(-\dfrac{1}{2}(\partial \phi )^2-\dfrac{1}{2}(m^2-i\epsilon )\phi ^2+\phi J\Big)\Big]\]
+\begin{itemize}
+\item[(i)] The Fourier-transform takes
+\[\tilde{\phi }(k)=\int d^{4}x\,e^{-ik\cdot x}\phi (x)\leftrightarrow \phi (x)=\int \dfrac{d^{^{4}x}}{(2\pi )^{4}}\,e^{ik\cdot x}\tilde{\phi }(x)\]
+which gives
+\[Z[J]=\int \mathcal{D}\phi \,\exp \Big[\dfrac{i}{2}\int \dfrac{d^{4}k}{(2\pi )^{4}}bgir-\tilde{\phi }(k)(k^2+m^2-i\epsilon )\tilde{\phi }(-k)+\tilde{J}(k)\tilde{\phi }(-k)+\tilde{J}(-k)\tilde{\phi }(k)\Big]\]
+\item[(ii)] Changing variables,
+\[\begin{align*}
+\chi (x)=&\phi (x)-\int \dfrac{d^{4}k}{(2\pi )^{4}}\,e^{ikx}\cdot \dfrac{\tilde{J}(k)}{k^2+m^2-i\epsilon }\\
+=&\int \dfrac{d^{4}k}{(2\pi )^{4}}\,e^{ikx}\Big(\tilde{\phi }(k)-\dfrac{\tilde{J}(k)}{k^2+m^2-i\epsilon }\Big)
+\end{align*}\]
+and 
+\[\begin{align*}
+Z[J]=&\int \mathcal{D}\chi \,\exp \Big[\dfrac{i}{2}\int \dfrac{d^{4}k}{(2\pi )^{4}}\Big(-\tilde{\chi }(k)(k^2+m^2-i\epsilon )\tilde{\chi }(-k)+\dfrac{\tilde{J}(k)\tilde{J}(-k)}{k^2+m^2-i\epsilon }\Big)\Big]\\
+=&\exp \Big[\dfrac{i}{2}\int \dfrac{d^{4}k}{(2\pi )^{4}}\cdot \dfrac{\tilde{J}(k)\tilde{J}(-k)}{k^2+m^2-i\epsilon }\Big]\times \int \mathcal{D}\chi \,\exp \Big[\cdot \Big]
+\end{align*}\]
+\item[(iii)] Setting $Z[0]=1$ for a free theory,
+\[Z[J]=\exp \Big[\dfrac{i}{2}\int \dfrac{d^{4}k}{(2\pi )^{4}}\cdot \dfrac{\tilde{J}(k)\tilde{J}(-k)}{k^2+m^2-i\epsilon }\Big]\]
+and taking the inverse transform
+\[\tilde{J}(k)=\int d^{4}x\,e^{-ikx}J(x)\]
+\[Z[J]=\exp \Big[-\dfrac{1}{2}\int d^{4}x\,d^{4}x'\,J(x)\mathrm{\Delta }_{F}(x-x')J(x')\Big]\]
+with 
+\[\mathrm{\Delta }_{F}(x-x')=\int \dfrac{d^{4}k}{(2\pi )^{4}}\,\dfrac{-i}{k^2+m^2-i\epsilon }e^{ik(x-x')}\]
+Now, our correlation functions are, for odd number of functions, 
+\[G^{(2N+1)}(x_1,\ldots ,x_{2N+1})=\dfrac{\delta ^{2N+1}Z[J]}{i\delta J(x_1),\ldots ,i\delta J(x_{2N+1})}|_{J=1}=0\]
+In the two particle case,
+\[\begin{align*}
+G^{(2)}(x_1,x_2)=&\langle T\hat{\phi }(x_1)\hat{\phi }(x_2)\rangle \\
+=&\dfrac{\delta }{i\delta J(x_1)}\Big(\dfrac{-1}{i}\int d^{4}x\,J(x)\mathrm{\Delta }_{F}(x-x_2)\Big)Z[J]|_{J=0}\\
+=&\mathrm{\Delta }_{F}(x_1-x_2)
+\end{align*}\]
+For the even number case, we can conclude
+\[G^{(2N)}(x_1,\ldots ,x_{N})=\sum_{\sigma \in S_{2N}} G^{(2)}(x_{\sigma (1)}-x_{\sigma (2)})\ldots G^{(2)}(x_{\sigma (2N-1)}-x_{\sigma (2N)})\]
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+(Wick theorem) The $2N$-point function in the above can be seen as the application of Wick's theorem. For example, consider the 4-point function
+\[\begin{align*}
+G^{(4)}(x_1,x_2,x_3,x_4)=&G^{(2)}(x_1-x_2)G^{(2)}(x_3-x_4)+G^{(2)}(x_1-x_3)G^{(2)}(x_2-x_4)+G^{(2)}(x_1-x_4)G^{(2)}(x_2-x_3)
+\end{align*}\]
+\end{thm}
+\vspace{2ex}
+
+

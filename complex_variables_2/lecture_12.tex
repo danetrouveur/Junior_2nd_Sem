@@ -1,0 +1,49 @@
+\section{Lecture 12 (October 28th)}
+\begin{rmk}
+We continue with the final step of the Riemann mapping theorem. Let $\mathrm{\Sigma} $ be the set of all 1-1 analytic functions from $D$ into $U$. We have proved if that $\phi \in \mathrm{\Sigma} $ satisfies $\phi (D)\ne U$, then for every $z_0\in D$ there is $\psi _{0}\in \mathrm{\Sigma} $ such that $|\psi '_{0}(z_0)|>|\phi '(z_0)|$.
+
+\bigskip
+
+(Step 3) If $z_0\in D$ and $\eta _{0}=\mathrm{sup}\{|\phi (z_0)|\;|\; \phi \in \mathrm{\Sigma} \}$, then there is $h\in \mathrm{\Sigma} $ such that $|h'(z_0)|=\eta _{0}$, which implies that $h(D)=U$. 
+\end{rmk}
+\vspace{2ex}
+\begin{proof}
+We suggest that $\mathcal{A}=\{|\phi '(z_0) \;|\; \phi \in \mathrm{\Sigma}  \}$ is bounded. Suppose that it is not bounded. Then for every $n\in {\bm N}$, there is $\phi _{n}\in \mathrm{\Sigma} $ such that $|\phi_{n} '(z_{0})|>n$. However, notice that $|\phi _{n}(z)|<1$ for all $z\in D$, $n\in {\bm N}$ and is uniformly bounded. By Montel's theorem, there is a subsequence $\{\phi _{n_{k}}\}$ which converges uniformly on every compact subset of $D$. Let $h(z)=\lim _{k\rightarrow \infty }\phi _{n_{k}}(z)$ for $z\in D$. Then, $h(z)$ is analytic in $D$ and $\lim _{n\rightarrow \infty }\phi _{n_{k}}'(z)=h'(z)$ for every $z\in D$ so that $h'(z_0)=\lim _{k\rightarrow \infty }\phi _{n_{k}}'(z_0)$ which means that 
+\[|h'(z_0)|=\lim _{k\rightarrow \infty }|\phi '_{n_{k}}(z_0)|\geq \lim _{k\rightarrow \infty }n_{k}=\infty \]
+which is a contradiction.
+
+\bigskip
+
+Knowing that $\eta _{0}>0$ (since $\phi '\ne 0$ for every $\phi \in \mathrm{\Sigma} $) there is a subsequence $\{\phi _{n}\}$ in $\mathrm{\Sigma} $ such that $\lim _{n\rightarrow \infty }|\phi '_{n}(z_0)|=\eta _{0}$. Since $|\phi _{n}(z)|\leq 1 $ for all $z\in D$, there is a subsequence $\{\phi _{n_{k}}\}$ which converges uniformly on all compact subsets of $D$ to an analytic function $h$ on $D$. Since $\lim _{k\rightarrow \infty }\phi _{n_{k}}'(z)=h'(z)$ for every $z\in D$, we have 
+\[|h(z_0)|=\lim _{k\rightarrow \infty }|\phi _{n_{k}}'(z_0)|=\eta _{0}\]
+It remains to prove that $h\in \mathrm{\Sigma} $. For every $z\in D$, $|h(z)|=\lim _{k\rightarrow \infty }|\phi _{n_{k}}(z)|\leq 1$ for all zin	$D$ as $\phi _{n_{k}}$ is a function from $D$ to $U$. If $|h(z_1)|=1$ for some $z_1\in D$, by the maximum modulus theorem or the open mapping theorem, $h$ is constant but $|h'(z_0)|=\eta _{0}>0$. This is again a contradiction. Thus, $h:D\rightarrow U$. Since $\phi _{n}$ is 1-1 analytic and $\phi _{n}\rightarrow h$ uniformly on all compact sets, we get that $h$ is 1-1.
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Assume that $h(z_0)=0$. If $h(z_0)=\beta \ne 0$ then $f=\phi _{\beta }\circ h\in \mathrm{\Sigma} $ satisfies
+\[|f'(z_0)|=|\phi _{\beta }'(\beta )h'(z_0)|=\dfrac{h'(z_0)}{1-|\beta |^2}>|h'(z_0)|\]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+Prove or disprove whether for a $f:D\rightarrow U$ is analytic when $|f'(z_0)|\leq |h'(z_0)|$.
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+This is true. Define $g=f\circ h^{-1}$. Then, $g:U\rightarrow U$ is analytic.
+\[g'(0)=f'(z_0)\big(h^{-1}\big)(0)=f'(z_0)\dfrac{1}{h'(z_0)}=\dfrac{f'(z_0)}{h'(z_0)}\]
+since $|g'(0)|\leq 1$ which implies that $|f'(z_0)|\leq |h'(z_0)|$. 
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+If $g:U\rightarrow U$ is 1-1 onto analytic with $g(0)=0$ and $g'(0)>0$, then $g(z)=z$. 
+\end{thm}
+\vspace{2ex}
+\begin{thm}
+If $D$ is simply connected ($D\ne {\bm C}$) then for every $z_0\in D$, there is a unique 1-1 analytic function $h$ from $D$ onto $U$ satisfying $h(z_0)=0$ and $h'(z_0)>0$.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+If $h\in \mathrm{\Sigma} $ satisfies $|h'(z_0)|=\mathrm{sup}\{\phi '(z_0)\;|\; \phi \in \mathrm{\Sigma} \}$, then $h(D)=U$ and $h(z_0)=0$. If there exists $f$ and $g$ both satisfying the conditions above, define $h=f\circ g^{-1}$ and $h(0)=0$ and $h'(0)=h'(z_0)/g'(z_0)>0$ giving $h(z)=z$. 
+\end{proof}
+\vspace{2ex}
+

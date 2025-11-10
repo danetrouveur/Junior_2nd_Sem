@@ -1,0 +1,100 @@
+\section{Lecture 15 (November 4th)}
+\begin{rmk}
+Last time, we saw various properties of separable extensions. Today, we will learn about normal extensions.
+\end{rmk}
+\vspace{2ex}
+\begin{prop}
+(14.23) If $\mathrm{char}(K)=0$, then every algebraic extension of $K$ is separable. 
+\end{prop}
+\vspace{2ex}
+\begin{prop}
+(14.24) (Primitive element theorem) Every finite separable extension is simple.
+\end{prop}
+\vspace{2ex}
+\begin{defi}
+(14.26) Let $F/K$ be an algebraic extension. $[F:K]_{s}$ denotes the separability degree of $F/K$ which is equal to the number of $K$-embeddings from $F\rightarrow \bar{K}$.
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+(14.28) Let $F/E/K$ be algebraic extensions.
+\[[F:K]_{s}=[F:E]_{s}[E:K]_{s}\]
+\end{prop}
+\vspace{2ex}
+\begin{cor}
+If $F/K$ is finite, $[F:K]_{s}<\infty $ (and $[F:K]_{s}$ divides $[F:K]$). 
+\end{cor}
+\vspace{2ex}
+\section{Chapter 14.3 Normal Extensions}
+\begin{defi}
+(14.15) An algebraic extension $F/K$ is normal if for every $\alpha \in F$, the minimal polynomial $\mathrm{irr}(\alpha ,K)$ splits in $F$.
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+$F/K$ is normal if and only if the following condition holds: if $F$ contains a zero of an irreducible polynomial $p(t)\in L[t]$, then $p(t)$ splits into linear factors over $F$. 
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+(Motivation) Let $p(t)\in K[t]$ be irreducible. Say $p(t)=\prod _{i=1}^{n}(t-\lambda _{i})\in \bar{K}[t]$. Consider a $K$-embedding $\sigma :E\hootrightarrow \bar{K}$ where $E=K(\lambda_1,\ldots ,\lambda _{n})$ is the splitting field of $p(t)$. We want to figure out the image $\sigma (E)\subset \bar{K}$. We claim that $\sigma (E)=E$. For this, observe that the image of $\lambda _{i}$ under $\sigma $ is $\alpha _{j}$ for some $j$. In other words, $\sigma $ permutes $\{\lambda_1,\lambda_2,\ldots ,\lambda_{n}\}$ ($\sigma :\{\lambda _{1},\ldots ,\lambda _{n}\}\rightarrow \{\lambda_1,\ldots ,\lambda _{n}\}$). All in all, $\sigma $ gives rise to a $K$-automorphism on $E$. 
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+Let $F/K$ be an algebraic extension. Fix an algebraic closure $\bar{K}$ of $K$ with $K\subset F\subset \bar{K}$. The following are equivalent:
+\begin{itemize}
+\item[(i)] There exists a subset $S\subset K[t]$ such that $F$ is a splitting field for $S$.
+\item[(ii)] If $\sigma :F\rightarrow \bar{K}$ is a $K$-embedding, then $\sigma (F)=F$.
+\item[(iii)] $F/K$ is normal.
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Assume that condition (ii) holds. To show that $F$ is normal over $K$, let $\alpha $ be an element of $F$. Suppose we are given a zero $\beta $ of $\mathrm{irr}(\alpha ,K)$ in $\bar{K}$. We wish to show that $\beta \in F$.
+
+\bigskip
+
+First we have a $K$-isomorphism $\sigma_0:K(\alpha )\rightarrow K(\beta )$. Using the isomorphism extension theorem, we can extend $\sigma $ to a $K$-embedding $\sigma :F\rightarrow \bar{K}$. By our assumption, $\sigma (F)=F$. In particular, $\beta =\sigma (\alpha )\in F$.
+\begin{center}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  >={Straight Barb[length=3pt,width=6pt]}, % barbed arrowhead (side lines)
+  node font=\small]
+
+  % corners
+  \node (E) at (0,5) {$F$};
+  \node (F) at (3,5) {$\bar{K}$};
+  \node (A) at (0,2.5) {$K(\alpha )$};
+  \node (B) at (0,0) {$K$};
+  \node (C) at (3,0) {$K$};
+  \node (D) at (3,2.5) {$K(\beta )$};
+
+  % vertical arrows (pointing up)
+  \draw[->] (B) -- (A);
+  \draw[->] (C) -- (D);
+  \draw[->] (A) -- (E);
+  \draw[->] (D) -- (F);
+  \draw[->] (A) -- node[midway,above] {$\sigma _{0}$}(D);
+  \draw[->] (E) -- node[midway, above] {$\sigma $} (F);
+
+  % horizontal arrows (pointing right) with labels above
+  \draw[->] (B) --  (C);
+
+  % commutator symbol in the middle (clockwise)
+
+\end{tikzpicture}
+\end{center}
+
+\end{proof}
+\vspace{2ex}
+\begin{lem}
+Let $F/K$ be an algebraic extension, and let $\sigma :F\rightarrow F$ be a $K$-embedding. Then $\sigma (F)=F$.
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+Let $\alpha _{0} \in F$ be an element. Set $\mathrm{irr}(\alpha_0 ,K)=(t-\alpha_0 )(t-\alpha_1)\ldots (t-\alpha_{r})(t-\beta_1)\ldots (t-\beta_{s})\in \bar{K}[t]$ where $\alpha _{i}\in F$ and $\beta _{j}\in \bar{K}\backslash F$. Then $\sigma $ permutes $\{\alpha,\alpha_1,\ldots ,\alpha _{r}\}$ so that $\alpha_0 =\sigma(\alpha _{i}) $ for some $0\leq i\leq r$. 
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+Let $F/K$ be a finite extension. Then $F/K$ is normal if and only if
+\[[F:K]_{s}=|\mathrm{Aut}(F/K)|\]
+
+\end{rmk}
+\vspace{2ex}
+

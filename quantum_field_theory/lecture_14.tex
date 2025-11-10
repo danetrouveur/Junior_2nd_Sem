@@ -1,0 +1,91 @@
+\section{Lecture 14 (October 29th)}
+\begin{recall}
+We have previously observed that for connected terms, the S-matrix elements could be written as the following using the LSZ reduction:
+\[S_{fi}=(2\pi )^{4}\delta ^{(4)}\Big(\sum ^{n}_{i=1}p_{i}-\sum ^{m}_{j=1}q_{j}\Big)\prod^{n}_{i=1}\dfrac{1}{\sqrt{(2\pi )^3\cdot 2E_{p_{i}}}}\prod^{n}_{j=1}\dfrac{1}{\sqrt{(2\pi )^3\cdot 2E_{q_{j}}}}\cdot i\mathcal{M}_{fi}\]
+\end{recall}
+\vspace{2ex}
+\begin{defi}
+(Scattering cross sections, $n=2\rightarrow m$) We define the scattering cross section as 
+\[\begin{align*}
+\sigma =&\frac{(\text{transition probability per unit time \& volume })}{(\text{flux of incident particles}) \times (\text{number density of target particles})}\\
+=&\dfrac{1}{|\vec{J}_{\mathrm{inc}}|\cdot \dfrac{1}{V}}\times \dfrac{|S_{fi}|^2\times \Big(\dfrac{1}{V/(2\pi )^3}\Big)^{2+m}}{T\times V}
+\end{align*}\]
+Note that the normalisation of the momentum eigenstates were given as $\langle \vec{p}|\vec{p}\rangle =\delta ^{(3)}({\bf 0})$. Then,
+\[V=\int d^3\vec{x}\,=(2\pi )^3\int \dfrac{d^3\vec{x}}{(2\pi )^3}e^{i{\bf 0}\cdot \vec{x}}=(2\pi )^3\cdot \delta ^{(3)}({\bf 0})\]
+The normalisation of the vectors thus become
+\[\dfrac{1}{\sqrt{V}/(2\pi )^3}|\vec{p}\rangle \]
+which justifies the substitution above. Then,
+\[\begin{align*}
+\sigma =&\dfrac{1}{|\vec{J}_{inc}|\cdot T}\dfrac{\Big((2\pi )^{4}\cdot \delta ^{(4)}(p_1+p_2-\sum _{j}p_{j})\Big)^2}{(V(2\pi )^3)^{2+m}}|\mathcal{M}_{fi}|^2\\
+&\times \dfrac{1}{(2\pi )^3\cdot 2E_{p_1}}\cdot \dfrac{1}{(2\pi )^3\cdot 2E_{p_2}}\cdot \prod^{m}_{j=1}\dfrac{1}{(2\pi )^3\cdot 2E_{q_{j}}}
+\end{align*}\]
+Note that $(2\pi )^{4}\delta ^{(4)}({\bf 0})=V\cdot T$ and that $\vec{q}_{j}\sim \vec{q}_{j}+d\vec{q}_{j}$
+\[\sigma =\dfrac{1}{|\vec{J}_{\mathrm{inc}}|\cdot V}(2\pi )^{4}\cdot \delta ^{(4)}(p_1+p_2-\sum ^{m}_{j=1}q_{j})|\mathcal{M}_{fi}|^2\dfrac{2E_{p_1}\cdot 2E_{p_2}}\prod^{m}_{j=1}\dfrac{1}{2E_{q_{j}}\cdot V}\]
+The differential scattering cross section for final states within the infinitesimal element $d^3\vec{q}_{j}$ is then
+\[d\sigma =\sigma \times \prod^{m}_{j=1}\dfrac{V\,d^3\vec{q}_{j}}{(2\pi )^3}\]
+noting that the number of states within $\vec{q}_{j}\sim \vec{q}_{j}+d^3\vec{q}_{j}$ is equal to
+\[\dfrac{V\,d^3\vec{q}}{(2\pi )^3}\leftrightarrow \dfrac{1}{(2\pi )^3/V}\]
+which is the density of momentum states. We conclude:
+\[d\sigma =\dfrac{1}{|\vec{J}_{\mathrm{inc}}|\cdot V}\dfrac{1}{2E_{p_1}\cdot 2E_{p_2}}\cdot (2\pi )^{4}\delta ^{(4)}(p_1+p_2-\sum _{j}q_{j})|\mathcal{M}_{fi}|^2\cdot \prod^{m}_{j=1}\dfrac{d^3\vec{q}_{j}}{(2\pi )^3\cdot 2E_{q_{j}}}\]
+replacing $|\vec{J}_{\mathrm{inc}}|\cdot V=1/|\vec{v}_{1}-\vec{v}_{2}|$
+\[d\sigma =\dfrac{1}{4\sqrt{(p_1\cdot p_2)^2-m_1^2m_2^2}}(2\pi )^{4}\delta ^{(4)}(p_1+p_2-\sum _{j}p_{j})|\mathcal{M}_{fi}|^2\prod^{m}_{j=1}\dfrac{d^3\vec{q}_{j}}{(2\pi )^3\cdot 2E_{q_{j}}}\]
+written in a Lorentz covariant manner.
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+(Special case with $m=2$, $2\rightarrow 2$ scattering) In the center of mass frame ($\vec{p}_{1}+\vec{p}_{2}=0=\vec{q}_{1}+\vec{q}_{2}$),
+\[\begin{align*}
+\sigma =&\int d\sigma =\int \dfrac{d^3\vec{q}_{1}}{(2\pi )^3\cdot 2E^{m_1}_{q_1}\cdot 2E^{m_2}_{q_{2}}}\dfrac{2\pi \cdot \delta (E_{p_1}^{M_1}+E_{p_2}^{M_2}-E_{q_{1}}^{m_1}-E_{-q_{1}}^{m_2})}{|\vec{v}_{1}-\vec{v}_{2}|\cdot 2E_{p_1}^{M_1}\cdot 2E_{p_2}^{M_2}}\cdot |\mathcal{M}_{fi}|^2\\
+=&\int \dfrac{q_1^2\,dq_1\,d\mathrm{\Omega} }{(2\pi )^2\cdot 2E_{q_1}^{m_1}\cdot 2E_{-q_1}^{m_2}}\cdot \dfrac{\delta (E_{CM}-\sqrt{q_1^2+m_1}-\sqrt{q_1^2+m_2^2})}{|\vec{v}_{1}-\vec{v}_{2}|\cdot 2E_{p_1}^{M_1}\cdot 2E_{p_2}^{M_2}}|\mathcal{M}_{fi}|^2\\
+=&\int d\mathrm{\Omega} \,\dfrac{1}{|\vec{v}_{1}-\vec{v}_{2}|\cdot 2E_{p_1}^{M_1}\cdot 2E_{p_2}^{M_2}}\cdot \int dq_{1}\cdot \dfrac{q_1^2}{16\pi ^2\cdot E_{q_1}^{m_1}\cdot E_{-q_1}^{m_2}}\dfrac{\delta (q_1-q_1^{CM})}{\dfrac{q_1}{E^{m_1}_{q_1}}+\dfrac{q_1}{E^{m_2}_{-q_1}}}\cdot |\mathcal{M}_{fi}|^2\\
+=&\int d\mathrm{\Omega} \,\dfrac{1}{|\vec{v}_{1}-\vec{v}_{2}|2E_{p_1}^{M_1}\cdot 2E_{p_2}^{M_2}}\cdot \dfrac{q_1^{CM}}{16\pi ^2\cdot E_{CM}}\cdot |\mathcal{M}_{fi}|^2
+\end{align*}\]
+we thus have
+\[\begin{align*}
+\Big(\dfrac{d\sigma }{d\mathrm{\Omega} }\Big)_{CM}=&\dfrac{1}{|\vec{v}_{1}-\vec{v}_{2}|\cdot 2E_{p_1}^{M_1}\cdot 2E_{p_2}^{M_2}}\cdot \dfrac{q_1^{CM}}{16\pi ^2\cdot E_{CM}}|\mathcal{M}_{fi}|^2\\
+=&\dfrac{q_1^{CM}}{64\pi ^2\cdot p_1^{CM}E_{CM}^2}\cdot |\mathcal{M}_{fi}|^2
+\end{align*}\]
+where $\vec{v}_{i}=\vec{p}_{i}/E^{M_{i}}_{p_{i}}$. We notice that in the massless limit,
+\[\dfrac{1}{64\pi ^2\cdot E_{CM}^2}\cdot |\mathcal{M}_{fi}|^2\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Decay rates, $n=1\rightarrow m$) The decay rate is defined as the probability per unit time that the particle will decay which is equal to one over the life-time over the particle.
+\[\begin{align*}
+\mathrm{\Gamma} =&\dfrac{|S_{fi}|^2\Big(\dfrac{1}{V/(2\pi )^3}\Big)^{1+m}}{T}\\
+=&(2\pi )^{4}\delta ^{(4)}(p_1-\sum ^{m}_{j=1}q_{j})\cdot |\mathcal{M}_{fi}|^2\dfrac{1}{2E_{p_1}}\cdot \prod^{m}_{j=1}\dfrac{1}{2E_{q_{j}}\cdot V}
+\end{align*}\]
+The differential decay rate is given by
+\[d\mathrm{\Gamma} =\mathrm{\Gamma} \times \prod^{m}_{j=1}\dfrac{V\,d^3\vec{q}}{(2\pi )^3}\]
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+(Correlation functions \& path integrals) The grand question from all the above is -- how do we compute 
+\[\begin{align*}
+G^{(N)}(x_1,\ldots ,x_{N})=\langle 0|T\hat{\phi }(x_1)\ldots \hat{\phi }(x_{N})|0\rangle \\
+\tilde{G}^{(N)}(p_1,\ldots ,p_{N})=\int \prod_{i}d^{4}x_{i}\,e^{-ip_{i}\cdot x_{i}}G^{(N)}(x_1,\ldots ,x_{n})
+\end{align*}\]
+The answer is, path integrals!
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+(Path integrals in quantum mechanics) We consider a 1-dimensional quantum system with $\hat{H}(\hat{q},\hat{p})=\hat{p}^2/2m+V(\hat{q})$. Consider the following basis: $\{|q;t\rangle _{H}\}$.
+\[|q;t\rangle _{H}=e^{-i\hat{H}(0-t)}|q\rangle \]
+which is a state localised at $q$ at time $t$ in the Heisenberg picture. The transition amplitude is
+\[{}_{H}\langle q_{f};t_{f}|q_{i};t_{i}\rangle _{H}\]
+The natural question is, what is the transition amplitude in terms of a path integral?
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(Phase space path integral) We split the time interval $t_{f}-t_{i}$ into $N+1$ segments 
+\[\langle q_{f};t_{f}|q_{i};t_{i}\rangle =\langle q_{f}|e^{-i\hat{H}(t_{f}-t_{N})}e^{-i\hat{H}(t_{N}-t_{N-1})}\ldots e^{-i\hat{H}(t_{1}-t_{i})}|q_{i}\rangle \]
+placing the completenes relation between all of these,
+\[\begin{align*}
+\langle q_{f};t_{f}|q_{i};t_{i}\rangle =&\int dq_{1}\ldots dq_{N}\,\langle q_{f}|e^{-i\hat{H}(t_{f}-t_{N})}|q_{N}\rangle \langle q_{N}|\ldots |q_{1}\rangle \langle q_{1}|e^{-i\hat{H}(t_{1}-t_{i})}|q_{i}\rangle \\
+=&\int dq_{1}\ldots dq_{N}\,\langle q_{f};t_{f}|q_{N};t_{N}\rangle \ldots \langle q_1;t_1|q_{i};t_{i}\rangle 
+\end{align*}\]
+where $t_{n}=t_{i}+n\cdot \Delta t$ ($n=0,\ldots ,N+1$) and 
+\[\delta t=\dfrac{t_{f}-t_{i}}{N+1}\]
+\end{thm}
+\vspace{2ex}
+

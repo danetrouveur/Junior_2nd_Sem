@@ -1,0 +1,57 @@
+\section{Lecture 13 (October 28th)}
+\begin{recall}
+Let $f(t)\in K[t]$ and $E$ be the splitting field for $f(t)$. We have seen (1) $[E:K]$ and (2) the number of $K$-embeddings $E\rightarrow \bar{K}$. Today's goal is to study (2) and separability. 
+\end{recall}
+\vspace{2ex}
+\section{Chapter 14.4 Separable Extensions}
+\begin{defi}
+(14.9) Let $K$ be a field. A polynomial $f(t)\in K[t]$ is separable if its factorisation over $\bar{K}$ has no multiple roots. Let $F/K$ be a algebraic extension. An element $\alpha \in F$ is separable over $K$ if the minimal polynomial $\mathrm{irr}(\alpha ,K)$ over $K$ is separable. We say that $F/K$ is separable if every $\alpha \in F$ is separable over $K$. 
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+Let $f(t)\in K[t]$ be a nonzero polynomial. Then, $f(t)$ is separable over $K$ if $f(t)$ has no multiple roots in $\bar{K}$. The following are equivalent:
+\begin{itemize}
+\item[(i)] $f(t)$ is separable over $K$
+\item[(ii)] $f(t)$ and $f'(t)$ have no common root in $\bar{K}$
+\item[(iii)] $\mathrm{gcd}(f(t),f'(t))=1$
+\end{itemize}
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+The proof is yours!
+\end{proof}
+\vspace{2ex}
+\begin{prop}
+(14.23) Let $K$ be a field of characteristic zero and let $f(t)\in K[t]$ be a irreducible polynomial. Then, $f(t)$ is separable. Moreover, algebraic extensions of fields of characteristic zero are separable.
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+Set $f(t)=a_{n}t^{n}+\ldots +a_1t+a_0$ so that $f'(t)=na_{n}t^{n-1}+\ldots +a_1$. Note that $\mathrm{deg}(f')<\mathrm{deg}(f)$ since $\mathrm{char}(K)=0$. Suppose that $\alpha \in \bar{K}$ is a common root of $f(t)$ and $f'(t)$. Then $\mathrm{irr}(\alpha ,K)|f'(t),f(t)$. Since $f(t)$ is irreducible over $K$, $\mathrm{deg}\big(\mathrm{irr}(\alpha ,K)\big)=\mathrm{deg}\big(f(t)\big)$. This contradicts to the observation that $\mathrm{irr}(\alpha ,K)| f'(t)$ because $\mathrm{deg}(f')<\mathrm{deg}(f)$. 
+\end{proof}
+\vspace{2ex}
+\begin{prop}
+(14.24) (Primative element theorem) Every finite separable extension is simple. 
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+The proof is ours and is technical. 
+\end{proof}
+\vspace{2ex}
+\begin{cor}
+(14.25) Let $F/K$ be a finite separable extension. Then there are exactly $[F:K]$ number of $K$-embeddings $F\rightarrow \bar{K}$. 
+\end{cor}
+\vspace{2ex}
+\begin{proof}
+By the primative element theorem, $F=K(\alpha )$ for some $\alpha \in F$. Since $\alpha $ is separable over $K$, $\mathrm{irr}(\alpha ,K)$ has no multiple roots in $\bar{K}$. Applying proposition (14.3), the number of $K$-embeddings $F=K(\alpha )\hookrightarrow \bar{K}$ equals the number of distinct roots in $\bar{K}$ of $\mathrm{irr}(\alpha ,K)$ which is equal to 
+\[\mathrm{deg}\big(\mathrm{irr}(\alpha ,K)\big)=[K(\alpha ):K]\]
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+Let $\alpha \in F$ be an algebraic element over $K$. Then the number of $K$-embeddings $K(\alpha )\hookrightarrow \bar{K}$ is the number of distinct zeros of $\mathrm{irr}(\alpha ,K)$ in $\bar{K}$, and both are less or equal to $\mathrm{deg}\big(\mathrm{irr}(\alpha ,K)\big)=[K(\alpha ),K]$. According to corollary (14.25), the euqality holds if and only if $\alpha $ is separable over $K$. 
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(14.26) The separability degree of an algebraic extension $F/K$ denoted $[F:K]_{s}$, is the number of $K$-embeddings $F\hookrightarrow \bar{K}$. 
+\end{defi}
+\vspace{2ex}
+

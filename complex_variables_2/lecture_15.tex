@@ -1,0 +1,91 @@
+\section{Lecture 15 (November 6th)}
+\begin{recall}
+We have previously shown the result (for $0<\alpha <1$) 
+\[\int ^{\infty }_{-\infty }\dfrac{e^{\alpha x}}{1+e^{x}}\,dx=\dfrac{\pi }{\sin \alpha \pi }\]
+where the change of variables $x=t^{\alpha }$ gives
+\[\int ^{\infty }_{0}\dfrac{x^{\alpha -1}}{1+x}\,dx=\dfrac{\pi }{\sin \alpha \pi }\]
+Now put $x=t^{\beta }$ for $0<\beta <\infty $.
+\[\int ^{\infty }_{0}\dfrac{x^{\alpha -1}}{1+x}\,dx=\int ^{\infty }_{0}\dfrac{t^{\alpha \beta -\beta }}{1+t^{\beta }}\beta t^{\beta-1}\,dt=\beta \int ^{\infty }_{0}\dfrac{t^{\alpha \beta -1}}{1+t^{\beta }}\,dt=\dfrac{\pi }{\alpha \pi }\]
+Take $\alpha =1/\beta $ such that $\beta >1$. We get
+\[\int ^{\infty }_{0}\dfrac{1}{1+t^{\beta }}\,dt=\dfrac{1}{\beta \sin \dfrac{\pi }{\beta }}\]
+for $\beta >1$. 
+\end{recall}
+\vspace{2ex}
+\begin{recall}
+We have considered Fourier transform of 
+\[f(x)=\begin{cases}
+1&-1<x<1\\
+0&|x|>1
+\end{cases}\]
+which was 2 times the $\mathrm{snc}$ function
+\[\hat{f}(t)=\int ^{\infty }_{-\infty }f(x)e^{-itx}\,dx=\dfrac{2\sin t}{t}\]
+We want to check that the inverse transform properly gives the original function.
+\end{recall}
+\vspace{2ex}
+\begin{ex}
+Find $\lim _{R\rightarrow \infty }\int _{-R}^{R}\dfrac{\sin x}{x}e^{itx}\,dx$. Notice that the kernel is a entire function, and that
+\[\int ^{R}_{-R}f(z)\,dz=\int _{C_{R}}f(z)\,dz=\int _{C_{R}}\dfrac{e^{iz}-e^{-iz}}{2iz}e^{itz}\,dz\]
+where $C_{R}$ is defined as contour the avoids the origin. Then,
+\[\begin{align*}
+\int ^{R}_{-R}f(z)\,dz=&\int _{C_{R}}\dfrac{1}{2i}\Big[\dfrac{e^{i(t+1)z}-e^{i(t-1)z}}{z}\Big]\,dz\\
+=&\dfrac{1}{2i}\Big[\int _{C_{R}}\dfrac{e^{i(t+1)z}}{z}\,dz-\int _{C_{R}}\dfrac{e^{i(t-1)z}}{z}\,dz\Big]\\
+=&\varphi _{R}(t+1)-\varphi _{R}(t-1)
+\end{align*}\]
+where $\varphi  _{R}(t)=\dfrac{1}{2i}\int _{C_{R}}\dfrac{e^{itz}}{z}\,dz$. Notice that
+\[\Big|\dfrac{e^{itz}}{z}\Big|=\Big|\dfrac{e^{itRe^{i\theta }}}{Re^{i\theta }}iRe^{i\theta }\Big|=|e^{-tR\sin \theta }|\]
+To evaluate 
+\[\varphi _{R}(t)=\dfrac{1}{2i}\int_{C_{R}}\dfrac{e^{itz}}{z}\,dz\]
+where for $t<0$, we choose a POSCC so that $\theta $ is from $0$ to $-\pi $. We find
+\[\lim _{R\rightarrow \infty }\int _{C_{R}}\dfrac{1}{2i}\dfrac{e^{itz}}{z}\,dz=0\]
+For $t>0$, we choose the POSCC $\mathrm{\Gamma} _{R}=C_{R}\cup \{\mathrm{upper\ semi\ circle}\}$. We find
+\[\int _{\mathrm{\Gamma} _{R}}\dfrac{e^{itz}}{z}\,dz=2\pi i\]
+thus 
+\[\lim _{R\rightarrow \infty }\int _{C_{R}}\dfrac{1}{2i}\dfrac{e^{itz}}{z}\,dz=\pi \]
+Our goal was
+\[\begin{align*}
+\lim _{R\rightarrow \infty }\int ^{R}_{-R}\dfrac{\sin x}{x}e^{itx}\,dx=&\lim _{R\rightarrow \infty }\int _{C_{R}}\dfrac{\sin x}{x}e^{itx}\,dx=\lim _{R\rightarrow \infty }\Big[\varphi  _{R}(t+1)-\varphi _{R}(t-1)\Big]\\
+=&\lim _{R\rightarrow \infty }\varphi _{R}(t+1)-\lim _{R\rightarrow \infty }\varphi _{R}(t-1)\\
+=&\begin{cases}
+\pi &-1<t<1\\
+\pi /2&t=0\\ 
+0& |t|>1\\
+\end{cases}
+\end{align*}\]
+Now, $\hat{f}(t)=2\sin t/t$ gives
+\[\lim _{R\rightarrow \infty }\int _{-R}^{R}\hat{f}(t)e^{ixt}\,dt\]
+We can further find that $\lim _{R\rightarrow \infty }\varphi (0)=(i\pi )/2i=\pi /2$. 
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+(Big theorem) 
+\begin{itemize}
+\item[(i)] If $f$ and $f'$ are $L^{1}$, $\hat{f'}(t)=it\hat{f}(t)$ 
+\item[(ii)] If $f(x)$ and $xf(x)$ are in $L^{1}$, then
+\[\big(xf(x)\big)\hat{}(t)=i\big(\hat{f}\Big)'(t)\]
+and
+\[\mathcal{F}\big(xf(x)\big)(t)=i\big(\hat{f}\big)'(t)\]
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+(I)
+\[\hat{f'}(t)=\int ^{\infty }_{-\infty }f'(x)e^{-itx}\,dx=\Big[f(x)e^{-itx}\Big]^{\infty }_{x=-\infty }+\int ^{\infty }_{-\infty }f(x)ite^{-itx}\,dx\]
+However, the first term is zero as
+\[\lim _{x\rightarrow \infty }f(x)=f(0)+\int ^{\infty }_{0}f'(x)\,dx\]
+where $\int ^{\infty }_{0}f'(x)\,dx=\lim _{x\rightarrow \infty }f(x)-f(0)$ and if $\lim _{x\rightarrow \infty }f(x)=\alpha $, $\alpha =0$. 
+(II) 
+\[\dfrac{d }{d t}\hat{f}(x)=\dfrac{d }{d t}\int ^{\infty }_{-\infty }f(x)e^{-ixt}\,dt=\int ^{\infty }_{-\infty }-ixf(x)e^{-ixt}\,dt=-i\Big[xf(x)\Big]^{\widehat{}} (t)  \]
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Last class we saw that for $f(x)=\exp (-x^2/2)$ implies $\hat{f}(t)=\sqrt{2\pi }\exp (-t^2/2)$. Then,
+\[f'(x)=-xe^{-x^2/2}\]
+so that
+\[f'(x)=-xf(x)\]
+Applying the Fourier transform, 
+\[it\hat{f}(t)=-i\big(\hat{f}\big)'(t)\]
+and
+\[\big(\hat{f}\big)'(t)=-t\hat{f}(t)\]
+\end{ex}
+\vspace{2ex}
+

@@ -1,0 +1,50 @@
+\section{Lecture 15 (October 27th)}
+\begin{defi}
+(Time-dependent pertubation theory) In time-dependent pertubation theory, the Hamiltonian dependents on time as
+\[\hat{H}(t)=\hat{H}^{(0)}+\lambda \hat{H}^{(1)}(t)\]
+we assume that we know all information about $\hat{H}^{(0)}$, with $\{E^{(0)}_{n},|\phi  _{n}^{(0)}\rangle \}$. We can imagine like a laser being shot into a hydrogen atom and transitions occuring, similar to scattering and collisions. The goal is to of course solve
+\[i\hbar \dfrac{\partial }{\partial t}|\psi (t)\rangle =\hat{H}(t)|\psi (t)\rangle \]
+with $|\psi (t)\rangle =\sum _{n}c_{n}(t)e^{-iE_{n}t/\hbar }|\phi _{n}\rangle $. Substituting, we have a coupled ordinary differential equation with respect to $c_{n}(t)$. Our first goal will be to derive this. We have
+\[\begin{align*}
+&i\hbar \sum _{n}\Big(\dot{c}_{n}(t)+\Big(-\dfrac{iE_{n}}{\hbar }\Big)c_{n}(t)\Big)e^{iE_{n}t/\hbar }|\phi _{n}\rangle \\
+&=\sum _{n}\Big(E^{(0)}_{n}+\lambda \hat{H}^{(1)}(t)\Big)c_{n}(t)e^{-iE_{n}t/\hbar }|\phi_{n} \rangle 
+\end{align*}\]
+Applying $\langle \phi _{m}|$ on both sides, 
+\[i\hbar \dot{c}_{m}(t)e^{-iE_{m}t/\hbar }=\sum _{n}\lambda \langle \phi _{m}|\hat{H}^{(1)}(t)|\phi _{n}\rangle e^{-iE_{n}t/\hbar }c_{n}(t)\]
+We conclude
+\[i\hbar \dfrac{d c_{m}(t)}{d t}=\sum _{n}e^{i(E_{m}-E_{n})t/\hbar }\lambda H^{(1)}_{mn}(t)c_{n}(t) \]
+which is exact. In reality, in many cases, at $t=t_{i}$, only one state is occupied, say $|\phi _{k}\rangle $, and 
+\[c_{n}(t_{i})=\delta _{nk}\]
+Let's now approximate starting here. 
+\[i\hbar \dfrac{d c_{m\ne k}(t)}{d t}\approx e^{i(E_{m}-E_{k})t/\hbar }H^{(1)}_{mk}(t)c_{k}(t) \]
+is the first order approximation as we expect the initial energy to be accumulated at $E_{k}$. Solving,
+\[c_{m\ne k}(t)-c_{m\ne k}(t_i)=\int ^{t}_{t_{i}}dt'\,\dfrac{d c_{m\ne k}(t')}{d t'} =\int ^{t}_{t_{i}}dt'\,\dfrac{1}{i\hbar }e^{i(E_{m}-E_{k})t'/\hbar }V_{mk}(t')\]
+Let's return to the original ansatz. We want the transition applitude $\langle \phi |\psi (t)\rangle =c_{m}(t)e^{-iE_{m}t}/\hbar $. Where the transition probability is given by $|\phi _{m}|\psi (t)\rangle |^2=|c_{m}(t)|^2$. Notice how
+\[\sum _{m}|c_{m}(t)|^2=\sum _{m}\langle \psi (t)|\phi _{m}\rangle \langle \phi _{m}|\psi (t)\rangle =\langle \psi (t)|\psi (t)\rangle =1\]
+and the coefficients are normalised. 
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+(Harmonic oscillator) Consider the simple harmonic oscillator with $\lambda H^{(1)}(t')=qExe^{-(t')^2/\tau ^2}$ where $\tau$ can be interpreted as pulse width. Take $t_{i}=-\infty $ and the ground state $n=0$. Up to the first order, we have
+\[c_{n \ne 0}(t)=\dfrac{qE}{i\hbar }\int ^{t}_{-\infty }dt'\,e^{i\omega _{n0}t'}\langle n|x|0\rangle e^{-(t')^2/\tau ^2}\]
+where $\omega _{mn}=(E_{m}-E_{n})/\hbar $. Also, notice that $\langle n|x|0\rangle $ is not zero only if $n=1$. Computing the Gaussian integral,
+\[P_{m}(\infty )=\pi \Big(\dfrac{qE\tau }{\hbar }\Big)^2\times |\langle m|x|0\rangle |^2\times e^{-\omega ^2_{k0}\tau ^2/4}\]
+which is only nonzero for $m=1$.
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Other example) Let
+\[\hat{H}^{(1)}(t)=\Big(\hat{M}e^{i\omega t}+\hat{M}^{\dagger }e^{i\omega t}\Big)\]
+where we assume that $\hat{M}=\hat{M}^{\dagger }$ for simplicity. Then,
+\[\hat{H}^{(1)}(t)=\hat{M}(e^{-i\omega t}+e^{i\omega t})\]
+For first order, let $t_{i}=0$ and $c_{n}(0)=\delta _{nk}$. We then have
+\[\begin{align*}
+c_{m\ne k}(t)=&\int ^{t}_{0}dt'\,\dfrac{1}{i\hbar }e^{i\omega _{mk}t'}\langle m|M|k\rangle \Big(e^{-i\omega t'}+e^{i\omega t'}\Big)\\
+=&\dfrac{1}{i\hbar }M_{mk}\dfrac{e^{i(\omega _{mk}\mp\omega )t}-1}{i(\omega _{mk}\mp \omega )}\\
+=&\dfrac{1}{i\hbar }M_{mk}\dfrac{1}{i(\omega _{mk}\mp \omega )}e^{i(\omega _{mk}\mp \omega )t/2}\Big(e^{i(\omega _{mk}\mp \omega )t/2}-e^{-i(\omega _{mk}\mp \omega )t/2}\Big)\\
+=&\dfrac{1}{i\hbar }M_{mk}\Big(\dfrac{\sin ((\omega _{mk}\mp \omega )t/2)}{(\omega _{mk}\mp \omega )t/2}\Big)^2e^{i(\omega _{mk}\pm \omega )t/2}
+\end{align*}\]
+
+\end{ex}
+\vspace{2ex}
+

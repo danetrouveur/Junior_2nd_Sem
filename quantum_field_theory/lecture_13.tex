@@ -1,0 +1,78 @@
+\section{Lecture 13 (October 27th)}
+\begin{thm}
+(S-matrix in the H-picture; LSZ formula for the Dirac fields) The $S$-matrix element for $(n,n')\rightarrow (m,m')$ scattering can be given as
+\[\begin{align*}
+S_{fi}=&\langle (\vec{q}_{1},j_{1}),\ldots ,(\vec{q}_{m},j_{m}),(\vec{q}_{1}',j_{1}'),\ldots ,(\vec{q}_{m'}',j'_{m'});\mathrm{out}|\\
+&|(\vec{p}_{1},i_{1}),\ldots ,(\vec{p}_{n},i_{n}),(\vec{p}_{1}',i_{1}'),\ldots ,(\vec{p}_{n}',i'_{n'});\mathrm{in}\rangle 
+\end{align*}\]
+The derivation of the LSZ reduction formula is given by
+\begin{itemize}
+\item[(i)] Preparation with
+\[\hat{b}^{i}(\vec{p})=\int d^3\vec{x}\,U_{+}^{i}(x)^{\dagger }\hat{\psi }(x)\qquad\&\qquad \hat{d}^{i}(\vec{p})^{\dagger }=\int d^3\vec{x}\,U^{i}_{-}(x)^{\dagger }\hat{\psi }(x)\]
+where
+\[U^{i}_{\pm,p}(x)=\dfrac{1}{\sqrt{(2\pi )^3\cdot 2E_{p}}}u^{i}_{\pm}(\vec{p})e^{\pm ip\cdot x}\]
+satisfying $(i\cancel{\partial }-m)U^{i}_{\pm}(x)=0$.
+\item[(ii)] Reducing the incoming $\vec{p}_{1}$of a particle
+\[\begin{align*}
+S_{fi}=&\langle f;\mathrm{out}|\hat{b}^{i_1}(\vec{p}_{1})|i\backslash (\vec{p}_{1}i_{1});\mathrm{in}\rangle \\
+=&\int d^3\vec{x}_{1}\,\langle f;\mathrm{out}|\hat{\psi }_{\mathrm{\in }}(x_1)^{\dagger }|i\backslash (\vec{p}_{1},i_{1});\mathrm{in}\rangle U^{i}_{+}(x)\\
+\approx & iZ^{-1/2}\int d^{4}\vec{x}_{1}\,(i\cancel{\partial }_{x_1}+m)\langle f;\mathrm{out}|\hat{\psi }(x_1)^{\dagger }|i\backslash (\vec{p}_{1},i_{1});\mathrm{in}\rangle U^{i_1}_{+,p_1}(x_1)
+\end{align*}\]
+\end{itemize}
+Repeating the same process, we arrive at the LSZ formula in the position space written as
+\[\begin{align*}
+S_{fi}\approx &(iZ^{-1/2})^{n+m}(-iZ^{-1/2})^{n'+m'}\int d^{4}x_1\ldots d^{4}y_1\ldots d^{4}x_1'\ldots d^{4}y_1'\ldots \\
+&\bar{U}^{j_{m}}_{+,q_{m}}(y_{m})(-i\cancel{\partial }_{y_{m}}+m)\ldots \bar{U}^{i_{1}'}_{-,p_1'}(x_1')(-i\cancel{\partial }_{x'}+m)\ldots \\
+&\langle T\hat{\bar{\psi }}(y'_{m'})\ldots \hat{\psi }(y_1)\ldots \hat{\bar{\psi }}(x_1)\ldots \hat{\psi }(x_1')\ldots \rangle \\
+&(i\cancel{\partial }_{x_1}+m)^{\leftarrow }U_{+,p_1}^{i_1}(x_1)\ldots (i\cancel{\partial }_{y'_{m'}}+m)^{\leftarrow}U^{j'_{m'}}_{-,q'_{m'}}(y'_{m'})\ldots 
+\end{align*}\]
+\end{thm}
+\vspace{2ex}
+\begin{rmk}
+\begin{itemize}
+\item[(i)] Time ordered Dirac operators must be aligned with the order of creation/annihilation operators. 
+\item[(ii)] The Spinor indices are contracted in pairs. 
+\item[(iii)] Correlation functions in the momentum space 
+\[G^{(N;M)}(X_1,\ldots ,X_{N};Y_1,\ldots ,Y_{M})=\langle T\hat{\psi }(X_1)\ldots \hat{\psi }(X_{N})\hat{\bar{\psi }}(Y_1)\ldots \hat{\bar{\psi }}(Y_{m})\rangle \]
+and
+\[\tilde{G}^{(N;M)}(P_1,\ldots ,P_{N};Q_1,\ldots ,Q_{M})=\int \prod d^{4}x_{i}\,e^{-iP_{i}\cdot X_{i}}\,d^{4}Y_{j}\,G^{(N;M)}(X,\ldots ;Y,\ldots )\]
+Then, the LSZ formula in the momentum space becomes
+\[\begin{align*}
+S^{(Cnt)}_{fi}=&(-)^{n'(n+m)+m'(n'+m)}(iZ^{-1/2})^{n+m}(-iZ^{-1/2})^{n'+m'}\\
+&\times \bar{u}_{-}^{i_{1}'}(\vec{p}_{1}')\dfrac{-\cancel{p}_{1}'+m}{\sqrt{(2\pi )^3\cdot 2E_{p'_{1}}}}\ldots \bar{u}_{+}^{j_{1}}(\vec{q}_{1})\dfrac{\cancel{q}_{1}+m}{\sqrt{(2\pi )^3\cdot 2E_{q_1}}}\ldots \\
+&\tilde{G}_{C}^{(n'+m;n+m')}(-p_1',\ldots ,-p'_{n'},q_{m},\ldots ,q_{1};q'_{m'},\ldots ,q'_{1},-p_1,\ldots ,-p_{n})\\
+&\times \dfrac{\cancel{p}_{1}+m}{\sqrt{(2\pi )^3\cdot 2E_{p_1}}}u^{i_1}_{+}(\vec{p}_{1})\ldots \dfrac{-\cancel{q}_{1}'+m}{\sqrt{(2\pi )^3\cdot 2E_{q_{1}}}}u_{-}^{j_{1}'}(\vec{q}_{1}')\ldots 
+\end{align*}\]
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+(S-matrix in the H-picture; LSZ formula for Maxwell fields) We make some comments on the following: for a massless spin-1 field, the LSZ (naive version) does not work. 
+\begin{itemize}
+\item[(i)] $\hat{A}_{\mu }(x)$ is not a gauge-invariant operator, creating unphysical states. Thus, we need to project into a transverse (physical) subspace which extremely complicates the LSZ formula. 
+\item[(ii)] No proper asymptotic single photon state in interacting gauge theory (QED), and true asymptotic states in QED are `dressed' [Faddeev, Kulish '70]. 
+\end{itemize}
+Good enough in connecting correlation functions and S-matrix elements in pertubative QFTs. 
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(Observable quantites) Consider how S-matrix elements must satisfy total momentum conservation. We do this by extracting the corresponding delta function! In the scalar case,
+\[\begin{align*}
+S_{fi}^{(cnt)}=((iZ)^{-1/2})^{n+m}\prod^{n}_{i=1}\dfrac{p_{i}^2+m^2}{\sqrt{(2\pi )^3\cdot 2E_{p_{i}}}}\cdot \prod^{m}_{j=1}\dfrac{q_{j}^2+m^2}{\sqrt{(2\pi )^3\cdot 2E_{q_{j}}}}\\
+&\tilde{G}^{(n+m)}_{C}(q_1,\ldots ,q_{m},-p_1,\ldots ,-p_{n})\\
+=&(2\pi )^{4}\delta ^{4}\Big(\sum ^{n}_{i=1}p_{i}-\sum ^{m}_{j=1}q_{j}\Big)\prod^{n}_{i=1}\dfrac{1}{\sqrt{(2\pi )^3\cdot 2E_{p_{i}}}}\prod^{m}_{j=1}\dfrac{1}{\sqrt{(2\pi )^3\cdot 2E_{q_{j}}}}\\
+&\times i\mathcal{M}_{fi}
+\end{align*}\]
+Comments:
+\begin{itemize}
+\item[(i)] $\mathcal{M}_{fi}$ is called the invariant matrix element (or scattering amplitude) which is proportional to corrlelation functions up to Dirac-delta function, and the external propagators, and spin/polarisation factors. 
+\item[(ii)] Correlation functions will be studied using path integrals with Feynman diagrams. 
+\end{itemize}
+We will have two particular cases of interest, 
+\begin{itemize}
+\item[(i)] $n=2$: scattering, where the differential cross section is obtained from $\mathcal{M}_{fi}$
+\item[(ii)] $n=1$: decaying, where the differential decay rates are obtained from $\mathcal{M}_{fi}$
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+

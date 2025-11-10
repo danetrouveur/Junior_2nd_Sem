@@ -1,0 +1,84 @@
+\section{Lecture 14 (October 30th)}
+\begin{rmk}
+Last class, we learned about separable extensions, and today we will be learning about separability degree.
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(14.9) We called a $\alpha \in F$ separable if $\mathrm{irr}(\alpha ,K)$ has no repeated roots in $\bar{K}$. 
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+(14.23) If $\mathrm{char}(K)=0$, every irreducible polynomial in $K[x]$ is separable. 
+\end{prop}
+\vspace{2ex}
+\begin{prop}
+(14.24) (Prime element theorem) Finite separable extensions are simple. 
+\end{prop}
+\vspace{2ex}
+\begin{cor}
+(14.25) For a finite separable extension $F/K$, the number of $K$-embeddings $F\rightarrow \langle K$ is $[F:K]$. In fact, for an algebraic $\alpha \in  F$ over $K$,
+\[|\{F\mathop{\rightarrow }^{\sigma }\bar{K} \;|\; \sigma |_{K}=\mathrm{1}_{K} \}|=|\{\beta \in \bar{K} \;|\; (\mathrm{irr}(\alpha ,K))(\beta )=0 \}|\leq \mathrm{deg}(\mathrm{irr}(\alpha ,K))=[K(\alpha ),K]\]
+\end{cor}
+\vspace{2ex}
+\begin{defi}
+(14.26) Let $F/K$ be an algebraic extension. Then
+\[[F:K]_{s}=|\{\sigma :F\rightarrow \bar{K} \;|\; \sigma |_{K}=\mathrm{1}_{K} \}\]
+where $[F:K]_{s}$ denotes the separability degree of $F/K$.
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+Definition (14.26) is independent of the choice of the algebraic closure of $\bar{K}$.
+\end{rmk}
+\vspace{2ex}
+\begin{prop}
+(14.28) If $F/E$ and $E/K$ are algebraic extensions then
+\[[F:K]_{s}=[F:E]_{s}[E:K]_{s}\]
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+Proof will be further inquired in the supplementary material.
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+Let $F/K$ be a finite extension. Then $F/K$ is separable if and only if $[F:K]_{s}=[F:K]$. 
+\end{thm}
+\vspace{2ex}
+\begin{rmk}
+In the case where $F=K(\alpha )$, we already have observed the result.
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+For a finite extension $F/K$, 
+\[[F:K]_{s}\leq [F:K]\]
+\end{rmk}
+\vspace{2ex}
+\begin{proof}
+(if) Let $\alpha \in F$. Consider the tower $F/K(\alpha )/K$. Note that 
+\[\begin{align*}
+[F:K]=&[F:K(\alpha )][K(\alpha ):K]\\
+[F:K]_{s}=&[F:K(\alpha )]_{s}[K(\alpha ):K]_{s}
+\end{align*}\]
+and $[F:K]$ implies that, through the remark, $[F:K(\alpha )]=[F:K(\alpha )]_{s}$ and $[K(\alpha ):K]=[K(\alpha ):K]_{s}$. That is, $\alpha $ is separable over $K$.
+
+\bigskip
+
+(only if) Ours! 
+\end{proof}
+\vspace{2ex}
+\begin{cor}
+Let $\alpha_1,\alpha_2,\ldots ,\alpha _{n}$ be elements of $\bar{K}$. Then $\alpha _{1},\ldots ,\alpha _{n}$ are separable over $K$ if and only if $K(\alpha _{1},\ldots ,\alpha _{n})$ is separable over $K$.
+\end{cor}
+\vspace{2ex}
+\begin{cor}
+Let $F/E$ and $E/K$ be finite extensions. $F/K$ is separable if and only if $F/E$ and $E/K$ are separable.  
+\end{cor}
+\vspace{2ex}
+\begin{proof}
+To prove this, go back to an analogous statement for algebraic extensions.
+\end{proof}
+\vspace{2ex}
+\begin{cor}
+Let $F/K$ be an algebraic extension then the set of separable elements of $F$ over $K$ forms a subfield of $F$.
+\end{cor}
+\vspace{2ex}
+ 
