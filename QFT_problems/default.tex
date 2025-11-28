@@ -14,35 +14,26 @@
 \abstract{}
 
 \begin{document}
-\begin{ex}
-Let's first preform the calculation for a normal particle. Generalising the result of $S_{z}|(0,k)\rangle $ from the above (notice how we never used the fact that the momentum of the arbitrary state was 0 up to the second last line), we have
-\[S_{j}|(p,i)\rangle =\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}b^{k}(p)^{\dagger }u^{k}_{+}(p)^{\dagger }\Big(\dfrac{1}{2}\mathrm{\Sigma} ^j\Big)u^{i}_{+}(p)|0\rangle\]
-The helicity operator can then be written as
+Note that
 \[\begin{align*}
-\sum _{j=1}^{3}n_{j}S_{j}|(p,i)\rangle =&\sum _{j=1}^{3}n_{j}\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}b^{k}(p)^{\dagger }u^{k}_{+}(p)^{\dagger }\Big(\dfrac{1}{2}\mathrm{\Sigma} ^{j}\Big)u^{i}_{+}(p)|0\rangle \\
-=&\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}b^{k}(p)^{\dagger }u_{+}^{k}(p)^{\dagger }\Big[\sum ^{3}_{j=1}\dfrac{1}{2}n_{j}\mathrm{\Sigma} ^{j}u^{i}_{+}(p)\Big]|0\rangle 
+s^2=&M_1^2+M_2^2-p_1p_2\\
+t^2=&M_1^2+m_1^2-p_1q_1\\
+u^2=&M_1^2+m_2^2-p_1q_2
 \end{align*}\]
-where $n_{j}$ is again defined as $p^{j}/|p|$. We can now employ the results from the previously problem, where 
+Using momentum conservation, we know that
+\[p_1+p_2=q_1+q_2\]
+and by squaring both sides,
+\[-M_1^2-M_2^2+2p_1p_2=-m_1^2-m_2^2+2q_1q_2\]
+Now, for any combination we want, we can find it by inner producting one of the variables on momentum conservation condition. For example,
+\[q_1(p_1+p_2)=-m_1^2+q_1q_2\]
+and subtituting for $q_1q_2$ and $q_1p_1$ would give $q_1p_2$.
+
+Explicitly,
 \[\begin{align*}
-\sum _{j}\dfrac{1}{2}n_{j}\mathrm{\Sigma} ^{j}u^{i}_{+}(p)=&\sum _{j}\dfrac{1}{2}\begin{pmatrix}
-n_{j}\sigma ^{j}&0\\0&n_{j}\sigma ^{j}
-\end{pmatrix}\begin{pmatrix}
-\xi ^{\pm}(p)\\
-\xi ^{\pm}(p)
-\end{pmatrix}=\sum _{j}\dfrac{1}{2}\begin{pmatrix}
-n_{j}\sigma ^{j}\xi ^{\pm}(p)\\
-n_{j}\sigma ^{i}\xi ^{\pm}(p)
-\end{pmatrix}\\=& \pm \dfrac{1}{2}\begin{pmatrix}
-\xi ^{\pm}(p)\\\xi ^{\pm}(p)
-\end{pmatrix}=\pm\dfrac{1}{2}u^{i}_{+}(p)
+s+t+u=&3M_1^2+M_2^2+m_1^2+m_2^2+2p_1(q_1+q_2-p_2)\\
+=&M_1^2+M_2^2+m_1^2+m_2^2+2M_1^2+2p_1(p_1)\\
+=&M_1^2+M_2^2+m_1^2+m_2^2
 \end{align*}\]
-\end{ex}
-\vspace{2ex}
-(the $+$ sign for $i=1$ and $-$ for $i=2$). Substituting this into the above, we obtain
-\[H|(p,i)\rangle =\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}b^{k}(p)^{\dagger }u^{k}_{+}(p)^{\dagger }\Big[\pm\dfrac{1}{2}u^{i}_{+}(p)\Big]=\sum ^{2}_{k=1}b^{k}(p)^{\dagger }\Big[\pm\dfrac{1}{2}\Big]\delta ^{ki}|0\rangle =\pm \dfrac{1}{2}b^{i}(p)^{\dagger }|0\rangle =\pm\dfrac{1}{2}|(p,i)\rangle \]
-which is exactly the result we expected! Similarly,
-\[H|(p,i')\rangle =\dfrac{1}{2E_{p}}\sum ^{2}_{k=1}-d^{k}(p)^{\dagger }u^{k}_{-}(p)^{\dagger }\Big[\pm\dfrac{1}{2}u^{i'}_{-}(p)\Big]=\sum ^{2}_{k=1}-d^{k}(p)^{\dagger }\Big[\pm \dfrac{1}{2}\Big]\delta ^{ki'}|0\rangle =\mp \dfrac{1}{2}d^{i'}(p)^{\dagger }|0\rangle =\mp\dfrac{1}{2}|(p,i')\]
-which concludes the proof.
+where in the second inequality we have used energy conservation.
 
 \end{document}
-

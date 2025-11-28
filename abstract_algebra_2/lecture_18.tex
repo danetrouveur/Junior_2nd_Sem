@@ -1,0 +1,66 @@
+\section{Lecture 18 (November 13th)}
+\begin{rmk}
+Last time we learned Galois theory. Today, we learn the main theorem and examples of $\mathrm{Gal}(F/K)$. 
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(15.2) An algebraic extension $F/K$ is Galois if it is separable and normal.
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+A finite extension $F/K$ is Galois if and only if $F$ is splitting field of a separable polynomial in $K[t]$ if and only if 
+\[[F:K]=|\mathrm{Aut}(F/K)|=|\mathrm{Gal}(F/K)|\]
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+Let $F/K$ is finite
+\[|\mathrm{Aut}(F/K)|\leq [F:K]_{s}\leq [F:K]\]
+the first equality holds if and only if $F/K$ is normal and the second equality holds if and only if $F/K$ is separable. We see that the two conditions we previously sought were exactly $F$ being normal and separable. 
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(15.31) and (15.35) (Fundamental theorem of Galois theory) Let $F/K$ be a finite Galois extension. Then the Galois correspondence
+\[\{E:\mathrm{\ an\ intermediate\ field\ }K\subset E\subset F\}\longleftrightarrow \{\mathrm{ subgroups\ of\ }\mathrm{Gal}(F/K)\}\]
+where $E\mapsto \mathrm{Gal}(F/E)$ and $H\mapsto F^{H}$ is a bijection.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+If $E$ is an intermediate field $K\subset E\subset F$, then the extension $E/K$ is Galois (or normal) if and only if $\mathrm{Gal}(F/E)$ is a normal subgroup of $\mathrm{Gal}(F/K)$. In this case, $\mathrm{Gal}(E/K)$ is isomorphic to $\mathrm{Gal}(F/K)/\mathrm{Gal}(F/E)$.
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+(15.12) Let $f(t)=t^{4}+t^{3}+t^2+t+1\in {\bm Q}[t]$. Let $F=$ the splitting field of $f(t)$, equal to ${\bm Q}(\xi ,\xi ^2,\xi ^3,\xi ^{4})$. Here, $\xi $ is a primative 5th root of unity. Note that
+\begin{itemize}
+\item[(i)] $F/{\bm Q}$ is finite Galois.
+\item[(ii)] Let $\sigma \in \mathrm{Gal}(F/{\bm Q})$. 
+\begin{center}
+
+\begin{tikzpicture}[>=stealth, node distance=3cm]
+
+% Top nodes
+\node (A) at (0,0) {${\bm Q}(\xi ,\xi ^2,\xi ^3,\xi^{4})$};
+\node (B) at (6,0) {${\bm Q}(\xi ,\xi^2,\xi^3,\xi^{4})$};
+
+% Arrow between them
+\draw[->] (A) -- node[above] {$\sigma $} (B);
+
+% Bottom node
+\node (C) at (3,-3) {${\bm Q}$};
+
+% Downward arrows
+\draw[->] (A) -- (C);
+\draw[->] (B) -- (C);
+
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+\item[(ii-i)] It is enough to consider $\sigma  (\xi )$ 
+\item[(ii-ii)] $\sigma (\xi )$ must be zero of $f(t)$ ($f(\xi )=0$ implies that $f(\sigma (\xi ))=0$) which implies that $\sigma (\xi )=\xi ^{i}$ for $1\leq i \leq 4$. 
+\item[(ii-iii)] There exists a $\sigma _{i}\in \mathrm{Gal}(F/K)$ such that $\sigma _{i}(\xi )=\xi ^{i}$ for each $1\leq i\leq 4$ by the isomorphism extension theorem. 
+\item[(ii-iv)] $\mathrm{Gal}(F/{\bm Q})=\{\sigma_1,\sigma_2,\sigma_3,\sigma_4\}$
+\item[(ii-v)] $({\bm Z}/5{\bm Z})^{\times }\rightarrow \mathrm{Gal}(F/{\bm Q})$.
+\end{itemize}
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+

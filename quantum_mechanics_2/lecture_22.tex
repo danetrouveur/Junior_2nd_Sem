@@ -1,0 +1,37 @@
+\section{Lecture 22 (November 24th)}
+\begin{defi}
+Recall that under the gauge choice of $\nabla \cdot A=0$, we can express the vector potential in the form
+\[\vec{A}(\vec{x},t)=\sum _{\vec{k}}\sum _{\lambda }c \Big[\hat{\epsilon }^{(\lambda )}A^{(\lambda )}(\vec{k})e^{i\vec{k}\cdot x-i\omega t}+\hat{\epsilon }^{(\lambda )\,*}A^{\dagger \,(\lambda )}(k)e^{-i\vec{k}\cdot \vec{x}-i\omega t}\Big]\]
+The ladder operators are suppose to satisfy
+\[[A^{(\lambda )}(\vec{k}),A^{\dagger \,(\lambda ')}(\vec{k}')]=\delta ^{\lambda \lambda '}\delta (\vec{k}-\vec{k}')\]
+We expect
+\[A^{\dagger \,(\lambda )}(\vec{k})|N_{\lambda k}\rangle =\sqrt{N_{\lambda k}+1}|N_{\lambda k}+1\rangle \]
+and etcetera. Recall that 
+\[H_{cl}=\int d^3x\, \Big(\dfrac{\epsilon_0}{2}E^2+\dfrac{1}{2\mu_0}B^2\Big)\]
+and
+\[\langle H_{cl}\rangle _{t}=2\cdot \dfrac{\epsilon_0}{2}\int d^3x\, \langle E^2\rangle =  N\times \hbar \omega \]
+As $\vec{E}=-\partial \vec{A}/\partial t$, 
+\[\langle H_{cl}\rangle =\epsilon_0c^2V\omega ^2(AA^{\dagger }+A^{\dagger }A)=\epsilon_0c^2V\omega ^2\Big(A^{\dagger }A+\dfrac{1}{2}\Big)=N\hbar \omega \]
+We find
+\[c^2=\dfrac{\hbar }{2V\omega \epsilon_0}\]
+The ladder operators are expected to evolve as
+\[a(t)=a(0)e^{-i\omega t}\qquad\&\qquad a^{\dagger }(t)=a^{\dagger }(0)e^{i\omega t}\]
+in the Heisenberg picure. The vector potential in the Fock spcae should be definitely memorised. 
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Radiative decay) We see one of the most prominent examples of the above construction. Recall that the Fermi golden rule was given as
+\[\mathrm{\Gamma} =\dfrac{2\pi }{\hbar }\sum _{f}|\langle f|M|i\rangle |^2\delta (\mathrm{\Sigma}  E)\]
+In the above, we take $M=e\vec{A}\cdot \vec{p}/m_{e}$.The phase space integral (summation over $f$) produces a factor $V$, which is cancelled with the factor in $\vec{A}$. The spin sector is namely,
+\[\langle 1s|\dfrac{e}{m_{e}}\sqrt{\dfrac{\hbar }{2\epsilon_0\omega V}}e^{-i\vec{k}\cdot \vec{x}}\hat{\epsilon }^{(\lambda )\;*}\cdot \vec{p}\;|2p\rangle \]
+For linear polarisation, $\hat{\epsilon }^{*}=\hat{\epsilon }$. Taking out the important parts,
+\[\langle 1s|(1-i\vec{k}\cdot \vec{x})\hat{\epsilon }\cdot \vec{p}|2p\rangle\]
+Let's consider the 0th order first (electric dipole).
+\[\begin{align*}
+\langle 1s|\hat{\epsilon }\cdot \vec{p}|2p\rangle =&\hat{\epsilon }\cdot \langle 1s|\vec{p}|2p\rangle =\hat{\epsilon }\cdot \langle 1s|m_{e}\dfrac{d \vec{x}}{d t}|2p\rangle =\hat{\epsilon } \cdot \langle 1s|m_{e}\dfrac{i}{\hbar }[H_0,\vec{x}]|2p\rangle \\
+=&\dfrac{im_{e}}{\hbar }\vec{\epsilon }\cdot \langle 1s|H_0\vec{x}-\vec{x}H_0|2p\rangle =(E_{f}-E_{i})\Big(\dfrac{im_{e}}{\hbar }\Big)\hat{\epsilon }\cdot \langle 1s|\vec{x}|2p\rangle 
+\end{align*}\]
+where the last term is essentially $\vec{p}$. Due to the Kronecker delta, the first round bracket becomes $-\hbar \omega $. 
+\end{defi}
+\vspace{2ex}
+

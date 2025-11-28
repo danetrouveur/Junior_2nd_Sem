@@ -1,0 +1,121 @@
+\section{Lecture 17 (November 13th)}
+\begin{recall}
+Consider $f\in L^{1}$ be piecewise continuous, and define
+\[\phi (x)=\dfrac{1}{\sqrt{2\pi }}e^{-x^2/2}\]
+We define
+\[\phi _{\epsilon }(x)=\dfrac{1}{\varepsilon  }\phi _{\varepsilon }\Big(\dfrac{x}{\epsilon }\Big)=\dfrac{1}{\sigma \sqrt{2\pi }}e^{-\dfrac{x^2}{2\epsilon ^2}}\]
+this implies that
+\[\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\hat{f}(t)e^{itx}\,dt=\lim _{\varepsilon  \rightarrow 0}\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\Big(\hat{f}(t)e^{-\varepsilon  ^2t^2/2}\Big)e^{ixt}\,dx=\lim _{\varepsilon \rightarrow 0}(f\ast \phi _{\varepsilon })(x)=\dfrac{1}{2}(f(x+)+f(x-))\]
+Note that $\phi (x)$ is in the Schwartz class, satisfying
+\[\sup_{x\in {\bm R}}\Big(x^{k}\phi ^{(n)}(x)\Big)<\infty \]
+for all $k,n\geq 0$. 
+\end{recall}
+\vspace{2ex}
+\begin{defi}
+(Schwartz class $\mathcal{S}$) A function is in the Schwartz class $f\in \mathcal{S}$ if and only if $f\in C^{\infty }({\bm R})$ and 
+\[\sup_{x\in {\bm R}}|x^{k}f^{(n)}(x)|<\infty \]
+If $f\in \mathcal{S}$ then $(\hat{f})^{\vee}=f$ where
+\[g^{\vee}(x)=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }f(t)e^{ixt}\,dt\]
+Thus, $\mathcal{F}:\mathcal{S}\rightarrow \mathcal{S}$ defined by $\mathcal{F}(f)=\hat{f}$ is an isomorphism. 
+\end{defi}
+\vspace{2ex}
+\begin{recall}
+Recall that 
+\[(f\ast g)(x)=\int ^{\infty }_{-\infty }f(x-y)g(y)\,dy=\int ^{\infty }_{-\infty }f(y)g(x-y)\,dy=(g\ast f)(x)\]
+if $f,g\in L^{1}$ then $f\ast g\in L^{1}$. 
+\end{recall}
+\vspace{2ex}
+\begin{thm}
+If $f,g\in L^{1}$, then $(f\ast g)^{\wedge}(t)=\hat{f}(t)\hat{g}(t)$. 
+\end{thm}
+\begin{proof}
+\[\begin{align*}
+(f\ast g)^{\wedge}(t)=&\int ^{\infty }_{-\infty }(f\ast g)(x)e^{-ixt}\,dt=\int ^{\infty }_{-\infty }\int ^{\infty }_{-\infty }f(x-y)g(y)\,dy\,e^{-ixt}\,dx\\
+=&\int ^{\infty }_{-\infty }\int _{-\infty }^{\infty }f(x-y)g(y)e^{-ixt}\,dy\,dx\\
+=&\int _{-\infty }^{\infty }\int _{-\infty }^{\infty }f(x-y)e^{-i(x-y)t}g(y)e^{-iyt}\,dx\,dy\\
+=&\int _{-\infty }^{\infty }g(y)e^{-iyt}\,dy\,\int _{-\infty }^{\infty }f(x-y)e^{-i(x-y)}\,dx\\
+=&\hat{g}(t)\hat{f}(t)
+\end{align*}\]
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Heat equation) Let's assume $u(x,t)\in \mathcal{S}$ for every fixed $t$. 
+\[\begin{cases}
+u_{xx}=u_{t}&t>0\\
+u(x,0)=f(x)
+\end{cases}\]
+Define 
+\[g(w,t)=\int ^{\infty }_{-\infty }u(x,t)e^{-ixw}\,dx\]
+which is the Fourier transform of $u(x,t)$. Recall that $\hat{f'}(t)=it\hat{f}(t)$. 
+\[\int _{-\infty }^{\infty }u_{t}(x,t)e^{-ixw}\,dx=\frac{\partial g}{\partial t}(w,t) \]
+Together this implies that in the Fourier space,
+\[-w^2g=\dfrac{\partial g}{\partial t} \]
+and the initial condition becomes
+\[g(w,0)=\hat{f}(w)\]
+Once fixing $w$, we see that the above is a ordinary differential equation with variable $t$. 
+\[g(w,t)=\hat{f}(w)e^{-iw^2t}\]
+Last class, we've also learned
+\[\mathcal{F}(e^{-ax^2/2})(w)=\sqrt{\frac{2\pi }{a}}e^{-w^2/2a}\]
+Now, for fixed $t>0$, put $a=1/2t$,
+\[\mathcal{F}\Big(\sqrt{\frac{1}{4\pi t}}e^{-x^2/4t}\Big)=e^{-w^2t}\]
+Now define $h_{t}(x)=\sqrt{1/4\pi t}\exp (-x^2/4t)$, then $\hat{h}_{t}(w)=\exp (-w^2t)$.
+\[g(w,t)=\hat{u}(w,t)=\hat{f}(w)\hat{h}_{t}(w)\]
+By the inversion theorem, together with
+\[\Big(f\ast h_{t}\Big)^{\wedge}=\hat{f}\hat{h}_{t}\]
+we have $u(x,t)=(f\ast h_{t})(x)$
+\[u(x,t)=\int ^{\infty }_{-\infty }f(y)\dfrac{1}{\sqrt{2\pi t}}e^{-(x-y)^2/4t}\,dy\]
+\end{thm}
+\vspace{2ex}
+\begin{recall}
+Let
+\[g(t)=\begin{cases}
+e^{-1/x}&t>0\\
+0&t\leq 0
+\end{cases}\]
+then $g\in C^{\infty }({\bm R})$. Also, let 
+\[h(t)=\begin{cases}
+e^{-1/(1-t^2)}&-1<t<1\\
+0&|t|\geq 1
+\end{cases}\]
+then $h\in C^{\infty }_{c}({\bm R})$, meaning that $C^{\infty }$ with a compact support. $f\in C_{c}({\bm R})$ with support $K$ when $f(x)=0$ if $x\in K^{c}$. Finally, define $\psi :{\bm R}\rightarrow {\bm R}$ by
+\[\psi (x)=\dfrac{h(x)}{\int ^{1}_{-1}h(t)\,dt}\]
+then $\psi \in C^{\infty }_{c}({\bm R})$ with support $[-1,1]$ and $\int ^{\infty }_{-\infty }\psi (x)\,dx=1$. $\psi \in C^{\infty }_{c}({\bm R})$ satisfies $\psi \geq 0$, $\psi (-x)=\psi (x)$, $\int ^{\infty }_{-\infty }\psi (x)\,dx=1$. Define 
+\[\psi _{\varepsilon }(x)=\dfrac{1}{\varepsilon }\psi \Big(\dfrac{x}{\varepsilon  }\Big)\]
+and $f\in L^{1}({\bm R})$ and $f\ast \psi _{\varepsilon }\in C^{\infty }({\bm R})$ with $f\ast \psi _{\varepsilon }\rightarrow f$. 
+\end{recall}
+\vspace{2ex}
+\begin{thm}
+If $f$ and $g$ have a compact support, then $f\ast g$ also has a compact support.
+\[(f\ast g)(x)=\int ^{\infty }_{-\infty }f(x-y)g(y)\,dy\]
+has a compact support.
+\end{thm}
+\vspace{2ex}
+\begin{cor}
+If $f\in L^{1}$ with a compact support, then $f\ast \psi _{\varepsilon }\in C_{c}^{\infty }({\bm R})\subset \mathcal{S}$. 
+\end{cor}
+\vspace{2ex}
+\begin{recall}
+If $f$ satifies $\int _{{\bm R}}|f|^{p}\,dx<\infty $ for $1\leq p<\infty $, then for every $\varepsilon >0$ there is $h\in C_{c}({\bm R})$ such that $\int _{{\bm R}}|f-h|^{p}\,dx<\varepsilon $. This tells us that $C_{c}({\bm R})$ is dense in $L^{p}({\bm R})$ for $1\leq p<\infty $. 
+\end{recall}
+\vspace{2ex}
+\begin{ex}
+Let $f$ satisfy $\int ^{\infty }_{-\infty }|f(y)|^2\,dy<\infty $. Define $g(x)=\overline{f(-x)}$. For $f\in \mathcal{S}$,
+\[\dfrac{1}{2\pi }\int ^{\infty }_{\infty }\hat{f}(t)\,dt=\Big(\hat{f}\Big)^{\vee}(0)=f(0)\]
+and $\int ^{\infty }_{-\infty }\hat{f}(t)\,dt=\sqrt{2\pi }f(0)$. Then,
+\[\begin{align*}
+(f\ast g)(0)=&\int^{\infty }_{-\infty }g(0-y)f(y)\,dy\\
+=&\int ^{\infty }_{-\infty }\overline{f(y)}f(y)\,dy=\int ^{\infty }_{-\infty }|f(y)|^2\,dy
+\end{align*}\]
+Thus,
+\[\begin{align*}
+\int ^{\infty }_{-\infty }|f(y)|^2\,dy=&(f\ast g)(0)=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }(f\ast g)^{\wedge}(t)\,dt
+=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\hat{f}(t)\hat{g}(t)\,dt\\
+\hat{g}(t)=&\int ^{\infty }_{-\infty }g(x)e^{-ixt}\,dt=\int ^{\infty }_{-\infty }\overline{f(-x)}e^{-ixt}\,dx=\int ^{-\infty }_{\infty }\overline{f(y)}e^{iyt}(-dy)\\
+=&\overline{\int ^{\infty }_{-\infty }f(y)e^{-iyt}\,dy}=\overline{\hat{f}(t)}
+\end{align*}\]
+by inversion theorem if $f,g\in \mathcal{S}$. In conclusion, 
+\[\int ^{\infty }_{-\infty }|f(y)|^2\,dy=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }|\hat{f}(t)|^2\,dt\]
+holds for every $f$ with $\int ^{\infty }_{-\infty }|f(y)|^2<\infty $. Plancherel theorem. 
+\end{ex}
+\vspace{2ex}
+ 

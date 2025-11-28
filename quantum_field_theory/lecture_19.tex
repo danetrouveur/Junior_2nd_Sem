@@ -1,0 +1,54 @@
+\section{Lecture 19 (November 17th)}
+\begin{rmk}
+What are different types of diagrams? 
+\begin{itemize}
+\item[(i)] (Vacuum bubbles) Diagrams that are disconnected from any external lines, or propagators. They are cancelled out when using a noramlised generating functional.
+\item[(ii)] (Disconnected) Diagrams that can be splitted into 2 or more parts. These cancel out when using the generating functional for connected diagrams. 
+\item[(iii)] (Connected diagrams) Diagrams in which all external lines are connected directly/indirectly. 
+\item[(iv)] (1-particle irreducible, 1PI) Connected diagrams that cannot be seperated into 2 disconnected pieces by cutting a single internal line. 
+\end{itemize}
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(Determining the coefficient in front of each diagram) This can be done through multiple methods:
+\begin{itemize}
+\item[(i)] By directly computing functional derivatives (counting multiplicity) 
+\item[(ii)] By using the diagram's symmetry factor 
+\[\dfrac{1}{V!}\dfrac{1}{(4!)^{V}}\dfrac{1}{P!}\dfrac{1}{2^{P}}\times (\mathrm{functional\ derivatives\ on\ }Z[J])\]
+Each term accounts for (1) vertices (2) functional derivatives (3) propagators and (4) source permutations. If there is no degeracy among the 4 types of permutations, the above fraction cancels out completely and we get a symmetry factor of 1. If there is degeneracy among these permutations, they do not cancel out completely. The symmetry factor is then the remain factor among the above numbers. Note that higher diagram symmetries imply more degeneracies, less cancellation, and a higher symemtry factor. How do we count the symmetry factor? 
+\begin{itemize}
+\item[(I)] There should be no degeneracy among the propagator and source permutations, so we eliminate them first.
+\[\dfrac{1}{V!}\dfrac{1}{(4!)^{V}}\]
+\item[(II)] For a given diagram, label verticies and legs from them individually.
+\item[(III)] Count the degeneracy of vertex and functional derivatives functional derivatives' permutations that are actually identical.
+\end{itemize}
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(2-point function at $\lambda $ order) We are going to see an example of (i).
+\[G^{(2)}(x_1,x_2)\Big|_{\lambda }=\dfrac{\delta }{i\delta J(x_1)}\dfrac{\delta }{i\delta J(x_2)}\Big(-\dfrac{i\lambda }{4!}\int d^{4}z\,\Big(\dfrac{\delta }{i\delta J(z)}\Big)^{4}\Big)\exp \Big[-\dfrac{1}{2}\int d^{4}x\,d^{4}y\,J(x)\mathrm{\Delta }_{F}(x-y)J(y)\Big]\Big|_{J=0}\]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Symmetry factors of the Feynman diagrams in $\phi ^{4}$ theory) 
+We can also use (ii). When a diagram has $V$ verticies and $P$ propagators, we can use
+\[\dfrac{1}{V!}\dfrac{1}{(4!)^{V}}\dfrac{1}{P!}\dfrac{1}{2^{P}}\times (\mathrm{functional\ derivatives\ on\ }Z[J])\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Feynman rules) Correlation functions in $\phi ^{4}$ theory can be systematically be representated using Feynman diagrams. This systemtic procedure is called the Feynman rules for $\phi ^{4}$ theory. In the position space, the connected $2N$-point function was given by
+\[G_{c}^{2N}(x_1,\ldots ,x_{2N})\]
+\begin{itemize}
+\item[(I)] Construct all connected diagrams with $2N$-external lines and $4P$-internal lines emanating from $P\in {\bm Z}_{\geq 0}$ vertices.
+\item[(II)] For each propagator, assign the free Feynman propagator
+\[\mathrm{\Delta }_{F}(x-y)\]
+
+\item[(III)] For each vertex, assign 
+\[-i\lambda \int d^{4}z\]
+\item[(IV)] Divide the diagram by the symmetry factor associated to each diagram.
+\item[(V)] Sum over all distinct diagrams.
+\end{itemize} 
+\end{defi}
+\vspace{2ex}
+

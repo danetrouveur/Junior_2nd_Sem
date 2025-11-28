@@ -1,0 +1,92 @@
+\section{Lecture 22 (November 27th)}
+\begin{rmk}
+Last class, we have learned the fundamental theorem of Galois theory I. Today, we will look at some examples and the concept of group action.
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(15.31) For a finite Galois extension $F/K$, there exists a correspondence between the Galois group (the group of automorphisms) and intermediate fields. Explicitly, the map
+\[\{K\subset E\subset F\}\leftrightarrow \{H\triangleleft \mathrm{Gal}(F/K)\}\]
+is given by
+\[E\mapsto \mathrm{Gal}(F/E)\]
+and
+\[H\mapsto F^{H}\]
+\end{thm}
+\vspace{2ex}
+\begin{defi}
+(15.22) Let $F/K$ be a finite Galois extension. Let $\alpha \in F$ be an element. The disinct $\sigma (\alpha )$ for $\sigma \in \mathrm{Gal}(F/K)$ are the Galois conjugates of $\alpha $. 
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+(15.24) Let $F/K$ be a finite Galois extension. Let $\alpha \in F$ be an element. Let $\alpha_1,\ldots ,\alpha _{r}$ be the Galois conjugates of $\alpha $. Then
+\[f(t)=\prod^{r}_{i=1}(t-\alpha _{i})\]
+is the minimal polynomial of $\alpha $ over $K$.
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+It suffices to show that $\mathrm{deg}\,f(t)=\mathrm{deg}\,\mathrm{irr}(\alpha ,K)$. Note that 
+\[\begin{align*}
+\mathrm{deg}(\mathrm{irr}(\alpha ,K))=[K(\alpha ):K]=\dfrac{[F:K]}{[F:K(\alpha )]}=\dfrac{|\mathrm{Gal}(F/K)|}{|\mathrm{Gal}(F:K(\alpha ))|}=[\mathrm{Gal}(F/K):\mathrm{Gal}(F/K(\alpha ))]
+\end{align*}\]
+Consider the action of $\mathrm{Gal}(F/K)$ on the set of the Galois conjugates of $\alpha $. Applying lemma (12.9), we see that
+\[\mathrm{deg}\,f(t)=r=[\mathrm{Gal}(F/K):\mathrm{Gal}(F/K(\alpha ))]\]
+\end{proof}
+\vspace{2ex}
+\begin{defi}
+(11.9) (Group actions) Let $G$ be a group and $X$ be a set. An action of $G$ on $X$ is a function $\phi :G\times X\rightarrow X$ such that:
+\begin{itemize}
+\item[(i)] $\phi (1,x)=x$ for all $x\in X$.
+\item[(ii)] $\phi (gh,x)=\phi (g,\phi (h,x))$ for all $g,h\in G$ and all $x\in X$.
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+(11.20) Giving an action of $G$ on $X$ is equivalent to giving a group homomorphism 
+\[G\rightarrow S_{x}\]
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+Ours! 
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+\begin{itemize}
+\item[(i)] $G$ acts on itself by left multiplication $G\times \underline{G}\rightarrow G:(g,h)\mapsto gh$
+\item[(ii)] $G$ acts on itself by conjugation $G\times \underline{G}\rightarrow \underline{G}:(g,h)\mapsto ghg^{-1}$ 
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(11.22) Let $X$ be a $G$-set. The orbit of an element $x\in X$ is the subset $\{g\cdot x\;|\;g\in G\}\subset X$.
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(12.8) The stabiliser of $x\in X$ is the subgroup
+\[G_{x}=\{g\in G\;|\;g\cdot x=x\}\]
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+Let $S_{n}$ act on $\{1,\ldots ,n\}$. Let $H\triangleleft S_{n}$. Then is $H=(S_{n})_{i}$ for some $i$?
+\end{prop}
+\vspace{2ex}
+\begin{lem}
+(12.9) There is a bijection between the orbit of $X$ and the set $G/G_{X}$ of left cosets of $G_{X}$. 
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+Define a function $\phi :G_{X}\rightarrow G/G_{X}$. Check that it is well defined and that it is bijective. 
+\end{proof}
+\vspace{2ex}
+\begin{prop}
+Let $K$ be a field, and $f(t)\in K[t]$ be a separable polynomial. The following are equivalent:
+\begin{itemize}
+\item[(i)] $f(t)\in K[t]$ is irreducible
+\item[(ii)] 
+\end{itemize}
+\end{prop}
+\vspace{2ex}
+\begin{ex}
+(15.32) Let $F$ be the splitting field of $t^3-2\in {\bm Q}[t]$ which is equal to ${\bm Q}(\alpha_1,\alpha_2,\alpha_3)={\bm Q}(2^{1/3},\alpha_1\xi ,\alpha_2\xi )$.
+\[\mathrm{Gal}(F/{\bm Q})\cong S_{3}\]
+\end{ex}
+\vspace{2ex}
+

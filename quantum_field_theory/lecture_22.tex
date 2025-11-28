@@ -1,0 +1,59 @@
+\section{Lecture 22 (November 26th)}
+\begin{prop}
+(Feynman rules in the momentum space) 
+\begin{itemize}
+\item[(i)] Construct all connected diagrams.
+\item[(ii)] For each arrowed leg, we have the assign the Dirac propagator
+\[\Big(\dfrac{-i}{\cancel{k}+m-i\epsilon }\Big)_{\alpha \beta }\]
+\item[(iii)] For each wavy leg, in the Feynman gauge,
+\[\dfrac{-i\eta _{\mu \nu }}{k^2-i\epsilon }\]
+\item[(iv)] For each vertex, 
+\[ie(\gamma ^{\mu })_{\beta \alpha }\cdot (2\pi )^{4}\delta ^{(4)}(k_1+k_2-k_3)\]
+\item[(v)] Integrate over all the internal momenta.
+\item[(vi)] Divide by the symmtry factor.
+\item[(vii)] Consider the rearrangement of Grassmannian fields $\times (-1)^{n}$.
+\item[(viii)] Sum over all diagrams.
+\end{itemize}
+\end{prop}
+\vspace{2ex}
+\begin{ex}
+($e^{-}e^{+}\rightarrow e^{-}e^{+}$ Bhabha scattering) The correlation function of our interest is:
+\[G^{(2;2;0)}_{c\;\alpha_1\alpha_2;\beta_1\beta_2}(x_1,x_2,y_1,y_2)=\langle T\psi _{\alpha_1}(x_1)\psi _{\alpha_2}(x_2)\bar{\psi }_{\beta_1}(y_1)\bar{\psi }_{\beta_2}(y_2)\]
+The Fourier transform is given as
+\[\tilde{G}^{(2;2;0)}_{c\;\alpha_1\alpha_2;\beta_1\beta_2}(p_1,p_2;q_1,q_2)\]
+Let's first compute in the position space! There are two possible diagrams.
+\[\begin{align*}
+&G^{(2;2;0)}_{c\;\alpha_1\alpha_2;\beta_1\beta_2}(x_1,x_2;y_1,y_2)\\=&\int d^{4}z_1\,d^{4}z_2\,\Big[(-1)\Big(S_{F}(x_1-z_1)ie\gamma ^{\mu }S_{F}(z_1-y_1)\Big)D_{F\,\mu \nu }(z_1-z_2)\Big(S_{F}(x_2-z_2)ie\gamma ^{\nu }S_{F}(z_2-y_2)\Big)_{\alpha_2\beta_2}\\&+\Big(S_{F}(x_2-z_1)ie\gamma ^{\mu }S_{F}(z_1-y_1)\Big)_{\alpha_2\beta_1}D_{F\,\mu \nu }(z_1-z_2)\Big(S_{F}(x_1-z_2)ie\gamma ^{\nu }S_{F}(z_2-y_2)\Big)_{\alpha_1\beta_2}\Big]
+\end{align*}\]
+where $(m,n)=(1,0)$. In the momentum space,
+\[\begin{align*}
+&\tilde{G}^{(2;2;0)}_{c\;\alpha_1\alpha_2;\beta_1\beta_2}(-p',q;-p,q')\\
+=&(-1)\int \dfrac{d^{4}k}{(2\pi )^{4}}\,\Big(\dfrac{1}{-\cancel{p}+m-i\epsilon }ie\gamma ^{\mu }(2\pi )^{4}\delta ^{(4)}(p+p'-k)\dfrac{1}{\cancel{p}+m-i\epsilon }\Big)_{\alpha_1,\beta_1}\\
+&\times \dfrac{-i\eta _{\mu \nu }}{k^2-i\epsilon }\times \Big(\dfrac{1}{\cancel{q}+m-i\epsilon }ie\gamma ^{\nu }(2\pi )^{4}\delta ^{(4)}(k-q-q')\dfrac{1}{-\cancel{q'}+m-i\epsilon }\Big)_{\alpha_2 \beta_2 }\\
+&+\Big[(-p',\alpha_1)\leftrightarrow (q_1,\alpha_2)\Big]\\
+=&\delta ^{(4)}(p+p'-q-q')\Big[(-1)\Big(\cdot \Big)_{\alpha_1\alpha_2}\times \dfrac{-i\eta _{\mu \nu }}{(p+p')^2-i\epsilon }\Big(\cdot \Big)_{\alpha_2\beta_2}+\ldots \Big]
+\end{align*}\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Mandelstam variables for $2\rightarrow 2$ scattering) We define
+\begin{itemize}
+\item[(i)] $s=-(p+p')^2$, the square of the total intial momentum.
+\item[(ii)] $t=-(p-q)^2$, the square of the difference of the initial and final momenta of the most similar particles.
+\item[(iii)] $u=-(p-q')^2$, the interchangable variable with $t$ by swapping final momenta. 
+\end{itemize}
+Let's make some comments. Bhabha scattering consists of a $s$-channel and a $t$-channel. In the case of Moller scattering, there is a $t$-channel and $s$-channel.
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+($e^{-}\gamma \rightarrow e^{-}\gamma $ Compton scattering)
+\[\tilde{G}_{c\;\alpha;\beta;\mu \nu }^{(1;1;2)}(P;Q;K_1;K_2)=\tilde{G}^{(1;1;2)}_{c\;\alpha;\beta;\mu \nu }(q;-p;-K,K')w\]
+The above is equal to
+\[\begin{align*}
+&(2\pi )^{4}\delta ^{(4)}(p+K-q-K')\times \\&\Big[\dfrac{-i\eta _{\mu \rho }}{K^2-i\epsilon }\dfrac{-i\eta _{\sigma \nu }}{K'^2-i\epsilon }\Big(\dfrac{-i}{\cancel{q}+m-i\epsilon }ie\gamma ^{\rho }\dfrac{-i}{(\cancel{p+K})+m-i\epsilon }ie\gamma ^{\rho }\dfrac{-i}{\cancel{p}+m-i\epsilon }\Big)_{\alpha \beta }\Big]\\
+&+\Big((K,\mu )\leftrightarrow (-K',\nu )\Big)
+\end{align*}\]
+
+\end{ex}
+\vspace{2ex}
+

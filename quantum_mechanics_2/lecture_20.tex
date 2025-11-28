@@ -1,0 +1,38 @@
+\begin{thm}
+We need to solve
+\[u''_{m}+\dfrac{1}{x}u_{m}'-\dfrac{m^2}{x^2}u_{m}-x^2u_{m}+\lambda u_{m}=0\]
+At $x\rightarrow \infty $, $u_{m}''-x^2u_{m}\sim 0$ and $u_{m}\sim e^{-x^2/2}$ and $x\rightarrow 0$ gives $u_{m}''+u_{m}'/x-|m|^2u_{m}/x^2\sim 0$ giving $u_{m}\sim x^{|m|}$. Substituting $u(x)=e^{-x^2/2}x^{|m|}G(x)$,
+\[G''+\Big(\dfrac{2|m|+1}{x}-2x\Big)G'+(\lambda -2-2|m|)G=0\]
+taking $y=x^2$, we have Laguere equation
+\[H''(y)+\Big(\dfrac{2l+2}{\rho }-1\Big)H'+\dfrac{n_{r}}{\rho }H=0\]
+for integers $n_{r}$. The energy levels are
+\[E(n_{r},m,k_{z})=\dfrac{\hbar ^2k_{z}^2}{2m}+\dfrac{eB\hbar }{m_{e}}(n_{r}+\dfrac{1}{2}+\dfrac{|m|+m}{2})\]
+with eigenfunctions 
+\[G(x^2)=L^{|m|}_{n_{r}}(x^2)\]
+and $h\omega _{c}=eB\hbar /m_{e}$. The degeneracy factor becomes approximately
+\[N_{\mathrm{dege}}=\dfrac{\mathrm{Area}}{2\pi l_{B}^2}\]
+We must know why does this degeneracy occurs at the ground state $n_{r}=0$. Memorise this formula.
+\end{thm}
+\vspace{2ex}
+\begin{defi}
+(Landau gauge) For a vector potential gauge $\vec{A}=(0,Bx,0)$, consider $H=(\vec{p}-(-e)\vec{A})^2$. 
+\[H=\dfrac{p_{x}^2}{2m_{e}}+\dfrac{e^2B^2x^2+2eBxp_{y}}{2m_{e}}+\dfrac{p_{y}^2}{2m_{e}}+\dfrac{p_{z}^2}{2m_{e}}\]
+this tells us that $[H,p_{y}]=[H,p_{z}]=0$ and that 
+\[\psi (x,y,z)=v(x)e^{ik_{y}y}e^{ik_{z}z}\]
+Substituting,
+\[\Big(-\dfrac{\hbar ^2}{2m_{e}}\dfrac{d ^2}{d x^2}+\dfrac{1}{2m_{e}}e^2B^2(x+x_0)^2\Big)v(x)=\Big(E-\dfrac{\hbar ^2k_{z}^2}{2m_{e}}\Big)v(x)\]
+where $x_0=\hbar k_{y}/eB$. Setting $s=x+x_0$,
+\[\Big(-\dfrac{\hbar ^2}{2m_{e}}\dfrac{d ^2}{d s^2}+\dfrac{1}{2m_{e}}e^2B^2s^2\Big)v(s-x_0)=\Big(E-\dfrac{\hbar ^2k_{z}^2}{2m_{e}}\Big)v(s-x_0)\]
+and 
+\[v(s-x_0)=e^{-m_{e}\omega _{c}s^2/\hbar }H_{n}(y)\]
+with $y=s\sqrt{m_{e}\omega _{c}/\hbar }$ and $e^2B^2/2m_{e}=m_{e}\omega _{c}^2/2$. The eigenvalues are
+\[E_{n}=\hbar \omega _{c}\Big(n+\dfrac{1}{2}\Big)+\dfrac{\hbar ^2k_{z}^2}{2m_{e}}\]
+and the structure is similar to the above. Taking the length of the Hall bar to be $L_{y}$ and $L_{x}$, we have
+\[k_{y}=\dfrac{2\pi }{L_{y}}n^{*}\]
+and ecetera, giving the range
+\[0\leq \dfrac{2\pi \hbar }{L_{y}}\dfrac{1}{eB}n^{*}\leq L_{x}\]
+and
+\[0\leq n^{*}\leq \dfrac{L_{x}L_{y}}{2\pi eB/\hbar }=\dfrac{\mathrm{Area}}{2\pi l_{B}^2}\]
+\end{defi}
+\vspace{2ex}
+

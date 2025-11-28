@@ -1,0 +1,115 @@
+\section{Lecture 21 (November 27th)}
+\begin{recall}
+Let $f_{n}$ be analytic in a domain $D$. Let
+\[\sum ^{\infty }_{n=1}|f_{n}(z)-1|\leq M_{n}\]
+for all $z\in D$ where $\sum ^{\infty }_{n=1}M_{n}<\infty $. Then,
+\[f(z)=\prod^{\infty }_{n=1}f_{n}(z)\]
+is analytic in $D$, and $f(z_0)=0$ if and only if $f_{n}(z_0)=0$ for some $n$. 
+\end{recall}
+\vspace{2ex}
+\begin{proof}
+There is a $K$ such that $M_{n}<\frac{1}{2}$ for all $n\geq K$. Thus, if $n\geq K$, then $|f_{n}(z)-1|<\frac{1}{2}$ for all $z\in D$ ($\frac{1}{2}\leq |f_{n}(z)|<\frac{3}{2}$ for all $z\in D$ if $n\geq K$). Thus, if $n\geq K$, then $\log f_{n}$ is analytic in $D$.
+\[\prod^{N}_{n=k}f_{n}(z)=\prod^{N}_{n=k}e^{\log f_{n}(z)}=e^{\sum ^{N}_{n=k}\log f_{n}(z)}\rightarrow e^{F(z)}\]
+as $|\log f_{n}(z)|=|1+\log f_{n}(z)-1|\leq 2|f_{n}(z)|\leq 2M_{n}$. If $K$ is a compact subset of $D$, then $F(K)$ is compact and $g(z)=e^{z}$ is uniformly continuous on $F(K)$, which tells us that $e^{F}$ is analytic in $D$.
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+The function
+\[f(z)=\prod^{\infty }_{n=1}\Big(1-\dfrac{z}{n^2}\Big)\]
+is an entire function with $Z_{f}=\{n^2\;|\;n\in {\bm N}\}$. Let $D=D(0,R)$ and $f_{n}(z)=1-z/n^2$. Then,
+\[\sum ^{\infty }_{n=1}|1-f_{n}(z)|\leq \sum ^{\infty }_{n=1}\dfrac{R}{n^2}\]
+setting $R/n^2=M_{n}$, $f$ is analytic on $D(0,R)$. Since $R$ is arbitrary, $f$ is entire. 
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+Let $0\leq a_{n}<1$. Then if $\sum ^{\infty }_{n=1}a_{n}<\infty $, then $\prod^{\infty }_{n=1}(1-a_{n})>0$. Put $f_{n}(z)=1-a_{n}$ constant.
+\end{ex}
+\vspace{2ex}
+\begin{prop}
+Let
+\[\begin{align*}
+A=&\{1,2,3,4,\ldots \}\\
+B=&\{1,4,9,25,\ldots \}\\
+C=&\{1,\sqrt{2},\sqrt{3},\sqrt{4},\ldots \}\\
+D=&\{\ln 1,\ln 2,\ln 3,\ln 4,\ldots  \}
+\end{align*}\]
+we can find entire functions $f_1,f_2,f_3,f_4$ such that $Z_{f_1}=A,Z_{f_2}=B,Z_{f_3}=C,Z_{f_4}=D$. 
+\end{prop}
+\vspace{2ex}
+\begin{defi}
+The Weierstrauss elementary factor $E_{p}(z)$ is defined by $E_{0}(z)=1-z$ for $p\in {\bm N}$ ($z\in {\bm C}$ and $p=0,1,\ldots $),
+\[E_{p}(z)=(1-z)\exp \Big(z+\dfrac{z^2}{2}+\ldots +\dfrac{z^{p}}{p}\Big)\]
+If $z_{n}\ne 0$ and $|z_{n}|\rightarrow \infty $ then
+\[\prod^{\infty }_{n=1}E_{n}\Big(\dfrac{z}{z_{n}}\Big)\]
+is an enitre function whose zero set is $z_{n}$ (at worst, this is an entire function). Notice how $E_{p}(1)=0$ and $E_{p}(0)=1$. 
+\end{defi}
+\vspace{2ex}
+\begin{lem}
+(Weierstrass) If $p\in {\bm N}$ and $|z|\leq 1$, then $|E_{p}(z)-1|\leq |z|^{p+1}$.
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+Since $E_{p}$ is entire, 
+\[E_{p}(z)=1+\sum ^{\infty }_{n=1}a_{n}z^{n}\]
+for all $z$. Thus,
+\[E_{p}'(z)=\sum ^{\infty }_{n=1}na_{n}z^{n-1}\]
+By straightforward calculation,
+\[\begin{align*}
+E_{p}'(z)=&-\exp \Big(z+\dfrac{z^{p}}{p}\Big)+(1-z)\exp \Big(z+\ldots +\dfrac{z_{p}}{p}\Big)\times (1+z+z^2+\ldots +z^{p-1})\\
+=&-\exp (z+\ldots +\dfrac{z^{p}}{p})+(1-z^{p})\exp \Big(z+\ldots +\dfrac{z^{p}}{p}\Big)\\
+=&-z^{p}\exp \Big(z+\dfrac{z^2}{2}+\ldots +\dfrac{z^{p}}{p}\Big)
+\end{align*}\]
+From this we know that
+\[a_1=a_2=\ldots =a_{p}=0\]
+and $a_{n}\leq 0$ for all $n\geq p+1$. Hence, for $|z|\leq 1$,
+\[\begin{align*}
+|E_{p}(z)-1|=&|\sum ^{\infty }_{n=1}a_{n}z^{n}|\\
+=&|\sum ^{\infty }_{n=p+1}a_{n}z^{n}|\\
+=&|z|^{p+1}|\sum ^{\infty }_{n=p+1}a_{n}z^{n-p-1}|\\
+\leq&|z|^{p+1}\cdot \sum ^{\infty }_{n=p+1}|a_{n}|
+\end{align*}\]
+Since $E_{p}(1)=0$, we have $1+\sum ^{\infty }_{n=1}a_{n}=0$ and thus
+\[1+\sum _{n=p+1}^{\infty }a_{n}=0\]
+since $a_1=\ldots =a_{p}=0$. Thus \[1-\sum ^{\infty }_{n=p+1}|a_{n}|=0\]
+since $|a_{n}|=-a_{n}$ for $n\geq p+1$. Then,
+\[\sum ^{\infty }_{n=p+1}|a_{n}|=1\]
+and
+\[|E_{p}(z)-1|\leq |z|^{p+1}\]
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Big theorem) Let $\{z_{n}\}$ be a sequence in ${\bm C}$ such that $z_{n}\ne 0$ and $|z_{n}|\rightarrow \infty $. If 
+\[\sum ^{\infty }_{n=1}\dfrac{1}{|z_{n}|^{p+1}}<\infty \]
+for $p=0,1,2,\ldots $ then
+\[f(z)=\prod^{\infty }_{n=1}E_{p}\Big(\dfrac{z}{z_{n}}\Big)\]
+is an entire function with
+\[Z_{f}=\{z_{n}\;|\;n\in {\bm N}\}\]
+Also, 
+\[\prod^{\infty }_{n=1}E_{n}\Big(\dfrac{z}{z_{n}}\Big)\]
+is an entire function whose zero set is $\{z_{n}\}$. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+For every $z\in \bar{D}(0,R)$,
+\[\Big|E_{p}\Big(\dfrac{z}{z_{n}}\Big)-1\Big|\leq \Big|\dfrac{z}{z_{n}}\Big|^{p+1}\leq 1\]
+for $|z/z_{n}|\leq 1$. Notice that this is satisfied for all $n\geq K$ since $|z_{n}|\rightarrow \infty $. And,
+\[\sum ^{\infty }_{n=k}\Big|\dfrac{z}{z_{n}}\Big|^{p+1}=|z|^{p+1}\sum ^{\infty }_{n=k}\dfrac{1}{|z_{n}|^{p+1}}\leq M\sum ^{\infty }_{n=k}\dfrac{1}{|z_{n}|^{p+1}}\]
+Thus, by the previous theorem,
+\[\prod^{\infty }_{n=1}E_{p}\Big(\dfrac{z}{z_{n}}\Big)\]
+is analytic in $D(0,R)$ for every $R$. Hence,
+\[\prod^{\infty }_{n=1}E_{p}\Big(\dfrac{z}{z_{n}}\Big)\]
+is entire whose zero set is $\{z_{n}\}$. Notice how if we put $n-1$ in $p$, we prove the second part.
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Using this theorem, show that an entire function $f$ such that $Z_{f}=\{1,2,\ldots \}$ is 
+\[f(z)=\prod^{\infty }_{n=1}E_{1}\Big(\dfrac{z}{z_{n}}\Big)=\prod^{\infty }_{n=1}\Big(1-\dfrac{z}{n}\Big)e^{z/n}\]
+An entire function $g$ such that $Z_{g}=\{1,4,9,16,25,\ldots \}$ is
+\[g(z)=\prod^{\infty }_{n=1}E_0\Big(\dfrac{z}{n^2}\Big)=\prod^{\infty }_{n=1}\Big(1-\dfrac{z}{n^2}\Big)\]
+Similarly $Z_{h}=\{1,\sqrt{2},\sqrt{3},\ldots \}$.
+\[h(z)=\prod^{\infty }_{n=1}E_2\Big(\dfrac{z}{\sqrt{n}}\Big)=\prod^{\infty }_{n=1}\Big(1-\dfrac{z}{\sqrt{n}}\Big)e^{z/\sqrt{n}+z^2/2n}\]
+If $Z_{F}=\{\ln 1,\ln 2,\ln 3,\ldots \}$, there exists no such $p$, and we must say that
+\[F=\prod^{\infty }_{n=2}E_{n}\Big(\dfrac{z}{\ln n}\Big)=z\prod^{\infty }_{n=2}\Big(1-\dfrac{1}{\ln n}\Big)\exp \Big(\dfrac{z}{\ln n}+\dfrac{1}{2}\Big(\dfrac{z}{\ln n}\Big)^2+\ldots +\dfrac{1}{n}\Big(\dfrac{z}{\ln n}\Big)^{n}\Big)\]
+\end{ex}
+\vspace{2ex}
+

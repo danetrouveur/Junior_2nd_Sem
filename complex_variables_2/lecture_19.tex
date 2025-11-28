@@ -1,0 +1,95 @@
+\section{Lecture 19 (November 20th)}
+\begin{rmk}
+Consider the function
+\[f(z)=\pi \cot \pi z=\dfrac{\pi \cos \pi z}{\sin \pi z}\]
+which has a simple pole at each $n\in {\bm Z}$. 
+\[\mathop{\mathrm{Res}}_{z=n}f(z)=\dfrac{\pi \cos n\pi }{(\sin \pi z)'_{z=n}}=\dfrac{\pi \cos n\pi }{\pi \cos n\pi }=1\]
+Consider the square contour $C_{N}$ and we find
+\[\pi \cot \pi z=\dfrac{1}{z}\Big(1-\dfrac{\pi ^2z}{3}-\dfrac{\pi ^{4}z^{4}}{45}-\ldots \Big)\]
+\end{rmk}
+\vspace{2ex}
+\begin{ex}
+We can use the above function to evaluate 
+\[\sum ^{\infty }_{n=1}\dfrac{1}{n^{4}}=\xi (4)\]
+Observe how
+\[\int _{C_{N}}\dfrac{\pi \cot \pi z}{z^{4}}\,dz\rightarrow 0\]
+as $N\rightarrow \infty $ due to parametrisation. This is in turn, due to the residue theorem,
+\[2\pi i\sum ^{N}_{k=-N}\mathop{\mathrm{Res}}_{z=k}\Big[\dfrac{\pi \cot \pi z}{z^{4}}\Big]=2\pi i\Big[2\sum ^{N}_{k=1}\dfrac{1}{k^{4}}+\mathop{\mathrm{Res}}_{z=0}\dfrac{\pi \cot \pi z}{z^{4}}\Big]\]
+and we expect the residue in the bracket to be
+\[\mathop{\mathrm{Res}}_{z=0}\dfrac{\pi \cot \pi z}{z^{4}}=-\dfrac{\pi ^{4}}{45}\]
+and
+\[\sum _{k=1}^{\infty }\dfrac{1}{k^{4}}=\dfrac{\pi ^{4}}{90}\]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+For $a\notin {\bm Z}$, evaluate 
+\[\sum ^{\infty }_{n=-\infty }\dfrac{1}{(z+a)^2}\]
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+\[\int _{C_{N}}\dfrac{\pi \cot \pi z}{(n+a)^2}\,dz=2\pi i\Big[\sum _{k=-N}^{N}\mathrm{Res}_{z=k}\Big(\dfrac{\pi \cot \pi z}{(z+a)^2}\Big)+\mathop{\mathrm{Res}}_{z=-a}\Big(\cdot \Big)\Big]\]
+If $f$ has a pole of order $2$ at $z_0$, then 
+\[\mathop{\mathrm{Res}}_{z=z_0}f(z)=\dfrac{1}{(k-1)!}\lim _{z\rightarrow z_0}\Big[(z-z_0)^{k}f(z)\Big]^{(k-1)}\]
+Thus 
+\[\mathop{\mathrm{Res}}_{z=-a}\dfrac{\pi \cot \pi z}{(z+a)^2}=\lim _{z\rightarrow -a}[\pi \cot \pi z]'=[\pi (-\csc ^2\pi z)\pi ]_{z=-a}=-\dfrac{\pi ^2}{\sin ^2a\pi }\]
+Thus,
+\[\sum ^{\infty }_{n=-\infty }\dfrac{1}{(n+a)^2}=\dfrac{\pi ^2}{\sin ^2a\pi }\]
+\end{proof}
+\vspace{2ex}
+\begin{ex}
+Define
+\[\sum ^{\infty }_{n=1}\dfrac{1}{n^2+a^2}\]
+for $a>0$. Use 
+\[\int _{C_{N}}\dfrac{\pi \cot \pi z}{n^2+a^2}\,dz\rightarrow 0\]
+as $N\rightarrow \infty $. The above is equal to 
+\[2\pi i\Big[\sum ^{N}_{k=-N}\Big(\cdot \Big)+\mathop{\mathrm{Res}}_{z=ai}\Big(\cdot \Big)+\mathop{\mathrm{Res}}_{z=-ai}\Big(\cdot \Big)\Big]\]
+We have
+\[\dfrac{1}{2}\Big(\dfrac{\pi }{a}\dfrac{\cosh \pi a}{\sinh \pi a}-\dfrac{1}{a^2}\Big)\]
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+For $z\notin {\bm Z}$, 
+\[\pi \cot \pi z=\dfrac{1}{z}+\sum ^{\infty }_{n=1}\dfrac{2z}{z^2-n^2}\]
+For $w\in {\bm Z}$,
+\[\int _{C_{N}}\dfrac{\pi \cot \pi z}{z(z-w)}\,dz=2\pi i\Big[\sum _{0\ne k=-N}^{N}\mathop{\mathrm{Res}}_{z=k}\dfrac{\pi \cot \pi z}{z(z-w)}+\mathop{\mathrm{Res}}_{z=0}\dfrac{\pi \cot \pi z}{z(z-w)}+\mathop{\mathrm{Res}}_{z=w}\Big(\cdot \Big)\Big]\]
+which goes to 0 as $N\rightarrow \infty $. The first residue is equal to
+\[\dfrac{1}{k(k-w)}\]
+and the last is equal to 
+\[\dfrac{\pi \cot \pi w}{w}\]
+For the second, we use partial fractions,
+\[\dfrac{1}{z(z-w)}=-\dfrac{1}{w}\Big(\dfrac{1}{z}-\dfrac{1}{z-w}\Big)\]
+and we have $-1/w^2$ for the second one. Gathering the results,
+\[\int _{C_{N}}\dfrac{\pi \cot \pi z}{z(z-w)}=2\pi i\Big[\sum _{0\ne k=-N}^{N}\dfrac{1}{k(k-w)}-\dfrac{1}{w^2}+\dfrac{\pi \cot \pi w}{w}\Big]\]
+Notice, however,
+\[\sum _{k=1}^{N}\dfrac{1}{k(k-w)}+\sum ^{-1}_{k=-N}\dfrac{1}{k(k-w)}=\sum ^{N}_{k=1}\dfrac{1}{k}\Big(\dfrac{1}{k-w}+\dfrac{1}{k+w}\Big)=\sum ^{N}_{k=1}\dfrac{1}{k}\dfrac{2k}{k^2-2^2}=\sum ^{N}_{k=1}\dfrac{2}{k^2-w^2}\]
+and
+\[\pi \cot \pi w=\dfrac{1}{w}+\sum ^{\infty }_{k=1}\dfrac{2w}{w^2-k^2}\]
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(Reverse parametrisation) \[\int ^{2\pi }_{0}\dfrac{1}{1+a\cos \theta }\,d\theta \]
+with $0<a<1$. We do this through paramterising in the opposite direction, $C:|z|=1$ and $z=e^{i\theta }$ ($0\leq \theta \leq 2\pi $).
+\[\cos \theta =\dfrac{e^{i\theta }+e^{-i\theta }}{2}=\dfrac{z+z^{-1}}{2}\]
+and $dz=ie^{i\theta }\,d\theta =iz\,d\theta $ implying $d\theta =dz/iz$. So,
+\[\int ^{2\pi }_{0}\dfrac{d\theta }{1+a\cos \theta }=\int _{|z|=1}\dfrac{1}{1+a\Big(\dfrac{z+z^{-1}}{2}\Big)}\,\dfrac{dz}{iz}=\dfrac{1}{ai}\int _{|z|=1}\dfrac{2\,dz}{z^2+\dfrac{2z}{a}+1}\]
+now, $z^2+2z/a+1=(z-z_2)(z-z_2)$ and
+\[z_1=-\dfrac{1}{a}+\sqrt{\dfrac{1}{a^2}-1}=\dfrac{-1+\sqrt{1-a^2}}{a}\qquad\&\qquad z_2=\dfrac{-1-\sqrt{1-a^2}}{a}\]
+where the second is outside $|z|=1$. 
+\[z_1-z_2=\dfrac{2\sqrt{1-a^2}}{a}\]
+and
+\[2\pi i\dfrac{1}{ai}\mathop{\mathrm{Res}}_{z=z_1}\Big(\cdot \Big)=2\pi i\dfrac{1}{ai}\dfrac{2}{z_1-z_2}=\dfrac{2\pi }{\sqrt{1-a^2}}\]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+Let's see another example of reverse parametrisation. For $n\in {\bm N}$, evaluate
+\[\int ^{2\pi }_{0}\sin ^{2n}t\,dt=\int _{|z|=1}\Big(\dfrac{z-z^{-1}}{2i}\Big)^{2n}\,\dfrac{dz}{iz}=\dfrac{1}{i(2i)^{2n}}\int _{|z|=1}(z-z^{-1})^{2n}z^{-1}\,dz\]
+Let $z=e^{it}$ for $0\leq t\leq 2\pi $. 
+\[\sin t=\dfrac{z-z^{-1}}{2i}\]
+with $dt=dz/iz$. We only need to find the coefficient of $z^{-1}$. 
+\[(z-z^{-1})^{2n}=\sum ^{2n}_{k=0}{}^{2n}C_{k}z^{k}(-z^{-1})^{2n-k}
+\]
+Finding the constant coefficient, 
+\[2\pi i\dfrac{1}{i}\dfrac{1}{(2i)^{2n}}{}^{2n}C_{n}(-1)^{n}=2\pi \dfrac{(2n)!}{2^{2n}(n!)^2}\]
+\end{ex}
+\vspace{2ex}
+

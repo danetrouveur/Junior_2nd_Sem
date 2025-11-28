@@ -1,0 +1,142 @@
+\section{Lecture 16 (November 11th)}
+\begin{thm}
+$f\in L^{1}$ implies that $\int ^{\infty }_{-\infty }|f(x)|\,dx<\infty $. Let $f,f'\in L^{1}$. Then,
+\[\hat{f}'(t)=it\hat{f}(t)\]
+and $f,xf(x)\in L^{1}$ implies that
+\[\mathcal{F}(xf(x))(t)=i\big(\hat{f}\big)'(t)\]
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+If $f(x)=e^{-ax^2/2}$, $a>0$, then $f'(x)=-axf(x)$. Take the Fourier transform,
+\[it\hat{f}(t)=-ai\big(\hat{f}\big)'(t)\]
+so that $\big(\hat{f}\big)'(t)=-t\hat{f}(t)/a$ denotes $g(t)=\hat{f}(t)$. Then $g'(t)=-tg(t)/a$ and
+\[g(0)=\hat{f}(0)=\int ^{\infty }_{-\infty }e^{-ax^2/2}\,dx=\sqrt{\dfrac{2\pi }{a}}\]
+If $I$ is an open interval containing 0 such thta $g(t)>0$ on $I$. Then for $t\in I$,
+\[\dfrac{g'(t)}{g(t)}=-\dfrac{t}{a} \]
+implies that
+\[\ln g(t)=-\dfrac{t^2}{2a}+C\]
+and $g(t)=C_1e^{-t^2/2a}$. Put $t=0$, and 
+\[g(t)=\sqrt{\dfrac{2\pi }{a}}e^{-t^2/2a}\]
+on $I$. If $I\ne {\bm R}$, then there is an endpoint $t_0$ of $I$ such that $g(t_0)\leq 0$. Put 
+\[g(t_0)=\lim _{t\rightarrow t_0}g(t)=\lim _{t\rightarrow t_0}\sqrt{\dfrac{2\pi }{a}}e^{-t^2/2a}=\sqrt{\dfrac{2\pi }{a}}e^{-t_0^2/2a}>0\]
+which is a contradiction.
+\[\mathcal{F}\Big(e^{-ax^2/2}\Big)(t)=\sqrt{\dfrac{2\pi }{a}}e^{-t^2/2a}\]
+for $a>0$. 
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Convolution of $f$ and $g$) Let
+\[(f\ast g)(x)=\int ^{\infty }_{-\infty }f(x-y)g(y)\,dy\]
+wherever it is defined. 
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+If $f,g\in L^{1}$ and $h=f\ast g$, then $h\in L^{1}$.
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+Let 
+\[f(x)=\begin{cases}
+1/\sqrt{x}&(0,1)=g(x)\in L^{1}\\
+0&\mathrm{elsewhere}
+\end{cases}\]
+also,
+\[f(x)g(x)=\begin{cases}
+1/x&(0,1)\\
+0
+\end{cases}\]
+which is not $L^{1}$. Thus, $L^{1}$ isn't closed under multiplication.
+\end{ex}
+\vspace{2ex}
+\begin{lem}
+\[\int ^{\infty }_{-\infty }\int ^{\infty }_{-\infty }f(x,y)\,dy\,dx\]
+if 
+\[\int ^{\infty }_{-\infty }\int ^{\infty }_{-\infty }|f(x,y)|\,dx\,dy<\infty \]
+Also, if $f(x,y)\geq 0$ for all $x,y$, then the above also holds.
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+\[\begin{align*}
+\int ^{\infty }_{-\infty }|h(x)|\,dx=&\int ^{\infty }_{-\infty }(f\ast g(x))\,dx=\int ^{\infty }_{-\infty }\Big|\int ^{\infty }_{-\infty }f(x-y)g(y)\,dy\Big|\,dx\\
+\leq& \int ^{\infty }_{-\infty }\int ^{\infty }_{-\infty }|f(x-y)||g(y)|\,dy\,dx\leq \int ^{\infty }_{-\infty }|g(y)|\,dy\int ^{\infty }_{-\infty }|f(x-y)|\,dx<\infty 
+\end{align*}\]
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+If $f,g\in L^{1}$, then $f\ast g=g\ast f$. 
+\[(f\ast g)(t)=\int ^{\infty }_{-\infty }f(x-y)g(y)\,dy=\int ^{-\infty }_{\infty }f(t)g(x-t)(-dt)=\int ^{\infty }_{-\infty }g(x-t)f(t)\,dt=(g\ast f)(x)\]
+by $x-y=t$ and $dy=-dt$. Thus,
+\[(f\ast g)(x)=\int ^{\infty }_{-\infty }g(x-y)f(y)\,dy\]
+\end{thm}
+\vspace{2ex}
+\begin{rmk}
+The meaning of $f\ast g$ is the weighted average of $f$ using $g$. For $a>0$, consider 
+\[g_{a}(x)=\begin{align*}
+1/2a& -a<x<a\\
+0&\mathrm{elsewhere}
+\end{align*}\]
+then,
+\[g_{a}(x)\geq 0\qquad\&\qquad \int ^{\infty }_{-\infty }g_{a}(x)\,dx=1\qquad\&\qquad g_{a}(-x)=g_{a}(x)\]
+then
+\[(f\ast g_{a})(x)=\int ^{\infty }_{-\infty }g_{a}(x-y)f(y)\,dy\]
+where
+\[g_{a}(x-y)=\begin{cases}
+1/2a&x-a<y<x+a\\
+0&\mathrm{elsewhere}
+\end{cases}\]
+Notice how
+\[(f\ast g)(x)=\dfrac{1}{2a}\int ^{x+a}_{x-a}f(y)\,dy\]
+taken to $a\rightarrow 0^{+}$ leaves us with $(f\ast g_{a})(x)\rightarrow f(x)$ if $f(x)$ is continuous at $x$.
+\[\lim _{a\rightarrow 0^{+}}(f\ast g_{a})(x)=\dfrac{1}{2}(f(x_{+})+f(x_{-}))\]
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+If $\phi \geq 0$, 
+\[\int ^{\infty }_{-\infty }\phi (x)\,dx=1\]
+and $\phi (-x)=\phi (x)$, then 
+\[\phi _{\varepsilon }(x)=\dfrac{1}{\varepsilon }\phi \Big(\dfrac{x}{\varepsilon }\Big)\]
+with $\varepsilon >0$ satisfies
+\[\int ^{\infty }_{-\infty }\phi _{\varepsilon }(x)\,dx=\int ^{\infty }_{-\infty }\dfrac{1}{\varepsilon }\phi \Big(\dfrac{x}{\varepsilon }\Big)\,dx=\int ^{\infty }_{-\infty }\phi (t)\,dt=1\]
+and
+\[\lim _{\varepsilon \rightarrow 0^{+}}(f\ast \phi _{\varepsilon })(x)=\dfrac{1}{2}(f(x_{+})+f(x_{-}))\]
+For example, we have the Cauchy distribution
+\[\phi (x)=\dfrac{1}{\pi }\dfrac{1}{1+x^2}\]
+and the normal distribution
+\[\phi (x)=\dfrac{1}{\sqrt{2\pi }}e^{-x^2/2}\]
+which is the smoothing function. Notice that
+\[(f\ast \phi )(x)=(\phi \ast f)(x)=\int ^{\infty }_{-\infty }\dfrac{1}{\sqrt{2\pi }}e^{-(x-y)^2/2}f(y)\,dy\]
+(the exponential function is $C^{\infty }({\bm R})$ and is nice) 
+\[(f\ast \phi _{\varepsilon })(x)=\int ^{\infty }_{-\infty }\dfrac{1}{\varepsilon \sqrt{2\pi }}e^{-|x-y|^2/2\varepsilon ^2}f(y)\,dy\]
+which implies
+\[\dfrac{1}{2}|f(x_{+})+f(x_{-})|\]
+and $\varepsilon \rightarrow 0$. The above is exactly $f(x)$ on every norm. Note that
+\[\mathcal{F}\Big(e^{-ax^2/2}\Big)(t)=\sqrt{\dfrac{2\pi }{a}}e^{-t^2/2a}\]
+and $\phi (x)=e^{-x^2/2}/\sqrt{2\pi }$. Then for $f\in L^{1}$,
+\[(f\ast \phi _{\varepsilon })(x)=\int ^{\infty }_{-\infty }\dfrac{1}{\varepsilon \sqrt{2\pi }}e^{-|x-y|^2/2\varepsilon ^2}f(y)\,dy\]
+with
+\[\phi _{\varepsilon }(x)=\dfrac{1}{\varepsilon }\phi \Big(\dfrac{x}{\varepsilon }\Big)=\dfrac{1}{\varepsilon \sqrt{2\pi }}e^{-x^2/2\varepsilon ^2}\]
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+We want to verify the equality
+\[\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\hat{f}(t)e^{ixt}\,dt=\dfrac{1}{2}\Big(f(x_{+})+f(x_{-})\Big)\]
+if $f\in L^{1}$ and is piecewise continuous.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Indeed,
+\[\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\hat{f}(t)e^{ixt}\,dt=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\int ^{\infty }_{-\infty }f(y)e^{-ity}\,dy\,e^{ixt}\,dy=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\int ^{\infty }_{-\infty }f(y)e^{i(x-y)t}\,dy\,dt\]
+This is a dead lock ($|e^{i(x-y)t}|=1$ and is not $L^{1}$ with respect to $t$). Instead, 
+\[\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\hat{f}(t)e^{-\varepsilon ^2t^2/2}e^{ixt}\,dt=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }f(y)e^{-ity}\,dy\,e^{-\varepsilon ^2t^2/2}e^{ixt}\,dt\]
+and
+\[\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\int ^{\infty }_{-\infty }f(y)e^{-\varepsilon ^2t^2/2}e^{i(x-y)t}\,dy\,dt=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }f(y)\int ^{\infty }_{-\infty }e^{-\varepsilon ^2t^2/2}e^{-i(y-x)t}\,dt\,dy\]
+where the most right integral satisfies
+\[\mathcal{F}\Big(e^{-\varepsilon ^2t^2/2}\Big)(y-x)=\dfrac{\sqrt{2\pi }}{\varepsilon }e^{-(y-x)^2/2\varepsilon ^2}\]
+resulting in 
+\[\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }f(y)\dfrac{\sqrt{2\pi }}{\varepsilon }e^{-(y-x)^2/2\varepsilon ^2}\,dy=(f\ast \phi _{\varepsilon })(x)\rightarrow \dfrac{1}{2}(f(x_{+})+f(x_{-}))\]
+as $\varepsilon \rightarrow 0$ and
+\[\dfrac{1}{2\pi }\int \hat{f}(t)e^{-\varepsilon ^2t^2/2}e^{itx}\,dt\rightarrow \dfrac{1}{2\pi }\int \hat{f}(t)e^{ixt}\,dt\]
+as $\varepsilon \rightarrow 0$. 
+\end{proof}
+\vspace{2ex}
+

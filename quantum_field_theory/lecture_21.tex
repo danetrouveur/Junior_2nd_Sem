@@ -1,0 +1,80 @@
+\section{Lecture 21 (November 24th)}
+\begin{defi}
+(Diagrammatics of $\phi ^{4}$ theory) Let us consider $\phi ^{l}$ theory in $n$-dimensions. Let's label:
+\begin{itemize}
+\item[(i)] $V_{l}$ as the number of $l$ verticies
+\item[(ii)] $L$ as the number of loops
+\item[(iii)] $I$ as the number of internal legs or propagators
+\item[(iv)] $N$ as the number of external legs or propagators
+\end{itemize}
+There are a certain number of constraints. Immediate relations are $lV_{l}=N+2I$ and $L=I-V_{l}+1$ which holds for connected diagrams. However, diagrams generally become divergent beyond the ``tree level" with $L=0$.
+\[\mathrm{divergence}\sim \int^{\mathrm{\Lambda }} (d^{n}k)^{L}\times \dfrac{1}{(k^2+m^2-i\epsilon )^{I}}\sim \mathrm{\Lambda }^{nL-2I}\]
+We define the superficial degree of divergence:
+\[\mathcal{D}=nL-2I=n(I-V_{l}+1)-2I=n-\dfrac{n-2}{2}N-\Big(n-\dfrac{n-2}{2}l\Big)V_{l}\]
+The interpretation is that:
+\begin{itemize}
+\item[(i)] ($\mathcal{D}\geq 0$) The diagram is divergent (but symmetries may reduce the degree of divergence. For example, we might expect quadratic divergence going to logarithmic divergence).
+\item[(ii)] ($\mathcal{D}<0$) The diagram is convergent (unless it contains divergent sub-diagrams).
+\end{itemize}
+This divergence is remedied through remoralisation by introducing suitable ``counterterms". However, if $\mathcal{D}$ implies that $V_{l}$ increases, this might not be available (the number of required counterterms is not bounded).
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+(Superficial renormalisiability of $\phi ^{l}$ theory in $n$-dimensions) If
+\[n-\dfrac{n-2}{2}l<0\]
+the diagram is non-renormalisable. If the above inequality become an equality or flips, we call the diagrams renormalisable and super-renormalisable respectively.
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+(Renormalisability from the mass dimension of the coupling constant) Notice that $[S]=0$ implies $[\mathcal{L}]=[(\partial \phi )^2]=[\lambda _{l}\phi ^{l}]=n$. $[\phi ]=(n-2)/2$ and $[\lambda _{l}]=n-(n-2)l/2$. Thus, we can realise the renormalisability of the theory can be obtained from the mass dimension of the coupling constant.
+\end{rmk}
+\vspace{2ex}
+\begin{ex}
+($\phi ^{4}$ theory in 4-dimension)
+\[\Big(n-\dfrac{n-2}{2}l\Big)_{(l,n)=(4,4)}=0\]
+and our theory is renormalisable. Then,
+\[\mathcal{D}=4-N\]
+and renormalisation is only required for 2 and 4 point functions is enough. 
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Quantum electrodynamics) The Lagrangian density of quantum electrodynamics is
+\[\begin{align*}
+\mathcal{L}_{QED}=&\bar{\psi }(i\gamma ^{\mu }(\partial_{\mu }-ieA_{\mu })-m)\psi -\dfrac{1}{4}F_{\mu \nu }F^{\mu \nu }&+\dfrac{1}{2\xi }(\partial _{\mu }A^{\mu })^2+\bar{\psi }\eta +\bar{\eta }\psi +A_{\mu }J^{\mu } 
+\end{align*}\]
+Notice how the interaction term is given as $e\bar{\psi }\gamma ^{\mu }A_{\mu }\psi $. The generating functional with the $i\epsilon $-prescription is given as
+\[\begin{align*}
+Z=[J,\eta ,\bar{\eta }]=&\int \mathcal{D}A_{\mu }\,\mathcal{D}\bar{\psi }\,\mathcal{D}\psi\,\exp \Big[i\int d^{4}x\,\mathcal{L}_{QED}\Big]
+\end{align*}\]
+Recall how we pulled out the interactions terms in $\phi ^{4}$ theory, and we do something similar here. 
+\[\begin{align*}
+Z[J,\eta ,\bar{\eta}]=&\int \mathcal{D}A_{\mu }\,\mathcal{D}\bar{\psi }\,\mathcal{D}\psi \,\exp \Big[ie\int d^{4}x\,\bar{\psi }\gamma ^{\mu }A_{\mu }\psi \Big]\exp \Big[i\int d^{4}x\,\Big(\mathcal{L}_{D}+\mathcal{L}_{M}+\bar{\psi }\eta +\bar{\eta }\psi +J^{\mu }A_{\mu }\Big)\Big]\\
+=&\exp \Big[ie\int d^{4}z\,\Big(\dfrac{\delta }{i\delta J^{\mu }(x)}\Big)\Big(\dfrac{i\delta }{\delta \eta (z)}\Big)\gamma ^{\mu }\Big(\dfrac{\delta }{i\delta \bar{\eta }(z)}\Big)\Big]\\&\times \exp \Big[-\int d^{4}x\,d^{4}y\,\bar{\eta }(x)S_{F}(x-y)\eta (y)\Big]\times \exp \Big[-\dfrac{1}{2}\int d^{4}x\,d^{4}y\,J^{\mu }(x)D_{F\,\mu \nu }(x-y)J^{\nu }(y)\Big]
+\end{align*}\]
+The goal is to introduce QED Feynman rules and analyse various QED scattering processes using the Feynman diagrams. For $e$ being small enough, we use perturbative analysis. 
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Feynman rules) The connected $(N;N;M)$-point function is given as 
+\[G^{(N;N;M)}_{c\;\alpha _{1}\ldots \alpha _{N};\beta_1\ldots \beta _{N};\mu_1\ldots \mu _{M}}(x_1,\ldots x_{n};y_1,\ldots y_{N};w_1,\ldots w_{M})\]
+which is equal to
+\[\langle 0|T\hat{\psi }_{\alpha_1}(x_1)\ldots \hat{\psi }_{\alpha _{N}}(x_{N})\hat{\bar{\psi }}_{\beta_1}(y_1)\ldots \hat{\bar{\psi }}_{\beta _{N}}\hat{A}_{\mu_1}(w_1)\ldots \hat{A}_{\mu _{M}}(w_{M})|0\rangle \]
+The Fourier transform will naturally give
+\[\tilde{G}^{(N;N;M)}_{c\;\alpha_1,\ldots ,\mu _{M}}(p_1,\ldots ,p_{N};q_{1},\ldots ,q_{N};r_{1},\ldots ,r_{m})\]
+The Feynman rules in the position space is given as:
+\begin{itemize}
+\item[(i)] Construct all connected diagrams with $N$-external incoming-arrowed lines and outgoing arrowed lines and $M$-external wavy lines and $3V$-internal (incoming-arrowed, outgoing-arrowed, wavy) lines from $V$ verticies.  
+\item[(ii)] For each arrowed leg,
+\[S_{F\;\alpha\beta }(X-Y)=\langle 0|T\hat{\psi }_{\alpha }(X)\hat{\bar{\psi }}_{\beta }(Y)|0\rangle \]
+\item[(iii)] For each wavy leg,
+\[D_{F\;\mu \nu }(v-w)=\langle 0|T\hat{A}_{\mu }(v)\hat{A}_{\nu }(w)|0\rangle \]
+\item[(iv)] For each vertex,
+\[ie(\gamma _{\mu })_{\beta \alpha }\int d^{4}z\]
+the arrow direction in the diagram corresponds to the right to left in matrix mulitplication. 
+\item[(v)] Divide by the symmetry-factor.
+\item[(vi)] Multiply the factor of ``-1" if necessary, considering the rearrangement of Grassmanian fields. For example, a fermionic loop contribute an additional factor of $-1$. 
+\item[(vi)] Sum over all distinct diagrams. 
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+

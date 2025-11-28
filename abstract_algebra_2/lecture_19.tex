@@ -1,0 +1,45 @@
+\section{Lecture 19 (November 18th)}
+\begin{rmk}
+Last time, we saw examples of $\mathrm{Gal}(F/K)$. Today, we learn more about the examples and we also learn Galois theory. Note that regarding notation, the textbook uses $\mathrm{Gal}_{K}(F)$. However, in our class, we use $\mathrm{Gal}(F/K)$. 
+\end{rmk}
+\vspace{2ex}
+\begin{ex}
+(15.11) Let $f(t)=t^{4}+t^{3}+t^2+t+1\in {\bm Q}[t]$, and let $F$ be the splitting field of $f(t)$, ${\bm Q}(\xi ,\xi ^2,\xi ^3,\xi ^{4})={\bm Q}(\xi )$ (where $\xi $ is the primative 5th root of unity). Calculate $\mathrm{Gal}(F/{\bm Q})$. 
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+\begin{itemize}
+\item[(i)] For each $n\in \{1,2,3,4\}$, $\sigma _{\bar{n}}:{\bm Q}(\xi )\rightarrow {\bm Q}(\xi ):\xi \mapsto \xi ^{n}$ is a element of $\mathrm{Gal}(F/{\bm Q})$. 
+\item[(ii)] There is a map $\phi :({\bm Z}/5{\bm Z})^{\times }\rightarrow \mathrm{Gal}(F/{\bm Q})$ that maps $\bar{n}\mapsto \sigma _{\bar{n}}$. Here, we regard $(({\bm Z}/5{\bm Z})^{\times },+)$ as an albelian group.
+\item[(iii)] $\phi $ is an isomorphism and in conclusion, $\mathrm{Gal}(F/{\bm Q})$ is a cyclic group of order 4.
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(15.13) Now lets turn to $f(t)=t^3-2$. Suppose $\sigma \in \mathrm{Gal}(F/{\bm Q})$. An important observation is that for each zero $\ast$ of $f(t)$, $\sigma (\ast)$ is a zero of $f(t)$ (note that $\ast\in \{\alpha ,\alpha \xi ,\alpha \xi ^2\}$). Therefore, $\sigma (\alpha )\in \{\alpha ,\alpha \xi ,\alpha \xi ^2\}$. Now we determine $\sigma (\alpha \xi )$. Then 
+\[\sigma (\alpha \xi )\in \{\alpha ,\alpha \xi ,\alpha \xi ^2\}-\{\sigma (\alpha )\}\]
+and also
+\[\sigma (\alpha \xi ^2)\in \{\alpha ,\alpha \xi ,\alpha \xi ^2\}-\{\sigma (\alpha ),\sigma (\alpha \xi )\}\]
+The conclusion is that $\sigma $ restricts to a bijection
+\[\{\alpha ,\alpha \xi ,\alpha \xi ^2\}\rightarrow \{\alpha ,\alpha \xi \alpha \xi ^2\}\]
+Conversely, for each bijection, we can obtain a element of $\mathrm{Gal}(F/{\bm Q})$ (since $F/{\bm Q}$ is Galois). It turns out that the map $\mathrm{Gal}(F/{\bm Q})\rightarrow S_{4}$, $\sigma \mapsto (\{\alpha ,\alpha \xi ,\alpha \xi ^2\}\rightarrow \{\alpha ,\alpha \xi ,\alpha \xi ^2\})$ is an isomorphism.
+\end{ex}
+\vspace{2ex}
+\begin{rmk}
+In example (15.12), we got a group homomorphism 
+\[\mathrm{Gal}(F/{\bm Q})\rightarrow S_{4}\]
+where 
+\[\sigma \mapsto (\{\xi, \xi ^2, \xi ^3, \xi ^{4}\}\rightarrow \{\xi, \xi ^2, \xi ^3, \xi ^{4}\})\]
+\end{rmk}
+\vspace{2ex}
+\begin{lem}
+(15.8) Let $F/K$ be an algebraic extension. Suppose that $F=K(\alpha_1,\ldots ,\alpha _{n})$, where $\alpha _{i}$'s are the zeros in $F$ of a polynomial $f(t)\in K[t]$. Then $\mathrm{Gal}(F/K)$ is isomorphic to a subgroup of $S_{n}$. 
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+Each $\sigma $ determined by the values at $\alpha_{i}$. In fact, there is a group homomoprhism 
+\[\mathrm{Gal}(F/K)\rightarrow S_{\{\alpha _1,\ldots ,\alpha _{n}\}}\]
+Moreover, this map is injective. For this, we will use group actions.
+\end{proof}
+\vspace{2ex}
+

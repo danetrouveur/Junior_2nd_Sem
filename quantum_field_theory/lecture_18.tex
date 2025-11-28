@@ -1,0 +1,87 @@
+\section{Lecture 18 (November 12th)}
+\begin{cor}
+Last class, we considered the path integral
+\[Z[J]=\exp \Big[-\dfrac{1}{2}\int d^{4}x\,d^{4}y\,J^{\mu }(x)D_{F\,\mu \nu }(x-y)J^{\nu }(y)\Big]\]
+with
+\[D_{F_{\mu \nu }}=\int \dfrac{d^{4}k}{(2\pi )^{4}}\,\dfrac{-i(\eta _{\mu \nu }-(1+\xi )\hat{k}_{\mu }\hat{k}_{\nu })}{k^2-i\epsilon }e^{ik\cdot (x-y)}\]
+The correlation functions from $Z[J]$ are then given as
+\[\begin{align*}
+G_{\mu_1,\ldots ,\mu _{2N+1}}^{(2N+1)}(x_1,\ldots ,x_{2N+1})=&0\\
+G_{\mu \nu }^{(2)}(x_1,x_2)=&\dfrac{\delta ^2Z[J]}{i\delta J^{\mu }(x_1)i\delta J^{\nu }(x_2)}\Big|_{J=1}=D_{F\,\mu \nu }(x_1-x_2)\\
+G^{(2N)}_{\mu_1,\ldots ,\mu _{2N}}(x_1,\ldots ,x_{2N})=&\sum _{\sigma \in S_{2}}G^{(2)}_{\mu _{\sigma (1)}\mu_{\sigma (2}}(x_{\sigma (1)}-x_{\sigma (2)})\ldots G_{\mu_{\sigma (2N-1)}\mu _{\sigma (2N)}}^{(2)}(x_{\sigma (2N-1)}-x_{\sigma (2N)})
+\end{align*}\]
+\end{cor}
+\vspace{2ex}
+\begin{rmk}
+We now learn Feynman diagrams of interacting quantum field theory. Our goal is to see two examples of interacting quantum field theories, $\phi ^{4}$ theory and quantum electrodynamics using a pertubative analysis.
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+($\phi ^{4}$ theory) The generating function for $\phi ^{4}$ theory is defined as
+\[\begin{align*}
+Z[J]=&\int \mathcal{D}\phi \,\exp \Big[i\int d^{4}x\,\Big(-\dfrac{1}{2}\partial^{\mu }\phi \partial _{\mu }\phi -\dfrac{1}{2}(m^2-i\epsilon )\phi ^2-\dfrac{\lambda }{4!}\phi ^{4}+\phi \cdot J\Big)\Big]\\
+=&\int \mathcal{D}\phi \,\exp \Big[-\int d^{4}x\,\dfrac{\lambda }{4!}\Big(\dfrac{\delta }{i\delta J(x)}\Big)^{4}\Big]\exp \Big[i\int d^{4}x\,\Big(-\dfrac{1}{2}(\partial \phi )^2-\dfrac{1}{2}(m^2-i\epsilon )\phi ^2+\phi J\Big)\Big]\\
+=&\exp \Big[-i\int d^{4}z\,\dfrac{\lambda }{4!}\Big(\dfrac{\delta }{i\delta J(z)}\Big)^{4}\Big]\exp \Big[-\dfrac{1}{2}\int d^{4}\,d^{4}y\,J(x)\mathrm{\Delta }_{F}(x-y)J(y)\Big]
+\end{align*}\]
+Our goal is to then:
+\begin{itemize}
+\item[(i)] Derive correlation functions from $Z[J]$ to explain how Feynman diagrams are used!
+\item[(ii)] Provide scattering amplitudes in terms of correlation functions. 
+\end{itemize}
+The key method would be to assume $\lambda $ is small enough such that we can preform a perturbative expansion.
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Pertubative expansions and Feynman diagrams) In writing
+\[Z[J]=\Big(1-i\int d^{4}z\,\dfrac{\lambda }{4!}\Big(\dfrac{\delta }{i\delta J(z)}\Big)^{4}\Big)\exp \Big(-\dfrac{1}{2}\int d^{4}x\,d^{4}y\,J(x)\mathrm{\Delta }_{F}(x-y)J(y)\Big)\]
+we can write the exponential as
+\[1-\dfrac{1}{2}J\mathrm{\Delta }J+\dfrac{1}{2!}\Big(-\dfrac{1}{2}J\mathrm{\Delta }J\Big)^2+\ldots \]
+This gives,
+\[\begin{align*}
+Z[J]=e^{-J\mathrm{\Delta }J/2}\Big(1-\dfrac{i\lambda }{4!}\int d^{4}z\,3\mathrm{\Delta }_{F}(z-z)^2-\dfrac{i\lambda }{4!}\int d^{4}z\,(-6)\mathrm{\Delta }_{F}(z-z)\Big(\int d^{4}x\,\mathrm{\Delta }_{F}(z-x)J(x)\Big)^2-\dfrac{i\lambda }{4!}\int d^{4}z\,\,\int d^{4}x\,\mathrm{\Delta }_{F}(z-x)J(x)\Big)^{4}\Big)
+\end{align*}\]
+The normalised generating functional is
+\[\begin{align*}
+Z_{n}[J]=&Z[J]/Z[0]\\
+=&\exp \Big[-\dfrac{1}{2}J\mathrm{\Delta }J\Big]\Big(1-\dfrac{i\lambda }{4!}\int d^{4}z\,\Big(-6\mathrm{\Delta }_{F}(0)\Big(\int d^{4}x\,\mathrm{\Delta }_{F}(z-x)J(x)\Big)^2+\Big(\int d^{4}x\,\mathrm{\Delta }_{F}(z-x)J(x)\Big)^{4}\Big)\Big)+O(\lambda ^2)
+\end{align*}\]
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(2-point function) The two point correlation function is given as
+\[\begin{align*}
+G^{(2)}(x_1,x_2)=\dfrac{\delta ^2Z[J]}{i\delta J(x_1)i\delta J(x_2)}\Big|_{J=0}=&\mathrm{\Delta }_{F}(x_1-x_2)\Big(1-\dfrac{i\lambda }{8}\int d^{4}z\,\mathrm{\Delta }_{F}(z-z)^2\Big)\\&-\dfrac{i\lambda }{2}\int d^{4}z\,\mathrm{\Delta }_{F}(z-z)\mathrm{\Delta }_{F}(z-x_2)+O(\lambda ^2)
+\end{align*}\]
+In terms of diagrams, it is the following.
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Normalised 2-point function) The normalised 2-point function is given as
+\[G_{n}^{(2)}(x_1,x_2)=\mathrm{\Delta }_{F}(x_1-x_2)-\dfrac{i\lambda }{2}\int d^{4}z\,\mathrm{\Delta }(z-z)\mathrm{\Delta }_{F}(z-x_1)\mathrm{\Delta }_{F}(z-x_2)+O(\lambda ^2)\]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Connected 2-point function) The connected 2-point function in this case is equivalent to the normalised 2-point function in this theory.
+\[\begin{align*}
+G_{c}^{(2)}(x_1,x_2)=&\dfrac{\delta ^2\log Z[J]}{i\delta J(x_1)i\delta J(x_2)}\\
+=&\dfrac{\delta }{i\delta J(x_1)}\Big(\dfrac{1}{Z[J]}\cdot \dfrac{\delta Z[J]}{i\delta J(x_2)}\Big)\Big|_{J=0}\\
+=&-\dfrac{1}{Z^2}\dfrac{\delta Z}{i\delta J_1} \dfrac{\delta Z}{i\delta J_2}+\dfrac{1}{Z}\dfrac{\delta }{i\delta J_1}\dfrac{\delta }{i\delta J_{2}}Z\Big|_{J=0}\\
+=&G_{n}^{(2)}(x_1,x_2)
+\end{align*}\]
+as the first term vanishes.
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(4-point correlation functions) 
+\[G_{n}^{(4)}(x_1,x_2,x_3,x_4)=\dfrac{\delta ^{4}Z_{n}[J]}{i\delta J(x_1),\ldots ,i\delta J(x_4)}\Big|_{J=0}\]
+which is equal to
+\[\begin{align*}
+&\mathrm{\Delta }_{F}(x_1-x_2)\mathrm{\Delta }_{F}(x_3-x_4)+(x_2\leftrightarrow x_3)+(x_2\leftrightarrow x_4)\\
+&-\dfrac{i\lambda }{2}\mathrm{\Delta }_{F}(z-z)\Big(\mathrm{\Delta }_{F}(x_3-x_4)\int d^{4}z\,\mathrm{\Delta }_{F}(z-x_1)\mathrm{\Delta }_{F}(z-x_2)+(5\mathrm{\ other\ permutations})\Big)\\
+&-i\lambda \int d^{4}z\,\mathrm{\Delta }_{F}(z-x_1)\mathrm{\Delta }_{F}(z-x_2)\mathrm{\Delta }_{F}(z-x_3)\mathrm{\Delta }_{F}(z-x_{4})+O(\lambda ^2)
+\end{align*}\]
+In terms of diagrams,
+
+\end{ex}
+\vspace{2ex}
+

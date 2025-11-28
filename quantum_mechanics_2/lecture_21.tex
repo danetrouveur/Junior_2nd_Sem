@@ -1,0 +1,43 @@
+\section{Lecture 21 (November 19th)}
+\begin{defi}
+(Aharonov-Bohm effect) Consider a vector potential $\vec{A}$ and the generated magnetic field $\vec{B}=\nabla \times \vec{A}$. In the quantum world, the vector potential is more fundamental in some sense than the emergent field. Consider a solinoid of radius $a$ with a homogeneous magnetic field with strength $B_0$. What is the vector potential? Well, the answer is, from the homework,
+\[\vec{A}=\begin{cases}
+A_{\phi }(\rho <a)\sim \rho B_{0}/z\\
+A_{\phi }(\rho >a)\sim \mathrm{\Phi} _{B}/2\pi \rho 
+\end{cases}\]
+with $\mathrm{\Phi} _{B}=B_0\pi a^2$. Let's try solving Schrodinger's equation outside the solenoid with $\vec{B}=0$ by trying to set $\vec{A}'=0$ outside. 
+\[\vec{A}'=0=\vec{A}-\Big(\hat{\rho }\dfrac{\partial }{\partial \phi }+\hat{\phi }\dfrac{1}{\rho }\dfrac{\partial }{\partial \phi }+\hat{z}\dfrac{\partial }{\partial z}\Big)\mathrm{\Lambda } \]
+we find that we need $\mathrm{\Lambda }=\mathrm{\Phi} \phi /2\pi $. We recall that
+\[\psi' =\exp \Big[\dfrac{-iq\mathrm{\Lambda }}{\hbar }\Big]\psi =\exp \Big[\dfrac{ie}{\hbar }\dfrac{\mathrm{\Phi} }{2\pi }\phi \Big]\psi =\exp \Big[\dfrac{ie}{\hbar }\int \vec{A}\cdot d\vec{r}\Big]\psi \]
+as $d\vec{r}=\rho \,d\vec{\phi }$. We of course need our single-valuedness condition,
+\[\psi (\phi +2\pi )=\psi(\phi ) \]
+but
+\[\psi (\phi +2\pi )=e^{ie\mathrm{\Phi} /\hbar }\psi (\phi )\]
+and the phase of the wavefunction changes. For a two slit interference experiment,
+\[\begin{align*}
+\psi_1+\psi_2=&S_1e^{iP_1}+S_2e^{iP_2}\\
+=&e^{iP_1}(S_1+S_2e^{iP_2-iP_1})
+\end{align*}\]
+where the phase difference is affected by the nontrivial integral
+\[\oint \vec{A}\cdot d\vec{r} \]
+and the interference pattern changes. A related problem will be in the test! 
+\end{defi}
+\vspace{2ex}
+\begin{thm}
+(Radiation theory) First of all, define
+\[H=\dfrac{(\vec{p}-(-e)\vec{A})^2}{2m_{e}}\]
+where $\vec{A}$ is given as the vector potential of light. The most widely used is the coulomb gauge, with $\nabla \cdot \vec{A}=0$. In vaccum, $\mathrm{\Phi} =0$, and we simply have
+\[\vec{A}=\nabla \times \vec{A}\qquad\&\qquad \vec{E}=-\dfrac{\partial \vec{A}}{\partial t} \]
+Second of all, we must discuss whether our system is semi-classical or quantum. For a true quantum picture, we need 
+\[a^{r}(k)\qquad\&\qquad a^{r}(k)^{\dagger }\qquad [a^{r}(k),a^{r}(k)^{\dagger }]=1\]
+The field becomes, approximately
+\[\vec{A}(x,t)=\sum _{k}\sum _{r=1}^{2}\Big[\vec{\epsilon }\,^{r}(k)a^{r}(k)e^{-i\omega t+ikx}+\vec{\epsilon }\,^{r}(k)^{\dagger }a^{r}(k)^{\dagger }e^{i\omega t-ikx}\Big]\]
+Most simply, let's consider monochromatic light with just a single $\omega $. Noting that
+\[N\hbar \omega =\int_{V} d^3\vec{x}\,\Big(\dfrac{\epsilon_0}{2}\vec{E}\cdot \vec{E}+\dfrac{\mu_0}{2}\vec{B}\cdot \vec{B}\Big)\]
+and $\vec{E}$ and $\vec{B}$ from above, we can determine the normalisation of the ansatz above.
+\[2\int d^3\vec{x}\,\dfrac{\epsilon_0}{2}\langle \vec{E}\cdot \vec{E}\rangle _{\mathrm{avg}}=2\omega ^2V\epsilon_0C^2\]
+which gives
+\[C=\sqrt{\dfrac{N\hbar  }{2\epsilon_0\omega V}}\]
+\end{thm}
+\vspace{2ex}
+

@@ -1,0 +1,91 @@
+\section{Lecture 18}
+\begin{recall}
+We have previously learned the Schwartz class $\mathcal{S}$ and that it is $\mathcal{S}$ is dense in $L^{1}$. This implied that for $f\in L^{1}$, there is $\{f_{n}\}$ in $\mathcal{S}$ such that 
+\[\lim _{n\rightarrow \infty }\int _{-\infty }^{\infty }|f_{n}-f|\,dx=0\]
+Also, if $f\in \mathcal{S}$, $\hat{f}\in \mathcal{S}$.
+\end{recall}
+\vspace{2ex}
+\begin{thm}
+(Riemann Lesbesgue lemma) If $f\in L^{1}$, then 
+\[\lim _{|t|\rightarrow \infty }\hat{f}(t)=0\]
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Take any $\varepsilon >0$, we have to find $M>0$ satisfying if $|t|>M$, then $|\hat{f(t)}|<\varepsilon $. We use the fact that $\mathcal{S}$ is dense in $L^{1}$ and that $\hat{f}(t)=\hat{f}_{n}(t)+(\hat{f}(t)-\hat{f}_{n}(t))$ where $f_{n}\in \mathcal{S}$. For $f\in L^{1}$, there is $f_{N}\in \mathcal{S}$ such that 
+\[\int ^{\infty }_{-\infty }|f-f_{N}|\,dx<\dfrac{\varepsilon }{2}\]
+Since $\hat{f}_{N}\in \mathcal{S}$, there is $M>0$ such that if $|t|>M$ then $|\hat{f}_{N}(t)|<\varepsilon /2$. And 
+\[\hat{f}_{N}(t)-\hat{f}(t)=\int _{-\infty }^{\infty }\Big(f_{n}(x)-f(x)\Big)e^{-itx}\,dx\]
+so that 
+\[|\hat{f}_{N}(t)-\hat{f}(t)|\leq \int ^{\infty }_{-\infty }|f_{N}(x)-f(x)|\,dx<\dfrac{\varepsilon }{2}\]
+Hence, if $|t|>M$ then 
+\[|\hat{f}(t)|\leq |\hat{f}_{N}(t)|+|\hat{f}(t)-\hat{f}_{N}(t)|<\dfrac{\varepsilon }{2}+\dfrac{\varepsilon }{2}=\varepsilon \]
+\end{proof}
+\vspace{2ex}
+\begin{cor}
+If $f\in L^{1}$, then $\hat{f}$ is continuous on ${\bm R}$. Take $\{f_{n}\}$ in $\mathcal{S}$ such that 
+\[\int _{-\infty }^{\infty }|f_{n}-f|\,dx\rightarrow 0\]
+then for every $t\in {\bm R}$
+\[|\hat{f}_{n}(t)-\hat{f}(t)|\leq \int ^{\infty }_{-\infty }|f_{n}(x)-f(x)|\,dx\]
+That is, $\hat{f}_{n}\rightarrow \hat{f}$ uniformly on ${\bm R}$.
+\end{cor}
+\vspace{2ex}
+\begin{defi}
+(Laplace transform of $f$) Let $f(t)=0$ if $t<0$, and continuous for $f\geq 0$. Lastly, let there exist $M,k,t_{0}>0$ such that
+\[|f(t)|\leq Me^{kt}\]
+for every $t>t_{0}$. For such $f$, the Laplce transform $F$ of $f$ is defined as
+\[F(s)=\int _{0}^{\infty }f(t)e^{-st}\,dt\]
+where $\mathrm{Re}(s)> k$ and $s \in {\bm C}$, analytic on the half plane $\mathrm{Re}(s)>k$. Indeed, if $s=\sigma +iw$ (where $\sigma >k$) then
+\[F(s)=\int _{0}^{\infty }f(t)e^{-\sigma t}e^{-iwt}\,dt\]
+which is $\hat{g}(w)$ where $g(t)=f(t)e^{-\sigma t}$ and is $L^{1}$. We now apply the inversion theorem on 
+\[\hat{g}(w)=\int _{0}^{\infty }f(t)e^{-\sigma t}e^{-iwt}\,dt=\int ^{\infty }_0 f(x)e^{-\sigma x}e^{-iwx}\,dx\]
+Then, 
+\[f(t)e^{-\sigma t}=g(t)=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\hat{g}(w)e^{itw}\,dw=\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\int ^{\infty }_{-\infty }f(x)e^{-\sigma x}e^{-iwx}\,dx\,e^{itw}\,dw\]
+Hence,
+\[f(t)=\dfrac{1}{2\pi }\int _{-\infty }^{\infty }\int _{0}^{\infty }f(x)e^{-(\sigma +iw)x}\,dx\,e^{(\sigma +iw)t}\,dw\]
+Putting pack $s=\sigma +iw$ ($dw=ds/i$),
+\[f(t)=\dfrac{1}{2\pi i}\int _{\sigma -i\infty}^{\sigma +i\infty }\int ^{\infty }_{0}f(x)e^{-sx}\,dx\,e^{st}\,ds=\dfrac{1}{2\pi i}\int _{\sigma +i\infty }^{\sigma -i\infty }F(s)e^{st}\,ds\]
+for $t>0$. 
+\end{defi}
+\vspace{2ex}
+ \begin{ex}
+ If $f(t)=1-e^{-t}$ for $t\geq 0$, zero elsewhere. Then 
+ \[F(s)=\int _{0}^{\infty }(1-e^{-t})e^{-st}\,dt=\int _{0}^{\infty }e^{-st}\,dt-\int _{0}^{\infty }e^{-(s+1)t}\,dt=\dfrac{1}{s}-\dfrac{1}{s+1}=\dfrac{1}{s(s+1)}\]
+Let's try the inversion theorem!
+\[f(t)=\dfrac{1}{2\pi i}\int ^{\sigma -i\infty }_{\sigma +i\infty }\dfrac{e^{st}}{s(s+1)}\,ds\]
+and we the left hemisphere contour $C_{R}\cup \{x=\sigma \}$. For the right edge, we use $s=\sigma +iy$ ($-R\leq y\leq R$). For the round circumference, $s=\sigma +Re^{i\theta }$ with $\pi /2\leq \theta \leq 3\pi /2$. Let $f(s)=e^{st}/s(1+s)$ Always, 
+\[\lim _{R\rightarrow \infty }\int _{C_{R}}f(s)\,ds=0\]
+must hold. In this particular case,
+\[\int _{C_{R}}f(s)\,ds\rightarrow 0\]
+as $R\rightarrow \infty $. Thus,
+\[\dfrac{1}{2\pi i}\int ^{\sigma +i\infty }_{\sigma -i\infty }\dfrac{e^{st}}{s(1+s)}\,ds=2\pi i\dfrac{1}{2\pi i}(1-e^{-t})=1-e^{-t}\]
+\end{ex}
+\vspace{2ex}
+\begin{recall}
+Notice that
+\[\int ^{\pi }_{0}e^{-R\sin \theta }\,d\theta =2\int ^{\pi /2}_{0}e^{-R\sin \theta }\,d\theta \]
+and that $2\theta /\pi \leq \sin \theta \leq \theta $.
+\[\int ^{\pi /2}_{0}e^{-R\sin \theta }\,d\theta \leq \int ^{\pi /2}_{0}e^{-R\theta /2\pi }\,d\theta =\dfrac{\pi }{2R}(1-e^{-R})\leq \dfrac{\pi }{2R}\]
+and
+\[\int ^{\pi }_{0}e^{-R\sin \theta }\,d\theta \leq \dfrac{\pi }{R}\]
+\end{recall}
+\vspace{2ex}
+\begin{ex}
+Find
+\[\dfrac{1}{2\pi i}\int ^{\sigma +i\sigma }_{\sigma -i\infty }\dfrac{e^{st}}{s^2+1}=\mathop{\mathrm{Res}}_{z=i}f+\mathop{\mathrm{Res}}_{z=-i}f=\]
+where $f(s)=e^{st}/(s^2+1)$. Notice that
+\[\mathop{\mathrm{Res}}_{z=\pm i}f=\dfrac{p(\pm i)}{q'(\pm i)}\]
+where $p(s)=e^{st}$ and $q(s)=s^2+1$. We thus have
+\[\dfrac{1}{2\pi i}\int ^{\sigma +i\infty }_{\sigma -i\infty }\dfrac{e^{st}}{s^2+1}\,ds=\dfrac{e^{it}}{2i}-\dfrac{e^{-it}}{2i}=\sin t\]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+Find
+\[\dfrac{1}{2\pi i}\int ^{\sigma +i\infty }_{\sigma -i\infty }\dfrac{2s^3e^{st}}{s^{4}-4}\,ds\]
+Note that $s^{4}-4=0$ implies $s=\pm \sqrt{2},\pm i\sqrt{2}$.
+\[\mathop{\mathrm{Res}}_{z=\alpha }f=\dfrac{2\alpha ^3e^{\alpha t}}{4\alpha ^3}=\dfrac{e^{\alpha t}}{2}\]
+and
+\[\dfrac{e^{t\sqrt{2}}}{2}+\dfrac{e^{-t\sqrt{2}}}{2}+\dfrac{e^{-it\sqrt{2}}}{2}+\dfrac{e^{it\sqrt{2}}}{2}=\cosh \sqrt{2}t+\cos \sqrt{2}t\]
+
+\end{ex}
+\vspace{2ex}
+ 

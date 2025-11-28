@@ -1,0 +1,83 @@
+\section{Lecture 20 (November 19th)}
+\begin{recall}
+Recall that we had the connected $2N$-point function in the $p$-space was given by
+\[G_{c}^{(2N)}(x_1,\ldots ,x_{2N})=\int \dfrac{d^{4}p}{(2\pi )^{4}}\ldots \dfrac{d^{4}p_{2N}}{(2\pi )^{4}}e^{ip_1x_1+\ldots +ip_{n}x_{n}}\tilde{G}_{c}^{(2N)}(p_1,\ldots ,p_{2N})\]
+How do we derive this?
+\begin{itemize}
+\item[(i)] The LHS is given in terms of $\mathrm{\Delta }_{F}(x-y)$ and $\int d^{4}z$'s.
+\item[(ii)] Put the integral representation of 
+\[\mathrm{\Delta }_{F}(x-y)=\int \dfrac{d^{4}k}{(2\pi )^{4}}\dfrac{-ie^{ik(x-y)}}{k^2+m^2-i\epsilon }\]
+into the LHS, then implement $\int d^{4}z$ integrals, yielding Dirac delta functions. 
+\item[(iii)] Read of $\tilde{G}_{c}^{(2N)}(p_1,\ldots ,p_{2N})$ from the integrand. 
+\end{itemize}
+\end{recall}
+\vspace{2ex}
+\begin{thm}
+(Feynman rules in momentum space) 
+\begin{itemize}
+\item[(i)] Construct all connected diagrams with $2N$ external lines and $4V$ internal lines (from $V$ verticies). Joined ends of lines form legs. 
+\item[(ii)] Assign momenta to all legs according to the "incoming" momentum convention. 
+\item[(iii)] For each leg, assign 
+\[\dfrac{-i}{k^2+m^2-i\epsilon }\]
+\item[(iv)] For each vertex, assign 
+\[-i\lambda (2\pi )^{4}\delta ^{(4)}(k_1+k_2+k_3+k_4)\]
+\item[(v)] Integrate over integral momenta.
+\[\int \dfrac{d^{4}k}{(2\pi )^{4}}\]
+\item[(vi)] Divide by the symmetry factor assigned with each diagram.
+\item[(vii)] Sum over all connected diagrams.
+\end{itemize}
+Let's make some comments:
+\begin{itemize}
+\item[(i)] Incoming momentum convention:
+\[G_{c}(\ldots ,x_{i},\ldots )=\int \ldots e^{ip_{i}x_{i}}\ldots \tilde{G}_{c}(\ldots ,p_{i},\ldots )\]
+and this is why we choose the direction of the diagram to be ``incoming". The physical meaning becomes clearer when $G_{c}^{(2N)}$ are related to the S-matrix via LSZ. 
+\item[(ii)] Translation symmetry:
+\[G^{(2N)}_{c}(x_1,\ldots ,x_{2N})=G_{c}^{(2N)}(x_1+a,\ldots ,x_{2N}+a)\]
+This implies that
+\[\tilde{G}^{(2N)}(p_1,\ldots ,p_{2N})=(2\pi )^{4}\delta ^{(4)}(p_1+\ldots +p_{2N})\tilde{G}^{(2N)}_{c}(p_1,\ldots ,p_{2N})\]
+and motivates the existence of the delta function corresponding to momentum conservation.
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(Connected 2-point function) 
+\[\begin{align*}
+\tilde{G}^{(2)}_{c}(p_1,p_2)=&(2\pi )^{4}\delta ^{(4)}(p_1+p_2)\Big(\dfrac{-i}{p_2^2+m^2-i\epsilon }-\dfrac{i\lambda }{2}\dfrac{-i}{p_1^2+m^2-i\epsilon }\dfrac{-i}{p_2^2+m^2-i\epsilon }\int \dfrac{d^{4}k}{(2\pi )^{4}}\dfrac{-i}{k^2+m^2-i\epsilon }\Big)
+\end{align*}\]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Irreducible 4-point functions) 
+\[\begin{align*}
+\mathrm{\Gamma} ^{(4)}(p_1,p_2,p_3,p_4)=&(2\pi )^{4}\delta ^{(4)}(p_1+p_2+p_3+p_4)\prod^{4}_{i=1}\dfrac{-i}{p_{i}^2+m^2-i\epsilon }(-i\lambda )\\
+&+\dfrac{(i\lambda )^2}{2}\int \dfrac{d^{4}k_1}{(2\pi )^4}\dfrac{d^{4}k_2}{(2\pi )^{4}}(2\pi )^{4}\delta ^{(4)}(p_1+p_2+p_3+p_4)(2\pi )^{4}\delta ^{(4)}(p_3+p_4-k_1-k_2)\\
+&\times \prod^{4}_{i=1}\dfrac{-i}{p_{i}^2+m^2-i\epsilon }\dfrac{-i}{k_1^2+m^2-i\epsilon }\dfrac{-i}{k_2^2+m^2-i\epsilon }
+\end{align*}\]
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+(Scattering amplitude in $\phi ^{4}$ theory) Recall that 
+\[\begin{align*}
+(2\pi )^{4}\delta ^{(4)}\Big(\sum ^{n}_{i=1}p_{i}-\sum ^{m}_{j=1}q_{j}\Big)\times i\mathcal{M}_{fi}=&(Z^{-1/2})^{n+m}\prod^{n}_{i=1}\dfrac{p_{i}^2+m^2}{-i}\prod^{m}_{j=1}\dfrac{q_{j}^2+m^2}{-i}\times \tilde{G}^{(n+m)}_{c}(q_1,\ldots ,q_{m},-p_1,\ldots ,-p_{n})
+\end{align*}\]
+If you amputate the external propagators, factor out the overall momentum conservation terms, and multiply by the appropriate powers of $Z$, you would be able to get your scattering amplitude. 
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(Scattering cross section of $2\rightarrow 2$ scattering in $\phi ^{4}$ theory at the tree level) Connected 4-point function
+\[\tilde{G}_{c}^{(4)}(q_1,q_2,-p_1,-p_2)=(2\pi )^{4}\delta ^{(4)}(q_1+q_2-p_1-p_2)\prod^{2}_{i=1}\dfrac{-i}{p_{i}^2+m^2-i\epsilon }\prod^{2}_{j=1}\dfrac{-i}{q_{j}^2+m^2-i\epsilon }(-i\lambda )\]
+and the scattering at the tree level is
+\[i\mathcal{M}_{2\rightarrow 2}=(Z^{-1/2})^{4}\times (-i\lambda +O(\lambda ^2))=-i\lambda +O(\lambda ^2)\]
+telling us that
+\[|\mathcal{M}_{2\rightarrow 2}|^2=\lambda ^2+O(\lambda ^3)\]
+Recall that the differential cross section was given by
+\[\Big(\dfrac{d \sigma }{d \mathrm{\Omega} } \Big)_{CM}=\dfrac{|\vec{p}|}{64\pi ^2|\vec{p}|^2E_{CM}^2}\cdot |\mathcal{M}_{2\rightarrow 2}|^2=\dfrac{\lambda ^2}{64\pi ^2E_{CM}^2}+O(\lambda ^3)\]
+this implies that
+\[\sigma =\dfrac{\lambda ^2}{16\pi E_{CM}^2}+O(\lambda ^3)\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Diagrammatics of $\phi ^{4}$ theory) Classifications of Feynman diagrams for $\phi ^{l}$ theory in $n$-dimensions. 
+\end{defi}
+\vspace{2ex}
+

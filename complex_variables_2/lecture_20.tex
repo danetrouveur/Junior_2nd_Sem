@@ -1,0 +1,96 @@
+\section{Lecture 20 (November 25th)}
+\begin{rmk}
+Let $f$ be a entire function. The zero set of $f$ is deonted as $Z_{f}$. If $A$ is a infinite subset of ${\bm C}$ and $Z_{f}=A$ for some entire function $f$, then $A$ must not have a limit point. If $A=\{a_{n}\}\subset {\bm C}$ with $\lim _{n\rightarrow \infty }|a_{n}|=\infty $, then is there an entire function $f$ satisfying $A=Z_{f}$? The answer is yes.
+\end{rmk}
+\vspace{2ex}
+\begin{ex}
+Let $A=\{a_1,\ldots ,a_{n}\}$ be a finite zero set. Then $f(z)=(z-a_1)\ldots (z-a_{n})$ and $A=Z_{f}$. 
+\end{ex}
+\vspace{2ex}
+\begin{prop}
+If there are two entire functions $f$ and $g$ such that $Z_{f}=Z_{g}$, then $\dfrac{f}{g}$ is entire with no zeros. Since ${\bm C}$ is simply connected, there exists an entire function $h$ such that $\dfrac{f}{g}=e^{h}$. That is, $f=ge^{h}$. 
+\end{prop}
+\vspace{2ex}
+\begin{ex}
+An entire function $f$ such that $Z_{f}={\bm Z}$.
+\[f(z)=\sin \pi z\]
+How do we find an entire function $f$ such that $Z_{f}=\{2,3,4,5,6,\ldots \}$? Let's use the notation
+\[\prod^{N}_{n=1}a_{n}=a_1a_2\ldots a_{N}\]
+and write
+\[f(z)=\Big(1-\dfrac{z}{2}\Big)\Big(1-\dfrac{z}{3}\Big)\Big(1-\dfrac{3}{4}\Big)\]
+This function is zero at $1$, and our conjecture is false. The idea is to find a multiplier $e^{g(z)}$ to take this property away!
+\[f(z)=\prod^{\infty }_{n=2}\Big(1-\dfrac{z}{n}\Big)e^{g(z)}\]
+\end{ex}
+\vspace{2ex}
+\begin{lem}
+If $a_{n}\geq 0$, then 
+\[\prod^{\infty }_{n=1}(1+a_{n})\]
+converges if and only if 
+\[\sum ^{\infty }_{n=1}a_{n}\]
+converges. 
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+If $x\geq 0$,
+\[e^{x}=1+x+\dfrac{x^2}{2!}+\dfrac{x^3}{3!}\geq 1+x\]
+\end{proof}
+\vspace{2ex}
+\begin{proof}
+\[\sum ^{N}_{n=1}a_{n}\leq \prod^{N}_{n=1}(1+a_{n})\leq \prod^{N}_{n=1}e^{a_{n}}=e^{\sum ^{N}_{n=1}a_{n}}\]
+using the comparison test. 
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Big theorem I) Let $a_{n}\in {\bm C}$. If $\sum ^{\infty }_{n=1}|a_{n}|<\infty $, then $\prod^{\infty }_{n=1}(1+a_{n})$ converges and if $\prod_{n=1}^{\infty }(1+a_{n})=0$ then $a_{n}=-1$ for some $n\in {\bm N}$. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Since $\sum ^{\infty }_{n=1}|a_{n}|$ converges, there is $K\in {\bm N}$ such that if $n\geq K$, then $|a_{n}|<\dfrac{1}{2}$. Then 
+\[\prod^{N}_{n=k} (1+a_{n})=\prod^{N}_{n=k}e^{\log (1+a_{n})}=e^{\sum ^{N}_{n=k}\log (1+a_{n})}\]
+Notice that
+\[\sum ^{N}_{n=k}|\log (1+a_{n})|\leq \sum ^{N}_{n=k}2|a_{n}|\]
+by lemma. Thus,
+\[\sum _{n=k}^{\infty }\log(1+a_{n})\]
+converges to some $A\in {\bm C}$. 
+\[\prod^{N}_{n=k}(1+a_{n})=e^{A}\ne 0\]
+\end{proof}
+\vspace{2ex}
+\begin{lem}
+We denote $\log z$ for $z\ne 0$ and $-\pi <\mathrm{arg}\,z<\pi $. 
+\[\log z=\ln |z|+i\mathrm{arg}\,z\]
+If $|z|<\dfrac{1}{2}$, then $\log(1+z)$ satisfies $|\log(1+z)|\leq 2|z|$.
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+Since $\log (1+z)$ is analytic in $|z|<1$, 
+\[\log (1+z)=z-\dfrac{z^2}{2}+\dfrac{z^3}{3}-\dfrac{z^{4}}{4}\]
+for $|z|<1$. Thus, if $|z|<\dfrac{1}{2}$, \[|\log (1+z)|=\Big|z-\dfrac{z^2}{2}+\dfrac{z^3}{3}+\ldots \Big|\leq |z|\Big(1+\dfrac{1}{2}+\dfrac{1}{4}+\ldots \Big)=2|z|\]
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Big theorem II) Let $\{f_{n}\}$ be analytic in a domain $D$. If there is $\{M_{n}\}$ with $M_{n}\geq 0$ satisfying $\sum ^{\infty }_{n=1}M_{n}<\infty $ and $|f_{n}(z)-1|\leq M_{n}$ for all $z\in D$, then
+\[f(z)=\prod^{\infty }_{n=1}f_{n}(z)\]
+is analytic in $D$ since $\prod_{n=1}^{N}f_{n}(z)$ converges uniformly on every compact subset. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+There exists $n\geq k$ such that $|f_{n}(z)-1|<\dfrac{1}{2}$ for all $z\in D$.
+\[\prod^{N}_{n=k}f_{n}(z)=\prod_{n=k}^{N}e^{\log (f_{n}(z))}=e^{\sum \log(f_{n}(z))}\leq e^{\sum M_{n}}\]
+as $|\log (f_{n}(z)-1)|\leq M_{n}$. 
+\end{proof}
+\vspace{2ex}
+\begin{lem}
+If $f_{n}$ converges uniformly and $g$ is uniformly continuous,
+\[g\circ f_{n}\]
+converges uniformly.
+\end{lem}
+\vspace{2ex}
+\begin{ex}
+Prove that $\prod^{\infty }_{n=1}\Big(1-\dfrac{z}{n^2}\Big)$ is an entire function with $Z_{f}=\{n^2\;|\;n\in {\bm N}\}$. 
+\end{ex}
+\vspace{2ex}
+\begin{proof}
+Let $D=D(0,R)$. Take $f_{n}(z)=z/n^2$ and $M_{n}=R/n^2$ we can conclude that $f(z)$ is analytic in $D$. 
+\end{proof}
+\vspace{2ex}
+

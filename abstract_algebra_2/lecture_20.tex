@@ -1,0 +1,35 @@
+\section{Lecture 20 (November 20th)}
+\begin{rmk}
+Last class, we have seen the two paritcular examples $\mathrm{Gal}({\bm Q}(\xi),{\bm Q})\cong {\bm Z}/4{\bm Z}$ and also $\mathrm{Gal}({\bm Q}(\alpha ,\alpha \xi ,\alpha \xi ^2)/{\bm Q})\cong S_{3}$. Today, we will be learning Galois theory.
+\end{rmk}
+\vspace{2ex}
+\begin{cor}
+(15.8) Let $f(t)$ be a separable polynomial in $K[t]$, and let $F=K(\alpha_1,\ldots ,\alpha _{n})$ be the splitting field of $f(t)$. Then the Galois group $\mathrm{Gal}(F/K)$ is isomorphic to a subgroup of $S_{n}$. 
+\end{cor}
+\vspace{2ex}
+\begin{proof}
+Let $\sigma \in \mathrm{Gal}(F/K)$ be an element. Then for each $\alpha _{i}$, its image under $\sigma $ is a zero of $f(t)$: In fact, $\sigma $ determines a bijection $\{\alpha_1,\ldots ,\alpha _{n}\}\rightarrow \{\alpha_1,\ldots ,\alpha _{n}\}$. Moreover, we have a group homomorphism 
+\[\phi :\mathrm{Gal}(F/K)\rightarrow S_{n}\]
+Since $F=K(\alpha ,\ldots ,\alpha _{n})$, $\phi $ is injective. 		
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(15.31) (Fundamental theorem of Galois theory I) Let $F/K$ be a finite Galois extension. Then the Galois correspondence is a bijection: that is, there is a bijection between the intermediate fields $K\subset E\subset F$ and the subgroups $H$ of $\mathrm{Gal}(F/K)$, given by $E\mapsto \mathrm{Gal}(F/E)$ and $H\mapsto F^{H}=\{\alpha \in F\;|\;\sigma (\alpha )=\alpha\mathrm{\ for\ all\ }\sigma \in H \}$.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+We prove only one direction. We first show that the map $E\mapsto \mathrm{Gal}(F/E)$ is injective. For this, it suffices to show that $F^{\mathrm{Gal}(F/E)}=E$ for each subfield $K\subset E\subset F$. For this, observe that $E\subset F^{\mathrm{Gal}(F/E)}$ as for any $\alpha \in E$, $\sigma \in \mathrm{Gal}(F/E)$ satisfies $\sigma (\alpha )=\alpha $, and $\alpha \in F^{\mathrm{Gal}(F/E)}$. 
+
+\bigskip
+
+For the other side, note that $F/F^{\mathrm{Gal}(F/E)}$ is a finite Galois extension and that $\mathrm{Gal}(F/F^{\mathrm{Gal}(F/E)})$ is a subgroup of $\mathrm{Gal}(F/E)$. Since $\mathrm{Gal}(F/E)$ is a subgroup of $\mathrm{Gal}(F/F^{\mathrm{Gal}(F/E)})$, we see that $\mathrm{Gal}(F/E)=\mathrm{Gal}(F/F^{\mathrm{Gal}(F/E)})$. To conclude, we observe that
+\[[F:F^{\mathrm{Gal}(F/E)}]=|\mathrm{Gal}(F/F^{\mathrm{Gal}(F/E)})|=|\mathrm{Gal}(F/E)|=[F:E]\]
+Thus $[F^{\mathrm{Gal}(F/E)}:E]=1$ and $F^{\mathrm{Gal}(F/E)}=E$. 
+
+\bigskip
+
+To prove the surjectivity (of $E\mapsto \mathrm{Gal}(F/E)$), let $H$ be a subgroup of $\mathrm{Gal}(F/K)$. We will show that $H=\mathrm{Gal}(F/F^{H})$. For this, let $\alpha \in F$ be an element. Take a maximal subset $\{\sigma_1,\ldots ,\sigma _{r}\}\subset H$ such that $\{\sigma_1(\alpha ),\ldots ,\sigma _{r}(\alpha )\}$ are mutually distinct. We may assume that $\sigma_1=\mathrm{1}_{F}$. We may assume that $\sigma_1=\mathrm{1}_{K}$. Let 
+\[f(t)=\prod^{r}_{i=1}(t-\sigma _{i}(\alpha ))\]
+\end{proof}
+\vspace{2ex}
+

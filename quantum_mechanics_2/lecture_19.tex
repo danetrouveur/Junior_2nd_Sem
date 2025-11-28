@@ -1,0 +1,70 @@
+\section{Lecture 19 (November 12th)}
+\begin{recall}
+We want a quantum Hamiltonian that incorporates electric and magnetic fields. We've previously written:
+\[H=\dfrac{1}{2m}(\vec{p}-q\vec{A})^2+q\phi \]
+We know the Hamiltonian equations of motion as
+\[\begin{cases}
+\dfrac{d x_{i}}{d t}=\dfrac{\partial H}{\partial p_{i}}\quad &\longrightarrow \quad\dfrac{d x_{i}}{d t}=\dfrac{1}{m}(p_{i}-qA_{i}) \\\\
+\dfrac{d p_{i}}{d t}=-\dfrac{\partial H}{\partial x_{i}}\quad& \longrightarrow\quad \dfrac{d p_{i}}{d t}=-\dfrac{1}{m}\sum _{j}(p_{j}-qA_{j})(-q)\Big(\dfrac{\partial A_{j}}{\partial x_{i}} \Big)+q\dfrac{\partial \phi }{\partial x_{i}}
+\end{cases}\]
+we of course expect, $\vec{F}=q(\vec{E}+\vec{v}\times \vec{B})$. Further manipulating the above,
+\[\begin{align*}
+m\dfrac{d ^2x_{i}}{d t^2}=&\Big(\dfrac{d p_{i}}{d t} \Big)-q\dfrac{d A_{i}}{d t}=\Big(\dfrac{d p_{i}}{d t} \Big)-q\Big(\sum _{j}\dfrac{\partial A_{i}}{\partial x_{j}}\dfrac{d x_{j}}{d t}+\dfrac{\partial A_{i}}{\partial t}   \Big)\\
+=&q\Big(-\dfrac{\partial A_{i}}{\partial t}-\dfrac{\partial \phi }{\partial x_{i}}\Big)-q\sum _{j}\dfrac{\partial A_{i}}{\partial x_{j}}\dfrac{d x_{j}}{d t}+q\sum _{j}\dfrac{\partial A_{j}}{\partial x_{i}}\dfrac{d x_{j}}{d t}\\=&qE_{i}+\sum _{j}q\dfrac{d x_{j}}{d t}\Big(\dfrac{\partial A_{j}}{\partial x_{i}}-\dfrac{\partial A_{i}}{\partial x_{j}}  \Big) \\
+=&q(E_{i}+[\vec{v}\times \vec{B}]_{i})
+\end{align*}\]
+which properly motivates our Hamiltonian above. Noticing the dependencies,
+\[H(x,p)=\dfrac{1}{2m}(\vec{p}-q\vec{A}(\vec{x},t))^2+q\phi (\vec{x},t)\]
+we write the Schrodinger equation
+\[i\hbar \dfrac{\partial }{\partial t}\psi (\vec{x},t)=H(\vec{x},\vec{p}) \]
+Recall that for electric and magnetic potential, $U(1)$ gauge symmetry exists, and
+\[\vec{A}\rightarrow \vec{A}-\nabla \mathrm{\Lambda }\qquad\&\qquad \phi \rightarrow \phi +\dfrac{\partial \mathrm{\Lambda }}{\partial t} \]
+should leave physical results invariant. Let's assume that
+\[\psi '=e^{-iq\mathrm{\Lambda }/\hbar }\psi \]
+Substituting,
+\[\begin{align*}
+i\hbar \dfrac{\partial }{\partial t}\psi =&i\hbar \dfrac{\partial }{\partial t}\Big(e^{iq\mathrm{\Lambda }/\hbar }\psi '\Big) 
+=e^{iq\mathrm{\Lambda }/\hbar }\Big[-q\dot{\mathrm{\Lambda }}\psi '+i\hbar \dfrac{\partial }{\partial t}\psi  \Big]
+\end{align*}\]
+and
+\[q\phi e^{iq\mathrm{\Lambda }/\hbar }\psi'=e^{iq\mathrm{\Lambda }/\hbar }\Big[q\phi +q\dfrac{d \mathrm{\Lambda }}{d t}\Big] \psi '=q\Big(\phi +\dfrac{\partial \mathrm{\Lambda }}{\partial t} \Big)\psi '\]
+therefore we see that $\psi '$ is the propor transformed solution particularly for the $\phi $ transformation. Now, 
+\[\begin{align*}
+(\vec{p}-q\vec{A})e^{iq\mathrm{\Lambda }/\hbar }\psi '=&i\hbar \dfrac{\partial }{\partial \vec{x}}\Big(e^{iq\mathrm{\Lambda }/\hbar }\psi '\Big)^2-q\vec{A}e^{iq\mathrm{\Lambda }/\hbar }\psi '\\
+=&\Big(q\dfrac{\partial \mathrm{\Lambda }}{\partial \vec{x}}\psi ' \Big)e^{iq\mathrm{\Lambda }}+(-i\hbar )\dfrac{\partial \psi '}{\partial \vec{x}}e^{-iq\mathrm{\Lambda }/\hbar }-q\vec{A}e^{iq\mathrm{\Lambda }/\hbar }\psi '\\
+=&e^{iq\mathrm{\Lambda }/\hbar }\Big[-i\hbar \dfrac{\partial }{\partial \vec{x}}-q\Big(\vec{A}-\dfrac{\partial \mathrm{\Lambda }}{\partial \vec{x}} \Big) \Big]\psi '\\
+(\vec{p}-q\vec{A})^2e^{iq\mathrm{\Lambda} /\hbar }\psi '=&\Big(-i\hbar \dfrac{\partial }{\partial \vec{x}}-q\Big(\vec{A}-\dfrac{\partial \mathrm{\Lambda }}{\partial \vec{x}} \Big) \Big)^2\psi '
+\end{align*}\]
+Dividing by $2m$, we can see that the $\psi '$ is a solution for the transformed gauge fields. This tells us that we can choose specific gauges that satisfy
+\[\nabla \cdot \vec{A}=0\qquad\&\qquad \nabla \cdot \vec{A}+\dfrac{1}{c^2}\dfrac{\partial \phi }{\partial t}=0 \]
+each called the Coulumb gauge and Lorentz gauge. We also need a vector potential $\vec{A}$, and two popular choices are the Landau gauge and the radial gauge:  
+\[\vec{A}=(0,Bx,0)\qquad\&\qquad \vec{A}=\Big(-\dfrac{yB}{2},\dfrac{Bx}{2},0\Big)\]
+These two are actually gauge equivalent, meaning that there is a $\mathrm{\Lambda }$ such that the two gauges have a difference of $\nabla \mathrm{\Lambda }$. j
+\end{recall}
+\vspace{2ex}
+\begin{lem}
+(Landau levels) We now solve the Schrodinger equation for the above two gauges that give the same magnetic field. Let $\vec{B}=B\hat{z}$ and $\phi =0$. For an electron,
+\[\begin{align*}
+H\psi =&\dfrac{1}{2m_{e}}(-i\hbar \nabla -(-e)\vec{A})^2\psi \\
+=&\dfrac{(-i\hbar \nabla )^2}{2m_{e}}\psi +\dfrac{1}{2m_{e}}(-i\hbar \nabla )\cdot (e\vec{A}\psi )+\dfrac{1}{2m_{e}}e\vec{A}\cdot (-i\hbar \nabla \psi )+\dfrac{e^2}{2m_{e}}\vec{A}\cdot \vec{A}\psi 
+\end{align*}\]
+the second term becomes  
+\[\dfrac{1}{2m_{e}}(-i\hbar )\Big[(e\nabla \cdot A)\psi+e\vec{A}\cdot \nabla \psi  \Big]\]
+and due to our gauge term,
+\[H\psi =\dfrac{(-i\hbar \nabla )^2}{2m_{e}}\psi +\dfrac{1}{m_{e}}e\vec{A}\cdot (-i\hbar \nabla \psi )+\dfrac{e^2}{2m_{e}}\vec{A}\cdot \vec{A}\psi \]
+The middle term now becomes
+\[\dfrac{1}{m_{e}}e\vec{A}\cdot (-i\hbar \nabla \psi )=\dfrac{e}{m_{e}}\dfrac{\vec{B}\cdot \vec{r}}{2}\times \vec{p}\psi =\dfrac{e}{m_{e}}\vec{B}\cdot \vec{L}\psi =\dfrac{e}{2m_{e}}BL_{z}\psi \]
+and $\vec{A}\cdot \vec{A}=B^2(x^2+y^2)/4$ in the last term. This motivates us to use cylindrical coordinates, and
+\[H\psi =\dfrac{(-i\hbar \nabla )^2}{2m_{e}}\psi +\dfrac{e}{2m_{e}}BL_{z}\psi +\dfrac{e^2B^2}{8m_{e}}\rho ^2\psi \]
+We can now take the ansatz
+\[\psi (\rho ,\phi ,z)=e^{ik_{z}z}e^{im\phi }u_{m}(\rho )\]
+and we get
+\[\dfrac{d ^2u_{m}}{d \rho ^2}+\dfrac{1}{\rho }\dfrac{d u_{m}}{d \rho }-\dfrac{m^2}{\rho ^2}u_{m} -\dfrac{e^2B^2}{4\hbar ^2}\rho ^2u_{m}+\Big(\dfrac{2m_{e}E}{\hbar ^2}-\dfrac{eB\hbar m}{\hbar ^2}-k_{z}^2\Big)u_{m}=0 \]
+employing dimensionless $x=\sqrt{eB/2\hbar }\times \rho $ and $l_{B}=\sqrt{\hbar /eB}$ (magnetic length) that has the units of length. You should definitely check this and memorize this! We can also introduce the dimensionless
+\[\lambda =\dfrac{4m_{e}}{\hbar }\Big(E-\dfrac{\hbar^2k_{z}^2}{2m}\Big)-2m\]
+and we have 
+\[u_{m}''+\dfrac{1}{x}u_{m}'-\dfrac{m^2}{x^2}u_{m}-x^2u_{m}+\lambda u_{m}=0\]
+The next plan is to find the asymptotic solution for $x\rightarrow \infty $ and $x\rightarrow 0$ which will be done next class. 
+\end{lem}
+\vspace{2ex}
+

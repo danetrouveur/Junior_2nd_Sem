@@ -1,0 +1,69 @@
+\section{Lecture 17 (November 12th)}
+\begin{thm}
+Consider $F/K$, an algebraic extension. The following are equivalent:
+\begin{itemize}
+\item[(i)] $\exists S\subset K[t]$ such that $F$ is a simplitting field for $S$ 
+\item[(ii)] If $\sigma :F\rightarrow \bar{K}$ is a $K$-embedding, then $\sigma (F)=F$
+\item[(iii)] $F/K$ is normal
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{cor}
+Let $F/K$ be a finite extension. $F/K$ is normal if and only if 
+\[[F:K]_{s}=|\mathrm{Aut}(F/K)|\]
+\end{cor}
+\vspace{2ex}
+\begin{prop}
+If $[F:K]=2$, then $F/K$ is normal.
+\end{prop}
+\vspace{2ex}
+\section{Chapter 15. Galois Theory}
+\section{15.1 Galois Groups and Galois Extensions}
+\begin{defi}
+Let $F/K$ be a field extension. The Galois group of $F/K$, denoted $\mathrm{Gal}(F/K)$ is the group of isomorphisms $\sigma :F\rightarrow F$ that resticts to the identity on $K$.
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(15.2) Let $F/K$ be an algebraic extension. We will say that $F/K$ is Galois if it is separable and normal. 
+\end{defi}
+\vspace{2ex}
+\begin{prop}
+Let $F/K$ be a finite extension. The following are equivalent:
+\begin{itemize}
+\item[(i)] $F/K$ is Galois
+\item[(ii)] $[F:K]=|\mathrm{Aut}(F/K)|$
+\item[(iii)] $F$ is a splitting field of a separable polynomial in $K[t]$ 
+\end{itemize}
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+We prove (i) if and only if (ii). Note that $|\mathrm{Aut}(F/K)|\leq [F:K]_{s}\leq [F:K]$. The first equality holds if and only  if $F/K$ is normal and the second holds if and only if $F/K$ is separable.
+
+\bigskip
+
+We now prove (i) to (iii). By the primative element theorem, we can wriet $F=K(\alpha )$ for some $\alpha \in F$. Set $f(t)=\mathrm{irr}(\alpha ,K)\in K[t]$. Since $F$ is normal over $K$, $F$ is  splitting field of $f(t)$. We note that $f(t)$ is separable since $F/K$ is separable.
+
+\bigskip
+
+Finally, (iii) to (i). Suppose that $F=K(\alpha_1,\ldots ,\alpha _{n})$ is a splitting field of a separable polynomial $f(t)$. Using the normal extension theorem, we see that $F$ is normal over $K$. Note that each $\alpha _{i}$ is separable over $K$. This implies that $K(\alpha_1,\ldots ,\alpha _{n})=F$ is separable. 
+\end{proof}
+\vspace{2ex}
+\begin{defi}
+(15.15) Let $F/K$ be a field extension. Let $G$ be a subgroup of $\mathrm{Gal}(F/K)$. The fixed field of $G$ is the sufield: 
+\[\{\alpha \in F\;|\;\sigma (\alpha )=\alpha \mathrm{\ for\ all\ } \sigma \in G \}\subset F\]
+denoted $F^{G}$. 
+\end{defi}
+\vspace{2ex}
+\begin{rmk}
+(Observation) $F^{G}$ is indeed a subfield of $F$ containing $K$ ($K\subset F^{G}\subset F$).
+\end{rmk}
+\vspace{2ex}
+\begin{rmk}
+(Remark) Let $F/E/K$ be field extensions. Then $\mathrm{Gal}(F/E)$ is a subgroup of $\mathrm{Gal}(F/K)$. 
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(15.31 + 15.35) (The main theorem of Galois theory) Let $F/K$ be a finite Galois extension. Then there is an order-reversing bijection between the set of all intermediate fields for $F/K$ and the set of all subgroups of $\mathrm{Gal}(F/K)$.
+\end{thm}
+\vspace{2ex}
+

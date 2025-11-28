@@ -1,0 +1,36 @@
+\section{Lecture 21 (November 25th)}
+\begin{rmk}
+Last class, we learned Galois theory and its proof. Today, we will continue the proof and look at some examples.
+\end{rmk}
+\vspace{2ex}
+\begin{thm}
+(15.31) (Fundamental theorem of Galois theory I) Let $F/K$ be a finite Galois extension.
+\[\begin{align*}
+\{K\subset E\subset F\}\;\leftrightarrow &\;\{1\subset H\subset \mathrm{Gal}(F/K)\}\\
+E\;\mapsto&\; \mathrm{Gal}(F/E)\\
+H\;\mapsto&\; H
+\end{align*}\]
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+The injectivity of $E\mapsto \mathrm{Gal}(F/E)$ follows for any intermediate field $E$. To prove that the map 
+\[E\mapsto \mathrm{Gal}(F/E)\]
+is surjective, let $H$ be a subgroup of $\mathrm{Gal}(F/K)$, we claim that $\mathrm{Gal}(F/F^{H})=H$. Let $\alpha \in F$ be an element. Take a maximal subset $\{\sigma_1,\ldots ,\sigma_{r}\}\subset H$ such that $\sigma_1(\alpha),\ldots \sigma_{r}(\alpha )$ are mutually distinct. We may suppose that $\sigma_{1}=\mathrm{1}_{F}$. Let 
+\[f(t)=\prod^{r}_{i=1}(t-\sigma_{i} (\alpha ))\in F[t]\supset F^{H}[t]\]
+Then for each $\tau \in H$, the maximality of the subset implies that
+\[\{(\tau \circ\sigma_1)(\alpha ),\ldots ,(\tau \circ\sigma _{r})(\alpha )\}\subset \{\sigma_1(\alpha ),\ldots ,\sigma _{r}(\alpha )\}\]
+It then follows that $f(t)\in F^{H}[t]$. We now complete the proof. Using the fact that $H\triangleleft \mathrm{Gal}(F/F^{H})$, $|H|\leq  |\mathrm{Gal}(F/F^{H})|=[F:F^{H}]$. Consequently, it will suffice to show that $[F:F^{H}]\leq |H|$. By the primative element theorem, $F=F^{H}(\alpha )$ for some $\alpha \in F$. It follows from the previous argument that
+\[\begin{align*}
+[F:F^{H}]=[F^{H}(\alpha ):F^{H}]=\mathrm{deg}(\mathrm{irr}(\alpha ,F^{H}))
+\leq f(t)
+\leq|H|
+\end{align*}\]
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+The proof shows the following: for each $\alpha \in F$, let $\sigma_1(\alpha ),\ldots ,\sigma _{r}(\alpha )$ be the Galois conjugates of $\alpha $ (that is, it is the set $\{\sigma _{i}(\alpha )\;|\;\sigma _{i}\in \mathrm{Gal}(F/K)\}$). Then 
+\[f(t)=\prod^{r}_{i=1}(t-\sigma _{i}(\alpha ))\in F^{\mathrm{Gal}(F/K)}[t]=K[t]\]
+Is $f(t)=\mathrm{irr}(\alpha ,K)$? According to proposition (15.24), $f(t)$ is indeed the minimal polynomial of $\alpha $ over $K$. 
+\end{rmk}
+\vspace{2ex}
+
