@@ -1,0 +1,77 @@
+\section{Lecture 24 (December 1st)}
+\begin{thm}
+(No-clone theorem) Consider an arbitrary qubit $|x\rangle \in {\bm C}^2$. Consider a clone map (a copy map):
+\[G:{\bm C}^2\times {\bm C}^2\rightarrow {\bm C}^2\times {\bm C}^2\]
+which is a unitary operator. I would send
+\[|x\rangle \otimes |0\rangle \rightarrow |x\rangle \otimes |x\rangle \]
+No such unitary map exists. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Let $|x\rangle =\alpha |0\rangle +\beta |0\rangle $ which is normalised, meaning $|\alpha |^2+|\beta |^2=1$. As the map is linear,
+\[\begin{align*}
+G(\alpha |0,0\rangle +\beta |1,0\rangle )=&\alpha G(|0,0\rangle )+\beta G(|1,0\rangle )=\alpha |0,0\rangle +\beta |1,1,\rangle \\
+=&\alpha ^2|0,0\rangle +\beta \alpha |1,0\rangle +\alpha \beta |0,1\rangle +\beta ^2|1,1\rangle 
+\end{align*}\]
+As one of the parameters are zero, only two possible pairs $(\alpha ,\beta )$ are possible. These are $|0\rangle $ and $|1\rangle $, telling us that the only qubits that are capable of copying are the basis qubits.
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(Entanglement entropy) We would like to know whether a vector inside $\mathcal{H}_{A}\otimes \mathcal{H}_{B}$ is entangled or disentangled. Let
+\[|\mathrm{\Psi} \rangle =\sum _{i,j}M_{ij}|i\rangle _{A}\otimes |j\rangle _{B} \]
+where $|i\rangle _{A}$ and $|j\rangle _{B}$ are orthonormal basis elements. The density matrix is given as
+\[\rho _{|\mathrm{\Psi} \rangle }=|\mathrm{\Psi} \rangle \langle \mathrm{\Psi} |=\sum _{i,j}M_{ij}|i\rangle _{A}\otimes |j\rangle _{B}\sum _{i',j'}M^{*}_{i',j'}\langle i'|_{A}\otimes \langle j'|_{B} \]
+Let's partially trace the above, obtaining $\sum _{k}\langle k|_{B}\rho _{|\mathrm{\Psi} \rangle }|k\rangle _{B}$. 
+\[\sum _{k}\langle k|_{B}\rho _{|\mathrm{\Psi} \rangle }|k\rangle _{B}=\sum _{i}M_{ik}|i\rangle _{A}\sum _{i'}M_{i'k}^{*}\langle i'|=\sum _{i,i',k}M_{ik}M^{*}_{i'k}|i\rangle _{A}\langle i'|_{A}=\sum _{i,i'}(MM^{\dagger })_{ii'}|i\rangle _{A}\langle i'|_{A}\]
+When we partially trace, we find a density matrix with respect to $|i\rangle _{A}$, and we call $\rho _{A}=MM^{\dagger }$ and $\rho _{B}=M^{\dagger }M$ partial density matrices. Recall that for a density operator $\hat{\rho }$, the von Neumann entropy is defined as
+\[S_{N}=-\mathrm{Tr}(\hat{\rho }\ln \hat{\rho })\]
+Now, the entanglement entropy is defined as the von Neumann entropy of $\rho _{A}$ and $\rho _{B}$. We show that
+\[S_{E}=-\mathrm{Tr}(\rho _{A}\ln \rho _{A})=-\mathrm{Tr}(\rho _{B}\ln \rho _{B})\]
+Observe that
+\[-\mathrm{Tr}(\rho _{A}\ln \rho _{A})=-\sum _{S_{l}>0}S_{l}^2\ln S_{l}^2=-\mathrm{Tr}(\rho _{B}\ln \rho _{B})\]
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+Let $|\mathrm{\Psi} \rangle =|\uparrow\rangle _{A}\otimes |\uparrow\rangle _{B}$ (which is obviouisly disentangled). We see that
+\[M=\begin{pmatrix}
+1&0\\0&0
+\end{pmatrix}=M^{\dagger }
+\]
+and we have 
+\[MM^{\dagger }=M^{\dagger }M=\begin{pmatrix}
+1&0\\0&0
+\end{pmatrix}
+\]
+and we find that $S_1=1$. This gives
+\[S_{E}=-1\ln 1=0\]
+and we can notice how $S_{E}=0$ when the system is disentangled and $S_{E}>0$ when the system is.
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+Let $|\mathrm{\Psi} \rangle= (|\uparrow\rangle _{A}\otimes |\downarrow\rangle _{B}-|\downarrow\rangle _{A}\otimes |\uparrow\rangle _{B})/\sqrt{2}$. We find
+\[M=\begin{pmatrix}
+0&1/\sqrt{2}\\-1/\sqrt{2}&0
+\end{pmatrix}\qquad\&\qquad M^{\dagger }=\begin{pmatrix}
+0&-1/\sqrt{2}\\1/\sqrt{2}&0
+\end{pmatrix}
+\]
+giving
+\[MM^{\dagger }=\begin{pmatrix}
+1/2&0\\0&1/2
+\end{pmatrix}
+\]
+We find
+\[S_{E}=-\dfrac{1}{4}\ln \dfrac{1}{4}-\dfrac{1}{4}\ln \dfrac{1}{4}=\ln 2\ne 0\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Differential scattering cross-section) In a scattering experiment, we define the differential scattering cross-section as the following:
+\[d\sigma =\dfrac{\mathrm{number\ of\ particles\ detected\ at\ }d\mathrm{\Omega} \mathrm{\ per\ unit\ time\ }
+}{\mathrm{incoming\ flux\ of\ particle}
+}\]
+The unit is given as $[d\sigma ]=L^2$. We now always compute things in the center of mass frame. Recall that the probability flux was given as
+\[j=\dfrac{\hbar }{2im}(\psi ^{*}\nabla \psi -\psi \nabla \psi ^{*})=\dfrac{1}{V}\dfrac{\hbar \vec{k}}{m}=\rho \vec{v}\]
+in the case of $\psi =e^{ikx}/\sqrt{V}$.
+\end{defi}
+\vspace{2ex}
+

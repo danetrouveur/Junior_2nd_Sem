@@ -1,0 +1,54 @@
+\section{Lecture 23 (December 2nd)}
+\begin{rmk}
+Last time, we learned about examples of the Galois correspondence. This class, we learn about the Galois group of polynomials. Make sure to read examples (15.32) and (15.33). 
+\end{rmk}
+\vspace{2ex}
+\begin{lem}
+(15.37) Let $f(t)\in K[t]$ be separable. Then, $f(t)\in K[t]$ is irreducible if and only if the Galois group $\mathrm{Gal}(K(\alpha ,\ldots ,\alpha _{n})/K)$ acts transistively on $\{\alpha_1,\ldots ,\alpha _{n}\}$.
+\end{lem}
+\vspace{2ex}
+\begin{lem}
+Let $f(t)\in K[t]$ and separable. Then,
+\begin{itemize}
+\item[(i)] There exists an injection $\mathrm{Gal}(K(\alpha ,\ldots ,\alpha _{n})/K)\hookrightarrow S_{n}$. 
+\item[(ii)] If $f(t)$ is irreducible in $K[t]$, then $n$ divides $|\mathrm{Gal}(K(\alpha ,\ldots ,\alpha _{n})/K)|$. 
+\end{itemize}
+\end{lem}
+\vspace{2ex}
+\begin{rmk}
+(Notation) Let $f(t)\in K[t]$ be a polynomial over a field $K$. We let $G_{f}$ denote the Galois group of the extension $K(\alpha ,\ldots ,\alpha _{n})/K$, where $\alpha_1,\ldots ,\alpha _{n}$ are the zeros of $f(t)$ (in $\bar{K}$). 
+\end{rmk}
+\vspace{2ex}
+\begin{proof}
+For (ii), notice that $\mathrm{deg}(\mathrm{irr}(\alpha_1,K))=\mathrm{deg}(f(t))$ and that:
+\[n=[K(\alpha_1):K]\;|\;[K(\alpha,\ldots ,\alpha _{n}):K]=|G_{f}|\]
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+(Notation) 
+\begin{itemize}
+\item[(i)] $K$ is a field
+\item[(ii)] $x_1,\ldots ,x_{n}$ are mutually distinct indeterminants
+\item[(iii)] $g(t)=\prod^{n}_{i=1}(t-x_{i})=t^{n}-s_1t^{n-1}+s_2t^{n-2}+\ldots +(-1)^{n}s_{n}\in E[t]$. In particular,
+\[s_1=\sum _{1\leq i\leq n}x_{i}\qquad s_2=\sum _{1\leq i\leq j\leq n}x_{i}x_{j}\qquad s_3=\sum _{1\leq i\leq j\leq k\leq n}x_ix_{j}x_{k}\qquad s_{n}=\prod^{n}_{i=1}x_{i}\]
+\item[(iv)] $E=K(s_1,\ldots ,s_{n})$
+\item[(v)] $F=K(x_1,\ldots ,x_{n})$
+\item[(vi)] $g(t)\in E[t]$ 
+\end{itemize}
+In this setting, $F$ is the splitting field of $g(t)\in E[t]$ and the extension $F/E$ is finite Galois.
+\end{rmk}
+\vspace{2ex}
+\begin{prop}
+There is an isomorphism $G_{g}\rightarrow S_{n}$.
+\end{prop}
+\vspace{2ex}
+\begin{proof}
+Due to the above lemma, there exists an injection $G_{g}\rightarrow S_{n}$. To prove surjectivity, we will show that there is a injection $S_{n}\rightarrow G_{g}$. For this, we note that each element of $S_{n}$ induces a $K$-automorphism on $K[x_1,\ldots ,x_{n}]$, hence a $K$-automorphisms on $\mathrm{Frac}(K[x_1,\ldots ,x_{n}])=K(x_1,\ldots ,x_{n})=F$. It gives an injective group homorphism $S_{n}\rightarrow \mathrm{Gal}(F/K) \supset \mathrm{Gal}(F/E)=G_{g}$. Now the punchline -- each $\sigma \in S_{n}$ fixes all $s_{i}$'s due to the fact that $g(t)=g_{\sigma }(t)$. Consequently, we get an injection 
+\[S_{n}\rightarrow \mathrm{Gal}(F/E)=G_{g}\]
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+$g(t)=\prod (t-x_{i})\in E[t]$ is irreducible by the lemma.
+\end{rmk}
+\vspace{2ex}
+

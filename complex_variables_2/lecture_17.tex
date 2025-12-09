@@ -3,9 +3,9 @@
 Consider $f\in L^{1}$ be piecewise continuous, and define
 \[\phi (x)=\dfrac{1}{\sqrt{2\pi }}e^{-x^2/2}\]
 We define
-\[\phi _{\epsilon }(x)=\dfrac{1}{\varepsilon  }\phi _{\varepsilon }\Big(\dfrac{x}{\epsilon }\Big)=\dfrac{1}{\sigma \sqrt{2\pi }}e^{-\dfrac{x^2}{2\epsilon ^2}}\]
+\[\phi _{\varepsilon }(x)=\dfrac{1}{\varepsilon  }\phi _{\varepsilon }\Big(\dfrac{x}{\epsilon }\Big)=\dfrac{1}{\varepsilon  \sqrt{2\pi }}e^{-\dfrac{x^2}{2\varepsilon  ^2}}\]
 this implies that
-\[\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\hat{f}(t)e^{itx}\,dt=\lim _{\varepsilon  \rightarrow 0}\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\Big(\hat{f}(t)e^{-\varepsilon  ^2t^2/2}\Big)e^{ixt}\,dx=\lim _{\varepsilon \rightarrow 0}(f\ast \phi _{\varepsilon })(x)=\dfrac{1}{2}(f(x+)+f(x-))\]
+\[\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\hat{f}(t)e^{itx}\,dt=\lim _{\varepsilon  \rightarrow 0}\dfrac{1}{2\pi }\int ^{\infty }_{-\infty }\Big(\hat{f}(t)e^{-\varepsilon  ^2t^2/2}\Big)e^{ixt}\,dx=\lim _{\varepsilon \rightarrow 0}(f\ast \phi _{\varepsilon })(x)=\dfrac{1}{2}(f(x^{+})+f(x^{-}))\]
 Note that $\phi (x)$ is in the Schwartz class, satisfying
 \[\sup_{x\in {\bm R}}\Big(x^{k}\phi ^{(n)}(x)\Big)<\infty \]
 for all $k,n\geq 0$. 

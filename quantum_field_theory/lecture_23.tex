@@ -1,0 +1,68 @@
+\section{Lecture 23 (December 1st)}
+\begin{thm}
+(LSZ formula in QED) The scattering amplitude $\mathcal{M}_{fi}$ can be obtained from $\tilde{G}$ by:
+\begin{itemize}
+\item[(i)] Amputating the external propagators.
+\item[(ii)] Factoring out the overall momentum conservation factor.
+\item[(iii)] Contracting the spinor indices with $U$'s and $\bar{U}$'s.
+\item[(iv)] Contracting vector indicies with $\epsilon $'s and $\epsilon ^{*}$'s.
+\item[(v)] Multiply by appropriate factors of minus and renormalisation factors.
+\end{itemize}
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+(Bhabha scattering cross section) 
+\[\begin{align*}
+&(2\pi )^{4}\delta ^{(4)}(p+p'-q-q')\times i\mathcal{M}_{e^{-}e^{+}\rightarrow e^{-}e^{+}}\\
+&=(Z^{-1/2})^{4}\Big(\bar{U}^{i'}_{-}(\vec{p}')\dfrac{-\cancel{p}'+m}{-i}\Big)\Big(\bar{U}^{j}_{+}(\vec{q})\dfrac{\cancel{q}+m}{-i}\Big)\tilde{G}_{c}^{(2;2;0)}(-p',q;-p,q')\\
+&\times \Big(\dfrac{\cancel{p}+m}{-i}U_{+}^{i}(\vec{p})\Big)\Big(\dfrac{-\cancel{q}'+m}{-i}U_{-}^{j'}(\vec{q}')\Big)
+\end{align*}\]
+This implies that
+\[\begin{align*}
+i\mathcal{M}_{e^{-}e^{+}\rightarrow e^{-}e^{+}}=&-\bar{U}^{i'}_{-}(\vec{p})(ie\gamma ^{\mu })U_{+}^{i}(\vec{p})\times \dfrac{-i\eta _{\mu \nu }}{(p+p')^2-i\epsilon }\bar{U}_{+}^{j}(\vec{q})(ie\gamma ^{\nu })U^{j'}_{-}(\vec{q}')\\
+&+\bar{U}_{+}^{j'}(\vec{q})(ie\gamma ^{\mu })U_{+}^{i}(\vec{p})\times \dfrac{-i\eta _{\mu \nu }}{(p-q')^2-i\epsilon }\bar{U}_{-}^{i'}(\vec{p}')(ie\gamma ^{\nu })U^{j'}_{-}(\vec{q}')+O(e^{4})
+\end{align*}\]
+The scattering amplitude square gives us, by noting that:
+\[(\gamma ^{\mu })^{\dagger }=\begin{cases}
+\gamma ^{\mu }&(\mu =0)\\
+-\gamma ^{\mu }&(\mu =1,2,3)
+\end{cases}\]
+This implies that $\gamma ^{0}(\gamma ^{\mu })^{\dagger }\gamma ^{0}=\gamma ^{\mu }$. Then, we simply write:
+\[U_{+}^{i}(\vec{p})^{\dagger }(\gamma ^{\mu })^{\dagger }(U^{i'}_{-}(\vec{p}')\gamma ^{0})^{\dagger }=U_{+}^{i}(\vec{p})^{\dagger }\gamma ^{0}\gamma ^{0}(\gamma ^{\mu } )^{\dagger }\gamma ^{0}U_{-}^{i'}(\vec{p}')=\bar{U}^{i}_{+}(\vec{p})\gamma ^{\mu }U^{i'}_{-}(\vec{p}')\]
+And we can quite easily compute $|\mathcal{M}_{e^{-}e^{+}\rightarrow e^{-}e^{+}}|^2$. In typical experiments,
+\begin{itemize}
+\item[(i)] Use unpolarised initial states and average over initial spin states.
+\item[(ii)] Use detectors blind to polarisation and sum over final spin states.
+\end{itemize}
+Initial averaged and final summed scattering amplitude square is then
+\[\sum |\mathcal{M}_{e^{-}e^{+}\rightarrow e^{-}e^{+}}|^2=\dfrac{1}{2}\sum _{i}\dfrac{1}{2}\sum _{i'}\sum _{j}\sum _{j'}|\mathcal{M}_{e^{-}e^{+}\rightarrow e^{-}e^{+}}|^2\]
+Recall the identity:
+\[\sum ^{2}_{i=1}U^{i}_{\pm}(\vec{p})\bar{U}^{i}_{\pm}(\vec{p})=-(\cancel{p}\mp m)\]
+and the individual terms of the scattering amplitude square become traces. Then,
+\[\begin{align*}
+|\mathcal{M}_{e^{-}e^{+}\rightarrow e^{-}e^{+}}|^2=\dfrac{e^{4}}{4}\Big[&\dfrac{\mathrm{Tr}[(\cancel{p}'+m)\gamma ^{\mu }(\cancel{p}-m)\gamma ^{\nu }]\mathrm{Tr}[(\cancel{q}-m)\gamma _{\mu }(\cancel{q}'+m)\gamma _{\nu }}{(p+p')^{4}}\\&+\dfrac{\mathrm{Tr}[(\cancel{q}-m)\gamma ^{\mu }(\cancel{p}-m)\gamma ^{\nu }\mathrm{Tr}[(\cancel{p}'+m)\gamma _{\mu }(\cancel{q}'+m)\gamma _\nu ]}{(p-q)^{4}}\Big]+\ldots 
+\end{align*}\]
+This consists of $s$-channel and $t$-channel and cross channels. Evaluation by trace technology is as expected,
+\[\begin{cases}
+\mathrm{Tr}(\mathrm{odd\ number\ of\ }\gamma 's)&=0\\
+\mathrm{Tr}(\gamma^{\mu }\gamma ^{\nu })&=-4\eta ^{\mu \nu }\\
+\mathrm{Tr}(\gamma ^{\mu }\gamma ^{\nu }\gamma ^{\rho }\gamma ^{\sigma })&=4(\eta ^{\mu \nu }\eta ^{\rho \sigma }-\eta ^{\mu \rho }\eta ^{\nu \sigma }+\eta ^{\mu \rho }\eta ^{\nu \rho })
+\end{cases}\]
+Then,
+\[\begin{align*}
+\sum |\mathcal{M}|^2\big|_{s\mathrm{-channel}}=&\dfrac{8e^{4}}{(p+p')^{4}}\Big((p\cdot q)(p'\cdot q')+(p\cdot q')(p'\cdot q)-m^2(p\cdot p'+q\cdot q'-2m^2)\Big)\\
+=&\dfrac{2e^{4}}{s^2}(t^2+u^2+8sm^2-8m^{4})
+\end{align*}\]
+using Mandelstam variables. In the center of mass (CM) frame, the Mandelstam variables are calculated more conveniently, where $s=4E^2$, $t=-4|\vec{p}|^2\sin ^2(\theta /2)$, and $u=-4|\vec{p}|^2\cos ^2(\theta /2)$. With this information,
+\[\sum |\mathcal{M}|^2\big|_{s\mathrm{-channel}}=e^{4}\Big((1+2(m/E)^2)+(1-(m/E)^2)^2\cos ^2\theta \Big)\]
+The $s$-channel differential cross section becomes,
+\[\begin{align*}
+\Big(\dfrac{d \sigma }{d \mathrm{\Omega} } \Big)_{CM}\big|_{s\mathrm{-channel}}=&\dfrac{|\cancel{\vec{q}}|}{64\pi ^2|\cancel{\vec{p}}|E_{CM}^2}\cdot \sum |\mathcal{M}|^2\big|_{s \mathrm{-channel}}
+\end{align*}\]
+Let's make some comments:
+\begin{itemize}
+\item[(i)] Non-trivial $\theta $-dependent exists, where $\phi \phi \rightarrow \phi \phi $ occurs through contact interaction and $e^{-}e^{+}\rightarrow e^{-}e^{+}$ occurs through vector interaction.
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+

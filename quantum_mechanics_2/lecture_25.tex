@@ -1,0 +1,49 @@
+\section{Lecture 25 (December 3rd)}
+\begin{rmk}
+We have previously defined the differential cross section as the number density (over solid angle) per time divided by flux. We naturally think of spherical polar coordinates and we know that:
+\[(\nabla ^2+k^2)e^{ikr}=0\]
+and we'd like to write the solutions in terms of $j_{l},n_{l},$ and $Y_{lm}$.
+\[e^{ikx}=\sum _{l=1}^{\infty }i^{l}(2l+1)j_{l}(kr)P_{l}(\cos \theta )\]
+where $Y_{l0}=P_{l}(\cos \theta )$ with normalisation. This should be memorised if possible. Recalling that
+\[j_{l}(\rho )\sim \dfrac{1}{r}\sin \Big(\rho -\dfrac{l\pi }{2}\Big)\qquad\&\qquad n_{l}(\rho )\sim (-1)\dfrac{1}{\rho }\cos \Big(\rho -\dfrac{l\pi }{2}\Big)\]
+we have
+\[e^{ikr}=\sum _{l=0}^{\infty }i^{l}(2l+1)P_{l}(\cos \theta )\dfrac{1}{2iR}\Big[\dfrac{e^{ikr}-il\pi /2}{r}-\dfrac{e^{-ikr}+il\pi /2}{r}\Big]\]
+Where we have decomposed the free particle into both a incoming and outgoing wave. We latter learn that in elastic collsions (kinetic energy conserved) the scattering only depends on the outgoing section. Thus,
+\[\psi (r)\sim\sum ^{\infty }_{l=0}i^{l}(2l+1)P_{l}(\cos \theta )\Big(\dfrac{i}{2k}\Big)\dfrac{1}{\sqrt{V}}\Big[(-1)S_{l}(k)j_{l}^{+}(r)+j_{l}^{-}(r)\Big]\]
+for large $r$ and after the scattering occurs. We consider $S_{l}(k)=1+(S_{l}(k)-1)$ where the latter corrsponds to the scattered particle.
+\[\psi (r)=\dfrac{e^{ikr}}{\sqrt{V}}+\dfrac{1}{\sqrt{V}}\sum ^{\infty }_{l=1}(2l+1)P_{l}(\cos \theta )\Big(\dfrac{S_{l}(k)-1}{2ik}\Big)\dfrac{e^{ikr}}{r}\]
+we need to remember that we're doing all this in the COM frame. We call the latter function's coefficient $f_{l}(k)$ and,
+\[\psi (r)=\dfrac{e^{ikr}}{\sqrt{V}}+f(\theta )\dfrac{e^{ikr}}{r}\dfrac{1}{\sqrt{V}}\]
+by defining
+\[f(\theta )=\sum ^{\infty }_{l=0}(2l+1)P_{l}(\cos \theta )f_{l}(k)\]
+Let's see probability flux conservation.
+\[0=\int J_{\mathrm{net}}^{i} \,dA_{i}=\int (J_{\mathrm{out}}+J_{\mathrm{in}})^{i}\, dA_{i}=\]
+provides us with the fact that $|S_{l}(k)|=1$. The phase change of the scattering matrix element is given as
+\[S_{l}(k)=e^{2i\delta _{l}}\]
+where $\delta _{l}$ is called the scattering phase shift. Finding the flux,
+\[j=\dfrac{\hbar }{2im}\Big(\psi ^{*}\nabla \psi -\psi \nabla \psi ^{*}\Big)=\dfrac{1}{V}\dfrac{\hbar k}{m}+\dfrac{1}{V}\dfrac{\hbar k}{m}\dfrac{|f(\theta )|^2}{r^2}\hat{r}+\ldots \]
+where $m$ is the reduced mass. Using our defintion of the differential cross section, the numerator is:
+\[r^2\,d\mathrm{\Omega}\,\dfrac{1}{V}\dfrac{\hbar k}{m}\dfrac{|f(\theta )^2|}{r^2}\]
+and dividing by flux $\hbar k/mV$, and we find
+\[\dfrac{d\sigma }{d\mathrm{\Omega} }=|f(\theta )|^2\]
+Let's substitute $f(\theta )$!
+\[\begin{align*}
+f(\theta )=&\sum ^{\infty }_{l=0}(2l+1)f_{l}(k)P_{l}(\cos \theta )\\
+=&\sum _{l=0}^{\infty }(2l+1)\Big(\dfrac{S_{l}(k)-1}{2ik}\Big)P_{l}(\cos \theta )\\
+=&\sum ^{\infty }_{l=0}(2l+1)e^{i\delta _{l}}\Big(\dfrac{\sin \delta _{l}}{k}\Big)P_{l}(\cos \theta )
+\end{align*}\]
+for elastic collisions, and
+\[\begin{align*}
+\sigma_{\mathrm{tot}}=&\int \dfrac{d\sigma }{d\mathrm{\Omega} }\,d\mathrm{\Omega} =2\pi \int d(\cos \theta )\,|f(\theta )|^2\\
+=&2\pi \int d(\cos \theta )\,\sum _{l,l'}(2l+1)(2l'+1)e^{i\delta _{l}-i\delta _{l'}}\Big(\dfrac{\sin \delta _{l}}{k}\Big)\Big(\dfrac{\sin \delta _{l'}}{k}\Big)P_{l}(\cos \theta )P_{l'}(\cos \theta )\\
+=&\dfrac{4\pi }{k^2} \sum _{l}(2l+1)\sin^2 \delta _{l}(k)=4\pi \sum _{l}(2l+1)|f_{l}(k)|^2
+\end{align*}\]
+\end{rmk}
+\vspace{2ex}
+\begin{cor}
+Let's compute the imaginary part of $f(\theta =0)$. We have:
+\[\mathrm{Im}\,f(0)=\sum _{l}(2l+1)\dfrac{\sin ^2\delta _{l}}{k^2}=\dfrac{k}{4\pi }\sigma _{\mathrm{tot}}\]
+This is called the optical theorem and is true in general.
+\end{cor}
+\vspace{2ex}
+

@@ -1,0 +1,58 @@
+\section{Lecture 25 (Decemeber 9th)}
+\begin{rmk}
+Last time, we looked at $G_{f}$ for a cubic $f$. Today, we will be solving polynomial equations.
+\end{rmk}
+\vspace{2ex}
+\begin{ex}
+(15.41) For a field with characteristic not equal to 2 and $f(t)\in K[t]$, an irreducible separable polynomial of degree three, we noted that 
+\[G_{f}\cong S_3\iff \delta _{f}\in K\]
+and
+\[G_{f}\cong A_3\iff \delta _{f}\notin K\]
+For $g(t)=t^3-s_1t^2+s_2t-s_3$,
+\[D_{g}=\delta ^2=-4s_2^{3}-27s_3^2-4s_1^3s_3+s_1^2s_2^2+18s_1s_2s_3\]
+and after applying the change of variables, one can remove all terms insolving $s_1$. In this case,
+\[D_{g}=-4s_2^3-27s_3^2\]
+\end{ex}
+\vspace{2ex}
+\section{Chapter 15.5 Solving Polynomial equations by Radicals}
+\begin{defi}
+(15.5) A field extension $F/K$ is a radical if there exists $u_1,\ldots ,u_{r}\in F$ and positive integers $m_1,\ldots ,m_{r}$ such that
+\[K\subset K(u_1)\subset K(u_1,u_2)\subset \ldots \subset K(u_1,\ldots ,u_{r})=F\]
+and $u_{i}^{m_{i}}\in K(u_1,u_2,\ldots ,u_{i-1})$ for all $i$. A polynomial $f(t)\in K[t]$ is solvable by radicals if its splitting field is contained in a radical extension.
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+Let $\mathrm{char}\,K=0$. Suppose $f(t)=t^2+bt+c\in {\bm Q}[t]$. Then,
+\[t=\dfrac{-b\pm \sqrt{b^2-4c}}{2}\]
+and $D=b^2-4c$. The splitting field of $f(t)$ is ${\bm Q}(\sqrt{D})/{\bm Q}$. Thus, the function is solvable by radicals. 
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+(15.47) Let $K$ be a field of $\mathrm{char}\,0$ and let $f(t)\in K[t]$ be a nonconstant polynomial. Then, $f(t)$ is solvable by radicals if and only if the Galois group $G_{f}$ is solvable. 
+\end{thm}
+\vspace{2ex}
+\begin{defi}
+(12.53) Let $G$ be a group. Then $G$ is solvable if there exists a tower 
+\[1=G_0\trianglelefteq G_1\trianglelefteq G_2\trianglelefteq \ldots \trianglelefteq G_{k}=G\]
+(that is, $G_{i}$ is normal in $G_{i+1}$) such that $G_{i+1}/G_{i}$ is abelian. 
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+(12.54 - 12.59) 
+\begin{itemize}
+\item[(i)] Albelian groups $G$ are solvable ($0\trianglelefteq G$).
+\item[(ii)] $D_{2n}$ is solvable ($1\trianglelefteq \ldots \trianglelefteq D_{2n}$).
+\item[(iii)] $S_3\cong D_6$ and is solvable.
+\item[(iv)] $S_4$ is also solvable (use the Klein 4-group) 
+\end{itemize}
+\end{ex}
+\vspace{2ex}
+\begin{prop}
+(12.60) Subgroups and homomorphic images of solvable groups are solvable. 
+\end{prop}
+\vspace{2ex}
+\begin{cor}
+(Solvable subextension) Let $K\subset F$ be a 
+\end{cor}
+\vspace{2ex}
+

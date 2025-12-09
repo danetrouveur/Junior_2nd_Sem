@@ -80,13 +80,87 @@ Define a function $\phi :G_{X}\rightarrow G/G_{X}$. Check that it is well define
 Let $K$ be a field, and $f(t)\in K[t]$ be a separable polynomial. The following are equivalent:
 \begin{itemize}
 \item[(i)] $f(t)\in K[t]$ is irreducible
-\item[(ii)] 
+\item[(ii)] $\mathrm{Gal}(K(\alpha_1,\ldots ,\alpha _{n})/K)$ acts transistively on $\{\alpha _1,\ldots ,\alpha _{n}\}$ where $\alpha_1,\ldots ,\alpha _{n}$ are the zeros of $f(t)$ in $\bar{K}$. That is, for any given pair of elements $(\alpha _{i},\alpha _{j})$, there exists an element $\sigma \in \mathrm{Gal}(K(\alpha_1,\ldots ,\alpha _{n})/K)$ such that $\sigma (\alpha _{i})=\sigma(\alpha _{j})$.
 \end{itemize}
 \end{prop}
 \vspace{2ex}
+\begin{rmk}
+Can we prove the irreducibility of $f(t)$ on page 44 using the above proposition?
+\end{rmk}
+\vspace{2ex}
+
 \begin{ex}
 (15.32) Let $F$ be the splitting field of $t^3-2\in {\bm Q}[t]$ which is equal to ${\bm Q}(\alpha_1,\alpha_2,\alpha_3)={\bm Q}(2^{1/3},\alpha_1\xi ,\alpha_2\xi )$.
 \[\mathrm{Gal}(F/{\bm Q})\cong S_{3}\]
+Due to the above, we can notice that
+\begin{center}
+\begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+
+% Bottom field
+\node (Q) at (0,0) {$S_3$};
+
+% First layer
+\node (Qzeta) at (-2,2) {$\langle (1,2,3)\rangle $};
+\node (Qcub2) at (6,2) {$\langle (3,1)\rangle $};
+\node (Qs2) at (4,2) {$\langle (2,3)\rangle $};
+
+% Top field
+\node (top) at (0,4) {$1$};
+
+% Edges to bottom
+\draw (Q) -- node[left] {} (Qzeta);
+\draw (Q) -- node[right] {} (Qcub2);
+\draw (Q) -- node[right] {} (Qs2);
+
+% Edges to top
+\draw (Qzeta) -- node[left] {} (top);
+\draw (Qcub2) -- node[left] {} (top);
+\draw (Qs2) -- node[right] {} (top);
+
+% Diagonal middle field
+\node (Qs) at (2,2) {$\langle (1,2)\rangle $};
+
+\draw (Q) -- node[right] {} (Qs);
+\draw (Qs) -- node[right] {} (top);
+
+\end{tikzpicture}
+\end{center}
+has a bijection with
+\begin{center}
+\begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+
+% Bottom field
+\node (Q) at (0,0) {${\bm Q}$};
+
+% First layer
+\node (Qzeta) at (-2,2) {$F^{\langle (1,2,3)\rangle} $};
+\node (Qcub2) at (6,2) {$F^{\langle (3,1)\rangle }$};
+\node (Qs2) at (4,2) {$F^{\langle (2,3)\rangle} $};
+
+% Top field
+\node (top) at (0,4) {$F$};
+
+% Edges to bottom
+\draw (Q) -- node[left] {} (Qzeta);
+\draw (Q) -- node[right] {} (Qcub2);
+\draw (Q) -- node[right] {} (Qs2);
+
+% Edges to top
+\draw (Qzeta) -- node[left] {} (top);
+\draw (Qcub2) -- node[left] {} (top);
+\draw (Qs2) -- node[right] {} (top);
+
+% Diagonal middle field
+\node (Qs) at (2,2) {$F^{\langle (1,2)\rangle } $};
+
+\draw (Q) -- node[right] {} (Qs);
+\draw (Qs) -- node[right] {} (top);
+
+\end{tikzpicture}
+\end{center}
+Letting us conclude that
+\[[F:F^{H}]=|H|\]
+
 \end{ex}
 \vspace{2ex}
 

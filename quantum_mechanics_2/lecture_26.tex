@@ -1,0 +1,69 @@
+\section{Lecture 26 (December 8th)}
+\begin{recall}
+Last class, we saw how in elastic colisions, where
+\[S_{l}=e^{2i\delta _{l}}\]
+But in inelastic collisions,
+\[S_{l}=\eta _{l}e^{2i\delta _{l}}\]
+where $0\leq \eta _{l}\leq 1$. 
+\end{recall}
+\vspace{2ex}
+\begin{ex}
+(Solid sphere) Consider a spherical potential well described by a pair $(-V_0,a)$. Recall that we could describe the free particle far from the potential with a combination of $(j_{l},\eta _{l})$ which for large $r$ became $(\sin r/r,\cos r/r)$. As we have finished the whole calculation for an arbitrary case, we only need to compute $S_{l}(k)=e^{2i\delta _{l}}$. In other words,
+\[\delta _{l}=\delta _{l}(V_0,a)\]
+We can do this through solving the Schrodinger equation for the cases $r\leq a$ and $r\geq a$, and impose that the solution and it's derivative is continuous at $a$. As the system is spherically symmetric, the solution is constructed of $R_{l}$ and $Y_{lm}$, but we expect $E\geq 0$. 
+\[-\dfrac{\hbar ^2}{2m_{r}}\Big(\dfrac{d ^2}{d r^2}+\dfrac{2}{r}\dfrac{d }{d r}-\dfrac{l(l+1)}{r^2}  \Big)R_{l}(r)+V(r)R_{l}(r)=ER_{l}(r)\]
+Let $\kappa =2m(E+V_0)/\hbar ^2$. Solving,
+\[\begin{cases}
+r\leq a& C_1j_{l}(\kappa r)+C_2n_{l}(\kappa r)\\
+r\geq a& C_3j_{l}(\kappa r)+C_4n_{l}(\kappa r)
+\end{cases}\]
+$C_2\rightarrow 0$ due to divergence at zero, and continuity conditions give us:
+\[\kappa \dfrac{j'(\kappa a)}{j_{l}(\kappa a)}=\kappa \dfrac{j_{l}'(\kappa a)+\dfrac{C}{B}\eta _{l}'(\kappa a)}{j_{l}(\kappa a)+\dfrac{C}{B}\eta _{l}(\kappa a)}\]
+Notice all the potential information is in $\kappa $, and this fixes $C/B$. 
+\[\psi (r\geq a)=B\Big(j_{l}(k r)+\dfrac{C}{B}\eta _{l}(k r)\Big)\]
+taking $r\rightarrow \infty $, 
+\[\psi (r\geq a)\sim B\Big(\dfrac{\sin (k r-l\pi /2)}{kr}-\dfrac{C}{B}\dfrac{\cos (kr-l\pi /2)}{kr}\Big)\]
+and
+\[\dfrac{2}{kr}\dfrac{1}{C/B-i}\Big[e^{-ikr-il\pi /2}\Big(\dfrac{-C/B+i}{C/B-i}\Big)-e^{-ikr+il\pi /2}\Big]\]
+Telling us that 
+\[S_{l}(k)=e^{2i\delta _{l}}=\Big(\dfrac{-C/B+i}{C/B-i}\Big)\]
+Solving this with respect to $\delta _{l}$,
+\[\tan \delta _{l}(k)=\dfrac{kj_{l}'(ka)j_{l}(\kappa a)-\kappa j_{l}(ka)j_{l}'(\kappa a)}{kn'_{l}(ka)j_{l}(\kappa a)-\kappa n_{l}(ka)j_{l}'(\kappa a)}\]
+at $k a\ll 1$, we can series expand the above, and knowing that $ka\sim l$, we only need small orders of $l$. The central point is that when the denominator is zero, $\delta _{l}(k)$ becomes $(n\pi +\pi /2)$, and $\sigma _{l}$ becoes maximum. We call this resonant scattering. We can approximate the above as
+\[\tan \delta _{l}(k)=\gamma \dfrac{(ka)^{2l+1}}{E-E_{k}}\]
+near resonance, and we can obtain $\sin ^2\delta _{l}(k)$ which is linear to the cross section. 
+\[\sigma _{l}=\dfrac{4\pi }{k^2}(2l+1)\dfrac{(\mathrm{\Gamma} /2)^2}{(E-E_{k})^2+(\mathrm{\Gamma} /2)^2}\]
+This is called the Breit-Wigner formula. 
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+(Direct solution of $l=0$ or $s$ wave) Again,
+\[R_0(r\leq a)=C'j_0=C'\dfrac{\sin \kappa r}{\kappa r}\]
+and
+\[R_0(r\geq a)=C_1j_0+C_2\eta_0=C_1\dfrac{\sin kr}{kr}+C_2\Big(\dfrac{-\cos kr}{kr}\Big)=\dfrac{C''\sin (kr+\delta_0)}{kr}\]
+This ultimately gives us
+\[\Big(\dfrac{\sin (kr-l\pi /2+\delta _{l})}{kr}\Big)\]
+for the radial equation and for $l=0$, we find $\delta _0=\delta _{l}(k)$.
+\[\dfrac{1}{R_0}\dfrac{d R_0}{d r}\Big|_{R=a}\qquad\&\qquad \tan ^{-1}\Big(\dfrac{k}{\kappa }\tan \kappa \Big)=ka\]
+we see that for $V_0>0$, $\delta_0>0$, which makes sense as the differential cross section increases.
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+(Born approximation) The Born approximation applies to:
+\begin{itemize}
+\item[(i)] High energy
+\item[(ii)] Weak potential
+\end{itemize}
+The idea is to express $d\sigma $, the transition rate into $d\mathrm{\Omega} $ divided by incident flux $p_{i}/Vm_{r}$, and use, for the transition rate, the Fermi Golden rule. Recall,
+\[\mathrm{\Gamma} _{i\rightarrow f}=\dfrac{2\pi }{\hbar }\sum _{f}\delta (E_{f}-E_{i})|\langle \phi _{f}|\lambda H^{(1)}|\phi _{i}\rangle |^2\]
+We can also express the final state sum as as a phase integral,
+\[\sum _{f}\rightarrow \int \dfrac{V\,d^3p}{(2\pi \hbar )^3}\]
+where initial and final states are just free plane waves:
+\[\dfrac{e^{ikr}}{\sqrt{V}}\]
+notice how the the iner product in this case becomes a Fourier transform,
+\[\int d^3r\,e^{-ik_{f}r}V(r)e^{ik_{i}r}=\tilde{V}(k_{i}-k_{f})\]
+we will ultimately find
+\[\dfrac{d\sigma }{d\mathrm{\Omega} } \propto |\tilde{V}(k_{i}-k_{f})|^2\]
+\end{thm}
+\vspace{2ex}
+

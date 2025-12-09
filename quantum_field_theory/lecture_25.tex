@@ -1,0 +1,68 @@
+\section{Lecture 25 (December 8th)}
+\begin{ex}
+Let's finish off Compton scattering! 
+\[i\mathcal{M}_{e^{-}\gamma \rightarrow e^{-}\gamma }=\Big(\bar{u}^{j}_{+}(q)ie\gamma ^{\nu }\dfrac{-i}{\cancel{p+K}+m-i\epsilon }ie\gamma ^{\mu }u^{i}_{+}(p)+((K,\mu )\leftrightarrow -K',\nu )\Big)\epsilon ^{r}_{\mu }(K)\epsilon ^{s}_{\nu }(K')^{*}\]
+in a expression like the first term, we'd like the operator to be in the numerator, and
+\[i\mathcal{M}=ie^2\Big(\dfrac{\bar{u}_{+}^{j}(q)\gamma ^{\nu }(\cancel{p+k}-m)\gamma ^{\mu }u^{i}_{+}(p)}{-2p\cdot K}+((K,\mu )\leftrightarrow (-K',\nu ))\Big)\epsilon _{\mu }^{r}(K)\epsilon ^{s}_{\nu }(K')^{*}\]
+multiplying both the numerator and denominator by:
+\[\dfrac{(\cancel{p+K})-m}{(\cancel{p+K})-m}\]
+Using the two identities
+\[(\cancel{p}\pm m)u_{\pm}(p)=0\qquad\&\qquad p_{\nu }(-\gamma ^{\mu }\gamma ^{\nu }-2\eta ^{\mu \nu })=-\gamma ^{\mu }\cancel{p}-2p^{\mu }\]
+we have
+\[ie^2\Big(\dfrac{\bar{u}^{j}_{+}(q)(\gamma ^{\nu }\cancel{K}\gamma ^{\mu }-2\gamma ^{\nu }p^{\mu })u_{+}^{i}(p)}{-2p\cdot K}+\ldots \Big)\epsilon ^{r}_{\mu }(K)\epsilon ^{s}_{\nu }(K')^{*}\]
+The scattering amplitude square corespondingly becomes:
+\[\begin{align*}
+|\mathcal{M}|^2=&e^{4}\Big(\dfrac{\bar{u}^{i}_{+}(q)(\gamma ^{\nu }\cancel{K}\gamma ^{\mu }-2\gamma ^{\nu }p^{\mu })u^{j}_{+}(p)}{2p\cdot K}+\ldots \Big)\Big(\dfrac{\bar{u}_{+}^{i}(p)(\gamma ^{\rho }\cancel{K}\gamma ^{\sigma }-2\gamma ^{\sigma }p^{\rho })u^{j}_{+}(q)}{2p\cdot K}+\ldots \Big)\\
+&\times \epsilon ^{r}_{\mu }(K)\epsilon ^{s}_{\nu }(K')^{*}\epsilon ^{r}_{\rho }(K)^{*}\epsilon ^{s}_{\sigma }(K')
+\end{align*}\]
+When we want to do the spin polarisation state sum, we use the identities:
+\[\sum ^{2}_{i=1}u^{i}_{+}(p)\bar{u}^{i}_{+}(p)=-(\cancel{p}-m)\]
+and
+\[\sum ^{2}_{r=1}\epsilon _{\mu }^{r}(p)^{*}\epsilon ^{r}_{\nu }(p)=\eta _{\mu \nu }-\dfrac{p_{\mu }p_{\nu }+(p_{\mu }n_{\nu }+p_{\nu }n_{\mu })(p\cdot n)}{(p\cdot n)^2}\]
+This would become a disaster. Here, the saviour of QED is the Ward identity:
+\[\mathcal{M}=\mathcal{M}^{\mu }\epsilon ^{r}_{\mu }(p)\implies \mathcal{M}^{\mu }p_{\mu }=0\]
+and this begs us to express all $\epsilon $'s as $\eta $'s. 
+\end{ex}
+\vspace{2ex}
+\begin{cor}
+(Initial-averaged and final-summed $|\mathcal{M}|^2$)
+\[\begin{align*}
+\sum |\mathcal{M}|^2=&\dfrac{1}{2}\sum _{i}\dfrac{1}{2}\sum _{r}\sum _{j}\sum _{s}|\mathcal{M}|^2\\
+=&\dfrac{e^{4}}{4}\mathrm{Tr}\Big((\cancel{q}-m)\dfrac{\gamma ^{\nu }\cancel{K}\gamma ^{\mu }-2\gamma ^{\nu }p^{\mu }}{2p\cdot K}(\cancel{p}-m)\dfrac{\gamma _{\mu }\cancel{K}\gamma _{\nu }-2\gamma _{\nu }p_{\mu }}{2p\cdot K}+\ldots \Big)\\
+=&\dfrac{e^{4}}{16}\mathrm{Tr}\Big(\dfrac{\gamma _{\nu }(\cancel{q}-m)(\gamma ^{\mu }\cancel{K}\gamma ^{\mu }-2\gamma ^{\nu }p^{\mu })(\cancel{p}-m)(\gamma _{\mu }\cancel{K}-2p_{\mu })}{(p\cdot K)^2}\Big)\\
+=&\dfrac{e^{4}}{8}\mathrm{Tr}\Big(\dfrac{(\cancel{q}+2m)(\cancel{K}\gamma ^{\mu }-2p^{\mu })(\cancel{p}-m)(\gamma _{\mu }\cancel{K}-2p_{\mu })}{(p\cdot K)^2}\Big)\\
+=&\dfrac{e^{4}}{8}\dfrac{\mathrm{Tr}[(\cancel{q}+2m)(\cancel{K}(2\cancel{p}+4m)\cancel{K}-2\cancel{K}\cancel{p}(\cancel{p}-m)-2(\cancel{p}-m)\cancel{p}\cancel{K}-4m^2(\cancel{p}-m))]}{(p\cdot K^2)}\\
+=&e^{4}\Big(\dfrac{2(q\cdot K)(p\cdot K)+2m^2q\cdot (p+K)+4m^2(m^2-p\cdot K)}{(p\cdot K)^2}\Big)+\ldots \\
+=&2e^{4}\Big(\dfrac{p\cdot K'}{p\cdot K}+\dfrac{p\cdot K}{p\cdot K'}-2m^2\Big(\dfrac{1}{p\cdot K}-\dfrac{1}{p\cdot K'}\Big)+m^{4}\Big(\dfrac{1}{p\cdot K}-\dfrac{1}{p\cdot K'}\Big)^2\Big)
+\end{align*}\]
+\end{cor}
+\vspace{2ex}
+\begin{cor}
+What are the physical observables? We need to partial integrate $d\sigma $ in the LAB frame,
+\[\begin{align*}
+\sigma =&\int \dfrac{d^3\vec{\omega }'}{(2\pi )^3\cdot 2\omega '}\dfrac{d^3\vec{q}}{(2\pi )^3\cdot 2E_{q}}\dfrac{1}{2m}\dfrac{1}{2\omega }(2\pi )^{4}\delta ^{(4)}(p+K-q-K')\cdot |\mathcal{M}|^2\\
+=&\int \dfrac{\omega '^2\,d\omega '\,d\mathrm{\Omega} }{(2\pi )^3\cdot 2\omega '}\dfrac{1}{2E_{q}}\dfrac{1}{2m}\dfrac{1}{2\omega }(2\pi )\delta ^{(4)}(m+\omega -E_{q}-\omega ')\cdot |\mathcal{M}|^2
+\end{align*}\]
+we now want to substitute 
+\[E_{q}=\sqrt{\vec{q}^2+m^2}=\sqrt{\omega ^2+\omega '^2-2\omega \omega '\cos \theta +m^2}\]
+and
+\[\begin{align*}
+&=\int d\mathrm{\Omega} \,\dfrac{1}{(2\pi )^2}\dfrac{\omega '}{16E_{q}m\omega }\dfrac{|\mathcal{M}|^2}{|1+\dfrac{\omega '-\omega \cos \theta }{E_{q}}}\Big|_{m+\omega =E_{q}+w'}\\
+&=\int d\mathrm{\Omega} \,\dfrac{1}{(2\pi )^2}\dfrac{\omega '}{16m\omega }\dfrac{1}{m+\omega (1-\cos \theta )}|\mathcal{M}|^2\\
+&=\int d\mathrm{\Omega} \,\Big(\dfrac{\omega '}{8\pi \omega }\Big)^2\cdot |\mathcal{M}|^2
+\end{align*}\]
+Now the differential cross section is finally:
+\[\begin{align*}
+\Big(\dfrac{d\sigma }{d\mathrm{\Omega} }\Big)_{\mathrm{LAB}}=&\Big(\dfrac{\omega '}{8\pi m\omega }\Big)^2\times 2e^{4}\Big(\dfrac{\omega '}{\omega }+\dfrac{\omega }{\omega '}-2m\Big(\dfrac{1}{\omega '}-\dfrac{1}{\omega }\Big)+m^2\Big(\dfrac{1}{\omega '}-\dfrac{1}{\omega }\Big)^2\Big)\\
+=&\Big(\dfrac{\omega '}{8\pi m\omega }\Big)^2\times 2e^{4}\Big(\dfrac{\omega '}{\omega }+\dfrac{\omega }{\omega '}-\sin ^2\theta \Big)
+\end{align*}\]
+Some comments:
+\begin{itemize}
+\item[(i)] This is called the (spin-averaged) Klein-Nishina formula.
+\item[(ii)] Reproduces the classical Thompson scattering cross section in the low energy limit ($\omega \ll m$)
+\[\Big(\dfrac{d\sigma }{d\mathrm{\Omega} }\Big)_{\mathrm{LAB}}=\dfrac{2e^{4}}{32\pi ^2m^2}(1+\cos ^2\theta )\]
+\item[(iii)] The high energy limit is given in Peskin in the CM frame.
+\end{itemize}
+\end{cor}
+\vspace{2ex}
+

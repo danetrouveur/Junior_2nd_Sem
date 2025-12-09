@@ -1,0 +1,99 @@
+\section{Lecture 22 (December 2nd)}
+\begin{recall}
+We had $E_0(z)=(1-z)$ and for $p\in {\bm N}$, 
+\[E_{p}(z)=(1-z)\exp \Big(z+\dfrac{z^2}{2}+\ldots +\dfrac{z^{p}}{p}\Big)\]
+\end{recall}
+\vspace{2ex}
+\begin{thm}
+For $|z|\leq 1$, 
+\[|E_{p}(z)-1|\leq |z|^{p+1}\]
+\end{thm}
+\vspace{2ex}
+\begin{thm}
+If $|z_{n}|\rightarrow \infty $, $z_{n}\ne 0$ and
+\[\sum ^{\infty }_{n=1}\dfrac{1}{|z_{n}|^{p+1}}<\infty \]
+then 
+\[\prod^{\infty }_{n=1}E_{p}\Big(\dfrac{z}{z_{n}}\Big)\]
+is an entire function whose zero set is $\{z_{n}\;|\;n\in {\bm N}\}$
+\end{thm}
+\vspace{2ex}
+\begin{ex}
+Let $A=\{\cbrt{n}\;|\;n\in {\bm N}\}$ then 
+\[f(z)=\prod^{\infty }_{n=1}E_{3}\Big(\dfrac{z}{\cbrt{n}}\Big)\]
+satisfies $Z_{f}=A$.
+\[f(z)=\prod^{\infty }_{n=1}(1-\dfrac{z}{\cbrt{n}})\exp\Big(\dfrac{z}{\sqrt{3}{n}}+\dfrac{z^2}{2\cbrt{n}}+\dfrac{}{}\Big) \]
+\end{ex}
+\vspace{2ex}
+\begin{ex}
+A function analytic in $U=\{|z|<1\}$ whose zero set is $\{1-1/n\;|\;n\in {\bm N}\}$ is
+\[f(z)=g\Big(\dfrac{1}{1-z}\Big)\]
+\end{ex}
+\vspace{2ex}
+\begin{thm}
+If $D$ is a bounded domain, $\alpha _{n}\in D$ with no limit point in $D$, then there is an analytic function on $D$ with $Z_{f}=\{\alpha _{n}\}$.
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+For each $\alpha _{n}$, there is $\beta _{n}\in D^{c}$ such that $|\beta _{n}-\alpha _{n}|\leq |\beta -\alpha _{n}|$ for all $\beta \in D^{c}$. Suppose $\{\alpha _{n}\}$ is an infinite set, then $\lim _{n\rightarrow \infty }|\beta _{n}-\alpha _{n}|=0$, otherwise, $\{\alpha _{n}\}$ has a limit point in $D$. We'll now show that
+\[f(z)=\prod^{\infty }_{n=1}E_{n}\Big(\dfrac{\alpha _{n}-\beta _{n}}{z-\beta _{n}}\Big)\]
+is analytic with $Z_{f}=\{\alpha _{n}\}$. We now show that 
+\[f_{N}(z)=\prod^{N}_{n=1}E_{n}\Big(\dfrac{\alpha _{n}-\beta _{n}}{z-\beta _{n}}\Big)\]
+conserges uniformly on every compact subset of $D$. Let $K$ be a compact subset. Then, there is $\delta >0$ such that $|z-\beta _{n}|>\delta $ for all $z\in K$. So, there is $M$ such that 
+\[\Big|\dfrac{\alpha _{n}-\beta _{n}}{z-\beta _{n}}\Big|<\dfrac{1}{2}\]
+for all $z\in K$ and $n>M$. Then, if $n>M$ and $z\in K$, then
+\[\Big|E_{n}\Big(\dfrac{\alpha _{n}-\beta _{n}}{z-\beta _{n}}\Big)-1\Big|\leq \Big|\dfrac{\alpha _{n}-\beta _{n}}{z-\beta _{n}}\Big|^{n+1}\leq \Big(\dfrac{1}{2}\Big)^{n+1}\]
+Thus,
+\[\sum ^{\infty }_{n=K}\Big|E_{n}\Big(\dfrac{\alpha _{n}-\beta _{n}}{z-\beta _{n}}\Big)-1\Big|\leq \sum ^{\infty }_{n=M}E_{n}\Big(\dfrac{\alpha _{n}-\beta _{n}}{z-\beta _{n}}\Big)\]
+converges uniformly on $K$.
+\end{proof}
+\vspace{2ex}
+\begin{lem}
+We have constantly seen $f_{n}$ analytic, $|f_{n}(z)-1|\leq c_{n}$ unfiromly on a compact set with $\sum c_{n}<\infty $. Then,\[f(z)=\prod^{\infty }_{n=1}f_{n}(z)\]
+is analytic. Setting
+\[F_{N}(z)=\prod^{N}_{n=1}f_{n}(z)\]
+we have
+\[\dfrac{F'_{N}(z)}{F_{N}(z)}=\sum ^{N}_{n=1}\dfrac{f'_{n}(z)}{f_{n}(z)}\]
+Therefore,
+\[\dfrac{f'(z)}{f(z)}=\sum _{n=1}^{\infty }\dfrac{f_{n}'(z)}{f_{n}(z)}\]
+This is due to the fact that $f_{n}\rightarrow f$ uniformly on $K$ and $f_{n}'\rightarrow f$ uniformly on $K$. Also, $f_{n}$ is uniformly bounded below on $K$. 
+\end{lem}
+\vspace{2ex}
+\begin{ex}
+Let 
+\[g(z)=\prod^{\infty }_{n=1}\Big(1-\dfrac{z^2}{n^2}\Big)=f(z^2)\]
+where $f(z)=\prod^{\infty }_{n=1}(1-z/n^2)$ is entire. $Z_{g}=\{\pm 1,\pm 2,\ldots \}={\bm Z}\backslash\{0\}$, all simple zeros. Thus,
+\[\sin \pi z=e^{h(z)}zg(z)\]
+for some entire function $h$. Let's apply the logarithmic derivative on this!
+\[\sin \pi z=e^{h(z)}z\prod^{\infty }_{n=1}\Big(1-\dfrac{z^2}{n^2}\Big)\]
+Then,
+\[\pi \cot \pi z=h'(z)+\dfrac{1}{z}+\sum ^{\infty }_{n=1}\dfrac{-\dfrac{2z}{n^2}}{\Big(1-\dfrac{z^2}{n^2}\Big)}=h'(z)+\dfrac{1}{z}+\sum^{\infty }_{n=1}\dfrac{2z}{z^2-n^2}\]
+However, we know that
+\[\pi \cot \pi z=\dfrac{1}{z}+\sum ^{\infty }_{n=1}\dfrac{2z}{z^2-n^2}\]
+and we find $h'=0$, that is, $h$ is constant. Then, we find $h$ to be $\pi $. Now,\[\dfrac{\sin \pi z}{\pi z}=\prod^{\infty }_{n=1}\Big(1-\dfrac{z^2}{n^2}\Big)\]
+Matching the coefficient for $z^2$, we get
+\[\sum ^{\infty }_{n=1}\dfrac{1}{n^2}=\dfrac{\pi }{6}\]
+\end{ex}
+\vspace{2ex}
+\begin{defi}
+(Complex gamma function $\mathrm{\Gamma} (z)$) Let
+\[f(z)=\prod^{\infty }_{n=1}\Big(1+\dfrac{z}{n}\Big)e^{-z/n}\]
+be an entire function whose zero set is $-{\bm N}$. Then, $f(z-1)$ is an entire function whose zero set is $\{0,-1,\ldots \}$. Thus, there is an entire function $g$ such that $f(z-1)=e^{g(z)}zf(z)$. Also,
+\[\dfrac{f'(z-1)}{f(z-1)}=g'(z)+\dfrac{1}{z}+\dfrac{f'(z)}{f(z)}\]
+To find $f'/f$, we take the logarithmic derivative,
+\[\dfrac{f'(z)}{f(z)}=\sum _{n=1}^{\infty }\dfrac{\Big[\Big(1-\dfrac{z}{n}\Big)e^{-z/n}\Big]'}{\Big(1+\dfrac{z}{n}\Big)e^{-z/n}}=\sum ^{\infty }_{n=1}\dfrac{-\dfrac{z}{n^2}}{\Big(1+\dfrac{z}{n}\Big)}=\sum ^{\infty }_{n=1}\dfrac{-z}{n(n+z)}=\sum ^{\infty }_{n=1}\Big(\dfrac{1}{n+z}-\dfrac{1}{n}\Big)\]
+where $[(1+z/n)e^{-z/n}]'=[e^{-z/n}+ze^{-z/n}/n]'=-ze^{-z/n}/n^2$. We now find
+\[\sum ^{\infty }_{n=1}\Big(\dfrac{1}{n+z-1}-\dfrac{1}{n}\Big)=g'(z)+\dfrac{1}{z}+\sum ^{\infty }_{n=1}\Big(\dfrac{1}{n+z}-\dfrac{1}{n}\Big)\]
+However,
+\[\sum ^{\infty }_{n=2}\Big(\dfrac{1}{n+z-1}-\dfrac{1}{n}\Big)=\sum ^{\infty }_{n=2}\Big(\dfrac{1}{n+z-1}-\dfrac{1}{n-1}+\dfrac{1}{n-1}-\dfrac{1}{n}\Big)=\sum ^{\infty }_{n=1}\Big(\dfrac{1}{n+z}-\dfrac{1}{n}\Big)+\sum ^{\infty }_{n=1}\Big(\dfrac{1}{n}-\dfrac{1}{n+1}\Big)\]
+and $g'(z)=0$, and is a constant. Let $g(z)=\gamma $, then
+\[f(z-1)=e^{\gamma}zf(z)\]
+Putting $z=1$, 
+\[1=f(0)=e^{\gamma }f(1)\]
+and
+\[1=e^{\gamma }\prod^{\infty }_{n=1}\Big(1+\dfrac{1}{n}\Big)e^{-1/n}\qquad\&\qquad e^{\gamma }=\Big[\prod^{\infty }_{n=1}\Big(1+\dfrac{1}{n}\Big)e^{-1/n}\Big]^{-1}\]
+so that
+\[\gamma =\lim_{n\rightarrow \infty }\sum ^{n}_{k=1}\Big(\dfrac{1}{k}-\ln \Big(1+\dfrac{1}{k}\Big)\Big)=\lim _{n\rightarrow \infty }\Big(\sum ^{n}_{k=1}\dfrac{1}{k}-\ln (k+1)\Big)\]
+This constant is called Euler's gamma. 
+\end{defi}
+\vspace{2ex}
+
