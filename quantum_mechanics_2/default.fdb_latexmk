@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1765167378.44183 "default.tex" "default.pdf" "default" 1765167379.86536 2
+["pdflatex"] 1765339491.67869 "default.tex" "default.pdf" "default" 1765339493.07232 2
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvbc7t.tfm" 1136768653 2672 88159036c64e674fcd9515bc9c7052d4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -199,9 +199,9 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753710123 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1753710051 3345733 17bb5a30f736e9ad56976bebac113531 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "default.aux" 1765167379.69324 1520 40b6f4ab86b90c691c4747d02b6ee13c "pdflatex"
-  "default.out" 1765167379.69428 2042 7f00a7825097b386006e39748cfa14c9 "pdflatex"
-  "default.tex" 1765162495.43219 1048 44875218debb95cd028aa303d18573dd ""
+  "default.aux" 1765339492.91442 1646 3f468aa4f9b68ef4e244519ea2d029b6 "pdflatex"
+  "default.out" 1765339492.91517 2232 2d4154277ee03cb3c1b743f41bfcbde2 "pdflatex"
+  "default.tex" 1765335788.31123 1071 af1d865c42878072472167187fbac052 ""
   "jheppub.sty" 1745656376 11794 6d17a977bbb994fa9e704befb431a7fa ""
   "lecture_15.tex" 1761538385.94494 3965 c1da92e9841bf3f91d3afd509863582d ""
   "lecture_16.tex" 1761711034.55724 4454 242534168e327d519289443b880518ce ""
@@ -214,7 +214,8 @@
   "lecture_23.tex" 1764130385.72779 2893 3f24e975459f898ca0110872d132b471 ""
   "lecture_24.tex" 1764562421.71271 4215 eeb8d467b4b97673453f4a1457e99d9e ""
   "lecture_25.tex" 1764735261.93536 3706 e8ce5b699d62fc202f50dbbfe5705cee ""
-  "lecture_26.tex" 1765167377.86785 4427 9a4a3311d31eb186642f77739108b2ac ""
+  "lecture_26.tex" 1765167384.51278 4426 907d9fca20048dc83f1d7fb961aab2dc ""
+  "lecture_27.tex" 1765339491.09171 3873 317c53658b002f6c42f5084bd57dc440 ""
   "preamble.tex" 1745656378 1280 a572ecc18c43e8c2e95a6070fdac8ba6 ""
   (generated)
   "default.aux"

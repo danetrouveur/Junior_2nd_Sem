@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1765246380.98475 "default.tex" "default.pdf" "default" 1765246383.51558 2
+["pdflatex"] 1765421103.01794 "default.tex" "default.pdf" "default" 1765421106.00366 2
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvbc7t.tfm" 1136768653 2672 88159036c64e674fcd9515bc9c7052d4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -213,9 +213,9 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753710123 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1753710051 3345733 17bb5a30f736e9ad56976bebac113531 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "default.aux" 1765246383.31977 4541 ebb4bad34b2fe18385f4bf8ad17368a7 "pdflatex"
-  "default.out" 1765246383.32083 7029 0447c371990d9f8b0acda99e74adf240 "pdflatex"
-  "default.tex" 1765243987.96855 997 97e8e9f2b0247f8692da845ef72b017b ""
+  "default.aux" 1765421105.7593 4667 33e46a670043e199dcd26e681efc8294 "pdflatex"
+  "default.out" 1765421105.76067 7219 c9820b0dcc7876d95f20baeeb0f57adc "pdflatex"
+  "default.tex" 1765416539.70557 1020 89997e183744f2682aa56e9e7097cc42 ""
   "jheppub.sty" 1745656376 11794 6d17a977bbb994fa9e704befb431a7fa ""
   "lecture_1.tex" 1758259676.82203 2081 2ed8b8f89f29216c554c69d6df34a669 ""
   "lecture_10.tex" 1760760892.82191 5900 9acdef2e9ec4dfdd04282a8ab50169e4 ""
@@ -234,7 +234,8 @@
   "lecture_22.tex" 1764295297.17546 5756 fad65f146340512f29f3b09fcf6dcc47 ""
   "lecture_23.tex" 1764643545.37742 2843 fc6998f0600fa9c8df6f2ae076fb001e ""
   "lecture_24.tex" 1765244675.93926 3967 187649513063b4d24be67a39d2788cc7 ""
-  "lecture_25.tex" 1765246380.36711 2166 f19917a7ec9a758c83a90299ccb22c2d ""
+  "lecture_25.tex" 1765248354.61299 3466 e6c0f595a09505df78f743af54fbc84b ""
+  "lecture_26.tex" 1765421102.39065 4899 3d877a29af1dabcb6cfd5a89f9e43b1b ""
   "lecture_3.tex" 1758430116.21066 689 d45ce24e00be881ec0ab60caa84bdac4 ""
   "lecture_5.tex" 1758585923.00032 5240 071f3c277c38987c837e9694c773a362 ""
   "lecture_6.tex" 1758584230.97486 4622 323dc8efd455ebac4fe7c567ca63c779 ""

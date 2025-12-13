@@ -1,0 +1,109 @@
+\section{Lecture 24 (December 9th)}
+\begin{recall}
+For $\mathrm{Re}(s)>1$, 
+\[\xi (s)=\sum _{n=1}^{\infty }\dfrac{1}{n^{s}}\]
+converges and for $\mathrm{Re}(s)>0$,
+\[\eta (s)=\sum ^{\infty }_{n=1}(-1)^{n+1}\dfrac{1}{n^{s}}\]
+converges. If $\mathrm{Re}(s)>1$,
+\[\xi (s)=(1-2^{1-s})^{-1}\eta (s)\]
+which is a analytic continuation of $\xi $ to $\mathrm{Re}(s)>0$. 
+\end{recall}
+\vspace{2ex}
+\begin{prop}
+(Riemann hypothesis) All zeros of such $\xi $ has the form
+\[z=\dfrac{1}{2}+it\]
+\end{prop}
+\vspace{2ex}
+\begin{thm}
+(Euler's theorem) Let $\xi (s)=\sum _{n=1}^{\infty }\dfrac{1}{n^{s}}$ for $s>1$, $s \in {\bm R}$.
+\[\dfrac{1}{\xi (s)}=\prod_{p}\Big(1-\dfrac{1}{p^{s}}\Big)\]
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+\[\xi (s)=1+\dfrac{1}{2^{s}}+\dfrac{1}{3^{s}}+\ldots \]
+Subtracting
+\[\xi (s)\dfrac{1}{2^{s}}=\dfrac{1}{2^{s}}+\dfrac{1}{4^{s}}+\dfrac{1}{6^{s}}+\ldots \]
+we obtain
+\[\xi (s)\Big(1-\dfrac{1}{2^{s}}\Big)=1+\dfrac{1}{3^{s}}+\dfrac{1}{5^{s}}+\ldots \]
+and 
+\[\xi (s)\Big(1-\dfrac{1}{2^{s}}\Big)\Big(1-\dfrac{1}{3^{s}}\Big)=1+\dfrac{1}{5^{s}}+\dfrac{1}{7^{s}}+\ldots \]
+Thus,
+\[\xi (s)\Big(1-\dfrac{1}{2^{s}}\Big)\Big(1-\dfrac{1}{3^{s}}\Big)\ldots \Big(1-\dfrac{1}{p^{s}}\Big)=1\]
+\end{proof}
+\vspace{2ex}
+\begin{defi}
+(Hankel contour) The Hankel contour is defined as 
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+    % axes
+    \draw[->] (-0.5,0) -- (5.5,0) node[right] ;
+    \draw[->] (0,-1.5) -- (0,1.5) node[above] ;
+
+    % Hankel contour upper ray
+    \draw[] (5,0.15) -- (0.25,0.15);
+
+    % small loop around 0
+    \draw[]
+        plot [smooth,domain=30:180] ({0.3*cos(\x)}, {0.3*sin(\x)});
+    \draw[]
+        plot [smooth,domain=180:330] ({0.3*cos(\x)}, {0.3*sin(\x)});
+
+    % Hankel contour lower ray
+    \draw[] (0.25,-0.15) -- (5,-0.15);
+
+    % arrows indicating direction
+    \draw[->] (3,0.15) -- +(0.01,0);  % upper ray
+    \draw[->] (-0.1,0.3) -- +(-0.01,-0.01); % around loop
+    \draw[->] (3,-0.15) -- +(0.01,0); % lower ray
+
+    % labels
+    \node at (0.5,0.5) {$\varepsilon$};
+\end{tikzpicture}
+\end{center}
+for $\varepsilon \rightarrow 0$.
+\end{defi}
+\vspace{2ex}
+\begin{ex}
+Recall our result for $0<\alpha <1$,
+\[\int ^{\infty }_{0}\dfrac{x^{\alpha -1}}{1+x}\,dx=\dfrac{\pi }{\sin \alpha \pi }\]
+Notice that 
+\[f(z)=\dfrac{z^{\alpha -1}}{1+z}\]
+is analytic inside on $C_{\varepsilon ,R}$, and vanishes on the outer rim. Inside the small key,
+\[\Big|\int _{\mathrm{IV}}f(z)\,dz\Big|\leq \int ^{2\pi }_{0}\dfrac{\varepsilon  ^{\alpha -1}}{1-\varepsilon }\varepsilon \,dt=2\pi \dfrac{\varepsilon ^{\alpha }}{1-\varepsilon }\rightarrow 0\]
+as $\varepsilon \rightarrow 0$. Now
+\[(1-e^{2\pi \alpha i})\int ^{\infty }_{0}\dfrac{x^{\alpha -1}}{1+x}\,dx=2\pi i\mathop{\mathrm{Res}}_{z=-1}f(z)\]
+Meanwhile,
+\[\mathop{\mathrm{Res}}_{z=-1}(e^{\pi i})^{\alpha -1}=-e^{\alpha \pi i}\]
+and through algebra,
+\[\int ^{\infty }_{0}\dfrac{x^{\alpha -1}}{1+x}\,dx=2\pi i\dfrac{e^{\alpha \pi i}}{e^{2\pi \alpha i}-1}=\dfrac{\pi }{\sin \alpha \pi }\]
+\end{ex}
+\vspace{2ex}
+\begin{recall}
+We have previously seen that for $\mathrm{Re}(s)>1$,
+\[\xi (s)=\dfrac{1}{\mathrm{\Gamma} (s)}\int ^{\infty }_{0}\dfrac{x^{s-1}}{e^{x}-1}\,ds\]
+For $\mathrm{Re}(s)>1$, take
+\[f(z)=\dfrac{z^{s-1}}{e^{z}-1}\]
+Now,
+\[\int _{H}\dfrac{z^{s-1}}{e^{z}-1}\,dz=(e^{2\pi is}-1)\int ^{\infty }_{0}\dfrac{x^{s-1}}{e^{x}-1}\,dx\]
+A critical point is that the left function is entire, and that the right integral becomes $\mathrm{\Gamma} (s)\xi (s)$. We now see that the left integral can be used to analytically continuate the right. We now see that the left integral can be used to analytically continuate the right. When $\mathrm{Re}(s)<0$,
+\[\begin{align*}
+\int _{H}\dfrac{z^{s-1}}{e^{z}-1}\,dz=&\lim _{R\rightarrow \infty }\int _{C_{\epsilon ,R}}\dfrac{z^{s-1}}{e^{z}-1}\,dz=-2\pi i\mathop{\mathrm{Res}}_{z=2n\pi i}f(z)\\=&-2\pi i\sum ^{\infty }_{n=-\infty }(2n\pi i)^{s-1}=-2\pi i (2\pi i)^{s-1}\sum ^{\infty }_{n=1}\Big[\dfrac{1}{n^{1-s}}+(-1)^{s-1}\dfrac{1}{n^{1-s}}\Big]\\
+=&-(2\pi i)^{s}\Big[\xi (1-s)+(-1)^{s-1}\xi (1-s)\Big]
+\end{align*}\]
+and we close $H$ by adding a big circle with radius $\infty $. Then, we can obtain the values using the resdiue theorem with $n\in {\bm Z}\backslash \{0\}$. Notice how the right converges when $\mathrm{Res}(s)<0$. 
+\end{recall}
+\vspace{2ex}
+\begin{cor}
+Therefore,
+\[\xi (s)=2^{s}\pi ^{s-1}\sin \dfrac{\pi s}{2}\xi (1-s)\mathrm{\Gamma} (1-s)\]
+determines all of $\xi (s)$ and has a simple pole at $s=1$ with residue $1$, otherwise analytic. Notice that
+\[\xi (s)=0\]
+if $s=-2,-4,-6,\ldots $. Also, if $\xi (\frac{1}{2}+it)=0$, $\xi (\frac{1}{2}-it)=0$. The Riemann hypothesis in this form is that $\xi (s)=0$ has all solutions on $0<\mathrm{Re}(s)<1$ of the form
+\[s=\dfrac{1}{2}+it\]
+where the band is called the critical strip. The above is called the critical line. The fact that $\xi (s)=0$ has no zeros on the line
+\[s=1+it\]
+proves the prime number theorem,
+\[\lim _{n\rightarrow \infty }\dfrac{\pi (n)\log n}{n}=1\]
+\end{cor}
+\vspace{2ex}
+

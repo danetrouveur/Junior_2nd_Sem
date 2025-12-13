@@ -51,8 +51,28 @@ and $D=b^2-4c$. The splitting field of $f(t)$ is ${\bm Q}(\sqrt{D})/{\bm Q}$. Th
 (12.60) Subgroups and homomorphic images of solvable groups are solvable. 
 \end{prop}
 \vspace{2ex}
+\begin{defi}
+Let $F/K$ be a finite Galois extension. Then $F/K$ is solvable if $\mathrm{Gal}(F/K)$ is solvable. Also, $F/K$ is abelian if $\mathrm{Gal}(F/K)$ is abelian.
+\end{defi}
+\vspace{2ex}
 \begin{cor}
-(Solvable subextension) Let $K\subset F$ be a 
+(Solvable subextension) Let $K\subset E\subset F$ be solvable extensions. If $F/K$ is solvable and $E/K$ is Galois, then $E/K$ is solvable. 
 \end{cor}
+\vspace{2ex}
+\begin{lem}
+(Solvable extensions) Let $F/K$ be a finite Galois extension. The following are equivalent:
+\begin{itemize}
+\item[(i)] $F/K$ is solvable (that is, $\mathrm{Gal}(F/K)$ is solvable)
+\item[(ii)] There exists a tower $K=F_0\subset F_1\subset \ldots \subset F_{s}=F$ such that each extension $F_{i+1}/F_{i}$ is abelian.
+\end{itemize}
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+From (i) to (ii), we know that $F/K$ is solvable and that there exists a tower,
+\[1=G_0\trianglelefteq G_1\trianglelefteq \ldots \trianglelefteq G_{s}=\mathrm{Gal}(F/K)\]
+where $G_{i+1}/G_{i}$ are all abelian. We acknowledge that:
+\[F=F^{1}=F^{G_0}\supset \ldots \supset F^{G_{5}}=F^{\mathrm{Gal}(F/K)}=K\]
+
+\end{proof}
 \vspace{2ex}
 

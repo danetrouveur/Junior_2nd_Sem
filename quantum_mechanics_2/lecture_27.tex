@@ -1,0 +1,52 @@
+\section{Lecture 27 (December 10th)}
+\begin{defi}
+(Quantum teleportation) The idea is sending one qubit via a classical $2$-bit. For example:
+\begin{itemize}
+\item[(i)] {\bf Entangled state}: let's try making a entangled state by taking $|0,0\rangle $ and taking a quantum gate to give:
+\[B|0,0\rangle =\dfrac{1}{\sqrt{2}}(|0,0\rangle +|1,1\rangle )\]
+where the output is entangled. Turns out that that the matrix is cnot times $H\otimes \mathrm{1}$ where
+\[\mathrm{cnot}(|a,b\rangle )=|a,a\oplus b\rangle \]
+and
+\[H|0\rangle =\dfrac{1}{\sqrt{2}}(|0\rangle +|1\rangle )\qquad\&\qquad H|1\rangle=\dfrac{1}{\sqrt{2}}(|0\rangle -|1\rangle ) \]
+In this way, the Bell circuit turns a non-entangled basis into a entangled basis.
+\item[(ii)] {\bf Alice \& Bob}: Let them take the two particles leaving them entangled.
+\item[(iii)] {\bf Alice sends a state}: Let's say Alice wants to send a arbitrary ket
+\[\alpha |0\rangle+ \beta |1\rangle \]
+to Bob. Considering the tensor product
+\[\big(\alpha |0\rangle +\beta |1\rangle \big)\otimes \dfrac{1}{\sqrt{2}}\big(|0,0\rangle +|1,1\rangle \big)=\dfrac{1}{\sqrt{2}}\big(\alpha |0,0,0\rangle +\alpha |0,1,1\rangle +\beta |1,0,0\rangle +\beta |1,1,1\rangle \big) \]
+Now, Alice manipulates these vectors.
+\item[(iv)] {\bf Alice takes} $B^{-1}$: Now let Alice take the inverse of the first two terms.
+\[B^{-1}|0,0\rangle =\dfrac{1}{\sqrt{2}}\big(|0,0\rangle +|1,0\rangle \big)\qquad B^{-1}|0,1\rangle =\dfrac{1}{\sqrt{2}}\big(|0,1\rangle +|1,1\rangle \big)
+\]
+and
+\[B^{-1}|1,0\rangle =\dfrac{1}{\sqrt{2}}\big(|0,1\rangle -|11\rangle \big)\qquad B^{-1}|11\rangle =\dfrac{1}{\sqrt{2}}\big(|0,0\rangle -|1,0\rangle \big)\]
+with $B^{-1}=(H\otimes )\cdot \mathrm{cnot}$. We find:
+\[\dfrac{1}{2}\big[\alpha \big(|000\rangle +|100\rangle \big)+\alpha (|011\rangle +|111\rangle )+\beta \big(|011\rangle -|110\rangle \big)+\beta \big(|001\rangle -|101\rangle \big)\big]\]
+\item[(v)] {\bf Bob's perspective}: Now,
+\[\dfrac{1}{2}|0,0\rangle\big(\alpha |0\rangle +\beta |1\rangle \big)+\dfrac{1}{2}|0,1\rangle (\alpha |1\rangle +\beta |0\rangle )+\dfrac{1}{2}|1,0\rangle \big(\alpha |0\rangle -\beta |1\rangle \big)+\dfrac{1}{2}|1,1\rangle \big(\alpha |1\rangle -\beta |0\rangle \big)\]
+\item[(vi)] {\bf Alice measures qubit 1 and 2}: each have equal amount of probability 
+\[|1,1\rangle ,|1,0\rangle ,|0,1\rangle ,|1,1\rangle \]
+and we obtain classical 2-bits. Alice has now collapsed the wave function. Now, we call Bob and tell him what we got as a classical 2-bit. 
+\item[(vii)] {\bf Bob's turn}: Bob can now read off Alice's state through appropriate operators. 
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(Bell's inequality) Suppose we got a singlet state:
+\[\dfrac{1}{\sqrt{2}}\big(|\uparrow\downarrow\rangle -|\downarrow\uparrow\rangle \big)\]
+also recall that
+\[|x\uparrow\rangle =\dfrac{1}{\sqrt{2}}(|z\uparrow\rangle +|z\downarrow)\qquad\&\qquad |x\downarrow\rangle =\dfrac{1}{\sqrt{2}}(|z\uparrow\rangle -|z\downarrow\rangle )\]
+Let's consider a large distance between Alice and Bob, with a singlet factor in the middle. Let's say that Alice can measure both $S_{x}$ and $S_{z}$ but Bob can only measure $S_{x}$.
+\begin{itemize}
+\item[(i)] When Alice measures $|x\uparrow\rangle $ Bob measures $|x\downarrow\rangle $.
+\item[(ii)] When Alice doesn't do anything, Bob can measure both up and down by 50\%.
+\item[(iii)] When Alice measures $|z\uparrow\rangle $ Bob measures both up and down by 50\%.
+\end{itemize}
+Notice how when Alice measures via $S_{x}$, Bob is determined, while if Alice measures $S_{z}$ or doesn't do anything, we don't know what Bob gets. Now, the EPR paradox states that you can not explain the above maintaining locality. 
+
+\bigskip
+
+Wigner's version of Bell's inequality brings in ensembles of the form $(z,x)$ which explains the pheonomenon accurately. Now, introduce $(\vec{a},\vec{b},\vec{c})$ that are not mutually orthonogal and there are 8 types. 
+\end{defi}
+\vspace{2ex}
+ 

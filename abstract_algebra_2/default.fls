@@ -441,6 +441,9 @@ INPUT lecture_24.tex
 INPUT ./lecture_25.tex
 INPUT ./lecture_25.tex
 INPUT lecture_25.tex
+INPUT ./lecture_26.tex
+INPUT ./lecture_26.tex
+INPUT lecture_26.tex
 INPUT default.aux
 INPUT ./default.out
 INPUT ./default.out

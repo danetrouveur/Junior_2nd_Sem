@@ -1,0 +1,96 @@
+\section{Lecture 26 (December 11th)} 
+\begin{rmk}
+Last time, we defined solvable by radicals. Today, it's showtime! 
+\end{rmk}
+\vspace{2ex}
+\begin{defi}
+(15.42)
+\begin{itemize}
+\item[(i)] A field extension $F/K$ is radical if there exists $K\subset K(u_{1})\subset K(u_1,u_2)\subset \ldots \subset K(u_1,\ldots ,u_{r})=F$ with $u_{i}^{m_{i}}\in K(u_1,\ldots, u_{i-1})$.
+\item[(ii)] $f(t)\in K[t]$ is solvable by radicals if its splitting field is contained in some radical extension.
+\end{itemize}
+\end{defi}
+\vspace{2ex}
+\begin{defi}
+(12.53) A group is solvable if there exists 
+\[1=G_0\trianglelefteq G_1\trianglelefteq \ldots \triangleleftneq G_{r}=G\]
+with $G_{i+1}/G_{i}$ is abelian. 
+\end{defi}
+\vspace{2ex}
+\begin{cor}
+(Solvable extensions) If $F/E/K$ is solvable and $E/K$ is Galois, $E/K$ is solvable. 
+\end{cor}
+\vspace{2ex}
+\begin{defi}
+Let $F/K$ be finite Galois. $F/K$ is solvable (abelian) if $\mathrm{Gal}(F/K)$ is solvable (abelian).
+\end{defi}
+\vspace{2ex}
+\begin{lem}
+(Solvable extensions) Let $F/K$ be finite Galois. The following are equivalent:
+\begin{itemize}
+\item[(i)] $F/K$ is solvable.
+\item[(ii)] Exists a tower
+\[K=F_0\subset F_1\subset \ldots \subset F_{s}=F\]
+with $F_{i+1}/F_{i}$ is abelian.
+\end{itemize}
+\end{lem}
+\vspace{2ex}
+\begin{lem}
+(15.45) Every separable radical extension is contained in a Galois radical extension. 
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+Let $F/K$ be separable and radical. 
+\[K\subset K(u_1)\subset K(u_1,u_2)\subset \ldots \subset K(u_1,\ldots ,u_{r})=F\]
+and $u_{i}^{m_{i}}\in K(u_{1},\ldots ,u_{i-1})$. As the extension is finite and separable, by the primative element theorem, $F=K(\alpha )$. Set $p(t)=\mathrm{irr}(\alpha ,K)$, and it has the zeros $\alpha =\alpha_1,\ldots ,\alpha _{s}\in \bar{K}$. We claim that $L=K(\alpha_1,\ldots ,\alpha_{s} )$, the splitting field of $f(t)\in K[t]$, is a radical extension of $K$. We verify that:
+\begin{itemize}
+\item[(i)] Notice that
+\[K\subset K(\alpha_1)\subset K(\alpha_1,\alpha_2)\subset \ldots \subset K(\alpha_1,\ldots ,\alpha _{s})=L\]
+\item[(ii)] In each step, 
+\[K(\alpha_1,\ldots ,\alpha _{i-1})\subset K(\alpha_1,\ldots ,\alpha _{i})\]
+is radical.
+\item[(iii)] We use the fact that there exists a $K$-isomorphism $K(\alpha )\cong K(\alpha_{i})$ is radical.
+\end{itemize}
+\end{proof}
+\vspace{2ex}
+\begin{lem}
+(Primative) Let $K$ be a field of characteristic zero. Let $\xi $ be a primative $n$-th root of unity. Then,
+\[\mathrm{Gal}(K(\xi )/K)\cong ({\bm Z}/n{\bm Z})^{\times }\]
+which is exercise 15.4.
+\end{lem}
+\vspace{2ex}
+\begin{lem}
+(15.28) (Cyclic) Let $K$ be a field containing all $n$-th roots of unity. Let $f(t)=t^{n}-a\in K[t]$ be a polynomial. Suppose $\alpha^{n}=a$ for some $\alpha \in \bar{K}$. Then $K(\alpha )$ is the splitting field of $f(t)$ and $G_{f}=\mathrm{Gal}(K(\alpha )/K)$ is cyclic.
+\end{lem}
+\vspace{2ex}
+\begin{proof}
+Note that the zeros are $\alpha ,\alpha \xi ,\ldots ,\alpha \xi ^{n-1}$. Then,
+\[K(\alpha ,\alpha \xi ,\ldots ,\alpha \xi ^{n-1})=K(\alpha )\]
+Notice how there exists a injection from $\mathrm{Gal}(K(\alpha)/K)$ into $\{\beta \in K\;|\;\beta ^{n}=1\}$ which is cyclic. A subgroup of a cyclic group is cyclic and the proof is complete.
+\end{proof}
+\vspace{2ex}
+\begin{thm}
+(15.46) Let $K$ be a field of characteristic zero. Let $f(t)\in K[t]$ be a polynomial of degree $\geq 1$. Then $f(t)$ is solvable by radicals if and only if $G_{f}$ is solvable. 
+\end{thm}
+\vspace{2ex}
+\begin{proof}
+Let $F$ be the splitting field of $f(t)$, and let $L$ be a radical extension of $K$ containing $F$. By lemma (15.45), we may assume that $L/K$ is Galois. Choose a tower
+\[K\subset K(\alpha_1)\subset K(\alpha_1,\alpha _{2})\subset \ldots \subset K(\alpha_1,\ldots ,\alpha _{s})=L\]
+such that $\alpha _{i}^{n_{i}}\in K(\alpha_1,\ldots ,\alpha _{i-1})$. Put $n=\mathrm{lcm}(n_1,\ldots,n_{s} )$. Let $\xi $ be a $n$-th root of unity. We now consider $L(\xi )/K$. Note that $K(\xi )$ contains all primative $n_{i}$-th roots of unity. Choose $g(t)\in K[t]$ such that $L/K$ is the splitting field for $g(t)$. Then $L(\xi )$	is the splitting field of $(t^{n}-1)g(t)$. By corollary (solvable extensions), it suffices to show that $L(\xi )/K$ is solvable. Consider the tower:
+\[K\subset K(\xi )\subset K(\xi ,\alpha_1)\subset K(\xi ,\alpha_1,\alpha_2)\subset \ldots \subset K(\xi ,\alpha_1,\ldots ,\alpha _{s})=L(\xi )\]
+Using lemma (solvable extensions), it will suffice to show that each step is an abelian extension. For this, we see that $K(\xi )/K$ is abelian by lemma (primative). Other steps are abelian by lemma (cyclic). 
+\end{proof}
+\vspace{2ex}
+\begin{cor}
+(15.48) There are no formulas in radicals for the solutions of a general polynomial equation of degree $n\geq 5$. 
+\end{cor}
+\vspace{2ex}
+\begin{proof}
+For $n\geq 5$, $S_{n}$ is not solvable.
+\end{proof}
+\vspace{2ex}
+\begin{rmk}
+You deserve a Bachelor's in math.
+\end{rmk}
+\vspace{2ex}
+
